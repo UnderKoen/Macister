@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let button = statusItem.button {
-            button.image = NSImage(named:NSImage.Name("MagisterLogo"))
+            button.image = NSImage(named:NSImage.Name("MagisterIcon"))
             button.action = #selector(togglePopover(_:))
         }
         popover.contentViewController = MagisterViewController.freshController()
