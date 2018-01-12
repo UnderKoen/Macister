@@ -22,7 +22,7 @@ extension FindSchoolViewController {
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "FindSchool"), bundle: nil)
         let identifier = NSStoryboard.SceneIdentifier(rawValue: "FindSchoolViewController")
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? FindSchoolViewController else {
-            fatalError("Why cant i find FindSchoolViewController? - Check Main.storyboard")
+            fatalError("Why cant i find FindSchoolViewController?")
         }
         return viewcontroller
     }
