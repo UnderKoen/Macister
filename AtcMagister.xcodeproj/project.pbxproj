@@ -11,8 +11,8 @@
 		5DA27DC62009274100909C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DC52009274100909C42 /* ViewController.swift */; };
 		5DA27DC82009274100909C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC72009274100909C42 /* Assets.xcassets */; };
 		5DA27DCB2009274100909C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* Main.storyboard */; };
-		5DA27DD72009274100909C42 /* UnderMagisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DD62009274100909C42 /* UnderMagisterTests.swift */; };
-		5DA27DE22009274100909C42 /* UnderMagisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DE12009274100909C42 /* UnderMagisterUITests.swift */; };
+		5DA27DD72009274100909C42 /* AtcMagisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DD62009274100909C42 /* AtcMagisterTests.swift */; };
+		5DA27DE22009274100909C42 /* AtcMagisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */; };
 		5DA27DF4200927D400909C42 /* MagisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DF3200927D400909C42 /* MagisterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,12 +40,12 @@
 		5DA27DC72009274100909C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DA27DCA2009274100909C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DA27DCC2009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DA27DCD2009274100909C42 /* UnderMagister.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UnderMagister.entitlements; sourceTree = "<group>"; };
+		5DA27DCD2009274100909C42 /* AtcMagister.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AtcMagister.entitlements; sourceTree = "<group>"; };
 		5DA27DD22009274100909C42 /* AtcMagisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtcMagisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DA27DD62009274100909C42 /* UnderMagisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderMagisterTests.swift; sourceTree = "<group>"; };
+		5DA27DD62009274100909C42 /* AtcMagisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtcMagisterTests.swift; sourceTree = "<group>"; };
 		5DA27DD82009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DA27DDD2009274100909C42 /* AtcMagisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtcMagisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DA27DE12009274100909C42 /* UnderMagisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderMagisterUITests.swift; sourceTree = "<group>"; };
+		5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtcMagisterUITests.swift; sourceTree = "<group>"; };
 		5DA27DE32009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DA27DF3200927D400909C42 /* MagisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +103,7 @@
 				5DA27DC72009274100909C42 /* Assets.xcassets */,
 				5DA27DC92009274100909C42 /* Main.storyboard */,
 				5DA27DCC2009274100909C42 /* Info.plist */,
-				5DA27DCD2009274100909C42 /* UnderMagister.entitlements */,
+				5DA27DCD2009274100909C42 /* AtcMagister.entitlements */,
 				5DA27DF3200927D400909C42 /* MagisterViewController.swift */,
 			);
 			path = AtcMagister;
@@ -112,7 +112,7 @@
 		5DA27DD52009274100909C42 /* AtcMagisterTests */ = {
 			isa = PBXGroup;
 			children = (
-				5DA27DD62009274100909C42 /* UnderMagisterTests.swift */,
+				5DA27DD62009274100909C42 /* AtcMagisterTests.swift */,
 				5DA27DD82009274100909C42 /* Info.plist */,
 			);
 			path = AtcMagisterTests;
@@ -121,7 +121,7 @@
 		5DA27DE02009274100909C42 /* AtcMagisterUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5DA27DE12009274100909C42 /* UnderMagisterUITests.swift */,
+				5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */,
 				5DA27DE32009274100909C42 /* Info.plist */,
 			);
 			path = AtcMagisterUITests;
@@ -270,7 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA27DD72009274100909C42 /* UnderMagisterTests.swift in Sources */,
+				5DA27DD72009274100909C42 /* AtcMagisterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA27DE22009274100909C42 /* UnderMagisterUITests.swift in Sources */,
+				5DA27DE22009274100909C42 /* AtcMagisterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +424,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = UnderMagister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.UnderMagister;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -439,7 +439,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = UnderMagister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.UnderMagister;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
