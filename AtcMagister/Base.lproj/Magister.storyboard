@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -101,6 +102,7 @@
                                     </subviews>
                                 </view>
                                 <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="titleFont" metaFont="message" size="11"/>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="caz-0E-cyC">
                                 <rect key="frame" x="128" y="13" width="256" height="32"/>
@@ -152,6 +154,7 @@
                                     </subviews>
                                 </view>
                                 <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="titleFont" metaFont="message" size="11"/>
                             </box>
                             <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-aA-cWq">
                                 <rect key="frame" x="185" y="122" width="142" height="22"/>
@@ -199,9 +202,25 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="Buttonaction:" target="mgu-oi-REs" id="qos-0f-Wxy"/>
+                                </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTh-Wc-nQG">
+                                <rect key="frame" x="-2" y="49" width="516" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="ERROR GOES HERE" id="xjb-yg-YAg">
+                                    <font key="font" metaFont="systemBlack" size="13"/>
+                                    <color key="textColor" red="0.91128966968911918" green="0.045282913505808153" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </customView>
+                    <connections>
+                        <outlet property="PasswordTextField" destination="9Ab-aA-cWq" id="Vyg-O9-vrk"/>
+                        <outlet property="UsernameTextField" destination="2hR-5D-4Cz" id="Oc7-4w-FcK"/>
+                    </connections>
                 </viewController>
                 <customObject id="Jp6-iq-usF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,9 +10,20 @@ import Cocoa
 
 class LoginViewController: NSViewController {
 
+    @IBOutlet weak var UsernameTextField: NSTextField!
+    @IBOutlet weak var PasswordTextField: NSSecureTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+    }
+    @IBAction func Buttonaction(_ sender: Any) {
+        if (UsernameTextField.stringValue == "") || (PasswordTextField.stringValue == "") {
+            print("empty")
+        } else {
+            print("do the authentication stuff")
+        }
+        
     }
     
 }
