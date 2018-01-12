@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  UnderMagister
+//  AtcMagister
 //
 //  Created by Koen van Staveren on 12/01/2018.
 //  Copyright © 2018 Koen van Staveren. All rights reserved.
