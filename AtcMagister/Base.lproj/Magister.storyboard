@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Magister View Controller-->
+        <!--Find School View Controller-->
         <scene sceneID="Rik-mA-wWr">
             <objects>
-                <viewController storyboardIdentifier="MagisterViewController" id="6Qw-NS-pYn" customClass="MagisterViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindSchoolViewController" id="6Qw-NS-pYn" customClass="FindSchoolViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="Kzq-31-a9h" userLabel="CustomView">
                         <rect key="frame" x="0.0" y="0.0" width="512" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -103,6 +103,17 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yCd-dE-AXC">
+                                <rect key="frame" x="132" y="43" width="246" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Klaar" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="MA8-wq-Raw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="Find:" target="6Qw-NS-pYn" id="jBi-TW-3eI"/>
+                                </connections>
+                            </button>
                             <box fixedFrame="YES" boxType="custom" borderType="none" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="rm3-aV-Lq8">
                                 <rect key="frame" x="0.0" y="252" width="512" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -126,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="97" y="223"/>
         </scene>
-        <!--Magister View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="cm5-FS-Rvo">
             <objects>
-                <viewController storyboardIdentifier="MagisterViewController" id="mgu-oi-REs" customClass="MagisterViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="mgu-oi-REs" customClass="LoginViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
                     <customView key="view" id="4wt-0h-fT8">
                         <rect key="frame" x="0.0" y="0.0" width="512" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
