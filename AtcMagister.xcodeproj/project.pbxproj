@@ -22,14 +22,14 @@
 			containerPortal = 5DA27DB82009274100909C42 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5DA27DBF2009274100909C42;
-			remoteInfo = UnderMagister;
+			remoteInfo = AtcMagister;
 		};
 		5DA27DDE2009274100909C42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5DA27DB82009274100909C42 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5DA27DBF2009274100909C42;
-			remoteInfo = UnderMagister;
+			remoteInfo = AtcMagister;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -143,7 +143,7 @@
 			dependencies = (
 			);
 			name = AtcMagister;
-			productName = UnderMagister;
+			productName = AtcMagister;
 			productReference = 5DA27DC02009274100909C42 /* AtcMagister.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -161,7 +161,7 @@
 				5DA27DD42009274100909C42 /* PBXTargetDependency */,
 			);
 			name = AtcMagisterTests;
-			productName = UnderMagisterTests;
+			productName = AtcMagisterTests;
 			productReference = 5DA27DD22009274100909C42 /* AtcMagisterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -179,7 +179,7 @@
 				5DA27DDF2009274100909C42 /* PBXTargetDependency */,
 			);
 			name = AtcMagisterUITests;
-			productName = UnderMagisterUITests;
+			productName = AtcMagisterUITests;
 			productReference = 5DA27DDD2009274100909C42 /* AtcMagisterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -452,9 +452,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = UnderMagisterTests/Info.plist;
+				INFOPLIST_FILE = AtcMagisterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.UnderMagisterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AtcMagister.app/Contents/MacOS/AtcMagister";
@@ -468,9 +468,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = UnderMagisterTests/Info.plist;
+				INFOPLIST_FILE = AtcMagisterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.UnderMagisterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AtcMagister.app/Contents/MacOS/AtcMagister";
@@ -483,12 +483,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = UnderMagisterUITests/Info.plist;
+				INFOPLIST_FILE = AtcMagisterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.UnderMagisterUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagisterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = UnderMagister;
+				TEST_TARGET_NAME = AtcMagister;
 			};
 			name = Debug;
 		};
@@ -498,12 +498,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = UnderMagisterUITests/Info.plist;
+				INFOPLIST_FILE = AtcMagisterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.UnderMagisterUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagisterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = UnderMagister;
+				TEST_TARGET_NAME = AtcMagister;
 			};
 			name = Release;
 		};
