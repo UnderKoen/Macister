@@ -13,6 +13,7 @@
 		5DA27DCB2009274100909C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* Main.storyboard */; };
 		5DA27DD72009274100909C42 /* UnderMagisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DD62009274100909C42 /* UnderMagisterTests.swift */; };
 		5DA27DE22009274100909C42 /* UnderMagisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DE12009274100909C42 /* UnderMagisterUITests.swift */; };
+		5DA27DF4200927D400909C42 /* MagisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DF3200927D400909C42 /* MagisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,19 +34,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5DA27DC02009274100909C42 /* UnderMagister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderMagister.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA27DC02009274100909C42 /* AtcMagister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtcMagister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DC32009274100909C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DA27DC52009274100909C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5DA27DC72009274100909C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DA27DCA2009274100909C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DA27DCC2009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DA27DCD2009274100909C42 /* UnderMagister.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UnderMagister.entitlements; sourceTree = "<group>"; };
-		5DA27DD22009274100909C42 /* UnderMagisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnderMagisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA27DD22009274100909C42 /* AtcMagisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtcMagisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DD62009274100909C42 /* UnderMagisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderMagisterTests.swift; sourceTree = "<group>"; };
 		5DA27DD82009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DA27DDD2009274100909C42 /* UnderMagisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnderMagisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA27DDD2009274100909C42 /* AtcMagisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtcMagisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DE12009274100909C42 /* UnderMagisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderMagisterUITests.swift; sourceTree = "<group>"; };
 		5DA27DE32009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DA27DF3200927D400909C42 /* MagisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +78,9 @@
 		5DA27DB72009274100909C42 = {
 			isa = PBXGroup;
 			children = (
-				5DA27DC22009274100909C42 /* UnderMagister */,
-				5DA27DD52009274100909C42 /* UnderMagisterTests */,
-				5DA27DE02009274100909C42 /* UnderMagisterUITests */,
+				5DA27DC22009274100909C42 /* AtcMagister */,
+				5DA27DD52009274100909C42 /* AtcMagisterTests */,
+				5DA27DE02009274100909C42 /* AtcMagisterUITests */,
 				5DA27DC12009274100909C42 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,14 +88,14 @@
 		5DA27DC12009274100909C42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5DA27DC02009274100909C42 /* UnderMagister.app */,
-				5DA27DD22009274100909C42 /* UnderMagisterTests.xctest */,
-				5DA27DDD2009274100909C42 /* UnderMagisterUITests.xctest */,
+				5DA27DC02009274100909C42 /* AtcMagister.app */,
+				5DA27DD22009274100909C42 /* AtcMagisterTests.xctest */,
+				5DA27DDD2009274100909C42 /* AtcMagisterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5DA27DC22009274100909C42 /* UnderMagister */ = {
+		5DA27DC22009274100909C42 /* AtcMagister */ = {
 			isa = PBXGroup;
 			children = (
 				5DA27DC32009274100909C42 /* AppDelegate.swift */,
@@ -102,34 +104,35 @@
 				5DA27DC92009274100909C42 /* Main.storyboard */,
 				5DA27DCC2009274100909C42 /* Info.plist */,
 				5DA27DCD2009274100909C42 /* UnderMagister.entitlements */,
+				5DA27DF3200927D400909C42 /* MagisterViewController.swift */,
 			);
-			path = UnderMagister;
+			path = AtcMagister;
 			sourceTree = "<group>";
 		};
-		5DA27DD52009274100909C42 /* UnderMagisterTests */ = {
+		5DA27DD52009274100909C42 /* AtcMagisterTests */ = {
 			isa = PBXGroup;
 			children = (
 				5DA27DD62009274100909C42 /* UnderMagisterTests.swift */,
 				5DA27DD82009274100909C42 /* Info.plist */,
 			);
-			path = UnderMagisterTests;
+			path = AtcMagisterTests;
 			sourceTree = "<group>";
 		};
-		5DA27DE02009274100909C42 /* UnderMagisterUITests */ = {
+		5DA27DE02009274100909C42 /* AtcMagisterUITests */ = {
 			isa = PBXGroup;
 			children = (
 				5DA27DE12009274100909C42 /* UnderMagisterUITests.swift */,
 				5DA27DE32009274100909C42 /* Info.plist */,
 			);
-			path = UnderMagisterUITests;
+			path = AtcMagisterUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5DA27DBF2009274100909C42 /* UnderMagister */ = {
+		5DA27DBF2009274100909C42 /* AtcMagister */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DA27DE62009274100909C42 /* Build configuration list for PBXNativeTarget "UnderMagister" */;
+			buildConfigurationList = 5DA27DE62009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagister" */;
 			buildPhases = (
 				5DA27DBC2009274100909C42 /* Sources */,
 				5DA27DBD2009274100909C42 /* Frameworks */,
@@ -139,14 +142,14 @@
 			);
 			dependencies = (
 			);
-			name = UnderMagister;
+			name = AtcMagister;
 			productName = UnderMagister;
-			productReference = 5DA27DC02009274100909C42 /* UnderMagister.app */;
+			productReference = 5DA27DC02009274100909C42 /* AtcMagister.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5DA27DD12009274100909C42 /* UnderMagisterTests */ = {
+		5DA27DD12009274100909C42 /* AtcMagisterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DA27DE92009274100909C42 /* Build configuration list for PBXNativeTarget "UnderMagisterTests" */;
+			buildConfigurationList = 5DA27DE92009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagisterTests" */;
 			buildPhases = (
 				5DA27DCE2009274100909C42 /* Sources */,
 				5DA27DCF2009274100909C42 /* Frameworks */,
@@ -157,14 +160,14 @@
 			dependencies = (
 				5DA27DD42009274100909C42 /* PBXTargetDependency */,
 			);
-			name = UnderMagisterTests;
+			name = AtcMagisterTests;
 			productName = UnderMagisterTests;
-			productReference = 5DA27DD22009274100909C42 /* UnderMagisterTests.xctest */;
+			productReference = 5DA27DD22009274100909C42 /* AtcMagisterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5DA27DDC2009274100909C42 /* UnderMagisterUITests */ = {
+		5DA27DDC2009274100909C42 /* AtcMagisterUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DA27DEC2009274100909C42 /* Build configuration list for PBXNativeTarget "UnderMagisterUITests" */;
+			buildConfigurationList = 5DA27DEC2009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagisterUITests" */;
 			buildPhases = (
 				5DA27DD92009274100909C42 /* Sources */,
 				5DA27DDA2009274100909C42 /* Frameworks */,
@@ -175,9 +178,9 @@
 			dependencies = (
 				5DA27DDF2009274100909C42 /* PBXTargetDependency */,
 			);
-			name = UnderMagisterUITests;
+			name = AtcMagisterUITests;
 			productName = UnderMagisterUITests;
-			productReference = 5DA27DDD2009274100909C42 /* UnderMagisterUITests.xctest */;
+			productReference = 5DA27DDD2009274100909C42 /* AtcMagisterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +209,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5DA27DBB2009274100909C42 /* Build configuration list for PBXProject "UnderMagister" */;
+			buildConfigurationList = 5DA27DBB2009274100909C42 /* Build configuration list for PBXProject "AtcMagister" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +222,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5DA27DBF2009274100909C42 /* UnderMagister */,
-				5DA27DD12009274100909C42 /* UnderMagisterTests */,
-				5DA27DDC2009274100909C42 /* UnderMagisterUITests */,
+				5DA27DBF2009274100909C42 /* AtcMagister */,
+				5DA27DD12009274100909C42 /* AtcMagisterTests */,
+				5DA27DDC2009274100909C42 /* AtcMagisterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DA27DC62009274100909C42 /* ViewController.swift in Sources */,
+				5DA27DF4200927D400909C42 /* MagisterViewController.swift in Sources */,
 				5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,12 +287,12 @@
 /* Begin PBXTargetDependency section */
 		5DA27DD42009274100909C42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5DA27DBF2009274100909C42 /* UnderMagister */;
+			target = 5DA27DBF2009274100909C42 /* AtcMagister */;
 			targetProxy = 5DA27DD32009274100909C42 /* PBXContainerItemProxy */;
 		};
 		5DA27DDF2009274100909C42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5DA27DBF2009274100909C42 /* UnderMagister */;
+			target = 5DA27DBF2009274100909C42 /* AtcMagister */;
 			targetProxy = 5DA27DDE2009274100909C42 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -453,7 +457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.UnderMagisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnderMagister.app/Contents/MacOS/UnderMagister";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AtcMagister.app/Contents/MacOS/AtcMagister";
 			};
 			name = Debug;
 		};
@@ -469,7 +473,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.UnderMagisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UnderMagister.app/Contents/MacOS/UnderMagister";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AtcMagister.app/Contents/MacOS/AtcMagister";
 			};
 			name = Release;
 		};
@@ -506,7 +510,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5DA27DBB2009274100909C42 /* Build configuration list for PBXProject "UnderMagister" */ = {
+		5DA27DBB2009274100909C42 /* Build configuration list for PBXProject "AtcMagister" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DA27DE42009274100909C42 /* Debug */,
@@ -515,7 +519,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DA27DE62009274100909C42 /* Build configuration list for PBXNativeTarget "UnderMagister" */ = {
+		5DA27DE62009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagister" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DA27DE72009274100909C42 /* Debug */,
@@ -524,7 +528,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DA27DE92009274100909C42 /* Build configuration list for PBXNativeTarget "UnderMagisterTests" */ = {
+		5DA27DE92009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagisterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DA27DEA2009274100909C42 /* Debug */,
@@ -533,7 +537,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DA27DEC2009274100909C42 /* Build configuration list for PBXNativeTarget "UnderMagisterUITests" */ = {
+		5DA27DEC2009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagisterUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DA27DED2009274100909C42 /* Debug */,
