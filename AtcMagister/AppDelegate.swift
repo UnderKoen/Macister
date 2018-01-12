@@ -11,23 +11,27 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
-    let popover = NSPopover()
+    static let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
+    static let popover = NSPopover()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        if let button = statusItem.button {
+        if let button = AppDelegate.statusItem.button {
             button.image = NSImage(named:NSImage.Name("MagisterIcon"))
             button.action = #selector(togglePopover(_:))
         }
-        popover.contentViewController = FindSchoolViewController.freshController()
+        AppDelegate.popover.contentViewController = FindSchoolViewController.freshController()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+    
+    static func changeView(controller:  NSViewController) {
+        popover.contentViewController = controller
+    }
 
     @objc func togglePopover(_ sender: Any?) {
-        if popover.isShown {
+        if  AppDelegate.popover.isShown {
             closePopover(sender: sender)
         } else {
             showPopover(sender: sender)
@@ -35,13 +39,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func showPopover(sender: Any?) {
-        if let button = statusItem.button {
-            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+        if let button = AppDelegate.statusItem.button {
+             AppDelegate.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
         }
     }
     
     func closePopover(sender: Any?) {
-        popover.performClose(sender)
+        AppDelegate.popover.performClose(sender)
     }
 
 }

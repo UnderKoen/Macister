@@ -14,7 +14,9 @@ class FindSchoolViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
     }
-    @IBAction func Find(_ sender: Any) {
+    
+    @IBAction func FindSchools(_ sender: Any) {
+        AppDelegate.changeView(controller: LoginViewController.freshController())
     }
     
 }
