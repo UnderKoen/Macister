@@ -20,7 +20,7 @@ class FindSchoolViewController: NSViewController {
 extension FindSchoolViewController {
     static func freshController() -> FindSchoolViewController {
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "FindSchool"), bundle: nil)
-        let identifier = NSStoryboard.SceneIdentifier(rawValue: "MagisterViewController")
+        let identifier = NSStoryboard.SceneIdentifier(rawValue: "FindSchoolViewController")
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? FindSchoolViewController else {
             fatalError("Why cant i find FindSchoolViewController? - Check Main.storyboard")
         }
