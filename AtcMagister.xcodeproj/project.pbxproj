@@ -10,10 +10,10 @@
 		5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DC32009274100909C42 /* AppDelegate.swift */; };
 		5DA27DC62009274100909C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DC52009274100909C42 /* ViewController.swift */; };
 		5DA27DC82009274100909C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC72009274100909C42 /* Assets.xcassets */; };
-		5DA27DCB2009274100909C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* Main.storyboard */; };
+		5DA27DCB2009274100909C42 /* FindSchool.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* FindSchool.storyboard */; };
 		5DA27DD72009274100909C42 /* AtcMagisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DD62009274100909C42 /* AtcMagisterTests.swift */; };
 		5DA27DE22009274100909C42 /* AtcMagisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */; };
-		5DA27DF4200927D400909C42 /* MagisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DF3200927D400909C42 /* MagisterViewController.swift */; };
+		5DA27DF4200927D400909C42 /* FindSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DF3200927D400909C42 /* FindSchoolViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,7 @@
 		5DA27DC32009274100909C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DA27DC52009274100909C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5DA27DC72009274100909C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5DA27DCA2009274100909C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DA27DCA2009274100909C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FindSchool.storyboard; sourceTree = "<group>"; };
 		5DA27DCC2009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DA27DCD2009274100909C42 /* AtcMagister.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AtcMagister.entitlements; sourceTree = "<group>"; };
 		5DA27DD22009274100909C42 /* AtcMagisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtcMagisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +47,7 @@
 		5DA27DDD2009274100909C42 /* AtcMagisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtcMagisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtcMagisterUITests.swift; sourceTree = "<group>"; };
 		5DA27DE32009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DA27DF3200927D400909C42 /* MagisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagisterViewController.swift; sourceTree = "<group>"; };
+		5DA27DF3200927D400909C42 /* FindSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSchoolViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +101,10 @@
 				5DA27DC32009274100909C42 /* AppDelegate.swift */,
 				5DA27DC52009274100909C42 /* ViewController.swift */,
 				5DA27DC72009274100909C42 /* Assets.xcassets */,
-				5DA27DC92009274100909C42 /* Main.storyboard */,
+				5DA27DC92009274100909C42 /* FindSchool.storyboard */,
 				5DA27DCC2009274100909C42 /* Info.plist */,
 				5DA27DCD2009274100909C42 /* AtcMagister.entitlements */,
-				5DA27DF3200927D400909C42 /* MagisterViewController.swift */,
+				5DA27DF3200927D400909C42 /* FindSchoolViewController.swift */,
 			);
 			path = AtcMagister;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DA27DC82009274100909C42 /* Assets.xcassets in Resources */,
-				5DA27DCB2009274100909C42 /* Main.storyboard in Resources */,
+				5DA27DCB2009274100909C42 /* FindSchool.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DA27DC62009274100909C42 /* ViewController.swift in Sources */,
-				5DA27DF4200927D400909C42 /* MagisterViewController.swift in Sources */,
+				5DA27DF4200927D400909C42 /* FindSchoolViewController.swift in Sources */,
 				5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,12 +298,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5DA27DC92009274100909C42 /* Main.storyboard */ = {
+		5DA27DC92009274100909C42 /* FindSchool.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5DA27DCA2009274100909C42 /* Base */,
 			);
-			name = Main.storyboard;
+			name = FindSchool.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Magister View Controller-->
+        <!--Find School View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="MagisterViewController" id="XfG-lQ-9wD" customClass="MagisterViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindSchoolViewController" id="XfG-lQ-9wD" customClass="FindSchoolViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="512" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -103,7 +103,7 @@
                                 </textFieldCell>
                             </textField>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUL-w9-0iA">
-                                <rect key="frame" x="128" y="167" width="256" height="22"/>
+                                <rect key="frame" x="128" y="167" width="256" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" placeholderString="Een deel van de naam/url school" drawsBackground="YES" usesSingleLineMode="YES" recentsAutosaveName="" id="dE1-zd-leu">
                                     <font key="font" metaFont="system"/>
