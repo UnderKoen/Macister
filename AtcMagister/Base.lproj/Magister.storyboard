@@ -69,62 +69,93 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Find School View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--Magister View Controller-->
+        <scene sceneID="Rik-mA-wWr">
             <objects>
-                <viewController storyboardIdentifier="FindSchoolViewController" id="XfG-lQ-9wD" customClass="FindSchoolViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="512" height="270"/>
+                <viewController storyboardIdentifier="MagisterViewController" id="6Qw-NS-pYn" customClass="MagisterViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="Kzq-31-a9h" userLabel="CustomView">
+                        <rect key="frame" x="0.0" y="0.0" width="512" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box fixedFrame="YES" boxType="custom" borderType="none" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="kBk-Hc-CNe">
-                                <rect key="frame" x="0.0" y="222" width="512" height="48"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOL-YT-i6R">
+                                <rect key="frame" x="210" y="227" width="93" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="a68-in-hHH">
-                                    <rect key="frame" x="0.0" y="0.0" width="512" height="48"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vUv-YW-A9L">
-                                            <rect key="frame" x="9" y="0.0" width="129" height="48"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="proportionallyDown" image="MagisterLogo" id="nPf-Uc-3KE"/>
-                                        </imageView>
-                                    </subviews>
-                                </view>
-                                <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </box>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nl7-7k-OZT">
-                                <rect key="frame" x="210" y="197" width="93" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="School zoeken" id="6X0-1u-5VZ">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="School zoeken" id="JGJ-v3-469">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ad-YX-2WC">
-                                <rect key="frame" x="138" y="167" width="236" height="22"/>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ss-Dc-o5q">
+                                <rect key="frame" x="138" y="197" width="236" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Een deel van de naam / url van school" drawsBackground="YES" id="f7g-H8-Bvf">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Een deel van de naam / url van school" drawsBackground="YES" id="gv9-Ab-lPm">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EhM-qh-ZFN">
-                                <rect key="frame" x="132" y="72" width="248" height="32"/>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ijO-3N-3Q5">
+                                <rect key="frame" x="132" y="43" width="246" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Klaar" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="SR5-vy-fUv">
+                                <buttonCell key="cell" type="push" title="Klaar" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="T95-Ra-97B">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <box fixedFrame="YES" boxType="custom" borderType="none" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="rm3-aV-Lq8">
+                                <rect key="frame" x="0.0" y="252" width="512" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" ambiguous="YES" id="gSk-71-A8z">
+                                    <rect key="frame" x="0.0" y="0.0" width="512" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D9F-8I-eQd">
+                                            <rect key="frame" x="9" y="0.0" width="129" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="proportionallyDown" image="MagisterLogo" id="Tfg-cI-yOm"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </box>
                         </subviews>
                     </view>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Zi3-0S-Kad" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="208"/>
+            <point key="canvasLocation" x="97" y="223"/>
+        </scene>
+        <!--Magister View Controller-->
+        <scene sceneID="cm5-FS-Rvo">
+            <objects>
+                <viewController storyboardIdentifier="MagisterViewController" id="mgu-oi-REs" customClass="MagisterViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
+                    <customView key="view" id="4wt-0h-fT8">
+                        <rect key="frame" x="0.0" y="0.0" width="512" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <box fixedFrame="YES" boxType="custom" borderType="none" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="4kp-Sn-KEN">
+                                <rect key="frame" x="0.0" y="252" width="512" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" ambiguous="YES" id="TZr-tX-yMU">
+                                    <rect key="frame" x="0.0" y="0.0" width="512" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09g-u4-gHg">
+                                            <rect key="frame" x="9" y="0.0" width="129" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="proportionallyDown" image="MagisterLogo" id="Mqx-WB-i6N"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </box>
+                        </subviews>
+                    </customView>
+                </viewController>
+                <customObject id="Jp6-iq-usF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="223"/>
         </scene>
     </scenes>
     <resources>

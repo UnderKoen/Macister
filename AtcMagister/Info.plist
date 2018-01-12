@@ -25,7 +25,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2018 Koen van Staveren. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
-	<string>FindSchool</string>
+	<string>Magister</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>LSUIElement</key>

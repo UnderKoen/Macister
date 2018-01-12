@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named:NSImage.Name("MagisterIcon"))
             button.action = #selector(togglePopover(_:))
         }
-        popover.contentViewController = FindSchoolViewController.freshController()
+        popover.contentViewController = MagisterViewController.freshController()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
