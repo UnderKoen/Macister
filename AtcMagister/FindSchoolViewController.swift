@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import Alamofire
+import SwiftHTTP
 
 class FindSchoolViewController: NSViewController {
 
@@ -17,6 +17,9 @@ class FindSchoolViewController: NSViewController {
     }
     
     @IBAction func FindSchools(_ sender: Any) {
+        HTTP.GET("https://mijn.magister.net/api/schools", parameters: ["filter": "thijm"], headers: [:]) { response in
+            print(response.text)
+        }
         AppDelegate.changeView(controller: LoginViewController.freshController())
     }
     
