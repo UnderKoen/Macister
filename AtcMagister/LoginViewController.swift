@@ -14,8 +14,6 @@ class LoginViewController: NSViewController {
     @IBOutlet weak var UsernameTextField: NSTextField!
     @IBOutlet weak var PasswordTextField: NSSecureTextField!
     
-    static var school: School = School(url: "", name: "", id: "")
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,11 +22,12 @@ class LoginViewController: NSViewController {
         if (UsernameTextField.stringValue == "") || (PasswordTextField.stringValue == "") {
             print("empty")
         } else {
-            HTTP.DELETE("https://domain.com/1") { response in
-                
-            }
+            Magister.magister?.login(username: UsernameTextField.stringValue, password: PasswordTextField.stringValue, onError: { (error) in
+                print(error)
+            }, onSucces: {
+                print("yeah")
+            })
         }
-        
     }
     
 }
