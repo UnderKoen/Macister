@@ -241,6 +241,19 @@
             </objects>
             <point key="canvasLocation" x="637" y="223"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="gOw-sN-6JM">
+            <objects>
+                <viewController id="N6g-wo-m3f" sceneMemberID="viewController">
+                    <view key="view" id="8De-mp-jsZ">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="urM-qP-Qdq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176" y="223"/>
+        </scene>
     </scenes>
     <resources>
         <image name="MagisterLogo" width="1024" height="382"/>
