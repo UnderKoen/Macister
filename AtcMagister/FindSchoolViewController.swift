@@ -8,6 +8,7 @@
 
 import Cocoa
 import SwiftHTTP
+import SwiftyJSON
 
 class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
 
@@ -22,8 +23,15 @@ class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
     }
     
     override func controlTextDidChange(_ obj: Notification) {
+        FindSchool.removeAllItems()
         HTTP.GET("https://mijn.magister.net/api/schools", parameters: ["filter": FindSchool.stringValue], headers: [:], requestSerializer: JSONParameterSerializer()) { response in
-            print(response.text)
+            let data = response.data
+            do {
+                let json = try JSON(data: data)
+                json.array?.forEach({ (json) in
+                    self.FindSchool.addItem(withObjectValue: json["Name"].string ?? "")
+                })
+            } catch {}
         }
     }
     
