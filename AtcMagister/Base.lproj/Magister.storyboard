@@ -78,46 +78,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="512" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="S72-id-yLK">
-                                <rect key="frame" x="0.0" y="0.0" width="512" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="TtN-fL-RcZ">
-                                    <rect key="frame" x="1" y="1" width="510" height="298"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <comboBox identifier="FindSchool" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4UD-K5-25W">
-                                            <rect key="frame" x="127" y="167" width="259" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="Een deel van de naam / url van school" usesSingleLineMode="YES" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="Ijn-kD-Qbj">
-                                                <font key="font" metaFont="systemMedium" size="13"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="deviceWhite"/>
-                                            </comboBoxCell>
-                                        </comboBox>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOL-YT-i6R">
-                                            <rect key="frame" x="198" y="199" width="114" height="19"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="School zoeken" id="JGJ-v3-469">
-                                                <font key="font" metaFont="system" size="16"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" red="0.92932087182998657" green="0.92945808172225952" blue="0.92930209636688232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="caz-0E-cyC">
-                                            <rect key="frame" x="121" y="13" width="268" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="push" title="Doorgaan" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="RE9-BC-7HA">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="continue:" target="6Qw-NS-pYn" id="9Df-9Q-Ha8"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </view>
-                                <color key="fillColor" red="0.89578045685279184" green="0.89578045685279184" blue="0.89578045685279184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </box>
                             <box fixedFrame="YES" boxType="custom" borderType="none" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="rm3-aV-Lq8">
                                 <rect key="frame" x="0.0" y="252" width="512" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -134,10 +94,39 @@
                                 </view>
                                 <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="caz-0E-cyC">
+                                <rect key="frame" x="122" y="13" width="268" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Doorgaan" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="RE9-BC-7HA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="continue:" target="6Qw-NS-pYn" id="9Df-9Q-Ha8"/>
+                                </connections>
+                            </button>
+                            <comboBox identifier="FindSchool" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4UD-K5-25W">
+                                <rect key="frame" x="128" y="171" width="259" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="Een deel van de naam / url van school" drawsBackground="YES" usesSingleLineMode="YES" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="Ijn-kD-Qbj">
+                                    <font key="font" metaFont="systemMedium" size="13"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="deviceWhite"/>
+                                </comboBoxCell>
+                            </comboBox>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="I4J-80-Ls0">
                                 <rect key="frame" x="128" y="173" width="256" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOL-YT-i6R">
+                                <rect key="frame" x="200" y="203" width="114" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="School zoeken" id="JGJ-v3-469">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.92932087182998657" green="0.92945808172225952" blue="0.92930209636688232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textFieldCell>
+                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K93-1Y-2Zs">
                                 <rect key="frame" x="-2" y="49" width="516" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -166,15 +155,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="512" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="bNb-Vy-9yZ">
-                                <rect key="frame" x="0.0" y="0.0" width="512" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" ambiguous="YES" id="qiD-yt-st3">
-                                    <rect key="frame" x="1" y="1" width="510" height="298"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <color key="fillColor" red="0.93155217170715332" green="0.93225884437561035" blue="0.93166166543960571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </box>
                             <box fixedFrame="YES" boxType="custom" borderType="none" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="4kp-Sn-KEN">
                                 <rect key="frame" x="0.0" y="252" width="512" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
