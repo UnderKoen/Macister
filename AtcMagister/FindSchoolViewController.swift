@@ -9,21 +9,27 @@
 import Cocoa
 import SwiftHTTP
 
-class FindSchoolViewController: NSViewController {
+class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
 
-    @IBOutlet weak var SchoolFinder: NSTextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    @IBOutlet weak var FindSchool: NSComboBox!
     
     @IBAction func FindSchools(_ sender: Any) {
-        HTTP.GET("https://mijn.magister.net/api/schools", parameters: ["filter": "thijm"], headers: [:]) { response in
-            
-        }
-        AppDelegate.changeView(controller: LoginViewController.freshController())
+        print(FindSchool.indexOfSelectedItem)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        FindSchool.delegate = self
     }
     
+    override func controlTextDidChange(_ obj: Notification) {
+        HTTP.GET("https://mijn.magister.net/api/schools", parameters: ["filter": FindSchool.stringValue], headers: [:], requestSerializer: JSONParameterSerializer()) { response in
+            print(response.text)
+        }
+    }
+    
+    func comboBoxSelectionDidChange(_ notification: Notification) {
+        print("tets")
+    }
 }
 
 extension FindSchoolViewController {
