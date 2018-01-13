@@ -14,11 +14,12 @@
 		5DA27DCB2009274100909C42 /* Magister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* Magister.storyboard */; };
 		5DA27DD72009274100909C42 /* AtcMagisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DD62009274100909C42 /* AtcMagisterTests.swift */; };
 		5DA27DE22009274100909C42 /* AtcMagisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */; };
-		5DFAED54200A2FE9000BC7CF /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED06200A2F88000BC7CF /* SwiftHTTP.framework */; };
 		5DFAED55200A2FED000BC7CF /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5DFAED58200A422E000BC7CF /* SchoolUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED57200A422E000BC7CF /* SchoolUrl.swift */; };
 		5DFAED5A200A4298000BC7CF /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED59200A4298000BC7CF /* School.swift */; };
 		5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5B200A4792000BC7CF /* MainViewController.swift */; };
+		5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5D200A48B0000BC7CF /* Magister.swift */; };
+		5DFAED91200A5C9E000BC7CF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +36,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5DA27DBF2009274100909C42;
 			remoteInfo = AtcMagister;
-		};
-		5DFAED05200A2F88000BC7CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DFAED00200A2F88000BC7CF /* SwiftHTTP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
-			remoteInfo = SwiftHTTP;
-		};
-		5DFAED07200A2F88000BC7CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DFAED00200A2F88000BC7CF /* SwiftHTTP.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
-			remoteInfo = SwiftHTTPTests;
 		};
 		5DFAED46200A2FD6000BC7CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -99,6 +86,55 @@
 			remoteGlobalIDString = A8580F741BCF5C5B00DA927B;
 			remoteInfo = "SwiftyJSON tvOS Tests";
 		};
+		5DFAED83200A5C84000BC7CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		5DFAED85200A5C84000BC7CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		5DFAED87200A5C84000BC7CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		5DFAED89200A5C84000BC7CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		5DFAED8B200A5C84000BC7CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		5DFAED8D200A5C84000BC7CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		5DFAED8F200A5C84000BC7CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -129,11 +165,12 @@
 		5DA27DDD2009274100909C42 /* AtcMagisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtcMagisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtcMagisterUITests.swift; sourceTree = "<group>"; };
 		5DA27DE32009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DFAED00200A2F88000BC7CF /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = Libs/SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 		5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = Libs/SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		5DFAED57200A422E000BC7CF /* SchoolUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolUrl.swift; sourceTree = "<group>"; };
 		5DFAED59200A4298000BC7CF /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		5DFAED5B200A4792000BC7CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5DFAED5D200A48B0000BC7CF /* Magister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magister.swift; sourceTree = "<group>"; };
+		5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Libs/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +178,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DFAED91200A5C9E000BC7CF /* Alamofire.framework in Frameworks */,
 				5DFAED55200A2FED000BC7CF /* SwiftyJSON.framework in Frameworks */,
-				5DFAED54200A2FE9000BC7CF /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,8 +210,8 @@
 		5DA27DB72009274100909C42 = {
 			isa = PBXGroup;
 			children = (
+				5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */,
 				5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */,
-				5DFAED00200A2F88000BC7CF /* SwiftHTTP.xcodeproj */,
 				5DA27DC22009274100909C42 /* AtcMagister */,
 				5DA27DD52009274100909C42 /* AtcMagisterTests */,
 				5DA27DE02009274100909C42 /* AtcMagisterUITests */,
@@ -227,15 +264,6 @@
 			path = AtcMagisterUITests;
 			sourceTree = "<group>";
 		};
-		5DFAED01200A2F88000BC7CF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5DFAED06200A2F88000BC7CF /* SwiftHTTP.framework */,
-				5DFAED08200A2F88000BC7CF /* SwiftHTTPTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5DFAED3C200A2FD6000BC7CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,8 +283,23 @@
 			children = (
 				5DFAED57200A422E000BC7CF /* SchoolUrl.swift */,
 				5DFAED59200A4298000BC7CF /* School.swift */,
+				5DFAED5D200A48B0000BC7CF /* Magister.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5DFAED79200A5C83000BC7CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DFAED84200A5C84000BC7CF /* Alamofire.framework */,
+				5DFAED86200A5C84000BC7CF /* Alamofire iOS Tests.xctest */,
+				5DFAED88200A5C84000BC7CF /* Alamofire.framework */,
+				5DFAED8A200A5C84000BC7CF /* Alamofire macOS Tests.xctest */,
+				5DFAED8C200A5C84000BC7CF /* Alamofire.framework */,
+				5DFAED8E200A5C84000BC7CF /* Alamofire tvOS Tests.xctest */,
+				5DFAED90200A5C84000BC7CF /* Alamofire.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,8 +398,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 5DFAED01200A2F88000BC7CF /* Products */;
-					ProjectRef = 5DFAED00200A2F88000BC7CF /* SwiftHTTP.xcodeproj */;
+					ProductGroup = 5DFAED79200A5C83000BC7CF /* Products */;
+					ProjectRef = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
 				},
 				{
 					ProductGroup = 5DFAED3C200A2FD6000BC7CF /* Products */;
@@ -373,20 +416,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		5DFAED06200A2F88000BC7CF /* SwiftHTTP.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftHTTP.framework;
-			remoteRef = 5DFAED05200A2F88000BC7CF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5DFAED08200A2F88000BC7CF /* SwiftHTTPTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftHTTPTests.xctest;
-			remoteRef = 5DFAED07200A2F88000BC7CF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		5DFAED47200A2FD6000BC7CF /* SwiftyJSON.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -436,6 +465,55 @@
 			remoteRef = 5DFAED52200A2FD6000BC7CF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		5DFAED84200A5C84000BC7CF /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 5DFAED83200A5C84000BC7CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5DFAED86200A5C84000BC7CF /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = 5DFAED85200A5C84000BC7CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5DFAED88200A5C84000BC7CF /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 5DFAED87200A5C84000BC7CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5DFAED8A200A5C84000BC7CF /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = 5DFAED89200A5C84000BC7CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5DFAED8C200A5C84000BC7CF /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 5DFAED8B200A5C84000BC7CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5DFAED8E200A5C84000BC7CF /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = 5DFAED8D200A5C84000BC7CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5DFAED90200A5C84000BC7CF /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 5DFAED8F200A5C84000BC7CF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -473,6 +551,7 @@
 				5DFAED58200A422E000BC7CF /* SchoolUrl.swift in Sources */,
 				5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */,
 				5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */,
+				5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */,
 				5DFAED5A200A4298000BC7CF /* School.swift in Sources */,
 				5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */,
 			);
