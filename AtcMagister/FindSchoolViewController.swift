@@ -11,14 +11,15 @@ import SwiftHTTP
 
 class FindSchoolViewController: NSViewController {
 
+    @IBOutlet weak var SchoolFinder: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
     }
     
     @IBAction func FindSchools(_ sender: Any) {
         HTTP.GET("https://mijn.magister.net/api/schools", parameters: ["filter": "thijm"], headers: [:]) { response in
-            print(response.text)
+            
         }
         AppDelegate.changeView(controller: LoginViewController.freshController())
     }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213920095243006BE4DA /* FindSchoolViewController.swift */; };
 		5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213B20095256006BE4DA /* LoginViewController.swift */; };
-		5D2621FB2009678B006BE4DA /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2621F720096762006BE4DA /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		5D262213200A1169006BE4DA /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D262210200A1154006BE4DA /* SwiftHTTP.framework */; };
 		5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DC32009274100909C42 /* AppDelegate.swift */; };
 		5DA27DC82009274100909C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC72009274100909C42 /* Assets.xcassets */; };
 		5DA27DCB2009274100909C42 /* Magister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* Magister.storyboard */; };
@@ -18,16 +18,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5D2621F620096762006BE4DA /* PBXContainerItemProxy */ = {
+		5D26220F200A1154006BE4DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5D2621F120096762006BE4DA /* SwiftHTTP.xcodeproj */;
+			containerPortal = 5D26220A200A1153006BE4DA /* SwiftHTTP.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
 			remoteInfo = SwiftHTTP;
 		};
-		5D2621F820096762006BE4DA /* PBXContainerItemProxy */ = {
+		5D262211200A1154006BE4DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5D2621F120096762006BE4DA /* SwiftHTTP.xcodeproj */;
+			containerPortal = 5D26220A200A1153006BE4DA /* SwiftHTTP.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
 			remoteInfo = SwiftHTTPTests;
@@ -64,7 +64,7 @@
 /* Begin PBXFileReference section */
 		5D26213920095243006BE4DA /* FindSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSchoolViewController.swift; sourceTree = "<group>"; };
 		5D26213B20095256006BE4DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		5D2621F120096762006BE4DA /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = "../../../../SwiftHTTP-master/SwiftHTTP.xcodeproj"; sourceTree = "<group>"; };
+		5D26220A200A1153006BE4DA /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = Libs/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 		5DA27DC02009274100909C42 /* AtcMagister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtcMagister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DC32009274100909C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DA27DC72009274100909C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D2621FB2009678B006BE4DA /* SwiftHTTP.framework in Frameworks */,
+				5D262213200A1169006BE4DA /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,15 +105,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D2621F220096762006BE4DA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5D2621F720096762006BE4DA /* SwiftHTTP.framework */,
-				5D2621F920096762006BE4DA /* SwiftHTTPTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5D2621FA2009678B006BE4DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,10 +112,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5D26220B200A1153006BE4DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D262210200A1154006BE4DA /* SwiftHTTP.framework */,
+				5D262212200A1154006BE4DA /* SwiftHTTPTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5DA27DB72009274100909C42 = {
 			isa = PBXGroup;
 			children = (
-				5D2621F120096762006BE4DA /* SwiftHTTP.xcodeproj */,
+				5D26220A200A1153006BE4DA /* SwiftHTTP.xcodeproj */,
 				5DA27DC22009274100909C42 /* AtcMagister */,
 				5DA27DD52009274100909C42 /* AtcMagisterTests */,
 				5DA27DE02009274100909C42 /* AtcMagisterUITests */,
@@ -271,8 +271,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 5D2621F220096762006BE4DA /* Products */;
-					ProjectRef = 5D2621F120096762006BE4DA /* SwiftHTTP.xcodeproj */;
+					ProductGroup = 5D26220B200A1153006BE4DA /* Products */;
+					ProjectRef = 5D26220A200A1153006BE4DA /* SwiftHTTP.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -285,18 +285,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		5D2621F720096762006BE4DA /* SwiftHTTP.framework */ = {
+		5D262210200A1154006BE4DA /* SwiftHTTP.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftHTTP.framework;
-			remoteRef = 5D2621F620096762006BE4DA /* PBXContainerItemProxy */;
+			remoteRef = 5D26220F200A1154006BE4DA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		5D2621F920096762006BE4DA /* SwiftHTTPTests.xctest */ = {
+		5D262212200A1154006BE4DA /* SwiftHTTPTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SwiftHTTPTests.xctest;
-			remoteRef = 5D2621F820096762006BE4DA /* PBXContainerItemProxy */;
+			remoteRef = 5D262211200A1154006BE4DA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
