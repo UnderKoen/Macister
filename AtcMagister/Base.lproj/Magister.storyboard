@@ -101,36 +101,46 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="continue:" target="6Qw-NS-pYn" id="9Df-9Q-Ha8"/>
+                                </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOL-YT-i6R">
-                                <rect key="frame" x="210" y="227" width="93" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="School zoeken" id="JGJ-v3-469">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <comboBox identifier="FindSchool" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4UD-K5-25W">
-                                <rect key="frame" x="128" y="195" width="259" height="26"/>
+                                <rect key="frame" x="128" y="171" width="259" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" placeholderString="Een deel van de naam / url van school" drawsBackground="YES" usesSingleLineMode="YES" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="Ijn-kD-Qbj">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </comboBoxCell>
-                                <connections>
-                                    <action selector="FindSchools:" target="6Qw-NS-pYn" id="hTu-5T-2qu"/>
-                                </connections>
                             </comboBox>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="I4J-80-Ls0">
-                                <rect key="frame" x="128" y="195" width="256" height="5"/>
+                                <rect key="frame" x="128" y="173" width="256" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOL-YT-i6R">
+                                <rect key="frame" x="200" y="203" width="114" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="School zoeken" id="JGJ-v3-469">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K93-1Y-2Zs">
+                                <rect key="frame" x="-2" y="49" width="516" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="tlz-49-tVW">
+                                    <font key="font" metaFont="systemBlack" size="13"/>
+                                    <color key="textColor" red="0.91128966970000003" green="0.045282913510000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="FindSchool" destination="4UD-K5-25W" id="0EI-EC-aUP"/>
+                        <outlet property="error" destination="K93-1Y-2Zs" id="4OK-TC-QwB"/>
                     </connections>
                 </viewController>
                 <customObject id="Zi3-0S-Kad" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -229,7 +239,7 @@
                 </viewController>
                 <customObject id="Jp6-iq-usF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629" y="223"/>
+            <point key="canvasLocation" x="637" y="223"/>
         </scene>
     </scenes>
     <resources>

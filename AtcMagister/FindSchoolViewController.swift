@@ -14,9 +14,6 @@ class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
 
     @IBOutlet weak var FindSchool: NSComboBox!
     
-    @IBAction func FindSchools(_ sender: Any) {
-        print(FindSchool.indexOfSelectedItem)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         FindSchool.delegate = self
@@ -35,8 +32,16 @@ class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
         }
     }
     
-    func comboBoxSelectionDidChange(_ notification: Notification) {
-        print("tets")
+    @IBOutlet weak var error: NSTextField!
+    
+    @IBAction func `continue`(_ sender: Any) {
+        let assigned = FindSchool.indexOfSelectedItem
+        if assigned == -1 {
+            error.stringValue = "Selecteer een school."
+        } else {
+            LoginViewController.school = FindSchool.itemObjectValue(at: assigned) as! String
+            AppDelegate.changeView(controller: LoginViewController.freshController())
+        }
     }
 }
 
