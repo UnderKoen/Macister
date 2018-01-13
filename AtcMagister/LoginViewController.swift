@@ -7,13 +7,14 @@
 //
 
 import Cocoa
+import SwiftHTTP
 
 class LoginViewController: NSViewController {
 
     @IBOutlet weak var UsernameTextField: NSTextField!
     @IBOutlet weak var PasswordTextField: NSSecureTextField!
     
-    static var school: String = ""
+    static var school: School = School(url: "", name: "", id: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,9 @@ class LoginViewController: NSViewController {
         if (UsernameTextField.stringValue == "") || (PasswordTextField.stringValue == "") {
             print("empty")
         } else {
-            print("do the authentication stuff")
+            HTTP.DELETE("https://domain.com/1") { response in
+                
+            }
         }
         
     }

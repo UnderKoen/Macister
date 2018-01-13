@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="637" y="223"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="gOw-sN-6JM">
             <objects>
-                <viewController id="N6g-wo-m3f" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="N6g-wo-m3f" customClass="MainViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="8De-mp-jsZ">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>

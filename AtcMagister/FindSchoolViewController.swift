@@ -39,8 +39,17 @@ class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
         if assigned == -1 {
             error.stringValue = "Selecteer een school."
         } else {
-            LoginViewController.school = FindSchool.itemObjectValue(at: assigned) as! String
             AppDelegate.changeView(controller: LoginViewController.freshController())
+            HTTP.GET("https://mijn.magister.net/api/schools", parameters: ["filter": FindSchool.itemObjectValue(at: assigned) as! String], headers: [:], requestSerializer: JSONParameterSerializer()) { response in
+                let data = response.data
+                do {
+                    let json = try JSON(data: data)
+                    let schoolJson = json.array?.first
+                    let school = School(url: schoolJson!["Url"].string ?? "", name: schoolJson!["Name"].string ?? "", id: schoolJson!["Id"].string ?? "")
+                    LoginViewController.school = school
+                    print(json.array?.first!["Url"].string ?? "")
+                } catch {}
+            }
         }
     }
 }
