@@ -28,7 +28,7 @@ class HttpUtil: NSObject {
     }
     
     static func httpGet(url: String, parameters: Parameters?, completionHandler: @escaping (DataResponse<Any>) -> () = { _ in }) {
-        Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: ["Cookie":cookies,"X-API-Client-ID":X_API_Client_ID]).responseJSON { (response) in
+        Alamofire.request(url, method: .get, parameters: parameters, headers: ["Cookie":cookies,"X-API-Client-ID":X_API_Client_ID]).responseJSON { (response) in
             storeCookies(response: response)
             completionHandler(response)
         }

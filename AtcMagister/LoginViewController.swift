@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import SwiftHTTP
 
 class LoginViewController: NSViewController {
 

@@ -7,8 +7,6 @@
 //
 
 import Cocoa
-import Alamofire
-import SwiftyJSON
 
 class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
 

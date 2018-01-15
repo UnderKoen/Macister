@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213920095243006BE4DA /* FindSchoolViewController.swift */; };
 		5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213B20095256006BE4DA /* LoginViewController.swift */; };
+		5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
+		5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DC32009274100909C42 /* AppDelegate.swift */; };
 		5DA27DC82009274100909C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC72009274100909C42 /* Assets.xcassets */; };
 		5DA27DCB2009274100909C42 /* Magister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* Magister.storyboard */; };
@@ -16,12 +18,10 @@
 		5DA27DE22009274100909C42 /* AtcMagisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */; };
 		5DAB9013200CB62E00705B36 /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAB9012200CB62E00705B36 /* HttpUtil.swift */; };
 		5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF54A42200BC89900278DAB /* EventMonitor.swift */; };
-		5DFAED55200A2FED000BC7CF /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5DFAED58200A422E000BC7CF /* SchoolUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED57200A422E000BC7CF /* SchoolUrl.swift */; };
 		5DFAED5A200A4298000BC7CF /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED59200A4298000BC7CF /* School.swift */; };
 		5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5B200A4792000BC7CF /* MainViewController.swift */; };
 		5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5D200A48B0000BC7CF /* Magister.swift */; };
-		5DFAED91200A5C9E000BC7CF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,8 +182,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DFAED91200A5C9E000BC7CF /* Alamofire.framework in Frameworks */,
-				5DFAED55200A2FED000BC7CF /* SwiftyJSON.framework in Frameworks */,
+				5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */,
+				5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +670,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 			};
 			name = Debug;
 		};
@@ -719,6 +720,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 			};
 			name = Release;
 		};
