@@ -26,14 +26,26 @@ class Profile: NSObject {
     var gebruikGeboortenaam:Bool?
     
     func getName() -> String {
-        return "\(roepNaam ?? "") \(tussenvoegsel ?? "") \(achternaam ?? "")"
+        if (tussenvoegsel == "") {
+            return "\(roepNaam ?? "") \(achternaam ?? "")"
+        } else {
+            return "\(roepNaam ?? "") \(tussenvoegsel ?? "") \(achternaam ?? "")"
+        }
     }
     
     func getOfficialName() -> String {
         if gebruikGeboortenaam! {
-            return "\(officieleVoornamen ?? "") \(geboortenaamTussenvoegsel ?? "") \(geboorteAchternaam ?? "")"
+            if (geboortenaamTussenvoegsel == "") {
+                return "\(officieleVoornamen ?? "") \(geboorteAchternaam ?? "")"
+            } else {
+                return "\(officieleVoornamen ?? "") \(geboortenaamTussenvoegsel ?? "") \(geboorteAchternaam ?? "")"
+            }
         } else {
-            return "\(officieleVoornamen ?? "") \(officieleTussenvoegsels ?? "") \(officieleAchternaam ?? "")"
+            if (officieleTussenvoegsels == "") {
+                return "\(officieleVoornamen ?? "") \(officieleAchternaam ?? "")"
+            } else {
+                return "\(officieleVoornamen ?? "") \(officieleTussenvoegsels ?? "") \(officieleAchternaam ?? "")"
+            }
         }
     }
     

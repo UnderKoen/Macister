@@ -293,26 +293,6 @@ DQ
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="proportionallyDown" image="MagisterLogo" id="Gc9-sH-UqG"/>
                                                     </imageView>
-                                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjL-rR-7Ij" userLabel="User Info">
-                                                        <rect key="frame" x="359" y="0.0" width="244" height="48"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <subviews>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCS-w6-EtR">
-                                                                <rect key="frame" x="-2" y="14" width="192" height="19"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Koen van Staveren" id="Whl-3m-qoX">
-                                                                    <font key="font" metaFont="system" size="16"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="deviceWhite"/>
-                                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                                                </textFieldCell>
-                                                            </textField>
-                                                            <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06F-MQ-nyM">
-                                                                <rect key="frame" x="196" y="0.0" width="48" height="48"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="NSUser" id="vCo-LR-Zpa"/>
-                                                            </imageView>
-                                                        </subviews>
-                                                    </customView>
                                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xg5-J3-KR2" userLabel="Buttons">
                                                         <rect key="frame" x="672" y="0.0" width="96" height="48"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -333,6 +313,26 @@ DQ
                                                                     <font key="font" metaFont="system"/>
                                                                 </buttonCell>
                                                             </button>
+                                                        </subviews>
+                                                    </customView>
+                                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjL-rR-7Ij" userLabel="User Info">
+                                                        <rect key="frame" x="344" y="0.0" width="320" height="48"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <subviews>
+                                                            <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06F-MQ-nyM">
+                                                                <rect key="frame" x="272" y="0.0" width="48" height="48"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="NSUser" id="vCo-LR-Zpa"/>
+                                                            </imageView>
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCS-w6-EtR">
+                                                                <rect key="frame" x="-2" y="14" width="268" height="19"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" id="Whl-3m-qoX">
+                                                                    <font key="font" metaFont="system" size="16"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="deviceWhite"/>
+                                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                                                </textFieldCell>
+                                                            </textField>
                                                         </subviews>
                                                     </customView>
                                                 </subviews>
@@ -1029,6 +1029,7 @@ DQ
                         <outlet property="agenda" destination="vqY-Fd-dM2" id="RjL-hj-LZp"/>
                         <outlet property="berichten" destination="kgB-sd-Lgu" id="lBl-OI-hQV"/>
                         <outlet property="cijfers" destination="UZz-eL-Chj" id="4Mj-a4-4US"/>
+                        <outlet property="userName" destination="cCS-w6-EtR" id="2Id-8h-aGm"/>
                     </connections>
                 </viewController>
                 <customObject id="urM-qP-Qdq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

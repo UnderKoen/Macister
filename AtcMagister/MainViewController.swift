@@ -14,9 +14,11 @@ class MainViewController: NSViewController {
     @IBOutlet weak var cijfers: NSView!
     @IBOutlet weak var agenda: NSView!
     
+    @IBOutlet weak var userName: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(Magister.magister?.getProfile()?.getName())
+        userName.stringValue = Magister.magister!.getProfile()!.getName()
     }
     
     @IBAction func switchTo(_ sender: Any) {
