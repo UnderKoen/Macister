@@ -11,6 +11,7 @@
 		5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213B20095256006BE4DA /* LoginViewController.swift */; };
 		5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
 		5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
+		5D8CB19E200D17C70073613D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CB19D200D17C70073613D /* Profile.swift */; };
 		5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DC32009274100909C42 /* AppDelegate.swift */; };
 		5DA27DC82009274100909C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC72009274100909C42 /* Assets.xcassets */; };
 		5DA27DCB2009274100909C42 /* Magister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* Magister.storyboard */; };
@@ -155,6 +156,7 @@
 /* Begin PBXFileReference section */
 		5D26213920095243006BE4DA /* FindSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSchoolViewController.swift; sourceTree = "<group>"; };
 		5D26213B20095256006BE4DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5D8CB19D200D17C70073613D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5DA27DC02009274100909C42 /* AtcMagister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtcMagister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DC32009274100909C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DA27DC72009274100909C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				5DFAED57200A422E000BC7CF /* SchoolUrl.swift */,
 				5DFAED59200A4298000BC7CF /* School.swift */,
 				5DFAED5D200A48B0000BC7CF /* Magister.swift */,
+				5D8CB19D200D17C70073613D /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */,
+				5D8CB19E200D17C70073613D /* Profile.swift in Sources */,
 				5DFAED58200A422E000BC7CF /* SchoolUrl.swift in Sources */,
 				5DAB9013200CB62E00705B36 /* HttpUtil.swift in Sources */,
 				5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */,

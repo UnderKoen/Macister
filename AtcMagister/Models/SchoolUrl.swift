@@ -9,37 +9,75 @@
 import Cocoa
 
 class SchoolUrl: NSObject {
-    var school:School;
+    var school:School
+    var profileId:Int?
+    var accountId:Int?
     
     init(school:School) {
-        self.school = school;
+        self.school = school
     }
     
     func getMagisterUrl() -> String {
-        return school.url + "/";
+        return school.url + "/"
     }
     
     func getApiUrl() -> String {
-        return getMagisterUrl() + "api/";
+        return getMagisterUrl() + "api/"
     }
     
     func getVersionUrl() -> String {
-        return getApiUrl() + "versie/";
+        return getApiUrl() + "versie/"
     }
     
     func getSessionUrl() -> String {
-        return getApiUrl() + "sessies/";
+        return getApiUrl() + "sessies/"
     }
     
     func getCurrentSessionUrl() -> String {
-        return getSessionUrl() + "huidige/";
+        return getSessionUrl() + "huidige/"
+    }
+    
+    func getUserUrl() -> String {
+        return getApiUrl() + "account/"
+    }
+    
+    //-------------------------==  PROFILE  ==-------------------------//
+    
+    func setProfileId(profileId:Int) {
+        self.profileId = profileId
+    }
+    
+    //------------==  PERSON  ==------------//
+    
+    func getPersonUrl() -> String {
+        return getApiUrl() + "personen/\(profileId!)/"
+    }
+    
+    func getStudiesUrl() -> String {
+        return getPersonUrl() + "/aanmeldingen"
+    }
+    
+    func getPhotoUrl() -> String {
+        return getPersonUrl() + "/foto"
+    }
+    
+    //------------==  STUDENT  ==------------//
+    
+    func getStudentUrl() -> String {
+        return getApiUrl() + "leerlingen/\(profileId!)/"
+    }
+    
+    func getAppointmentsUrl() -> String {
+        return getStudentUrl() + "/afspraken"
+    }
+    
+    //-------------------------==  ACCOUNT  ==-------------------------//
+    
+    func setAccountId(accountId:Int) {
+        self.accountId = accountId
     }
     
     func getAccountUrl() -> String {
-        return getApiUrl() + "account/";
-    }
-    
-    func getStudiesUrl(profileId:Int) -> String {
-        return getApiUrl() + "personen/" + "\(profileId)" + "/aanmeldingen";
+        return getApiUrl() + "accounts/\(accountId!)"
     }
 }

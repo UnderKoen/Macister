@@ -10,11 +10,27 @@ import Cocoa
 
 class MainViewController: NSViewController {
 
+    @IBOutlet weak var berichten: NSView!
+    @IBOutlet weak var cijfers: NSView!
+    @IBOutlet weak var agenda: NSView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        //print(Magister.magister?.getProfile()?.getName())
     }
     
+    @IBAction func switchTo(_ sender: Any) {
+        if let tab = sender as? NSClickGestureRecognizer {
+            let view = tab.view
+            if view == berichten {
+                print("berichten")
+            } else if view == cijfers {
+                print("cijfers")
+            } else if view == agenda {
+                //print(Magister.magister?.getProfile()?.getName())
+            }
+        }
+    }
 }
 
 extension MainViewController {

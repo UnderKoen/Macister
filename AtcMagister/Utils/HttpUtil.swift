@@ -20,14 +20,14 @@ class HttpUtil: NSObject {
         }
     }
     
-    static func httpPost(url: String, parameters: Parameters?, completionHandler: @escaping (DataResponse<Any>) -> () = { _ in }) {
+    static func httpPost(url: String, parameters: Parameters = [:], completionHandler: @escaping (DataResponse<Any>) -> () = { _ in }) {
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: ["Cookie":cookies,"X-API-Client-ID":X_API_Client_ID]).responseJSON { (response) in
             storeCookies(response: response)
             completionHandler(response)
         }
     }
     
-    static func httpGet(url: String, parameters: Parameters?, completionHandler: @escaping (DataResponse<Any>) -> () = { _ in }) {
+    static func httpGet(url: String, parameters: Parameters = [:], completionHandler: @escaping (DataResponse<Any>) -> () = { _ in }) {
         Alamofire.request(url, method: .get, parameters: parameters, headers: ["Cookie":cookies,"X-API-Client-ID":X_API_Client_ID]).responseJSON { (response) in
             storeCookies(response: response)
             completionHandler(response)

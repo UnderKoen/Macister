@@ -11,25 +11,23 @@ import Alamofire
 import SwiftyJSON
 
 class Magister: NSObject {
-    static var magister:Magister? = nil
+    static var magister:Magister?
     
-    var school:School
-    var schoolUrl:SchoolUrl
+    private var school:School
+    private var schoolUrl:SchoolUrl
+    private var profile:Profile?
     
     init(school: School) {
         self.school = school
         self.schoolUrl = SchoolUrl(school: self.school)
-        super.init()
     }
     
     func getSchoolUrl() -> SchoolUrl {
         return schoolUrl
     }
     
-    var cookies:String = ""
-    
-    func setCookies(cookies: String) {
-        self.cookies = cookies
+    func getProfile() -> Profile? {
+        return profile
     }
     
     func logout() {
@@ -47,12 +45,22 @@ class Magister: NSObject {
                     let json = try JSON(data: response.data!)
                     let msg = json["message"]
                     if msg == JSON.null {
-                        onSucces()
+                        self.init_magister(onSucces)
                     } else {
                         onError(msg.string!)
                     }
                 } catch {}
             })
+        }
+    }
+    
+    private func init_magister(_ whenDone: @escaping () -> Void) {
+        profile = Profile.init(magister: self)
+        DispatchQueue.global().async {
+            while !self.profile!.done {
+                sleep(UInt32(0.1))
+            }
+            whenDone()
         }
     }
 }

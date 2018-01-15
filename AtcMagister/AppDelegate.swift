@@ -34,9 +34,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     static func changeView(controller:  NSViewController) {
-        let newSize = NSSize.init(width: controller.view.frame.size.width, height: controller.view.frame.size.height)
-        popover.contentSize = newSize
-        popover.contentViewController = controller
+        DispatchQueue.main.async {
+            let newSize = NSSize.init(width: controller.view.frame.size.width, height: controller.view.frame.size.height)
+            popover.contentSize = newSize
+            popover.contentViewController = controller
+        }
     }
 
     @objc func togglePopover(_ sender: Any?) {
