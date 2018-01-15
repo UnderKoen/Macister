@@ -14,6 +14,8 @@
 		5DA27DCB2009274100909C42 /* Magister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* Magister.storyboard */; };
 		5DA27DD72009274100909C42 /* AtcMagisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DD62009274100909C42 /* AtcMagisterTests.swift */; };
 		5DA27DE22009274100909C42 /* AtcMagisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */; };
+		5DAB9013200CB62E00705B36 /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAB9012200CB62E00705B36 /* HttpUtil.swift */; };
+		5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF54A42200BC89900278DAB /* EventMonitor.swift */; };
 		5DFAED55200A2FED000BC7CF /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5DFAED58200A422E000BC7CF /* SchoolUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED57200A422E000BC7CF /* SchoolUrl.swift */; };
 		5DFAED5A200A4298000BC7CF /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED59200A4298000BC7CF /* School.swift */; };
@@ -165,6 +167,8 @@
 		5DA27DDD2009274100909C42 /* AtcMagisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtcMagisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtcMagisterUITests.swift; sourceTree = "<group>"; };
 		5DA27DE32009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DAB9012200CB62E00705B36 /* HttpUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
+		5DF54A42200BC89900278DAB /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = Libs/SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		5DFAED57200A422E000BC7CF /* SchoolUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolUrl.swift; sourceTree = "<group>"; };
 		5DFAED59200A4298000BC7CF /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 		5DA27DC22009274100909C42 /* AtcMagister */ = {
 			isa = PBXGroup;
 			children = (
+				5DAB9001200CB60A00705B36 /* Utils */,
 				5DFAED56200A420C000BC7CF /* Models */,
 				5DA27DC32009274100909C42 /* AppDelegate.swift */,
 				5DA27DC72009274100909C42 /* Assets.xcassets */,
@@ -242,6 +247,7 @@
 				5D26213920095243006BE4DA /* FindSchoolViewController.swift */,
 				5D26213B20095256006BE4DA /* LoginViewController.swift */,
 				5DFAED5B200A4792000BC7CF /* MainViewController.swift */,
+				5DF54A42200BC89900278DAB /* EventMonitor.swift */,
 			);
 			path = AtcMagister;
 			sourceTree = "<group>";
@@ -262,6 +268,14 @@
 				5DA27DE32009274100909C42 /* Info.plist */,
 			);
 			path = AtcMagisterUITests;
+			sourceTree = "<group>";
+		};
+		5DAB9001200CB60A00705B36 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5DAB9012200CB62E00705B36 /* HttpUtil.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		5DFAED3C200A2FD6000BC7CF /* Products */ = {
@@ -549,11 +563,13 @@
 			files = (
 				5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */,
 				5DFAED58200A422E000BC7CF /* SchoolUrl.swift in Sources */,
+				5DAB9013200CB62E00705B36 /* HttpUtil.swift in Sources */,
 				5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */,
 				5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */,
 				5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */,
 				5DFAED5A200A4298000BC7CF /* School.swift in Sources */,
 				5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */,
+				5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

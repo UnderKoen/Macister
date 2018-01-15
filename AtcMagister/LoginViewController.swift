@@ -13,6 +13,7 @@ class LoginViewController: NSViewController {
 
     @IBOutlet weak var UsernameTextField: NSTextField!
     @IBOutlet weak var PasswordTextField: NSSecureTextField!
+    @IBOutlet weak var error: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +21,12 @@ class LoginViewController: NSViewController {
     
     @IBAction func Buttonaction(_ sender: Any) {
         if (UsernameTextField.stringValue == "") || (PasswordTextField.stringValue == "") {
-            print("empty")
+            error.stringValue = "Niet alles is ingevuld"
         } else {
             Magister.magister?.login(username: UsernameTextField.stringValue, password: PasswordTextField.stringValue, onError: { (error) in
-                print(error)
+                self.error.stringValue = "Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord."
             }, onSucces: {
-                print("yeah")
+                AppDelegate.changeView(controller: MainViewController.freshController())
             })
         }
     }

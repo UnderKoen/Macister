@@ -21,14 +21,10 @@ class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
     
     override func controlTextDidChange(_ obj: Notification) {
         FindSchool.removeAllItems()
-        Alamofire.request("https://mijn.magister.net/api/schools", method: .get, parameters: ["filter": FindSchool.stringValue]).responseJSON { (response) in
-            let data = response.data
-            do {
-                let json = try JSON(data: data!)
-                json.array?.forEach({ (json) in
-                    self.FindSchool.addItem(withObjectValue: json["Name"].string ?? "")
-                })
-            } catch {}
+        School.findSchools(filter: FindSchool.stringValue) { (schools) in
+            schools.forEach({ (school) in
+                self.FindSchool.addItem(withObjectValue: school.name)
+            })
         }
     }
     
@@ -40,15 +36,9 @@ class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
             error.stringValue = "Selecteer een school."
         } else {
             AppDelegate.changeView(controller: LoginViewController.freshController())
-            Alamofire.request("https://mijn.magister.net/api/schools", method: .get, parameters: ["filter": FindSchool.stringValue]).responseJSON { (response) in
-                let data = response.data
-                do {
-                    let json = try JSON(data: data!)
-                    let schoolJson = json.array?.first
-                    let school = School(url: schoolJson!["Url"].string ?? "", name: schoolJson!["Name"].string ?? "", id: schoolJson!["Id"].string ?? "")
-                    Magister.magister = Magister(school: school)
-                } catch {}
-            }
+            School.findSchools(filter: FindSchool.stringValue, completionHandler: { (schools) in
+                Magister.magister = Magister(school: schools.first!)
+            })
         }
     }
 }

@@ -33,15 +33,16 @@ class Magister: NSObject {
     }
     
     func logout() {
-        Alamofire.request(schoolUrl.getCurrentSessionUrl(), method: .delete, encoding: JSONEncoding.default, headers: ["X-API-Client-ID":"12D8"]).responseJSON { (response) in
-            self.setCookies(cookies: response.response?.allHeaderFields["Set-Cookie"] as! String)
-        }
+        HttpUtil.httpDelete(url: schoolUrl.getCurrentSessionUrl())
     }
     
     func login(username: String, password: String, onError: @escaping (_ error: String) -> Void, onSucces: @escaping () -> Void) {
         logout()
         DispatchQueue.global().async {
-            Alamofire.request(self.schoolUrl.getSessionUrl(), method: .post, parameters: ["Gebruikersnaam":username,"Wachtwoord":password], encoding: JSONEncoding.default, headers: ["Cookie":self.cookies,"X-API-Client-ID":"12D8","Content-Type":"application/json"]).responseJSON { (response) in
+            while(HttpUtil.cookies == "") {
+                sleep(UInt32(0.1))
+            }
+            HttpUtil.httpPost(url: self.schoolUrl.getSessionUrl(), parameters: ["Gebruikersnaam":username,"Wachtwoord":password,"IngelogdBlijven":true], completionHandler: { (response) in
                 do {
                     let json = try JSON(data: response.data!)
                     let msg = json["message"]
@@ -51,7 +52,7 @@ class Magister: NSObject {
                         onError(msg.string!)
                     }
                 } catch {}
-            }
+            })
         }
     }
 }
