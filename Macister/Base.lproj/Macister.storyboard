@@ -242,14 +242,18 @@ DQ
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTh-Wc-nQG">
-                                            <rect key="frame" x="-2" y="64" width="516" height="17"/>
+                                            <rect key="frame" x="-2" y="64" width="516" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="xjb-yg-YAg">
-                                                <font key="font" metaFont="systemBlack" size="12"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="xjb-yg-YAg">
+                                                <font key="font" metaFont="system"/>
                                                 <color key="textColor" red="0.91128966968911918" green="0.045282913505808153" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <progressIndicator hidden="YES" wantsLayer="YES" fixedFrame="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="uyR-Ei-mRY">
+                                            <rect key="frame" x="128" y="63" width="256" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" red="0.93136738990000001" green="0.93136738990000001" blue="0.93136738990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -260,6 +264,7 @@ DQ
                         <outlet property="PasswordTextField" destination="9Ab-aA-cWq" id="Vyg-O9-vrk"/>
                         <outlet property="UsernameTextField" destination="2hR-5D-4Cz" id="Oc7-4w-FcK"/>
                         <outlet property="error" destination="UTh-Wc-nQG" id="jnc-0t-Cbm"/>
+                        <outlet property="progressBar" destination="uyR-Ei-mRY" id="jlq-t8-BTE"/>
                     </connections>
                 </viewController>
                 <customObject id="Jp6-iq-usF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

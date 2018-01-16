@@ -20,14 +20,12 @@ class MainViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userName.stringValue = Magister.magister!.getProfile()!.getName()
-        profileImage.image = Magister.magister!.getProfile()!.profielFoto!
+        userName.stringValue = Magister.magister!.getPerson()!.getName()
+        profileImage.image = Magister.magister!.getPerson()!.profielFoto!
         profileImage.wantsLayer = true
         profileImage.image?.size=profileImage.frame.size
         profileImage.layer?.cornerRadius = profileImage.frame.size.width/2
         profileImage.layer?.masksToBounds = true
-        //profileImage.layer?.borderWidth = 2
-        profileImage.layer?.borderColor = CGColor.white
     }
     
     @IBAction func switchTo(_ sender: Any) {
