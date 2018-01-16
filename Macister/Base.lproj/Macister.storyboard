@@ -63,7 +63,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="AtcMagister" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Macister" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,7 +72,7 @@
         <!--Find School View Controller-->
         <scene sceneID="Rik-mA-wWr">
             <objects>
-                <viewController storyboardIdentifier="FindSchoolViewController" id="6Qw-NS-pYn" customClass="FindSchoolViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindSchoolViewController" id="6Qw-NS-pYn" customClass="FindSchoolViewController" customModule="Macister" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Kzq-31-a9h">
                         <rect key="frame" x="0.0" y="0.0" width="512" height="320"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -159,7 +159,7 @@ DQ
         <!--Login View Controller-->
         <scene sceneID="cm5-FS-Rvo">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="mgu-oi-REs" customClass="LoginViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="mgu-oi-REs" customClass="LoginViewController" customModule="Macister" customModuleProvider="target" sceneMemberID="viewController">
                     <customView key="view" id="4wt-0h-fT8" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="512" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -268,7 +268,7 @@ DQ
         <!--Main View Controller-->
         <scene sceneID="gOw-sN-6JM">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="N6g-wo-m3f" customClass="MainViewController" customModule="AtcMagister" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="N6g-wo-m3f" customClass="MainViewController" customModule="Macister" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="8De-mp-jsZ">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="704"/>
                         <autoresizingMask key="autoresizingMask"/>
