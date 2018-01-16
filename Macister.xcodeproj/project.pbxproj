@@ -32,14 +32,14 @@
 			containerPortal = 5DA27DB82009274100909C42 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5DA27DBF2009274100909C42;
-			remoteInfo = AtcMagister;
+			remoteInfo = Macister;
 		};
 		5DA27DDE2009274100909C42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5DA27DB82009274100909C42 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5DA27DBF2009274100909C42;
-			remoteInfo = AtcMagister;
+			remoteInfo = Macister;
 		};
 		5DFAED46200A2FD6000BC7CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -339,7 +339,7 @@
 			dependencies = (
 			);
 			name = Macister;
-			productName = AtcMagister;
+			productName = Macister;
 			productReference = 5DA27DC02009274100909C42 /* Macister.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -357,7 +357,7 @@
 				5DA27DD42009274100909C42 /* PBXTargetDependency */,
 			);
 			name = MacisterTests;
-			productName = AtcMagisterTests;
+			productName = MacisterTests;
 			productReference = 5DA27DD22009274100909C42 /* MacisterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -375,7 +375,7 @@
 				5DA27DDF2009274100909C42 /* PBXTargetDependency */,
 			);
 			name = MacisterUITests;
-			productName = AtcMagisterUITests;
+			productName = MacisterUITests;
 			productReference = 5DA27DDD2009274100909C42 /* MacisterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -748,7 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = AtcMagister/Info.plist;
+				INFOPLIST_FILE = Macister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -764,7 +764,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = AtcMagister/Info.plist;
+				INFOPLIST_FILE = Macister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -779,9 +779,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = AtcMagisterTests/Info.plist;
+				INFOPLIST_FILE = MacisterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagisterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.MacisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Macister.app/Contents/MacOS/Macister";
@@ -795,9 +795,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = AtcMagisterTests/Info.plist;
+				INFOPLIST_FILE = MacisterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagisterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.MacisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Macister.app/Contents/MacOS/Macister";
@@ -810,12 +810,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = AtcMagisterUITests/Info.plist;
+				INFOPLIST_FILE = MacisterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagisterUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.MacisterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = AtcMagister;
+				TEST_TARGET_NAME = Macister;
 			};
 			name = Debug;
 		};
@@ -825,12 +825,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = AtcMagisterUITests/Info.plist;
+				INFOPLIST_FILE = MacisterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagisterUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.MacisterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = AtcMagister;
+				TEST_TARGET_NAME = Macister;
 			};
 			name = Release;
 		};
