@@ -1,6 +1,6 @@
 //
-//  AtcMagisterUITests.swift
-//  AtcMagisterUITests
+//  MacisterUITests.swift
+//  MacisterUITests
 //
 //  Created by Koen van Staveren on 12/01/2018.
 //  Copyright © 2018 Koen van Staveren. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class AtcMagisterUITests: XCTestCase {
+class MacisterUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

@@ -27,7 +27,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2018 Koen van Staveren. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
-	<string>Magister</string>
+	<string>Macister</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

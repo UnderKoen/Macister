@@ -15,9 +15,9 @@
 		5DA11AB1200D55D6001785F2 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA11AB0200D55D6001785F2 /* FileUtil.swift */; };
 		5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DC32009274100909C42 /* AppDelegate.swift */; };
 		5DA27DC82009274100909C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC72009274100909C42 /* Assets.xcassets */; };
-		5DA27DCB2009274100909C42 /* Magister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* Magister.storyboard */; };
-		5DA27DD72009274100909C42 /* AtcMagisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DD62009274100909C42 /* AtcMagisterTests.swift */; };
-		5DA27DE22009274100909C42 /* AtcMagisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */; };
+		5DA27DCB2009274100909C42 /* Macister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* Macister.storyboard */; };
+		5DA27DD72009274100909C42 /* MacisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DD62009274100909C42 /* MacisterTests.swift */; };
+		5DA27DE22009274100909C42 /* MacisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DE12009274100909C42 /* MacisterUITests.swift */; };
 		5DAB9013200CB62E00705B36 /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAB9012200CB62E00705B36 /* HttpUtil.swift */; };
 		5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF54A42200BC89900278DAB /* EventMonitor.swift */; };
 		5DFAED58200A422E000BC7CF /* SchoolUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED57200A422E000BC7CF /* SchoolUrl.swift */; };
@@ -159,17 +159,17 @@
 		5D26213B20095256006BE4DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5D8CB19D200D17C70073613D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5DA11AB0200D55D6001785F2 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
-		5DA27DC02009274100909C42 /* AtcMagister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtcMagister.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA27DC02009274100909C42 /* Macister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DC32009274100909C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DA27DC72009274100909C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5DA27DCA2009274100909C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Magister.storyboard; sourceTree = "<group>"; };
+		5DA27DCA2009274100909C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Macister.storyboard; sourceTree = "<group>"; };
 		5DA27DCC2009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DA27DCD2009274100909C42 /* AtcMagister.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AtcMagister.entitlements; sourceTree = "<group>"; };
-		5DA27DD22009274100909C42 /* AtcMagisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtcMagisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DA27DD62009274100909C42 /* AtcMagisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtcMagisterTests.swift; sourceTree = "<group>"; };
+		5DA27DCD2009274100909C42 /* Macister.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Macister.entitlements; sourceTree = "<group>"; };
+		5DA27DD22009274100909C42 /* MacisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA27DD62009274100909C42 /* MacisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacisterTests.swift; sourceTree = "<group>"; };
 		5DA27DD82009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DA27DDD2009274100909C42 /* AtcMagisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtcMagisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtcMagisterUITests.swift; sourceTree = "<group>"; };
+		5DA27DDD2009274100909C42 /* MacisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA27DE12009274100909C42 /* MacisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacisterUITests.swift; sourceTree = "<group>"; };
 		5DA27DE32009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DAB9012200CB62E00705B36 /* HttpUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
 		5DF54A42200BC89900278DAB /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
@@ -220,9 +220,9 @@
 			children = (
 				5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */,
 				5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */,
-				5DA27DC22009274100909C42 /* AtcMagister */,
-				5DA27DD52009274100909C42 /* AtcMagisterTests */,
-				5DA27DE02009274100909C42 /* AtcMagisterUITests */,
+				5DA27DC22009274100909C42 /* Macister */,
+				5DA27DD52009274100909C42 /* MacisterTests */,
+				5DA27DE02009274100909C42 /* MacisterUITests */,
 				5DA27DC12009274100909C42 /* Products */,
 				5D2621FA2009678B006BE4DA /* Frameworks */,
 			);
@@ -231,47 +231,47 @@
 		5DA27DC12009274100909C42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5DA27DC02009274100909C42 /* AtcMagister.app */,
-				5DA27DD22009274100909C42 /* AtcMagisterTests.xctest */,
-				5DA27DDD2009274100909C42 /* AtcMagisterUITests.xctest */,
+				5DA27DC02009274100909C42 /* Macister.app */,
+				5DA27DD22009274100909C42 /* MacisterTests.xctest */,
+				5DA27DDD2009274100909C42 /* MacisterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5DA27DC22009274100909C42 /* AtcMagister */ = {
+		5DA27DC22009274100909C42 /* Macister */ = {
 			isa = PBXGroup;
 			children = (
 				5DAB9001200CB60A00705B36 /* Utils */,
 				5DFAED56200A420C000BC7CF /* Models */,
 				5DA27DC32009274100909C42 /* AppDelegate.swift */,
 				5DA27DC72009274100909C42 /* Assets.xcassets */,
-				5DA27DC92009274100909C42 /* Magister.storyboard */,
+				5DA27DC92009274100909C42 /* Macister.storyboard */,
 				5DA27DCC2009274100909C42 /* Info.plist */,
-				5DA27DCD2009274100909C42 /* AtcMagister.entitlements */,
+				5DA27DCD2009274100909C42 /* Macister.entitlements */,
 				5D26213920095243006BE4DA /* FindSchoolViewController.swift */,
 				5D26213B20095256006BE4DA /* LoginViewController.swift */,
 				5DFAED5B200A4792000BC7CF /* MainViewController.swift */,
 				5DF54A42200BC89900278DAB /* EventMonitor.swift */,
 			);
-			path = AtcMagister;
+			path = Macister;
 			sourceTree = "<group>";
 		};
-		5DA27DD52009274100909C42 /* AtcMagisterTests */ = {
+		5DA27DD52009274100909C42 /* MacisterTests */ = {
 			isa = PBXGroup;
 			children = (
-				5DA27DD62009274100909C42 /* AtcMagisterTests.swift */,
+				5DA27DD62009274100909C42 /* MacisterTests.swift */,
 				5DA27DD82009274100909C42 /* Info.plist */,
 			);
-			path = AtcMagisterTests;
+			path = MacisterTests;
 			sourceTree = "<group>";
 		};
-		5DA27DE02009274100909C42 /* AtcMagisterUITests */ = {
+		5DA27DE02009274100909C42 /* MacisterUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5DA27DE12009274100909C42 /* AtcMagisterUITests.swift */,
+				5DA27DE12009274100909C42 /* MacisterUITests.swift */,
 				5DA27DE32009274100909C42 /* Info.plist */,
 			);
-			path = AtcMagisterUITests;
+			path = MacisterUITests;
 			sourceTree = "<group>";
 		};
 		5DAB9001200CB60A00705B36 /* Utils */ = {
@@ -325,9 +325,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5DA27DBF2009274100909C42 /* AtcMagister */ = {
+		5DA27DBF2009274100909C42 /* Macister */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DA27DE62009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagister" */;
+			buildConfigurationList = 5DA27DE62009274100909C42 /* Build configuration list for PBXNativeTarget "Macister" */;
 			buildPhases = (
 				5DA27DBC2009274100909C42 /* Sources */,
 				5DA27DBD2009274100909C42 /* Frameworks */,
@@ -338,14 +338,14 @@
 			);
 			dependencies = (
 			);
-			name = AtcMagister;
+			name = Macister;
 			productName = AtcMagister;
-			productReference = 5DA27DC02009274100909C42 /* AtcMagister.app */;
+			productReference = 5DA27DC02009274100909C42 /* Macister.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5DA27DD12009274100909C42 /* AtcMagisterTests */ = {
+		5DA27DD12009274100909C42 /* MacisterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DA27DE92009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagisterTests" */;
+			buildConfigurationList = 5DA27DE92009274100909C42 /* Build configuration list for PBXNativeTarget "MacisterTests" */;
 			buildPhases = (
 				5DA27DCE2009274100909C42 /* Sources */,
 				5DA27DCF2009274100909C42 /* Frameworks */,
@@ -356,14 +356,14 @@
 			dependencies = (
 				5DA27DD42009274100909C42 /* PBXTargetDependency */,
 			);
-			name = AtcMagisterTests;
+			name = MacisterTests;
 			productName = AtcMagisterTests;
-			productReference = 5DA27DD22009274100909C42 /* AtcMagisterTests.xctest */;
+			productReference = 5DA27DD22009274100909C42 /* MacisterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5DA27DDC2009274100909C42 /* AtcMagisterUITests */ = {
+		5DA27DDC2009274100909C42 /* MacisterUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DA27DEC2009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagisterUITests" */;
+			buildConfigurationList = 5DA27DEC2009274100909C42 /* Build configuration list for PBXNativeTarget "MacisterUITests" */;
 			buildPhases = (
 				5DA27DD92009274100909C42 /* Sources */,
 				5DA27DDA2009274100909C42 /* Frameworks */,
@@ -374,9 +374,9 @@
 			dependencies = (
 				5DA27DDF2009274100909C42 /* PBXTargetDependency */,
 			);
-			name = AtcMagisterUITests;
+			name = MacisterUITests;
 			productName = AtcMagisterUITests;
-			productReference = 5DA27DDD2009274100909C42 /* AtcMagisterUITests.xctest */;
+			productReference = 5DA27DDD2009274100909C42 /* MacisterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -413,7 +413,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5DA27DBB2009274100909C42 /* Build configuration list for PBXProject "AtcMagister" */;
+			buildConfigurationList = 5DA27DBB2009274100909C42 /* Build configuration list for PBXProject "Macister" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -436,9 +436,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				5DA27DBF2009274100909C42 /* AtcMagister */,
-				5DA27DD12009274100909C42 /* AtcMagisterTests */,
-				5DA27DDC2009274100909C42 /* AtcMagisterUITests */,
+				5DA27DBF2009274100909C42 /* Macister */,
+				5DA27DD12009274100909C42 /* MacisterTests */,
+				5DA27DDC2009274100909C42 /* MacisterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -550,7 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DA27DC82009274100909C42 /* Assets.xcassets in Resources */,
-				5DA27DCB2009274100909C42 /* Magister.storyboard in Resources */,
+				5DA27DCB2009274100909C42 /* Macister.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA27DD72009274100909C42 /* AtcMagisterTests.swift in Sources */,
+				5DA27DD72009274100909C42 /* MacisterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,7 +601,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA27DE22009274100909C42 /* AtcMagisterUITests.swift in Sources */,
+				5DA27DE22009274100909C42 /* MacisterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,23 +610,23 @@
 /* Begin PBXTargetDependency section */
 		5DA27DD42009274100909C42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5DA27DBF2009274100909C42 /* AtcMagister */;
+			target = 5DA27DBF2009274100909C42 /* Macister */;
 			targetProxy = 5DA27DD32009274100909C42 /* PBXContainerItemProxy */;
 		};
 		5DA27DDF2009274100909C42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5DA27DBF2009274100909C42 /* AtcMagister */;
+			target = 5DA27DBF2009274100909C42 /* Macister */;
 			targetProxy = 5DA27DDE2009274100909C42 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5DA27DC92009274100909C42 /* Magister.storyboard */ = {
+		5DA27DC92009274100909C42 /* Macister.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5DA27DCA2009274100909C42 /* Base */,
 			);
-			name = Magister.storyboard;
+			name = Macister.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -747,10 +747,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KN7JU6NLR4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AtcMagister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagister;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -763,10 +763,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KN7JU6NLR4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AtcMagister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagister;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -784,7 +784,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AtcMagister.app/Contents/MacOS/AtcMagister";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Macister.app/Contents/MacOS/Macister";
 			};
 			name = Debug;
 		};
@@ -800,7 +800,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.AtcMagisterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AtcMagister.app/Contents/MacOS/AtcMagister";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Macister.app/Contents/MacOS/Macister";
 			};
 			name = Release;
 		};
@@ -837,7 +837,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5DA27DBB2009274100909C42 /* Build configuration list for PBXProject "AtcMagister" */ = {
+		5DA27DBB2009274100909C42 /* Build configuration list for PBXProject "Macister" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DA27DE42009274100909C42 /* Debug */,
@@ -846,7 +846,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DA27DE62009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagister" */ = {
+		5DA27DE62009274100909C42 /* Build configuration list for PBXNativeTarget "Macister" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DA27DE72009274100909C42 /* Debug */,
@@ -855,7 +855,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DA27DE92009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagisterTests" */ = {
+		5DA27DE92009274100909C42 /* Build configuration list for PBXNativeTarget "MacisterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DA27DEA2009274100909C42 /* Debug */,
@@ -864,7 +864,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DA27DEC2009274100909C42 /* Build configuration list for PBXNativeTarget "AtcMagisterUITests" */ = {
+		5DA27DEC2009274100909C42 /* Build configuration list for PBXNativeTarget "MacisterUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DA27DED2009274100909C42 /* Debug */,

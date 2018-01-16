@@ -1,6 +1,6 @@
 //
 //  MainViewController.swift
-//  AtcMagister
+//  Macister
 //
 //  Created by Koen van Staveren on 13/01/2018.
 //  Copyright © 2018 Koen van Staveren. All rights reserved.
@@ -23,8 +23,6 @@ class MainViewController: NSViewController {
         userName.stringValue = Magister.magister!.getProfile()!.getName()
         profileImage.image = Magister.magister!.getProfile()!.profielFoto!
         profileImage.wantsLayer = true
-        //print(profileImage.frame.size)
-        //print(profileImage.image?.size)
         profileImage.image?.size=profileImage.frame.size
         profileImage.layer?.cornerRadius = profileImage.frame.size.width/2
         profileImage.layer?.masksToBounds = true
