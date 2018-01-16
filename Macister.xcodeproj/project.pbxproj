@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213920095243006BE4DA /* FindSchoolViewController.swift */; };
 		5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213B20095256006BE4DA /* LoginViewController.swift */; };
+		5D546096200DE8D4002C0D74 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D546095200DE8D4002C0D74 /* TodayViewController.swift */; };
+		5D5460A9200DE9FD002C0D74 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */; };
 		5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
 		5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5D8CB19E200D17C70073613D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CB19D200D17C70073613D /* Profile.swift */; };
@@ -157,6 +159,8 @@
 /* Begin PBXFileReference section */
 		5D26213920095243006BE4DA /* FindSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSchoolViewController.swift; sourceTree = "<group>"; };
 		5D26213B20095256006BE4DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5D546095200DE8D4002C0D74 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		5D8CB19D200D17C70073613D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		5DA11AB0200D55D6001785F2 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		5DA27DC02009274100909C42 /* Macister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macister.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +256,8 @@
 				5D26213B20095256006BE4DA /* LoginViewController.swift */,
 				5DFAED5B200A4792000BC7CF /* MainViewController.swift */,
 				5DF54A42200BC89900278DAB /* EventMonitor.swift */,
+				5D546095200DE8D4002C0D74 /* TodayViewController.swift */,
+				5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */,
 			);
 			path = Macister;
 			sourceTree = "<group>";
@@ -583,6 +589,8 @@
 				5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */,
 				5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */,
 				5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */,
+				5D5460A9200DE9FD002C0D74 /* CalendarViewController.swift in Sources */,
+				5D546096200DE8D4002C0D74 /* TodayViewController.swift in Sources */,
 				5DFAED5A200A4298000BC7CF /* School.swift in Sources */,
 				5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */,
 				5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */,

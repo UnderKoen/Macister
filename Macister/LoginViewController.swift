@@ -25,7 +25,7 @@ class LoginViewController: NSViewController {
             Magister.magister?.login(username: UsernameTextField.stringValue, password: PasswordTextField.stringValue, onError: { (error) in
                 self.error.stringValue = "Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord."
             }, onSucces: {
-                AppDelegate.changeView(controller: MainViewController.freshController())
+                AppDelegate.changeView(controller: TodayViewController.freshController())
             })
         }
     }
