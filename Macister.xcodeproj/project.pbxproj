@@ -748,7 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = AtcMagister/Info.plist;
+				INFOPLIST_FILE = Macister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -764,7 +764,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = AtcMagister/Info.plist;
+				INFOPLIST_FILE = Macister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;
 				PRODUCT_NAME = "$(TARGET_NAME)";

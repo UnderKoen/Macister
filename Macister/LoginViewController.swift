@@ -34,7 +34,7 @@ class LoginViewController: NSViewController {
 
 extension LoginViewController {
     static func freshController() -> LoginViewController {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Magister"), bundle: nil)
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Macister"), bundle: nil)
         let identifier = NSStoryboard.SceneIdentifier(rawValue: "LoginViewController")
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? LoginViewController else {
             fatalError("Why cant i find LoginViewController?")

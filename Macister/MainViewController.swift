@@ -46,7 +46,7 @@ class MainViewController: NSViewController {
 
 extension MainViewController {
     static func freshController() -> MainViewController {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Magister"), bundle: nil)
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Macister"), bundle: nil)
         let identifier = NSStoryboard.SceneIdentifier(rawValue: "MainViewController")
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? MainViewController else {
             fatalError("Why cant i find MainViewController?")
