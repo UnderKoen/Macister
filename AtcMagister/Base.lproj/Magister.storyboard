@@ -298,9 +298,9 @@ DQ
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <subviews>
                                                             <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06F-MQ-nyM">
-                                                                <rect key="frame" x="272" y="0.0" width="48" height="48"/>
+                                                                <rect key="frame" x="280" y="8" width="32" height="34"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
-                                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="NSUser" id="vCo-LR-Zpa"/>
+                                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" id="vCo-LR-Zpa"/>
                                                             </imageView>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCS-w6-EtR">
                                                                 <rect key="frame" x="-2" y="14" width="268" height="19"/>
@@ -1029,6 +1029,7 @@ DQ
                         <outlet property="agenda" destination="vqY-Fd-dM2" id="RjL-hj-LZp"/>
                         <outlet property="berichten" destination="kgB-sd-Lgu" id="lBl-OI-hQV"/>
                         <outlet property="cijfers" destination="UZz-eL-Chj" id="4Mj-a4-4US"/>
+                        <outlet property="profileImage" destination="06F-MQ-nyM" id="Tlx-zW-AAG"/>
                         <outlet property="userName" destination="cCS-w6-EtR" id="2Id-8h-aGm"/>
                     </connections>
                 </viewController>
@@ -1501,7 +1502,6 @@ DQ
         <image name="MagisterLogo" width="1024" height="382"/>
         <image name="NSGoLeftTemplate" width="9" height="12"/>
         <image name="NSGoRightTemplate" width="9" height="12"/>
-        <image name="NSUser" width="32" height="32"/>
         <image name="Tab" width="192" height="32"/>
         <image name="ic_date_range_white" width="24" height="24"/>
         <image name="ic_email_white" width="24" height="24"/>

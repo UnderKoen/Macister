@@ -58,7 +58,7 @@ class SchoolUrl: NSObject {
     }
     
     func getPhotoUrl() -> String {
-        return getPersonUrl() + "/foto"
+        return getPersonUrl() + "foto/"
     }
     
     //------------==  STUDENT  ==------------//

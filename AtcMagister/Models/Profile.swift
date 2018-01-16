@@ -24,6 +24,7 @@ class Profile: NSObject {
     var geboorteAchternaam:String?
     var geboortenaamTussenvoegsel:String?
     var gebruikGeboortenaam:Bool?
+    var profielFoto:NSImage?
     
     func getName() -> String {
         if (tussenvoegsel == nil) {
@@ -67,8 +68,14 @@ class Profile: NSObject {
                 self.geboorteAchternaam = person["GeboorteAchternaam"].string
                 self.geboortenaamTussenvoegsel = person["GeboortenaamTussenvoegsel"].string
                 self.gebruikGeboortenaam = person["GebruikGeboortenaam"].bool
+                magister.getSchoolUrl().setProfileId(profileId: self.id!)
+                HttpUtil.httpGetFile(url: magister.getSchoolUrl().getPhotoUrl(), fileName: "pf.png") { (response) in
+                    if let data = response.result.value {
+                        self.profielFoto = NSImage(data: data)
+                        self.done = true
+                    }
+                }
             } catch {}
-            self.done = true
         }
     }
 }

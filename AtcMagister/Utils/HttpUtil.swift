@@ -34,6 +34,17 @@ class HttpUtil: NSObject {
         }
     }
     
+    static func httpGetFile(url: String, fileName: String, parameters: Parameters = [:], completionHandler: @escaping (DownloadResponse<Data>) -> () = { _ in }) {
+        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+            let documentsURL = FileUtil.getApplicationFolder()
+            let fileURL = documentsURL.appendingPathComponent(fileName)
+            return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+        }
+        Alamofire.download(url, method: .get, parameters: parameters, headers: ["Cookie":cookies,"X-API-Client-ID":X_API_Client_ID], to: destination).responseData { (response) in
+            completionHandler(response)
+        }
+    }
+    
     static func storeCookies(response: DataResponse<Any>) {
         let cookies_new = response.response?.allHeaderFields["Set-Cookie"] as? String ?? ""
         if cookies_new != "" {

@@ -15,10 +15,21 @@ class MainViewController: NSViewController {
     @IBOutlet weak var agenda: NSView!
     
     @IBOutlet weak var userName: NSTextField!
+    @IBOutlet weak var profileImage: NSImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Magister.magister!.getProfile()!.profielFoto!.size)
         userName.stringValue = Magister.magister!.getProfile()!.getName()
+        profileImage.image = Magister.magister!.getProfile()!.profielFoto!
+        profileImage.wantsLayer = true
+        //print(profileImage.frame.size)
+        //print(profileImage.image?.size)
+        profileImage.image?.size=profileImage.frame.size
+        profileImage.layer?.cornerRadius = profileImage.frame.size.width/2
+        profileImage.layer?.masksToBounds = true
+        //profileImage.layer?.borderWidth = 2
+        profileImage.layer?.borderColor = CGColor.white
     }
     
     @IBAction func switchTo(_ sender: Any) {
