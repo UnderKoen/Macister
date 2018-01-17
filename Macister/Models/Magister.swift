@@ -15,18 +15,19 @@ class Magister: NSObject {
     static var magister:Magister?
     
     private var school:School
-    private var schoolUrl:SchoolUrl
+    private var mainUrl:MainUrl
     private var person:Person?
     private var studies:Studies?
     private var grades:Grades?
     
     init(school: School) {
         self.school = school
-        self.schoolUrl = SchoolUrl(school: self.school)
+        self.mainUrl = MainUrl()
+        self.mainUrl.setSchool(school: school)
     }
     
-    func getSchoolUrl() -> SchoolUrl {
-        return schoolUrl
+    func getMainUrl() -> MainUrl {
+        return mainUrl
     }
     
     func getPerson() -> Person? {
@@ -42,7 +43,7 @@ class Magister: NSObject {
     }
     
     func logout() {
-        HttpUtil.httpDelete(url: schoolUrl.getCurrentSessionUrl())
+        HttpUtil.httpDelete(url: mainUrl.schoolUrl!.getCurrentSessionUrl())
     }
     
     func login(username: String, password: String, onError: @escaping (_ error: String) -> Void, onSucces: @escaping () -> Void) {
@@ -51,7 +52,7 @@ class Magister: NSObject {
             while(HttpUtil.cookies == "") {
                 usleep(useconds_t.init(1000000 * 0.1))
             }
-            HttpUtil.httpPost(url: self.schoolUrl.getSessionUrl(), parameters: ["Gebruikersnaam":username,"Wachtwoord":password,"IngelogdBlijven":true], completionHandler: { (response) in
+            HttpUtil.httpPost(url: self.mainUrl.schoolUrl!.getSessionUrl(), parameters: ["Gebruikersnaam":username,"Wachtwoord":password,"IngelogdBlijven":true], completionHandler: { (response) in
                 do {
                     let json = try JSON(data: response.data!)
                     let msg = json["message"]
@@ -71,7 +72,7 @@ class Magister: NSObject {
     
     private func init_magister(_ whenDone: @escaping () -> Void, _ onError: @escaping (_ error: String) -> Void) {
         waiting = 0.0
-        HttpUtil.httpGet(url: schoolUrl.getUserUrl()) { (response) in
+        HttpUtil.httpGet(url: mainUrl.schoolUrl!.getUserUrl()) { (response) in
             do {
                 let json = try JSON(data: response.data!)
                 let person = json["Persoon"]
@@ -85,7 +86,7 @@ class Magister: NSObject {
                     return
                 }
             }
-            HttpUtil.httpGet(url: self.schoolUrl.getStudiesUrl()) { (response) in
+            HttpUtil.httpGet(url: self.mainUrl.personUrl!.getStudiesUrl()) { (response) in
                 do {
                     let json = try JSON(data: response.data!)
                     self.studies = Studies.init(json: json)

@@ -6,7 +6,7 @@
 import Cocoa
 
 class AccountUrl: NSObject {
-    var account: Accounts
+    var account: Account
     var schoolUrl: SchoolUrl
 
     init(account: Account, schoolUrl: SchoolUrl) {
@@ -15,6 +15,6 @@ class AccountUrl: NSObject {
     }
 
     func getAccountUrl() -> String {
-        return getApiUrl() + "accounts/\(accountId!)"
+        return schoolUrl.getApiUrl() + "accounts/\(account.id)"
     }
 }

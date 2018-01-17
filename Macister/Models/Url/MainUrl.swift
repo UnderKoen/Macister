@@ -24,6 +24,6 @@ class MainUrl: NSObject {
     }
     
     func setAccount(account:Account) {
-        self.accountUrl = AccountUrl.init(account: account, scshoolUrl: schoolUrl!)
+        self.accountUrl = AccountUrl.init(account: account, schoolUrl: schoolUrl!)
     }
 }

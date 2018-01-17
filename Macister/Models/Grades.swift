@@ -13,25 +13,19 @@ class Grades: NSObject {
     var done:Bool = false
     
     var grades:[Grade]?
-    var lastGrade:Grade?
     
-    init(grades:[Grade]?, lastGrade:Grade?) {
+    init(grades:[Grade]?) {
         self.grades = grades
-        self.lastGrade = lastGrade
     }
     
     convenience init (json: JSON?) {
         let items = json!["Items"].array
         var grades:[Grade] = []
-        var lastGrade:Grade?
         items?.forEach({ (json) in
             let grade = Grade(json: json)
-            grade.append(study)
-            if study.eindeDate!.timeIntervalSinceNow > 0.0 {
-                lastGrade = grade
-            }
+            grades.append(grade)
         })
-        self.init(grades: grades, lastGrade: lastGrade)
+        self.init(grades: grades)
         self.done = true
     }
 }

@@ -49,7 +49,7 @@ class Grade: NSObject {
     }
     
     convenience init(json:JSON?) {
-        self.init(id: json?["CijferId"].int, cijferStr: json?["CijferStr"].string, isVoldoende: json?["IsVoldoende"].bool, ingevoerdDoor: json?["IngevoerdDoor"], datumIngevoerd: json?["DatumIngevoerd"].string, inhalen: json?["Inhalen"].bool, vrijstelling: json?["Vrijstelling"].bool, teltMee: json?["TeltMee"].bool, cijferKolomIdEloOpdracht: json?["CijferKolomIdEloOpdracht"].bool, docent: json?["Docent"].bool, vakDispensatie: json?["VakDispensatie"].bool, vakVrijstelling: json?["VakVrijstelling"].bool)
+        self.init(id: json?["CijferId"].int, cijferStr: json?["CijferStr"].string, isVoldoende: json?["IsVoldoende"].bool, ingevoerdDoor: json?["IngevoerdDoor"], datumIngevoerd: json?["DatumIngevoerd"].string, inhalen: json?["Inhalen"].bool, vrijstelling: json?["Vrijstelling"].bool, teltMee: json?["TeltMee"].bool, cijferKolomIdEloOpdracht: json?["CijferKolomIdEloOpdracht"].int, docent: json?["Docent"].string, vakDispensatie: json?["VakDispensatie"].bool, vakVrijstelling: json?["VakVrijstelling"].bool)
     }
 }
 
