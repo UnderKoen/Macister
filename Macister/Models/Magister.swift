@@ -88,11 +88,11 @@ class Magister: NSObject {
             }
         }
         DispatchQueue.global().async {
-            while !((self.person?.done ?? false) && (self.studies?.done ?? false)) {
+            while !((self.person?.done ?? false)/* && (self.studies?.done ?? false)*/) {
                 usleep(useconds_t.init(1000000 * 0.1))
                 self.waiting = self.waiting + 0.1
                 if self.waiting > Magister.maxWait {
-                    onError("Het inloggen duurde te land.")
+                    onError("Het inloggen duurde te lang.")
                     return
                 }
             }
