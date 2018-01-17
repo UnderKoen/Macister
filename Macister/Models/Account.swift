@@ -27,6 +27,7 @@ class Account: NSObject {
         self.isEmailadresGeverifieerd = isEmailadresGeverifieerd
         self.moetEmailadresVerifieren = moetEmailadresVerifieren
         self.uuId = uuId
+        self.done = true
     }
     
     convenience init(json: JSON?) {

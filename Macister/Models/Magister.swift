@@ -17,6 +17,7 @@ class Magister: NSObject {
     private var school:School
     private var mainUrl:MainUrl
     private var person:Person?
+    private var account:Account?
     private var studies:Studies?
     private var grades:Grades?
     
@@ -34,6 +35,10 @@ class Magister: NSObject {
         return person
     }
     
+    func getAccount() -> Account? {
+        return account
+    }
+    
     func getStudies() -> Studies? {
         return studies
     }
@@ -46,6 +51,8 @@ class Magister: NSObject {
         HttpUtil.httpDelete(url: mainUrl.schoolUrl!.getCurrentSessionUrl())
     }
     
+    private var accountId:Int?
+    
     func login(username: String, password: String, onError: @escaping (_ error: String) -> Void, onSucces: @escaping () -> Void) {
         logout()
         DispatchQueue.global().async {
@@ -57,6 +64,7 @@ class Magister: NSObject {
                     let json = try JSON(data: response.data!)
                     let msg = json["message"]
                     if msg == JSON.null {
+                        self.accountId = Int((json["links"]["account"]["href"].string?.replacingOccurrences(of: "/api/accounts/", with: ""))!)
                         self.init_magister(onSucces, onError)
                     } else {
                         onError(msg.string!)
@@ -79,6 +87,12 @@ class Magister: NSObject {
                 self.person = Person(json: person)
             } catch {}
         }
+        HttpUtil.httpGet(url: mainUrl.schoolUrl!.getAccountUrl(accountId: accountId!)) { (response) in
+            do {
+                let json = try JSON(data: response.data!)
+                self.account = Account.init(json: json)
+            } catch {}
+        }
         DispatchQueue.global().async {
             while !((self.person?.done ?? false)) {
                 usleep(useconds_t.init(1000000 * 0.1))
@@ -94,7 +108,7 @@ class Magister: NSObject {
             }
         }
         DispatchQueue.global().async {
-            while !((self.person?.done ?? false) && (self.studies?.done ?? false)) {
+            while !((self.person?.done ?? false) && (self.studies?.done ?? false) && (self.account?.done ?? false)) {
                 usleep(useconds_t.init(1000000 * 0.1))
                 self.waiting = self.waiting + 0.1
                 if self.waiting > Magister.maxWait {

@@ -10,7 +10,6 @@ import Cocoa
 
 class SchoolUrl: NSObject {
     var school:School
-    var accountId:Int?
     
     init(school:School) {
         self.school = school
@@ -40,13 +39,7 @@ class SchoolUrl: NSObject {
         return getApiUrl() + "account/"
     }
     
-    //-------------------------==  ACCOUNT  ==-------------------------//
-    
-    func setAccountId(accountId:Int) {
-        self.accountId = accountId
-    }
-    
-    func getAccountUrl() -> String {
-        return getApiUrl() + "accounts/\(accountId!)"
+    func getAccountUrl(accountId:Int) -> String {
+        return getApiUrl() + "accounts/\(accountId)"
     }
 }

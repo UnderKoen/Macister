@@ -10,8 +10,6 @@ import Cocoa
 import SwiftyJSON
 
 class Study: NSObject {
-    var done:Bool = false
-    
     var id:Int?
     var leerlingId:Int?
     

@@ -10,8 +10,6 @@ import Cocoa
 import SwiftyJSON
 
 class Grade: NSObject {
-    var done: Bool = false
-
     var id: Int?
     var cijferStr: String?
     var isVoldoende: Bool?
