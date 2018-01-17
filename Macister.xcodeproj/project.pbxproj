@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		325100FB473A1DEA4561BBF9 /* SchoolUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251083F745E625D541E9F52 /* SchoolUrl.swift */; };
+		325101D92B7C90E2B4886C95 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510517A416ACC98321249B /* Grade.swift */; };
 		3251078DA73A7CF619E01E78 /* PersonUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510F33F605D20AFFE2846F /* PersonUrl.swift */; };
 		32510A01928C9210EDCFA599 /* AccountUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251087250EDA4D6C703A278 /* AccountUrl.swift */; };
 		32510C10B8247A10427147B0 /* StudentUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325107C6ABAB648C9B2A98E7 /* StudentUrl.swift */; };
@@ -167,6 +168,7 @@
 
 /* Begin PBXFileReference section */
 		325103B1BD4D0B957E5FBDBE /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		32510517A416ACC98321249B /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		325107C6ABAB648C9B2A98E7 /* StudentUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentUrl.swift; sourceTree = "<group>"; };
 		3251083F745E625D541E9F52 /* SchoolUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolUrl.swift; sourceTree = "<group>"; };
 		3251087250EDA4D6C703A278 /* AccountUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountUrl.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				5D041B06200E549D00FFBF6A /* Studies.swift */,
 				325104154C343031730B3840 /* Url */,
 				325103B1BD4D0B957E5FBDBE /* Account.swift */,
+				32510517A416ACC98321249B /* Grade.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				32510C10B8247A10427147B0 /* StudentUrl.swift in Sources */,
 				32510A01928C9210EDCFA599 /* AccountUrl.swift in Sources */,
 				32510D4EDC1DDDB9EF7E56D0 /* Account.swift in Sources */,
+				325101D92B7C90E2B4886C95 /* Grade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

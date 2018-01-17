@@ -10,39 +10,43 @@ import Cocoa
 import SwiftyJSON
 
 class Grade: NSObject {
-    var done:Bool = false
-    
-    var id:Int?
-    var CijferStr:String?
-    var isVoldoende:Bool?
-    var IngevoerdDoor:NSObject?
-    var DatumIngevoerd:String?
-    var CijferPeriode:Date?
-    //var CijferPeriode:GradePeriod?
-    //var Vak:Subject?
-    var Inhalen:Bool?
-    var Vrijstelling:Bool?
-    var TeltMee:Bool?
-    //var CijferKolom:GradeColomn;
-    var CijferKolomIdEloOpdracht:Int?
-    var Docent:String?
-    var VakDispensatie:Bool?
-    var VakVrijstelling:Bool?
-    
-    init(id:Int?, CijferStr:String?, isVoldoende:Bool?, IngevoerdDoor:NSObject?, lesperiode:String?, groep:Group?, studieInfo:StudyInfo?) {
+    var done: Bool = false
+
+    var id: Int?
+    var cijferStr: String?
+    var isVoldoende: Bool?
+    var ingevoerdDoor: NSObject?
+    var datumIngevoerd: String?
+    var datumIngevoerdDate: Date?
+    //var cijferPeriode:GradePeriod?
+    //var vak:Subject?
+    var inhalen: Bool?
+    var vrijstelling: Bool?
+    var teltMee: Bool?
+    //var cijferKolom:GradeColomn?
+    var cijferKolomIdEloOpdracht: Int?
+    var docent: String?
+    var vakDispensatie: Bool?
+    var vakVrijstelling: Bool?
+
+    init(id: Int?, cijferStr: String?, isVoldoende: Bool?, ingevoerdDoor: NSObject?, datumIngevoerd: String?, /*cijferPeriode:GradePeriod?, vak:Subject?, */inhalen: Bool?, vrijstelling: Bool?, teltMee: Bool?, /*cijferKolom:GradeColomn?, */ cijferKolomIdEloOpdracht: Int?, docent: String?, vakDispensatie: Bool?, vakVrijstelling: Bool?) {
         self.id = id
-        self.leerlingId = leerlingId
-        self.start = start
-        self.startDate = DateUtil.getDateFromString(date: start!)
-        self.einde = einde
-        self.eindeDate = DateUtil.getDateFromString(date: einde!)
-        self.lesperiode = lesperiode
-        self.groep = groep
-        self.studieInfo = studieInfo
+        self.cijferStr = cijferStr
+        self.isVoldoende = isVoldoende
+        self.ingevoerdDoor = ingevoerdDoor
+        self.datumIngevoerd = datumIngevoerd
+        self.datumIngevoerdDate = DateUtil.getDateFromString(date: datumIngevoerd!)
+        //self.cijferPeriode = cijferPeriode
+        //self.vak = vak
+        self.inhalen = inhalen
+        self.vrijstelling  = vrijstelling
+        self.teltMee = teltMee
+        //self.cijferKolom = cijferKolom
+        self.cijferKolomIdEloOpdracht = cijferKolomIdEloOpdracht
+        self.docent = docent
+        self.vakDispensatie  = vakDispensatie
+        self.vakVrijstelling = vakVrijstelling
     }
-    
-    convenience init(json:JSON?) {
-        self.init(id: json?["Id"].int, leerlingId: json?["LeerlingId"].int, start: json?["Start"].string, einde: json?["Einde"].string, lesperiode: json?["Lesperiode"].string, groep: Group(json: json?["Groep"]), studieInfo: StudyInfo(json: json?["Studie"]))
-    }
+
 }
 
