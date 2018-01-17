@@ -15,7 +15,7 @@ class StudentUrl: NSObject {
     }
 
     func getStudentUrl() -> String {
-        return getApiUrl() + "leerlingen/\(profileId!)/"
+        return schoolUrl.getApiUrl() + "leerlingen/\(person.id!)/"
     }
 
     func getAppointmentsUrl() -> String {

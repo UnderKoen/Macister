@@ -5,7 +5,7 @@
 
 import Cocoa
 
-class personUrl: NSObject {
+class PersonUrl: NSObject {
     var person:Person
     var schoolUrl:SchoolUrl
 
@@ -15,7 +15,7 @@ class personUrl: NSObject {
     }
 
     func getPersonUrl() -> String {
-        return SchoolUrl.getApiUrl() + "personen/\(profileId!)/"
+        return schoolUrl.getApiUrl() + "personen/\(person.id!)/"
     }
 
     func getStudiesUrl() -> String {

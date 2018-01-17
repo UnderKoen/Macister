@@ -6,10 +6,12 @@
 import Cocoa
 
 class AccountUrl: NSObject {
-    var accountId: Int?
+    var account: Accounts
+    var schoolUrl: SchoolUrl
 
-    func setAccountId(accountId: Int) {
-        self.accountId = accountId
+    init(account: Account, schoolUrl: SchoolUrl) {
+        self.account = account
+        self.schoolUrl = schoolUrl
     }
 
     func getAccountUrl() -> String {
