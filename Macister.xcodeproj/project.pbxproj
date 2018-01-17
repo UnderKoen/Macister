@@ -37,6 +37,7 @@
 		5DFAED5A200A4298000BC7CF /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED59200A4298000BC7CF /* School.swift */; };
 		5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5B200A4792000BC7CF /* MainViewController.swift */; };
 		5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5D200A48B0000BC7CF /* Magister.swift */; };
+		C6393FF7200FA6F900DD9F78 /* Grades.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6393FF6200FA6F900DD9F78 /* Grades.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +206,7 @@
 		5DFAED5B200A4792000BC7CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5DFAED5D200A48B0000BC7CF /* Magister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magister.swift; sourceTree = "<group>"; };
 		5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Libs/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		C6393FF6200FA6F900DD9F78 /* Grades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grades.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +353,7 @@
 				325104154C343031730B3840 /* Url */,
 				325103B1BD4D0B957E5FBDBE /* Account.swift */,
 				32510517A416ACC98321249B /* Grade.swift */,
+				C6393FF6200FA6F900DD9F78 /* Grades.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				5D5460A9200DE9FD002C0D74 /* CalendarViewController.swift in Sources */,
 				5D041AF3200E2CF800FFBF6A /* StudyInfo.swift in Sources */,
 				5D546096200DE8D4002C0D74 /* TodayViewController.swift in Sources */,
+				C6393FF7200FA6F900DD9F78 /* Grades.swift in Sources */,
 				5DFAED5A200A4298000BC7CF /* School.swift in Sources */,
 				5D041B09200E5EDD00FFBF6A /* DateUtil.swift in Sources */,
 				5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */,
