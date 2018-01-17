@@ -83,12 +83,12 @@ class Magister: NSObject {
             HttpUtil.httpGet(url: self.schoolUrl.getStudiesUrl()) { (response) in
                 do {
                     let json = try JSON(data: response.data!)
-                    print(DateUtil.getDateFromString(date: json["Items"].array!.last!["Einde"].string!))
+                    self.studies = Studies.init(json: json)
                 } catch {}
             }
         }
         DispatchQueue.global().async {
-            while !((self.person?.done ?? false)/* && (self.studies?.done ?? false)*/) {
+            while !((self.person?.done ?? false) && (self.studies?.done ?? false)) {
                 usleep(useconds_t.init(1000000 * 0.1))
                 self.waiting = self.waiting + 0.1
                 if self.waiting > Magister.maxWait {
