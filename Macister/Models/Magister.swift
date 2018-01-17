@@ -18,6 +18,7 @@ class Magister: NSObject {
     private var schoolUrl:SchoolUrl
     private var person:Person?
     private var studies:Studies?
+    private var grades:Grades?
     
     init(school: School) {
         self.school = school
@@ -34,6 +35,10 @@ class Magister: NSObject {
     
     func getStudies() -> Studies? {
         return studies
+    }
+    
+    func getGrades() -> Grades? {
+        return grades
     }
     
     func logout() {

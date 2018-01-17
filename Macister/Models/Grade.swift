@@ -15,7 +15,7 @@ class Grade: NSObject {
     var id: Int?
     var cijferStr: String?
     var isVoldoende: Bool?
-    var ingevoerdDoor: NSObject?
+    var ingevoerdDoor: Any?
     var datumIngevoerd: String?
     var datumIngevoerdDate: Date?
     //var cijferPeriode:GradePeriod?
@@ -29,7 +29,7 @@ class Grade: NSObject {
     var vakDispensatie: Bool?
     var vakVrijstelling: Bool?
 
-    init(id: Int?, cijferStr: String?, isVoldoende: Bool?, ingevoerdDoor: NSObject?, datumIngevoerd: String?, /*cijferPeriode:GradePeriod?, vak:Subject?, */inhalen: Bool?, vrijstelling: Bool?, teltMee: Bool?, /*cijferKolom:GradeColomn?, */ cijferKolomIdEloOpdracht: Int?, docent: String?, vakDispensatie: Bool?, vakVrijstelling: Bool?) {
+    init(id: Int?, cijferStr: String?, isVoldoende: Bool?, ingevoerdDoor: Any?, datumIngevoerd: String?, /*cijferPeriode:GradePeriod?, vak:Subject?, */inhalen: Bool?, vrijstelling: Bool?, teltMee: Bool?, /*cijferKolom:GradeColomn?, */ cijferKolomIdEloOpdracht: Int?, docent: String?, vakDispensatie: Bool?, vakVrijstelling: Bool?) {
         self.id = id
         self.cijferStr = cijferStr
         self.isVoldoende = isVoldoende
@@ -47,6 +47,9 @@ class Grade: NSObject {
         self.vakDispensatie  = vakDispensatie
         self.vakVrijstelling = vakVrijstelling
     }
-
+    
+    convenience init(json:JSON?) {
+        self.init(id: json?["CijferId"].int, cijferStr: json?["CijferStr"].string, isVoldoende: json?["IsVoldoende"].bool, ingevoerdDoor: json?["IngevoerdDoor"], datumIngevoerd: json?["DatumIngevoerd"].string, inhalen: json?["Inhalen"].bool, vrijstelling: json?["Vrijstelling"].bool, teltMee: json?["TeltMee"].bool, cijferKolomIdEloOpdracht: json?["CijferKolomIdEloOpdracht"].bool, docent: json?["Docent"].bool, vakDispensatie: json?["VakDispensatie"].bool, vakVrijstelling: json?["VakVrijstelling"].bool)
+    }
 }
 
