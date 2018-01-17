@@ -19,6 +19,6 @@ class StudentUrl: NSObject {
     }
 
     func getAppointmentsUrl() -> String {
-        return getStudentUrl() + "/afspraken"
+        return getStudentUrl() + "afspraken/"
     }
 }

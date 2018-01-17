@@ -13,6 +13,8 @@ class MainUrl: NSObject {
     var personUrl:PersonUrl?
     var studentUrl:StudentUrl?
     var accountUrl:AccountUrl?
+    var currentStudyUrl:StudyUrl?
+    var studiesUrls:[Study:StudyUrl]?
     
     func setSchool(school:School) {
         self.schoolUrl = SchoolUrl.init(school: school)
@@ -25,5 +27,13 @@ class MainUrl: NSObject {
     
     func setAccount(account:Account) {
         self.accountUrl = AccountUrl.init(account: account, schoolUrl: schoolUrl!)
+    }
+    
+    func setStudies(studies:Studies) {
+        studiesUrls = [:]
+        studies.studies?.forEach({ (study) in
+            studiesUrls![study] = StudyUrl.init(study: study, personUrl: personUrl!)
+        })
+        currentStudyUrl = studiesUrls![studies.currentStudy!]
     }
 }

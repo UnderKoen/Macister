@@ -40,6 +40,6 @@ class SchoolUrl: NSObject {
     }
     
     func getAccountUrl(accountId:Int) -> String {
-        return getApiUrl() + "accounts/\(accountId)"
+        return getApiUrl() + "accounts/\(accountId)/"
     }
 }

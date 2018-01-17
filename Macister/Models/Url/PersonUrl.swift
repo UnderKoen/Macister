@@ -19,7 +19,7 @@ class PersonUrl: NSObject {
     }
 
     func getStudiesUrl() -> String {
-        return getPersonUrl() + "/aanmeldingen"
+        return getPersonUrl() + "aanmeldingen/"
     }
 
     func getPhotoUrl() -> String {
