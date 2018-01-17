@@ -40,26 +40,8 @@ class SchoolUrl: NSObject {
     func getUserUrl() -> String {
         return getApiUrl() + "account/"
     }
-    
+
     //-------------------------==  PROFILE  ==-------------------------//
-    
-    func setProfileId(profileId:Int) {
-        self.profileId = profileId
-    }
-    
-    //------------==  PERSON  ==------------//
-    
-    func getPersonUrl() -> String {
-        return getApiUrl() + "personen/\(profileId!)/"
-    }
-    
-    func getStudiesUrl() -> String {
-        return getPersonUrl() + "/aanmeldingen"
-    }
-    
-    func getPhotoUrl() -> String {
-        return getPersonUrl() + "foto/"
-    }
     
     //------------==  STUDENT  ==------------//
     
