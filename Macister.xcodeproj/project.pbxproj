@@ -31,6 +31,7 @@
 		5DFAED5A200A4298000BC7CF /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED59200A4298000BC7CF /* School.swift */; };
 		5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5B200A4792000BC7CF /* MainViewController.swift */; };
 		5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5D200A48B0000BC7CF /* Magister.swift */; };
+		C6393FE3200F996000DD9F78 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6393FE2200F996000DD9F78 /* Grade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +194,7 @@
 		5DFAED5B200A4792000BC7CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5DFAED5D200A48B0000BC7CF /* Magister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magister.swift; sourceTree = "<group>"; };
 		5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Libs/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		C6393FE2200F996000DD9F78 /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +327,7 @@
 				5D041AF2200E2CF800FFBF6A /* StudyInfo.swift */,
 				5D041B04200E2D0E00FFBF6A /* Group.swift */,
 				5D041B06200E549D00FFBF6A /* Studies.swift */,
+				C6393FE2200F996000DD9F78 /* Grade.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				5DFAED5A200A4298000BC7CF /* School.swift in Sources */,
 				5D041B09200E5EDD00FFBF6A /* DateUtil.swift in Sources */,
 				5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */,
+				C6393FE3200F996000DD9F78 /* Grade.swift in Sources */,
 				5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
