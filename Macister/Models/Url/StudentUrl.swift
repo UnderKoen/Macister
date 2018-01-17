@@ -14,15 +14,11 @@ class StudentUrl: NSObject {
         self.schoolUrl = schoolUrl
     }
 
-    func getPersonUrl() -> String {
-        return SchoolUrl.getApiUrl() + "personen/\(profileId!)/"
+    func getStudentUrl() -> String {
+        return getApiUrl() + "leerlingen/\(profileId!)/"
     }
 
-    func getStudiesUrl() -> String {
-        return getPersonUrl() + "/aanmeldingen"
-    }
-
-    func getPhotoUrl() -> String {
-        return getPersonUrl() + "foto/"
+    func getAppointmentsUrl() -> String {
+        return getStudentUrl() + "/afspraken"
     }
 }
