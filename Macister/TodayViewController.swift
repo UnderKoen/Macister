@@ -10,9 +10,11 @@ import Cocoa
 
 class TodayViewController: MainViewController {
 
+    @IBOutlet weak var calanderItems: NSScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        calanderItems.documentView!.scroll(NSPoint.init(x: 0, y: calanderItems.frame.height))
     }
     
 }

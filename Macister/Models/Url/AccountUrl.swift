@@ -15,6 +15,6 @@ class AccountUrl: NSObject {
     }
 
     func getAccountUrl() -> String {
-        return schoolUrl.getApiUrl() + "accounts/\(account.id)/"
+        return schoolUrl.getApiUrl() + "accounts/\(account.id!)/"
     }
 }

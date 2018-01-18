@@ -33,6 +33,8 @@
 		5DA27DCB2009274100909C42 /* Macister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC92009274100909C42 /* Macister.storyboard */; };
 		5DA27DD72009274100909C42 /* MacisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DD62009274100909C42 /* MacisterTests.swift */; };
 		5DA27DE22009274100909C42 /* MacisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DE12009274100909C42 /* MacisterUITests.swift */; };
+		5DA53B8E20100223001DD8F2 /* Lesson.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA53B8D20100223001DD8F2 /* Lesson.xib */; };
+		5DA53B9020100266001DD8F2 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA53B8F20100266001DD8F2 /* Lesson.swift */; };
 		5DAB9013200CB62E00705B36 /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAB9012200CB62E00705B36 /* HttpUtil.swift */; };
 		5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF54A42200BC89900278DAB /* EventMonitor.swift */; };
 		5DFAED5A200A4298000BC7CF /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED59200A4298000BC7CF /* School.swift */; };
@@ -201,6 +203,8 @@
 		5DA27DDD2009274100909C42 /* MacisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DE12009274100909C42 /* MacisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacisterUITests.swift; sourceTree = "<group>"; };
 		5DA27DE32009274100909C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DA53B8D20100223001DD8F2 /* Lesson.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Lesson.xib; sourceTree = "<group>"; };
+		5DA53B8F20100266001DD8F2 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		5DAB9012200CB62E00705B36 /* HttpUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
 		5DF54A42200BC89900278DAB /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = Libs/SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
@@ -284,6 +288,7 @@
 		5DA27DC22009274100909C42 /* Macister */ = {
 			isa = PBXGroup;
 			children = (
+				5DA53B8C201001FD001DD8F2 /* Custom Objects */,
 				5DAB9001200CB60A00705B36 /* Utils */,
 				5DFAED56200A420C000BC7CF /* Models */,
 				5DA27DC32009274100909C42 /* AppDelegate.swift */,
@@ -317,6 +322,15 @@
 				5DA27DE32009274100909C42 /* Info.plist */,
 			);
 			path = MacisterUITests;
+			sourceTree = "<group>";
+		};
+		5DA53B8C201001FD001DD8F2 /* Custom Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5DA53B8D20100223001DD8F2 /* Lesson.xib */,
+				5DA53B8F20100266001DD8F2 /* Lesson.swift */,
+			);
+			path = "Custom Objects";
 			sourceTree = "<group>";
 		};
 		5DAB9001200CB60A00705B36 /* Utils */ = {
@@ -604,6 +618,7 @@
 			files = (
 				5DA27DC82009274100909C42 /* Assets.xcassets in Resources */,
 				5DA27DCB2009274100909C42 /* Macister.storyboard in Resources */,
+				5DA53B8E20100223001DD8F2 /* Lesson.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +661,7 @@
 				5D016666200FB55000C0E1D9 /* StudyUrl.swift in Sources */,
 				5DFAED5A200A4298000BC7CF /* School.swift in Sources */,
 				5D041B09200E5EDD00FFBF6A /* DateUtil.swift in Sources */,
+				5DA53B9020100266001DD8F2 /* Lesson.swift in Sources */,
 				5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */,
 				5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */,
 				325100FB473A1DEA4561BBF9 /* SchoolUrl.swift in Sources */,

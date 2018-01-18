@@ -44,7 +44,7 @@ class LoginViewController: NSViewController {
                     while self.busy {
                         usleep(useconds_t.init(1000000 * 0.1))
                         DispatchQueue.main.async {
-                            self.progressBar.doubleValue = Magister.magister!.waiting
+                            self.progressBar.increment(by: 0.1)
                         }
                     }
                     DispatchQueue.main.async {
