@@ -10,7 +10,6 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     static let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
     static let popover = NSPopover()
     var eventMonitor: EventMonitor?
@@ -63,3 +62,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 }
 
+class PopoverContentView:NSView {
+    var backgroundView:PopoverBackgroundView?
+    override func viewDidMoveToWindow() {
+        super.viewDidMoveToWindow()
+        if let frameView = self.window?.contentView?.superview {
+            if backgroundView == nil {
+                backgroundView = PopoverBackgroundView(frame: frameView.bounds)
+                frameView.addSubview(backgroundView!, positioned: NSWindow.OrderingMode.below, relativeTo: frameView)
+            }
+        }
+    }
+}
+
+class PopoverBackgroundView:NSView {
+    override func draw(_ dirtyRect: NSRect) {
+        NSColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1).set()
+        __NSRectFill(self.bounds)
+    }
+}
