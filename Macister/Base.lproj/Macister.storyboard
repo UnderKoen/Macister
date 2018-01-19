@@ -794,7 +794,6 @@ DQ
                         <outlet property="berichten" destination="kgB-sd-Lgu" id="t4b-8V-884"/>
                         <outlet property="calanderItems" destination="Id6-Yu-WAD" id="Knj-6c-VKa"/>
                         <outlet property="cijfers" destination="UZz-eL-Chj" id="1IB-yL-JMU"/>
-                        <outlet property="logout" destination="k5T-md-l54" id="iBM-5U-vHR"/>
                         <outlet property="profileImage" destination="06F-MQ-nyM" id="Tlx-zW-AAG"/>
                         <outlet property="userName" destination="cCS-w6-EtR" id="2Id-8h-aGm"/>
                         <outlet property="vandaag" destination="Xx8-fn-a9B" id="zFW-xJ-cr7"/>
