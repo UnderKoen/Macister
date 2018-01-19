@@ -298,7 +298,7 @@ DQ
                                                             <rect key="frame" x="0.0" y="0.0" width="760" height="48"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <view key="contentView" ambiguous="YES" id="aQ5-Zh-9dM">
-                                                                <rect key="frame" x="0.0" y="1" width="760" height="46"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="760" height="48"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             </view>
                                                             <color key="fillColor" red="0.2105208039" green="0.59082901480000005" blue="0.86057275529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -307,7 +307,7 @@ DQ
                                                             <rect key="frame" x="0.0" y="48" width="760" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <view key="contentView" ambiguous="YES" id="MjX-dy-UIh">
-                                                                <rect key="frame" x="0.0" y="1" width="760" height="38"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="760" height="40"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             </view>
                                                             <color key="fillColor" red="0.0" green="0.48077776606800909" blue="0.70357721863611111" alpha="0.63679901541095896" colorSpace="custom" customColorSpace="sRGB"/>
@@ -634,6 +634,9 @@ DQ
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" metaFont="system"/>
                                                                 </buttonCell>
+                                                                <connections>
+                                                                    <action selector="logout:" target="N6g-wo-m3f" id="aBW-4Y-E2M"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </customView>
@@ -791,6 +794,7 @@ DQ
                         <outlet property="berichten" destination="kgB-sd-Lgu" id="t4b-8V-884"/>
                         <outlet property="calanderItems" destination="Id6-Yu-WAD" id="Knj-6c-VKa"/>
                         <outlet property="cijfers" destination="UZz-eL-Chj" id="1IB-yL-JMU"/>
+                        <outlet property="logout" destination="k5T-md-l54" id="iBM-5U-vHR"/>
                         <outlet property="profileImage" destination="06F-MQ-nyM" id="Tlx-zW-AAG"/>
                         <outlet property="userName" destination="cCS-w6-EtR" id="2Id-8h-aGm"/>
                         <outlet property="vandaag" destination="Xx8-fn-a9B" id="zFW-xJ-cr7"/>

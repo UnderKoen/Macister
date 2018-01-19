@@ -18,6 +18,7 @@ class MainViewController: NSViewController {
     @IBOutlet weak var userName: NSTextField!
     @IBOutlet weak var profileImage: NSImageView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userName.stringValue = Magister.magister!.getPerson()!.getName()
@@ -26,6 +27,12 @@ class MainViewController: NSViewController {
         profileImage.image?.size=profileImage.frame.size
         profileImage.layer?.cornerRadius = profileImage.frame.size.width/2
         profileImage.layer?.masksToBounds = true
+    }
+    
+    @IBAction func logout(_ sender: Any) {
+        Magister.magister!.logout()
+        AppDelegate.changeView(controller: FindSchoolViewController.freshController())
+        Magister.magister = nil
     }
     
     @IBAction func switchTo(_ sender: Any) {
