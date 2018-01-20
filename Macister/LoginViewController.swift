@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SwiftyJSON
 
 class LoginViewController: NSViewController {
 
@@ -21,18 +22,14 @@ class LoginViewController: NSViewController {
         progressBar.maxValue = Magister.maxWait
     }
     
-    private var timesWrong:Int = 0
+    private var timesWrong:[String:Int] = [:]
     private var busy:Bool = false
     @IBAction func Buttonaction(_ sender: Any) {
         if (!busy) {
             self.busy = true
-            if timesWrong == 3 {
-                self.error.stringValue = "Je hebt je wachtwoord al \(timesWrong) keer fout gedaan bij 5 word je account geblokkeerd."
-                DispatchQueue.global().async {
-                    usleep(useconds_t.init(1000000 * 5))
-                    self.busy = false
-                    self.timesWrong = 10
-                }
+            if self.isBlocked(user: self.UsernameTextField.stringValue) {
+                self.error.stringValue = "Het account is 10 minuten geblokkeerd wegens overschrijding van het maximale aantal foutieve inlogpogingen."
+                busy = false
             } else if (UsernameTextField.stringValue == "") || (PasswordTextField.stringValue == "") {
                 error.stringValue = "Niet alles is ingevuld"
                 busy = false
@@ -56,7 +53,12 @@ class LoginViewController: NSViewController {
                     DispatchQueue.main.async {
                         if (error.contains("Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord.")) {
                             self.error.stringValue = "Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord."
-                            self.timesWrong = self.timesWrong+1
+                            self.timesWrong[self.UsernameTextField.stringValue] = (self.timesWrong[self.UsernameTextField.stringValue] ?? 0) + 1
+                            if (self.timesWrong[self.UsernameTextField.stringValue] ?? 0) == 5 {
+                                self.error.stringValue = "Het account is 10 minuten geblokkeerd wegens overschrijding van het maximale aantal foutieve inlogpogingen."
+                                self.setBlock(user: self.UsernameTextField.stringValue, timeInMinutes: 10)
+                                self.timesWrong[self.UsernameTextField.stringValue] = 0
+                            }
                         } else {
                             self.error.stringValue = error
                         }
@@ -70,6 +72,58 @@ class LoginViewController: NSViewController {
         }
     }
     
+    func isBlocked(user:String) -> Bool {
+        var url:URL = FileUtil.getApplicationFolder()
+        var json:JSON?
+        url.appendPathComponent("blocked.json")
+        do {
+            let text = try String(contentsOf: url, encoding: .utf8)
+            json = JSON.init(parseJSON: text)
+        } catch {
+            json = JSON.init(parseJSON: "{}")
+        }
+        return json!.contains(where: {(strS, jsonS) in
+            if (strS == Magister.magister!.getSchool().name) {
+                return jsonS.contains(where: { (strF, jsonF) -> Bool in
+                    if (strF == self.UsernameTextField.stringValue) {
+                        let date = DateUtil.getDateFromMagisterString(date: jsonF.stringValue)
+                        if (date.timeIntervalSinceNow >= 0) {
+                            return true
+                        }
+                    }
+                    return false
+                })
+            }
+            return false
+        })
+    }
+    
+    func setBlock(user:String, timeInMinutes:Int) {
+        var url:URL = FileUtil.getApplicationFolder()
+        var json:JSON?
+        url.appendPathComponent("blocked.json")
+        do {
+            let text = try String(contentsOf: url, encoding: .utf8)
+            if (text == "") {
+                json = JSON(parseJSON: "{}")
+            } else {
+                json = JSON(parseJSON: text)
+            }
+        } catch {
+            json = JSON(parseJSON: "{}")
+        }
+        var jsonS = json![Magister.magister!.getSchool().name]
+        if (jsonS == JSON.null) {
+            jsonS = JSON(parseJSON: "{}")
+        }
+        let until = Date.init(timeIntervalSinceNow: Double.init(timeInMinutes)*60.0)
+        jsonS[user] = JSON.init(DateUtil.getDateFormatMagister().string(from: until))
+        json![Magister.magister!.getSchool().name] = jsonS
+        do {
+            try json!.rawString()!.write(to: url, atomically: false, encoding: .utf8)
+        }
+        catch {}
+    }
 }
 
 extension LoginViewController {

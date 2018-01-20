@@ -9,9 +9,13 @@
 import Cocoa
 
 class DateUtil: NSObject {
-    static func getDateFromString(date: String) -> Date {
+    static func getDateFormatMagister() -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH:mm:ss.SSSSSSS'Z'"
-        return dateFormatter.date(from: date)!
+        return dateFormatter
+    }
+    
+    static func getDateFromMagisterString(date: String) -> Date {
+        return getDateFormatMagister().date(from: date)!
     }
 }

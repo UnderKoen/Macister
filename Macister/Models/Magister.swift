@@ -27,6 +27,10 @@ class Magister: NSObject {
         self.mainUrl.setSchool(school: school)
     }
     
+    func getSchool() -> School {
+        return school
+    }
+    
     func getMainUrl() -> MainUrl {
         return mainUrl
     }

@@ -27,9 +27,9 @@ class Study: NSObject {
         self.id = id
         self.leerlingId = leerlingId
         self.start = start
-        self.startDate = DateUtil.getDateFromString(date: start!)
+        self.startDate = DateUtil.getDateFromMagisterString(date: start!)
         self.einde = einde
-        self.eindeDate = DateUtil.getDateFromString(date: einde!)
+        self.eindeDate = DateUtil.getDateFromMagisterString(date: einde!)
         self.lesperiode = lesperiode
         self.groep = groep
         self.studieInfo = studieInfo
