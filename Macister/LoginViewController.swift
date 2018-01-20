@@ -75,7 +75,7 @@ class LoginViewController: NSViewController {
     func isBlocked(user:String) -> Bool {
         var url:URL = FileUtil.getApplicationFolder()
         var json:JSON?
-        url.appendPathComponent("blocked.json")
+        url.appendPathComponent(".blocked.json")
         do {
             let text = try String(contentsOf: url, encoding: .utf8)
             json = JSON.init(parseJSON: text)
@@ -101,7 +101,7 @@ class LoginViewController: NSViewController {
     func setBlock(user:String, timeInMinutes:Int) {
         var url:URL = FileUtil.getApplicationFolder()
         var json:JSON?
-        url.appendPathComponent("blocked.json")
+        url.appendPathComponent(".blocked.json")
         do {
             let text = try String(contentsOf: url, encoding: .utf8)
             if (text == "") {
