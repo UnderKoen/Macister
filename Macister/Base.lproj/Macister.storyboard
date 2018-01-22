@@ -184,6 +184,17 @@ DQ
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="proportionallyDown" image="MagisterLogo" id="vgO-ZA-Ohl"/>
                                                     </imageView>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U6y-1R-A4T">
+                                                        <rect key="frame" x="464" y="0.0" width="48" height="48"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ic_arrow_back_white" imagePosition="only" alignment="center" inset="2" id="3na-C7-IcG">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="goBack:" target="mgu-oi-REs" id="F7C-1a-BM4"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </view>
                                             <color key="fillColor" red="0.19997885823249817" green="0.20001345872879028" blue="0.19997128844261169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -227,20 +238,6 @@ DQ
                                                 </allowedInputSourceLocales>
                                             </secureTextFieldCell>
                                         </secureTextField>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nvp-zU-n7c">
-                                            <rect key="frame" x="128" y="32" width="256" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="push" title="Doorgaan" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="iPx-xg-aZj">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                                <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="Buttonaction:" target="mgu-oi-REs" id="qos-0f-Wxy"/>
-                                            </connections>
-                                        </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTh-Wc-nQG">
                                             <rect key="frame" x="-2" y="64" width="516" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -254,6 +251,20 @@ DQ
                                             <rect key="frame" x="128" y="63" width="256" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nvp-zU-n7c">
+                                            <rect key="frame" x="122" y="32" width="268" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Doorgaan" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="iPx-xg-aZj">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                                <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="Buttonaction:" target="mgu-oi-REs" id="qos-0f-Wxy"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -269,7 +280,7 @@ DQ
                 </viewController>
                 <customObject id="Jp6-iq-usF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650" y="223"/>
+            <point key="canvasLocation" x="669" y="223"/>
         </scene>
         <!--Today View Controller-->
         <scene sceneID="gOw-sN-6JM">

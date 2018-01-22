@@ -72,6 +72,11 @@ class LoginViewController: NSViewController {
         }
     }
     
+    @IBAction func goBack(_ sender: Any) {
+        AppDelegate.changeView(controller: FindSchoolViewController.freshController())
+        Magister.magister = nil
+    }
+    
     func isBlocked(user:String) -> Bool {
         var url:URL = FileUtil.getApplicationFolder()
         var json:JSON?
