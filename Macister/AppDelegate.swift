@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named:NSImage.Name("MagisterIcon"))
             button.action = #selector(togglePopover(_:))
         }
-        AppDelegate.popover.contentViewController = FindSchoolViewController.freshController()
+        AppDelegate.changeView(controller: FindSchoolViewController.freshController())
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
             if AppDelegate.popover.isShown {
                 self?.closePopover(sender: event)
@@ -37,6 +37,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let newSize = NSSize.init(width: controller.view.frame.size.width, height: controller.view.frame.size.height)
             popover.contentSize = newSize
             popover.contentViewController = controller
+            let pw = controller.view.window
+            pw?.parent?.removeChildWindow(pw!)
         }
     }
 
@@ -52,6 +54,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = AppDelegate.statusItem.button {
             AppDelegate.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
         }
+        let pw = AppDelegate.popover.contentViewController!.view.window
+        pw?.parent?.removeChildWindow(pw!)
         eventMonitor?.start()
     }
     
