@@ -54,6 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = AppDelegate.statusItem.button {
             AppDelegate.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
         }
+        AppDelegate.popover.appearance = NSAppearance.init(named: .aqua)
         let pw = AppDelegate.popover.contentViewController!.view.window
         pw?.parent?.removeChildWindow(pw!)
         eventMonitor?.start()
