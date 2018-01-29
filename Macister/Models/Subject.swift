@@ -12,13 +12,17 @@ import SwiftyJSON
 class Subject: NSObject {
     var id:Int?
     var naam:String?
+    var afkorting:String?
+    var volgnr:Int?
     
-    init(id:Int?, naam:String?) {
+    init(id:Int?, naam:String?, afkorting:String?, volgnr:Int?) {
         self.id = id
         self.naam = naam
+        self.afkorting = afkorting
+        self.volgnr = volgnr
     }
     
     convenience init(json:JSON?) {
-        self.init(id: json?["Id"].int, naam: json?["Naam"].string)
+        self.init(id: json?["Id"].int, naam: json?["Naam"].string, afkorting: json?["Afkorting"].string, volgnr: json?["Volgnr"].int)
     }
 }

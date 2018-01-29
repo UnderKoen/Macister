@@ -16,30 +16,30 @@ class Grade: NSObject {
     var ingevoerdDoor: Any?
     var datumIngevoerd: String?
     var datumIngevoerdDate: Date?
-    //var cijferPeriode:GradePeriod?
-    //var vak:Subject?
+    var cijferPeriode:GradePeriod?
+    var vak:Subject?
     var inhalen: Bool?
     var vrijstelling: Bool?
     var teltMee: Bool?
-    //var cijferKolom:GradeColomn?
+    var cijferKolom:GradeColomn?
     var cijferKolomIdEloOpdracht: Int?
     var docent: String?
     var vakDispensatie: Bool?
     var vakVrijstelling: Bool?
 
-    init(id: Int?, cijferStr: String?, isVoldoende: Bool?, ingevoerdDoor: Any?, datumIngevoerd: String?, /*cijferPeriode:GradePeriod?, vak:Subject?, */inhalen: Bool?, vrijstelling: Bool?, teltMee: Bool?, /*cijferKolom:GradeColomn?, */ cijferKolomIdEloOpdracht: Int?, docent: String?, vakDispensatie: Bool?, vakVrijstelling: Bool?) {
+    init(id: Int?, cijferStr: String?, isVoldoende: Bool?, ingevoerdDoor: Any?, datumIngevoerd: String?, cijferPeriode:GradePeriod?, vak:Subject?, inhalen: Bool?, vrijstelling: Bool?, teltMee: Bool?, cijferKolom:GradeColomn?, cijferKolomIdEloOpdracht: Int?, docent: String?, vakDispensatie: Bool?, vakVrijstelling: Bool?) {
         self.id = id
         self.cijferStr = cijferStr
         self.isVoldoende = isVoldoende
         self.ingevoerdDoor = ingevoerdDoor
         self.datumIngevoerd = datumIngevoerd
         self.datumIngevoerdDate = DateUtil.getDateFromMagisterString(date: datumIngevoerd!)
-        //self.cijferPeriode = cijferPeriode
-        //self.vak = vak
+        self.cijferPeriode = cijferPeriode
+        self.vak = vak
         self.inhalen = inhalen
         self.vrijstelling  = vrijstelling
         self.teltMee = teltMee
-        //self.cijferKolom = cijferKolom
+        self.cijferKolom = cijferKolom
         self.cijferKolomIdEloOpdracht = cijferKolomIdEloOpdracht
         self.docent = docent
         self.vakDispensatie  = vakDispensatie
@@ -47,7 +47,7 @@ class Grade: NSObject {
     }
     
     convenience init(json:JSON?) {
-        self.init(id: json?["CijferId"].int, cijferStr: json?["CijferStr"].string, isVoldoende: json?["IsVoldoende"].bool, ingevoerdDoor: json?["IngevoerdDoor"], datumIngevoerd: json?["DatumIngevoerd"].string, inhalen: json?["Inhalen"].bool, vrijstelling: json?["Vrijstelling"].bool, teltMee: json?["TeltMee"].bool, cijferKolomIdEloOpdracht: json?["CijferKolomIdEloOpdracht"].int, docent: json?["Docent"].string, vakDispensatie: json?["VakDispensatie"].bool, vakVrijstelling: json?["VakVrijstelling"].bool)
+        self.init(id: json?["CijferId"].int, cijferStr: json?["CijferStr"].string, isVoldoende: json?["IsVoldoende"].bool, ingevoerdDoor: json?["IngevoerdDoor"].object, datumIngevoerd: json?["DatumIngevoerd"].string, cijferPeriode: GradePeriod(json: json?["CijferPeriode"]), vak: Subject(json: json?["Vak"]), inhalen: json?["Inhalen"].bool, vrijstelling: json?["Vrijstelling"].bool, teltMee: json?["TeltMee"].bool, cijferKolom: GradeColomn(json: json?["CijferKolom"]), cijferKolomIdEloOpdracht: json?["CijferKolomIdEloOpdracht"].int, docent: json?["Docent"].string, vakDispensatie: json?["VakDispensatie"].bool, vakVrijstelling: json?["VakVrijstelling"].bool)
     }
 }
 
