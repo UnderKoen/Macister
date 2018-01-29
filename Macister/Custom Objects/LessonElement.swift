@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 @IBDesignable
-class Lesson: NSView {
+class LessonElement: NSView {
     @IBOutlet weak var view: NSView!
     
     @IBInspectable var lessonNumber:Int = 0 {

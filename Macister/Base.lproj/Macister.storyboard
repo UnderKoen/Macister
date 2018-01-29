@@ -101,15 +101,6 @@
                                             </view>
                                             <color key="fillColor" red="0.19997885823249817" green="0.20001345872879028" blue="0.19997128844261169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </box>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOL-YT-i6R">
-                                            <rect key="frame" x="201" y="208" width="110" height="19"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="School zoeken" drawsBackground="YES" id="JGJ-v3-469">
-                                                <font key="font" metaFont="system" size="16"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K93-1Y-2Zs">
                                             <rect key="frame" x="-2" y="64" width="516" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -142,6 +133,15 @@ DQ
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                             </comboBoxCell>
                                         </comboBox>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOL-YT-i6R">
+                                            <rect key="frame" x="199" y="207" width="114" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="School zoeken" drawsBackground="YES" id="JGJ-v3-469">
+                                                <font key="font" metaFont="system" size="16"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -200,7 +200,7 @@ DQ
                                             <color key="fillColor" red="0.19997885823249817" green="0.20001345872879028" blue="0.19997128844261169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </box>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BqD-oA-8H3">
-                                            <rect key="frame" x="219" y="208" width="75" height="19"/>
+                                            <rect key="frame" x="217" y="210" width="79" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Username" drawsBackground="YES" id="o2l-Zq-MGI">
                                                 <font key="font" metaFont="system" size="16"/>
@@ -214,15 +214,6 @@ DQ
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="Login" drawsBackground="YES" usesSingleLineMode="YES" id="ShP-iC-XNw">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="deviceWhite"/>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IX5-MY-jah">
-                                            <rect key="frame" x="221" y="151" width="70" height="19"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password" drawsBackground="YES" id="uFR-tp-5fX">
-                                                <font key="font" metaFont="system" size="16"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                             </textFieldCell>
                                         </textField>
@@ -265,6 +256,15 @@ DQ
                                                 <action selector="Buttonaction:" target="mgu-oi-REs" id="qos-0f-Wxy"/>
                                             </connections>
                                         </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IX5-MY-jah">
+                                            <rect key="frame" x="219" y="153" width="74" height="19"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password" drawsBackground="YES" id="uFR-tp-5fX">
+                                                <font key="font" metaFont="system" size="16"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -422,7 +422,7 @@ DQ
                                                                         <rect key="frame" x="0.0" y="-224875" width="252" height="672"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHy-zJ-UT4" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHy-zJ-UT4" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="624" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -433,7 +433,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="Biol - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iL0-Ou-FbM" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iL0-Ou-FbM" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="576" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -444,7 +444,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMQ-db-bU7" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMQ-db-bU7" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="528" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -455,7 +455,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_B"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zby-kP-Rnx" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zby-kP-Rnx" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="480" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -466,7 +466,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4zA-ee-hia" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4zA-ee-hia" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="432" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -477,7 +477,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zcs-Mc-sho" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zcs-Mc-sho" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="384" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -488,7 +488,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TtQ-of-LyC" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TtQ-of-LyC" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="336" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -499,7 +499,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pYR-4u-Hc6" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pYR-4u-Hc6" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="288" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -510,7 +510,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGw-gV-ZYU" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGw-gV-ZYU" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="240" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -521,7 +521,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuS-c1-4Qo" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuS-c1-4Qo" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="192" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -532,7 +532,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="icH-Ng-7Nd" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="icH-Ng-7Nd" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="144" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -543,7 +543,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mZG-ip-qSe" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mZG-ip-qSe" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="96" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -554,7 +554,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Rb-Fa-DtB" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Rb-Fa-DtB" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="48" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
@@ -565,7 +565,7 @@ DQ
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="lessonInfo" value="lo - Di - AH4lo_A"/>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdu-qa-Iog" customClass="Lesson" customModule="Macister" customModuleProvider="target">
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdu-qa-Iog" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="252" height="48"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
