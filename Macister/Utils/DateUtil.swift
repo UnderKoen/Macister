@@ -15,14 +15,26 @@ class DateUtil: NSObject {
         return dateFormatter
     }
     
-    static func getDateFromMagisterString(date: String) -> Date {
-        return getDateFormatMagister().date(from: date)!
-    }
-    
     static func getDateFormatLesson() -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         return dateFormatter
+    }
+    
+    static func getDateFormatLessons() -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd"
+        return dateFormatter
+    }
+    
+    static func getDateFormatToday() -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE d MMMM"
+        return dateFormatter
+    }
+    
+    static func getDateFromMagisterString(date: String) -> Date {
+        return getDateFormatMagister().date(from: date)!
     }
     
     static func getLessonTime(lesson: Lesson) -> String {

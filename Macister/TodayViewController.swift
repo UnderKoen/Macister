@@ -11,13 +11,27 @@ import Cocoa
 class TodayViewController: MainViewController {
 
     @IBOutlet weak var calanderItems: NSScrollView!
+    @IBOutlet weak var dayLabel: NSTextField!
+    
+    @IBInspectable var lessonHeight:Int = 48
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        calanderItems.documentView!.scroll(NSPoint.init(x: 0, y: calanderItems.frame.height))
-        let el = LessonElement.init(frame: CGRect.init(x: 0, y: 516, width: 252, height: 48))
-        calanderItems.documentView!.addSubview(el)
-        
+        Magister.magister?.getLessonHandler()?.getLessons(from: Date(), until: Date(), completionHandler: { (lessons) in
+            var y:Int = Int(self.calanderItems.frame.height)
+            if y-(lessons.count*self.lessonHeight) < 0 {
+                self.calanderItems.documentView!.setFrameSize(NSSize(width: self.calanderItems.contentSize.width, height: CGFloat(lessons.count*48)))
+                y = lessons.count*self.lessonHeight
+            }
+            lessons.forEach({ (lesson) in
+                y = y-self.lessonHeight
+                let el = LessonElement(frame: CGRect(x: 0, y: y, width: 252, height: self.lessonHeight))
+                el.lesson = lesson
+                self.calanderItems.documentView!.addSubview(el)
+            })
+            self.calanderItems.documentView!.scroll(NSPoint.init(x: 0, y: lessons.count*self.lessonHeight))
+        })
+        dayLabel.stringValue = DateUtil.getDateFormatToday().string(from: Date())
     }
     
 }

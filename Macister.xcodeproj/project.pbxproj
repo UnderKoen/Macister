@@ -25,6 +25,7 @@
 		5D546096200DE8D4002C0D74 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D546095200DE8D4002C0D74 /* TodayViewController.swift */; };
 		5D5460A9200DE9FD002C0D74 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */; };
 		5D6F520620161535004C63BA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6F520520161535004C63BA /* Lesson.swift */; };
+		5D7E3C3E201F86BC00CB8721 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E3C3D201F86BC00CB8721 /* StatusType.swift */; };
 		5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
 		5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5D8CB19E200D17C70073613D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CB19D200D17C70073613D /* Person.swift */; };
@@ -201,6 +202,7 @@
 		5D546095200DE8D4002C0D74 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		5D6F520520161535004C63BA /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		5D7E3C3D201F86BC00CB8721 /* StatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
 		5D8CB19D200D17C70073613D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5DA11AB0200D55D6001785F2 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		5DA27DC02009274100909C42 /* Macister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macister.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,6 +395,7 @@
 				5DF747122019F2EE007E6650 /* DisplayType.swift */,
 				5DF747142019F34B007E6650 /* InfoType.swift */,
 				5DAEC621201F16DE00AB7B13 /* RowType.swift */,
+				5D7E3C3D201F86BC00CB8721 /* StatusType.swift */,
 			);
 			path = Type;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				5D016652200FA4FE00C0E1D9 /* MainUrl.swift in Sources */,
 				5DF747102019EEAC007E6650 /* LessonType.swift in Sources */,
 				5DF7470B2019EE2B007E6650 /* ClassRoom.swift in Sources */,
+				5D7E3C3E201F86BC00CB8721 /* StatusType.swift in Sources */,
 				5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */,
 				5D8CB19E200D17C70073613D /* Person.swift in Sources */,
 				5DF746F72019EDCF007E6650 /* Subject.swift in Sources */,

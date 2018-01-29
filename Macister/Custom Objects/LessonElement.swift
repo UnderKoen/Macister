@@ -52,9 +52,17 @@ class LessonElement: NSView {
     
     var lesson:Lesson? {
         didSet {
-            lessonNumber = lesson!.lesuurVan!
-            lessonTime = DateUtil.getLessonTime(lesson: lesson!)
-            lessonInfo = lesson!.omschrijving!
+            if ((lesson!.lesuurVan) != nil) {
+                lessonNumber = lesson!.lesuurVan!
+            }
+            if (lesson!.duurtHeleDag ?? false) {
+                lessonTime = "0:00 - 0:00"
+            } else {
+                lessonTime = DateUtil.getLessonTime(lesson: lesson!)
+            }
+            if ((lesson!.omschrijving) != nil) {
+                lessonInfo = lesson!.omschrijving!
+            }
         }
     }
     

@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField identifier="LessonTime" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRK-jE-j1f" userLabel="Time">
-                    <rect key="frame" x="8" y="24" width="114" height="16"/>
+                    <rect key="frame" x="8" y="24" width="246" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="-" id="8a9-yu-tie">
                         <font key="font" metaFont="systemBold" size="12"/>
@@ -47,7 +47,7 @@
                 <textField identifier="LessonInfo" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CH8-hr-a5O" userLabel="Info">
                     <rect key="frame" x="28" y="6" width="226" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="-" id="Uy1-dP-Sqw">
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="-" id="Uy1-dP-Sqw">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" white="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
