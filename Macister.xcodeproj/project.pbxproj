@@ -40,6 +40,7 @@
 		5DAEC60E201F123100AB7B13 /* GradePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEC60D201F123100AB7B13 /* GradePeriod.swift */; };
 		5DAEC620201F152C00AB7B13 /* GradeColomn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEC61F201F152C00AB7B13 /* GradeColomn.swift */; };
 		5DAEC622201F16DE00AB7B13 /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEC621201F16DE00AB7B13 /* RowType.swift */; };
+		5DAEC627201F293200AB7B13 /* LessonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEC626201F293200AB7B13 /* LessonHandler.swift */; };
 		5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF54A42200BC89900278DAB /* EventMonitor.swift */; };
 		5DF746F72019EDCF007E6650 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF746F62019EDCF007E6650 /* Subject.swift */; };
 		5DF747092019EDF2007E6650 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF747082019EDF2007E6650 /* Teacher.swift */; };
@@ -220,6 +221,7 @@
 		5DAEC60D201F123100AB7B13 /* GradePeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradePeriod.swift; sourceTree = "<group>"; };
 		5DAEC61F201F152C00AB7B13 /* GradeColomn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeColomn.swift; sourceTree = "<group>"; };
 		5DAEC621201F16DE00AB7B13 /* RowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowType.swift; sourceTree = "<group>"; };
+		5DAEC626201F293200AB7B13 /* LessonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonHandler.swift; sourceTree = "<group>"; };
 		5DF54A42200BC89900278DAB /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		5DF746F62019EDCF007E6650 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		5DF747082019EDF2007E6650 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
@@ -310,7 +312,7 @@
 			children = (
 				5DA53B8C201001FD001DD8F2 /* Custom Objects */,
 				5DAB9001200CB60A00705B36 /* Utils */,
-				5DFAED56200A420C000BC7CF /* Models */,
+				5DFAED56200A420C000BC7CF /* Magister */,
 				5DA27DC32009274100909C42 /* AppDelegate.swift */,
 				5DA27DC72009274100909C42 /* Assets.xcassets */,
 				5DA27DC92009274100909C42 /* Macister.storyboard */,
@@ -363,6 +365,27 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		5DAEC623201F18B200AB7B13 /* Grade */ = {
+			isa = PBXGroup;
+			children = (
+				32510517A416ACC98321249B /* Grade.swift */,
+				C6393FF6200FA6F900DD9F78 /* Grades.swift */,
+				5DAEC60D201F123100AB7B13 /* GradePeriod.swift */,
+				5DAEC61F201F152C00AB7B13 /* GradeColomn.swift */,
+			);
+			path = Grade;
+			sourceTree = "<group>";
+		};
+		5DAEC625201F282500AB7B13 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				5DFAED59200A4298000BC7CF /* School.swift */,
+				5DFAED5D200A48B0000BC7CF /* Magister.swift */,
+				5DAEC626201F293200AB7B13 /* LessonHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 		5DF7470C2019EE4D007E6650 /* Type */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,29 +411,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5DFAED56200A420C000BC7CF /* Models */ = {
+		5DFAED56200A420C000BC7CF /* Magister */ = {
 			isa = PBXGroup;
 			children = (
+				5DAEC625201F282500AB7B13 /* Handlers */,
+				325104154C343031730B3840 /* Url */,
 				5DF7470C2019EE4D007E6650 /* Type */,
-				5DFAED59200A4298000BC7CF /* School.swift */,
-				5DFAED5D200A48B0000BC7CF /* Magister.swift */,
+				5DAEC623201F18B200AB7B13 /* Grade */,
 				5D8CB19D200D17C70073613D /* Person.swift */,
 				5D118544200E08F4003EE455 /* Study.swift */,
 				5D041AF2200E2CF800FFBF6A /* StudyInfo.swift */,
 				5D041B04200E2D0E00FFBF6A /* Group.swift */,
 				5D041B06200E549D00FFBF6A /* Studies.swift */,
-				325104154C343031730B3840 /* Url */,
 				325103B1BD4D0B957E5FBDBE /* Account.swift */,
-				32510517A416ACC98321249B /* Grade.swift */,
-				C6393FF6200FA6F900DD9F78 /* Grades.swift */,
-				5DAEC60D201F123100AB7B13 /* GradePeriod.swift */,
-				5DAEC61F201F152C00AB7B13 /* GradeColomn.swift */,
 				5D6F520520161535004C63BA /* Lesson.swift */,
 				5DF746F62019EDCF007E6650 /* Subject.swift */,
 				5DF747082019EDF2007E6650 /* Teacher.swift */,
 				5DF7470A2019EE2B007E6650 /* ClassRoom.swift */,
 			);
-			path = Models;
+			path = Magister;
 			sourceTree = "<group>";
 		};
 		5DFAED79200A5C83000BC7CF /* Products */ = {
@@ -706,6 +725,7 @@
 				5D016666200FB55000C0E1D9 /* StudyUrl.swift in Sources */,
 				5DFAED5A200A4298000BC7CF /* School.swift in Sources */,
 				5D041B09200E5EDD00FFBF6A /* DateUtil.swift in Sources */,
+				5DAEC627201F293200AB7B13 /* LessonHandler.swift in Sources */,
 				5DA53B9020100266001DD8F2 /* LessonElement.swift in Sources */,
 				5DF747152019F34B007E6650 /* InfoType.swift in Sources */,
 				5D6F520620161535004C63BA /* Lesson.swift in Sources */,

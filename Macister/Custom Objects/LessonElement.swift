@@ -50,6 +50,14 @@ class LessonElement: NSView {
         }
     }
     
+    var lesson:Lesson? {
+        didSet {
+            lessonNumber = lesson!.lesuurVan!
+            lessonTime = DateUtil.getLessonTime(lesson: lesson!)
+            lessonInfo = lesson!.omschrijving!
+        }
+    }
+    
     var onHover:Bool = false
     override func mouseEntered(with event: NSEvent) {
         onHover = true

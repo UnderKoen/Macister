@@ -15,6 +15,9 @@ class TodayViewController: MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         calanderItems.documentView!.scroll(NSPoint.init(x: 0, y: calanderItems.frame.height))
+        let el = LessonElement.init(frame: CGRect.init(x: 0, y: 516, width: 252, height: 48))
+        calanderItems.documentView!.addSubview(el)
+        
     }
     
 }

@@ -23,6 +23,6 @@ class Subject: NSObject {
     }
     
     convenience init(json:JSON?) {
-        self.init(id: json?["Id"].int, naam: json?["Naam"].string, afkorting: json?["Afkorting"].string, volgnr: json?["Volgnr"].int)
+        self.init(id: json?["Id"].int, naam: json?["Naam"].string ?? json?["Omschrijving"].string, afkorting: json?["Afkorting"].string, volgnr: json?["Volgnr"].int)
     }
 }

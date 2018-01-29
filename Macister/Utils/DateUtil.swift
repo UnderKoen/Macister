@@ -18,4 +18,15 @@ class DateUtil: NSObject {
     static func getDateFromMagisterString(date: String) -> Date {
         return getDateFormatMagister().date(from: date)!
     }
+    
+    static func getDateFormatLesson() -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter
+    }
+    
+    static func getLessonTime(lesson: Lesson) -> String {
+        let format = getDateFormatLesson()
+        return format.string(from: lesson.startDate!) + " - " + format.string(from: lesson.eindeDate!)
+    }
 }
