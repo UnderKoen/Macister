@@ -12,6 +12,7 @@ class TodayViewController: MainViewController {
 
     @IBOutlet weak var calanderItems: NSScrollView!
     @IBOutlet weak var dayLabel: NSTextField!
+    @IBOutlet weak var monthLabel: NSTextField!
     
     @IBInspectable var lessonHeight:Int = 48
     
@@ -48,7 +49,8 @@ class TodayViewController: MainViewController {
             })
             self.calanderItems.documentView!.scroll(NSPoint.init(x: 0, y: lessons.count*self.lessonHeight))
         })
-        dayLabel.stringValue = DateUtil.getDateFormatToday().string(from: calanderDate)
+        dayLabel.stringValue = DateUtil.getDateFormatTodayDay().string(from: calanderDate)
+        monthLabel.stringValue = DateUtil.getDateFormatTodayMonth().string(from: calanderDate)
     }
     
     

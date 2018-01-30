@@ -384,10 +384,19 @@ DQ
                                                             <rect key="frame" x="0.0" y="564" width="252" height="48"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <subviews>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8u-ka-aYj" userLabel="Today Label">
-                                                                    <rect key="frame" x="54" y="5" width="144" height="38"/>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8u-ka-aYj" userLabel="DayLabel">
+                                                                    <rect key="frame" x="54" y="24" width="144" height="19"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Donderdag 18 Januari" id="ttu-ZS-CnN">
+                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Donderdag 18" id="ttu-ZS-CnN">
+                                                                        <font key="font" metaFont="systemMedium" size="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="deviceWhite"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Xk-Ul-AOt" userLabel="MonthLabel">
+                                                                    <rect key="frame" x="54" y="5" width="144" height="19"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Januari 2018" id="aqI-Lm-ggW">
                                                                         <font key="font" metaFont="systemMedium" size="16"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="deviceWhite"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -656,6 +665,7 @@ DQ
                         <outlet property="calanderItems" destination="Id6-Yu-WAD" id="Knj-6c-VKa"/>
                         <outlet property="cijfers" destination="UZz-eL-Chj" id="1IB-yL-JMU"/>
                         <outlet property="dayLabel" destination="U8u-ka-aYj" id="UEi-k9-jsb"/>
+                        <outlet property="monthLabel" destination="1Xk-Ul-AOt" id="pI0-VF-VvP"/>
                         <outlet property="profileImage" destination="06F-MQ-nyM" id="Tlx-zW-AAG"/>
                         <outlet property="userName" destination="cCS-w6-EtR" id="2Id-8h-aGm"/>
                         <outlet property="vandaag" destination="Xx8-fn-a9B" id="zFW-xJ-cr7"/>
