@@ -387,7 +387,7 @@ DQ
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8u-ka-aYj" userLabel="DayLabel">
                                                                     <rect key="frame" x="54" y="24" width="144" height="19"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Donderdag 18" id="ttu-ZS-CnN">
+                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="ttu-ZS-CnN">
                                                                         <font key="font" metaFont="systemMedium" size="16"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="deviceWhite"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -396,7 +396,7 @@ DQ
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Xk-Ul-AOt" userLabel="MonthLabel">
                                                                     <rect key="frame" x="54" y="5" width="144" height="19"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Januari 2018" id="aqI-Lm-ggW">
+                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="aqI-Lm-ggW">
                                                                         <font key="font" metaFont="systemMedium" size="16"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="deviceWhite"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

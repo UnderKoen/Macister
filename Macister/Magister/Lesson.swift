@@ -68,11 +68,11 @@ class Lesson: NSObject {
             subjects.append(Subject.init(json: jsonF))
         })
         var teachers:[Teacher] = [Teacher].init()
-        json?["Vakken"].array?.forEach({ (jsonF) in
+        json?["Docenten"].array?.forEach({ (jsonF) in
             teachers.append(Teacher.init(json: jsonF))
         })
         var classRooms:[ClassRoom] = [ClassRoom].init()
-        json?["Vakken"].array?.forEach({ (jsonF) in
+        json?["Lokalen"].array?.forEach({ (jsonF) in
             classRooms.append(ClassRoom.init(json: jsonF))
         })
         self.init(id: json?["Id"].int, start: json?["Start"].string, einde: json?["Einde"].string, lesuurVan: json?["LesuurVan"].int, lesuurTotMet: json?["LesuurTotMet"].int, duurtHeleDag: json?["DuurtHeleDag"].bool, omschrijving: json?["Omschrijving"].string, lokatie: json?["Lokatie"].string, status: StatusType(rawValue: json?["Status"].int ?? 0), lessonType: LessonType(rawValue: (json?["Type"].int) ?? 0), weergaveType: DisplayType(rawValue: (json?["WeergaveType"].int) ?? 0), inhoud: json?["Inhoud"].string, infoType: InfoType(rawValue: (json?["InfoType"].int) ?? 0), aantekening: json?["Aantekening"].object, afgerond: json?["Afgerond"].bool, vakken: subjects, docenten: teachers, lokalen: classRooms, groepen: json?["Groepen"].object, opdrachtId: json?["OpdrachtId"].int, heeftBijlagen: json?["HeeftBijlagen"].bool, bijlagen: json?["Bijlagen"].object)
