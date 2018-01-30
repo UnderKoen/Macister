@@ -61,7 +61,11 @@ class LessonElement: NSView {
                 lessonTime = DateUtil.getLessonTime(lesson: lesson!)
             }
             if ((lesson!.omschrijving) != nil) {
-                lessonInfo = lesson!.omschrijving!
+                var string = ""
+                if (lesson?.lokatie != nil) {
+                    string = " (\(lesson!.lokatie!))"
+                }
+                lessonInfo = lesson!.omschrijving! + string
             }
         }
     }
