@@ -53,6 +53,7 @@
 		5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5B200A4792000BC7CF /* MainViewController.swift */; };
 		5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5D200A48B0000BC7CF /* Magister.swift */; };
 		C6393FF7200FA6F900DD9F78 /* Grades.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6393FF6200FA6F900DD9F78 /* Grades.swift */; };
+		C63C6A6220208E6F002ED383 /* GradeElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = C63C6A6120208E6F002ED383 /* GradeElement.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +238,7 @@
 		5DFAED5D200A48B0000BC7CF /* Magister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magister.swift; sourceTree = "<group>"; };
 		5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Libs/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C6393FF6200FA6F900DD9F78 /* Grades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grades.swift; sourceTree = "<group>"; };
+		C63C6A6120208E6F002ED383 /* GradeElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeElement.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +355,7 @@
 			children = (
 				5DA53B8D20100223001DD8F2 /* LessonElement.xib */,
 				5DA53B8F20100266001DD8F2 /* LessonElement.swift */,
+				C63C6A6120208E6F002ED383 /* GradeElement.xib */,
 			);
 			path = "Custom Objects";
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 			files = (
 				5DA27DC82009274100909C42 /* Assets.xcassets in Resources */,
 				5DA27DCB2009274100909C42 /* Macister.storyboard in Resources */,
+				C63C6A6220208E6F002ED383 /* GradeElement.xib in Resources */,
 				5DA53B8E20100223001DD8F2 /* LessonElement.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
