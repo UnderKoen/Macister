@@ -50,6 +50,40 @@ class LessonElement: NSView {
         }
     }
     
+    var infoType:InfoType = InfoType.NONE {
+        didSet {
+            view.subviews.forEach { (view) in
+                if (view.identifier?.rawValue == "InfoType") {
+                    let infoTypeLabel = view.subviews[0].subviews[0] as! NSTextField
+                    switch self.infoType {
+                    case .NONE:
+                        break
+                    case .HOMEWORK:
+                        view.isHidden = false
+                        infoTypeLabel.stringValue = "HW"
+                    case .TEST:
+                        view.isHidden = false
+                        infoTypeLabel.stringValue = "PW"
+                    case .EXAM:
+                        view.isHidden = false
+                        infoTypeLabel.stringValue = "TT"
+                    case .QUIZ:
+                        view.isHidden = false
+                        infoTypeLabel.stringValue = "SO"
+                    case .ORAL:
+                        view.isHidden = false
+                        infoTypeLabel.stringValue = "MO"
+                    case .INFORMATION:
+                        view.isHidden = false
+                        infoTypeLabel.stringValue = "I"
+                    case .ANNOTATION:
+                        break
+                    }
+                }
+            }
+        }
+    }
+    
     var lesson:Lesson? {
         didSet {
             if ((lesson!.lesuurVan) != nil) {
@@ -66,6 +100,9 @@ class LessonElement: NSView {
                     string = " (\(lesson!.lokatie!))"
                 }
                 lessonInfo = lesson!.omschrijving! + string
+            }
+            if (lesson!.infoType != nil) {
+                self.infoType = lesson!.infoType!
             }
         }
     }

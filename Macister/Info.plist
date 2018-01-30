@@ -30,5 +30,10 @@
 	<string>Macister</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DroidSans.ttf</string>
+		<string>DroidSans-Bold.ttf</string>
+	</array>
 </dict>
 </plist>

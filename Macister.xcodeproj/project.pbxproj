@@ -24,6 +24,8 @@
 		5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213B20095256006BE4DA /* LoginViewController.swift */; };
 		5D546096200DE8D4002C0D74 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D546095200DE8D4002C0D74 /* TodayViewController.swift */; };
 		5D5460A9200DE9FD002C0D74 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */; };
+		5D5B84702020A7F200A1185B /* DroidSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B845E2020A7F100A1185B /* DroidSans-Bold.ttf */; };
+		5D5B84712020A7F200A1185B /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B846F2020A7F200A1185B /* DroidSans.ttf */; };
 		5D6F520620161535004C63BA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6F520520161535004C63BA /* Lesson.swift */; };
 		5D7E3C3E201F86BC00CB8721 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E3C3D201F86BC00CB8721 /* StatusType.swift */; };
 		5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
@@ -202,6 +204,8 @@
 		5D26213B20095256006BE4DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5D546095200DE8D4002C0D74 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		5D5B845E2020A7F100A1185B /* DroidSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSans-Bold.ttf"; sourceTree = "<group>"; };
+		5D5B846F2020A7F200A1185B /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
 		5D6F520520161535004C63BA /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		5D7E3C3D201F86BC00CB8721 /* StatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
 		5D8CB19D200D17C70073613D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -288,6 +292,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5D5B84472020A75D00A1185B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5D5B845E2020A7F100A1185B /* DroidSans-Bold.ttf */,
+				5D5B846F2020A7F200A1185B /* DroidSans.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		5DA27DB72009274100909C42 = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +327,7 @@
 		5DA27DC22009274100909C42 /* Macister */ = {
 			isa = PBXGroup;
 			children = (
+				5D5B84472020A75D00A1185B /* Fonts */,
 				5DA53B8C201001FD001DD8F2 /* Custom Objects */,
 				5DAB9001200CB60A00705B36 /* Utils */,
 				5DFAED56200A420C000BC7CF /* Magister */,
@@ -679,7 +693,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D5B84702020A7F200A1185B /* DroidSans-Bold.ttf in Resources */,
 				5DA27DC82009274100909C42 /* Assets.xcassets in Resources */,
+				5D5B84712020A7F200A1185B /* DroidSans.ttf in Resources */,
 				5DA27DCB2009274100909C42 /* Macister.storyboard in Resources */,
 				C63C6A6220208E6F002ED383 /* GradeElement.xib in Resources */,
 				5DA53B8E20100223001DD8F2 /* LessonElement.xib in Resources */,
