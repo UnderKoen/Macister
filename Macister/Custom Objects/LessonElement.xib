@@ -43,6 +43,7 @@
                         </subviews>
                     </view>
                     <color key="fillColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="message" size="11"/>
                 </box>
                 <textField identifier="LessonInfo" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CH8-hr-a5O" userLabel="Info">
                     <rect key="frame" x="26" y="8" width="188" height="16"/>
@@ -61,6 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                     <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.25064212330000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    <font key="titleFont" metaFont="message" size="11"/>
                 </box>
                 <box identifier="InfoType" hidden="YES" fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="caI-fc-lnh" userLabel="InfoType">
                     <rect key="frame" x="220" y="12" width="24" height="24"/>
@@ -73,7 +75,7 @@
                                 <rect key="frame" x="-2" y="4" width="28" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="-" id="XAb-nI-Vvf">
-                                    <font key="font" size="12" name="DroidSans-Bold"/>
+                                    <font key="font" metaFont="system" size="12"/>
                                     <color key="textColor" white="1" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -81,6 +83,7 @@
                         </subviews>
                     </view>
                     <color key="fillColor" red="0.0" green="0.58823529409999997" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <font key="titleFont" metaFont="message" size="11"/>
                 </box>
             </subviews>
             <point key="canvasLocation" x="143" y="168"/>

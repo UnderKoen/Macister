@@ -22,10 +22,9 @@
 		5D118545200E08F4003EE455 /* Study.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D118544200E08F4003EE455 /* Study.swift */; };
 		5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213920095243006BE4DA /* FindSchoolViewController.swift */; };
 		5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213B20095256006BE4DA /* LoginViewController.swift */; };
+		5D505275202107B800DE3F8F /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5D505274202107B700DE3F8F /* Fonts */; };
 		5D546096200DE8D4002C0D74 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D546095200DE8D4002C0D74 /* TodayViewController.swift */; };
 		5D5460A9200DE9FD002C0D74 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */; };
-		5D5B84702020A7F200A1185B /* DroidSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B845E2020A7F100A1185B /* DroidSans-Bold.ttf */; };
-		5D5B84712020A7F200A1185B /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B846F2020A7F200A1185B /* DroidSans.ttf */; };
 		5D6F520620161535004C63BA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6F520520161535004C63BA /* Lesson.swift */; };
 		5D7E3C3E201F86BC00CB8721 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E3C3D201F86BC00CB8721 /* StatusType.swift */; };
 		5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
@@ -44,6 +43,10 @@
 		5DAEC620201F152C00AB7B13 /* GradeColomn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEC61F201F152C00AB7B13 /* GradeColomn.swift */; };
 		5DAEC622201F16DE00AB7B13 /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEC621201F16DE00AB7B13 /* RowType.swift */; };
 		5DAEC627201F293200AB7B13 /* LessonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEC626201F293200AB7B13 /* LessonHandler.swift */; };
+		5DE430662020C9420071C7A6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
+		5DE430672020C9420071C7A6 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DE430722020C9490071C7A6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
+		5DE430732020C9490071C7A6 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF54A42200BC89900278DAB /* EventMonitor.swift */; };
 		5DF746F72019EDCF007E6650 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF746F62019EDCF007E6650 /* Subject.swift */; };
 		5DF747092019EDF2007E6650 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF747082019EDF2007E6650 /* Teacher.swift */; };
@@ -72,6 +75,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5DA27DBF2009274100909C42;
 			remoteInfo = Macister;
+		};
+		5DE430682020C9420071C7A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DD67C0A1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		5DE430742020C9490071C7A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C7DFC5A1A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON macOS";
 		};
 		5DFAED46200A2FD6000BC7CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -180,6 +197,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5DE430732020C9490071C7A6 /* SwiftyJSON.framework in Embed Frameworks */,
+				5DE430672020C9420071C7A6 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,10 +221,9 @@
 		5D118544200E08F4003EE455 /* Study.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study.swift; sourceTree = "<group>"; };
 		5D26213920095243006BE4DA /* FindSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSchoolViewController.swift; sourceTree = "<group>"; };
 		5D26213B20095256006BE4DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5D505274202107B700DE3F8F /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		5D546095200DE8D4002C0D74 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		5D5B845E2020A7F100A1185B /* DroidSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSans-Bold.ttf"; sourceTree = "<group>"; };
-		5D5B846F2020A7F200A1185B /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
 		5D6F520520161535004C63BA /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		5D7E3C3D201F86BC00CB8721 /* StatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
 		5D8CB19D200D17C70073613D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -250,7 +268,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DE430722020C9490071C7A6 /* SwiftyJSON.framework in Frameworks */,
 				5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */,
+				5DE430662020C9420071C7A6 /* Alamofire.framework in Frameworks */,
 				5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,18 +312,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5D5B84472020A75D00A1185B /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				5D5B845E2020A7F100A1185B /* DroidSans-Bold.ttf */,
-				5D5B846F2020A7F200A1185B /* DroidSans.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		5DA27DB72009274100909C42 = {
 			isa = PBXGroup;
 			children = (
+				5D505274202107B700DE3F8F /* Fonts */,
 				5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */,
 				5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */,
 				5DA27DC22009274100909C42 /* Macister */,
@@ -327,7 +339,6 @@
 		5DA27DC22009274100909C42 /* Macister */ = {
 			isa = PBXGroup;
 			children = (
-				5D5B84472020A75D00A1185B /* Fonts */,
 				5DA53B8C201001FD001DD8F2 /* Custom Objects */,
 				5DAB9001200CB60A00705B36 /* Utils */,
 				5DFAED56200A420C000BC7CF /* Magister */,
@@ -481,6 +492,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				5DE430692020C9420071C7A6 /* PBXTargetDependency */,
+				5DE430752020C9490071C7A6 /* PBXTargetDependency */,
 			);
 			name = Macister;
 			productName = Macister;
@@ -693,12 +706,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D5B84702020A7F200A1185B /* DroidSans-Bold.ttf in Resources */,
 				5DA27DC82009274100909C42 /* Assets.xcassets in Resources */,
-				5D5B84712020A7F200A1185B /* DroidSans.ttf in Resources */,
 				5DA27DCB2009274100909C42 /* Macister.storyboard in Resources */,
 				C63C6A6220208E6F002ED383 /* GradeElement.xib in Resources */,
 				5DA53B8E20100223001DD8F2 /* LessonElement.xib in Resources */,
+				5D505275202107B800DE3F8F /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,6 +805,16 @@
 			isa = PBXTargetDependency;
 			target = 5DA27DBF2009274100909C42 /* Macister */;
 			targetProxy = 5DA27DDE2009274100909C42 /* PBXContainerItemProxy */;
+		};
+		5DE430692020C9420071C7A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire macOS";
+			targetProxy = 5DE430682020C9420071C7A6 /* PBXContainerItemProxy */;
+		};
+		5DE430752020C9490071C7A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON macOS";
+			targetProxy = 5DE430742020C9490071C7A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -921,6 +943,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -937,6 +960,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";

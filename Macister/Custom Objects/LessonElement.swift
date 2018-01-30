@@ -55,6 +55,7 @@ class LessonElement: NSView {
             view.subviews.forEach { (view) in
                 if (view.identifier?.rawValue == "InfoType") {
                     let infoTypeLabel = view.subviews[0].subviews[0] as! NSTextField
+                    infoTypeLabel.font = NSFont.init(name: "DroidSans-Bold", size: 12)
                     switch self.infoType {
                     case .NONE:
                         break
