@@ -16,6 +16,14 @@ class LessonHandler: NSObject {
         self.magister = magister
     }
     
+    func getLessonsToday(completionHandler: @escaping ([Lesson]) -> () = { _ in }) {
+        getLessonsForDay(day: Date(), completionHandler: completionHandler)
+    }
+    
+    func getLessonsForDay(day:Date, completionHandler: @escaping ([Lesson]) -> () = { _ in }) {
+        getLessons(from: day, until: day, completionHandler: completionHandler)
+    }
+    
     func getLessons(from:Date, until:Date, completionHandler: @escaping ([Lesson]) -> () = { _ in }) {
         let format = DateUtil.getDateFormatLessons()
         HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getLessonsUrl())!, parameters: ["van":format.string(from: from), "tot":format.string(from: until), "status":1]) { (response) in

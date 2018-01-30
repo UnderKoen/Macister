@@ -400,6 +400,9 @@ DQ
                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                         <font key="font" metaFont="system"/>
                                                                     </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="previousDay:" target="N6g-wo-m3f" id="OST-5h-Olc"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dxr-zS-kko" userLabel="Tomorrow">
                                                                     <rect key="frame" x="204" y="0.0" width="48" height="48"/>
@@ -408,6 +411,9 @@ DQ
                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                         <font key="font" metaFont="system"/>
                                                                     </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="nextDay:" target="N6g-wo-m3f" id="oz3-2h-2It"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </customView>

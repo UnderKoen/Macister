@@ -15,9 +15,26 @@ class TodayViewController: MainViewController {
     
     @IBInspectable var lessonHeight:Int = 48
     
+    var calanderDate:Date = Date()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        Magister.magister?.getLessonHandler()?.getLessons(from: Date(), until: Date(), completionHandler: { (lessons) in
+        updateCalander()
+    }
+    
+    @IBAction func nextDay(_ sender: Any) {
+        calanderDate.addTimeInterval(86400)
+        updateCalander()
+    }
+    
+    @IBAction func previousDay(_ sender: Any) {
+        calanderDate.addTimeInterval(-86400)
+        updateCalander()
+    }
+    
+    func updateCalander() {
+        Magister.magister?.getLessonHandler()?.getLessonsForDay(day: calanderDate, completionHandler: { (lessons) in
+            self.calanderItems.documentView!.subviews.removeAll()
             var y:Int = Int(self.calanderItems.frame.height)
             if y-(lessons.count*self.lessonHeight) < 0 {
                 self.calanderItems.documentView!.setFrameSize(NSSize(width: self.calanderItems.contentSize.width, height: CGFloat(lessons.count*48)))
@@ -31,8 +48,9 @@ class TodayViewController: MainViewController {
             })
             self.calanderItems.documentView!.scroll(NSPoint.init(x: 0, y: lessons.count*self.lessonHeight))
         })
-        dayLabel.stringValue = DateUtil.getDateFormatToday().string(from: Date())
+        dayLabel.stringValue = DateUtil.getDateFormatToday().string(from: calanderDate)
     }
+    
     
 }
 
