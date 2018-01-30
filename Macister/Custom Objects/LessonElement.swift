@@ -56,7 +56,7 @@ class LessonElement: NSView {
                 lessonNumber = lesson!.lesuurVan!
             }
             if (lesson!.duurtHeleDag ?? false) {
-                lessonTime = "0:00 - 0:00"
+                lessonTime = "Hele dag"
             } else {
                 lessonTime = DateUtil.getLessonTime(lesson: lesson!)
             }

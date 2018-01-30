@@ -34,7 +34,8 @@ class DateUtil: NSObject {
     }
     
     static func getDateFromMagisterString(date: String) -> Date {
-        return getDateFormatMagister().date(from: date)!
+        let date = getDateFormatMagister().date(from: date)!
+        return date.addingTimeInterval(TimeInterval(TimeZone.current.secondsFromGMT(for: date)))
     }
     
     static func getLessonTime(lesson: Lesson) -> String {
