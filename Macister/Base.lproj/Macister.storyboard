@@ -244,36 +244,13 @@ DQ
                                             </view>
                                             <color key="fillColor" red="0.19997885823249817" green="0.20001345872879028" blue="0.19997128844261169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </box>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BqD-oA-8H3">
-                                            <rect key="frame" x="217" y="210" width="79" height="19"/>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DXS-KS-dR5" userLabel="Username Text Field" customClass="CUTextField" customModule="Macister" customModuleProvider="target">
+                                            <rect key="frame" x="128" y="204" width="256" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Username" drawsBackground="YES" id="o2l-Zq-MGI">
-                                                <font key="font" metaFont="system" size="16"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2hR-5D-4Cz">
-                                            <rect key="frame" x="128" y="178" width="256" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="Login" drawsBackground="YES" usesSingleLineMode="YES" id="ShP-iC-XNw">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="deviceWhite"/>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <secureTextField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-aA-cWq">
-                                            <rect key="frame" x="128" y="121" width="256" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="center" placeholderString="Wachtwoord" drawsBackground="YES" usesSingleLineMode="YES" id="aUf-cK-atv">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                                <allowedInputSourceLocales>
-                                                    <string>NSAllRomanInputSourcesLocaleIdentifier</string>
-                                                </allowedInputSourceLocales>
-                                            </secureTextFieldCell>
-                                        </secureTextField>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Username"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTh-Wc-nQG">
                                             <rect key="frame" x="-2" y="64" width="516" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -301,15 +278,14 @@ DQ
                                                 <action selector="Buttonaction:" target="mgu-oi-REs" id="qos-0f-Wxy"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IX5-MY-jah">
-                                            <rect key="frame" x="219" y="153" width="74" height="19"/>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6db-Ui-3iM" userLabel="Password Text Field" customClass="CUTextField" customModule="Macister" customModuleProvider="target">
+                                            <rect key="frame" x="128" y="148" width="256" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password" drawsBackground="YES" id="uFR-tp-5fX">
-                                                <font key="font" metaFont="system" size="16"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                            </textFieldCell>
-                                        </textField>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Password"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="secure" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -317,10 +293,10 @@ DQ
                         </subviews>
                     </customView>
                     <connections>
-                        <outlet property="PasswordTextField" destination="9Ab-aA-cWq" id="Vyg-O9-vrk"/>
-                        <outlet property="UsernameTextField" destination="2hR-5D-4Cz" id="Oc7-4w-FcK"/>
                         <outlet property="error" destination="UTh-Wc-nQG" id="jnc-0t-Cbm"/>
+                        <outlet property="passwordTextField" destination="6db-Ui-3iM" id="hXn-3q-dei"/>
                         <outlet property="progressBar" destination="uyR-Ei-mRY" id="jlq-t8-BTE"/>
+                        <outlet property="usernameTextField" destination="DXS-KS-dR5" id="lXa-Lz-YrZ"/>
                     </connections>
                 </viewController>
                 <customObject id="Jp6-iq-usF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

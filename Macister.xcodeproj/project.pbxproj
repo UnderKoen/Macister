@@ -30,6 +30,8 @@
 		5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
 		5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5D8CB19E200D17C70073613D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CB19D200D17C70073613D /* Person.swift */; };
+		5D9281AA2021C86E00FA3902 /* CUTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9281A92021C86E00FA3902 /* CUTextField.xib */; };
+		5D9281BA2021D68D00FA3902 /* CUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9281B92021D68D00FA3902 /* CUTextField.swift */; };
 		5DA11AB1200D55D6001785F2 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA11AB0200D55D6001785F2 /* FileUtil.swift */; };
 		5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DC32009274100909C42 /* AppDelegate.swift */; };
 		5DA27DC82009274100909C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC72009274100909C42 /* Assets.xcassets */; };
@@ -58,7 +60,6 @@
 		5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5B200A4792000BC7CF /* MainViewController.swift */; };
 		5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5D200A48B0000BC7CF /* Magister.swift */; };
 		C6393FF7200FA6F900DD9F78 /* Grades.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6393FF6200FA6F900DD9F78 /* Grades.swift */; };
-		C63C6A6220208E6F002ED383 /* GradeElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = C63C6A6120208E6F002ED383 /* GradeElement.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +228,8 @@
 		5D6F520520161535004C63BA /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		5D7E3C3D201F86BC00CB8721 /* StatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
 		5D8CB19D200D17C70073613D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		5D9281A92021C86E00FA3902 /* CUTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CUTextField.xib; sourceTree = "<group>"; };
+		5D9281B92021D68D00FA3902 /* CUTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUTextField.swift; sourceTree = "<group>"; };
 		5DA11AB0200D55D6001785F2 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		5DA27DC02009274100909C42 /* Macister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DC32009274100909C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -260,7 +263,6 @@
 		5DFAED5D200A48B0000BC7CF /* Magister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magister.swift; sourceTree = "<group>"; };
 		5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Libs/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C6393FF6200FA6F900DD9F78 /* Grades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grades.swift; sourceTree = "<group>"; };
-		C63C6A6120208E6F002ED383 /* GradeElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeElement.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,7 +382,8 @@
 			children = (
 				5DA53B8D20100223001DD8F2 /* LessonElement.xib */,
 				5DA53B8F20100266001DD8F2 /* LessonElement.swift */,
-				C63C6A6120208E6F002ED383 /* GradeElement.xib */,
+				5D9281A92021C86E00FA3902 /* CUTextField.xib */,
+				5D9281B92021D68D00FA3902 /* CUTextField.swift */,
 			);
 			path = "Custom Objects";
 			sourceTree = "<group>";
@@ -708,9 +711,9 @@
 			files = (
 				5DA27DC82009274100909C42 /* Assets.xcassets in Resources */,
 				5DA27DCB2009274100909C42 /* Macister.storyboard in Resources */,
-				C63C6A6220208E6F002ED383 /* GradeElement.xib in Resources */,
 				5DA53B8E20100223001DD8F2 /* LessonElement.xib in Resources */,
 				5D505275202107B800DE3F8F /* Fonts in Resources */,
+				5D9281AA2021C86E00FA3902 /* CUTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,6 +775,7 @@
 				32510C10B8247A10427147B0 /* StudentUrl.swift in Sources */,
 				32510A01928C9210EDCFA599 /* AccountUrl.swift in Sources */,
 				5DF747132019F2EE007E6650 /* DisplayType.swift in Sources */,
+				5D9281BA2021D68D00FA3902 /* CUTextField.swift in Sources */,
 				32510D4EDC1DDDB9EF7E56D0 /* Account.swift in Sources */,
 				325101D92B7C90E2B4886C95 /* Grade.swift in Sources */,
 			);

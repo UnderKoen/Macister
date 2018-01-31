@@ -11,8 +11,8 @@ import SwiftyJSON
 
 class LoginViewController: NSViewController {
 
-    @IBOutlet weak var UsernameTextField: NSTextField!
-    @IBOutlet weak var PasswordTextField: NSSecureTextField!
+    @IBOutlet weak var usernameTextField: CUTextField!
+    @IBOutlet weak var passwordTextField: CUTextField!
     @IBOutlet weak var error: NSTextField!
     @IBOutlet weak var progressBar: NSProgressIndicator!
     
@@ -27,10 +27,10 @@ class LoginViewController: NSViewController {
     @IBAction func Buttonaction(_ sender: Any) {
         if (!busy) {
             self.busy = true
-            if self.isBlocked(user: self.UsernameTextField.stringValue) {
+            if self.isBlocked(user: self.usernameTextField.input.stringValue) {
                 self.error.stringValue = "Het account is 10 minuten geblokkeerd wegens overschrijding van het maximale aantal foutieve inlogpogingen."
                 busy = false
-            } else if (UsernameTextField.stringValue == "") || (PasswordTextField.stringValue == "") {
+            } else if (usernameTextField.input.stringValue == "") || (passwordTextField.input.stringValue == "") {
                 error.stringValue = "Niet alles is ingevuld"
                 busy = false
             } else {
@@ -49,15 +49,15 @@ class LoginViewController: NSViewController {
                         self.progressBar.stopAnimation(self)
                     }
                 }
-                Magister.magister?.login(username: UsernameTextField.stringValue, password: PasswordTextField.stringValue, onError: { (error) in
+                Magister.magister?.login(username: usernameTextField.input.stringValue, password: passwordTextField.input.stringValue, onError: { (error) in
                     DispatchQueue.main.async {
                         if (error.contains("Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord.")) {
                             self.error.stringValue = "Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord."
-                            self.timesWrong[self.UsernameTextField.stringValue] = (self.timesWrong[self.UsernameTextField.stringValue] ?? 0) + 1
-                            if (self.timesWrong[self.UsernameTextField.stringValue] ?? 0) == 5 {
+                            self.timesWrong[self.usernameTextField.input.stringValue] = (self.timesWrong[self.usernameTextField.input.stringValue] ?? 0) + 1
+                            if (self.timesWrong[self.usernameTextField.input.stringValue] ?? 0) == 5 {
                                 self.error.stringValue = "Het account is 10 minuten geblokkeerd wegens overschrijding van het maximale aantal foutieve inlogpogingen."
-                                self.setBlock(user: self.UsernameTextField.stringValue, timeInMinutes: 10)
-                                self.timesWrong[self.UsernameTextField.stringValue] = 0
+                                self.setBlock(user: self.usernameTextField.input.stringValue, timeInMinutes: 10)
+                                self.timesWrong[self.usernameTextField.input.stringValue] = 0
                             }
                         } else {
                             self.error.stringValue = error
@@ -90,7 +90,7 @@ class LoginViewController: NSViewController {
         return json!.contains(where: {(strS, jsonS) in
             if (strS == Magister.magister!.getSchool().name) {
                 return jsonS.contains(where: { (strF, jsonF) -> Bool in
-                    if (strF == self.UsernameTextField.stringValue) {
+                    if (strF == self.usernameTextField.input.stringValue) {
                         let date = DateUtil.getDateFromMagisterString(date: jsonF.stringValue)
                         if (date.timeIntervalSinceNow >= 0) {
                             return true
