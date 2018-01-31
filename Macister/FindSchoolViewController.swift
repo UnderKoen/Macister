@@ -18,8 +18,8 @@ class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
     }
     
     override func controlTextDidChange(_ obj: Notification) {
-        FindSchool.removeAllItems()
         School.findSchools(filter: FindSchool.stringValue) { (schools) in
+            self.FindSchool.removeAllItems()
             schools.forEach({ (school) in
                 self.FindSchool.addItem(withObjectValue: school.name)
             })
