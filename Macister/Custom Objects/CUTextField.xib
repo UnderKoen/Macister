@@ -48,10 +48,10 @@
                     </secureTextFieldCell>
                 </secureTextField>
                 <box identifier="line" fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="oCM-ZQ-uPv" userLabel="Line">
-                    <rect key="frame" x="0.0" y="0.0" width="256" height="2"/>
+                    <rect key="frame" x="0.0" y="0.0" width="256" height="1"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <view key="contentView" ambiguous="YES" id="kqJ-xh-GeR">
-                        <rect key="frame" x="0.0" y="0.0" width="256" height="2"/>
+                        <rect key="frame" x="0.0" y="0.0" width="256" height="1"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                     <color key="fillColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -187,6 +187,13 @@ DQ
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                             </textFieldCell>
                                         </textField>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kw-wp-qUO" userLabel="Username Text Field" customClass="CUTextField" customModule="Macister" customModuleProvider="target">
+                                            <rect key="frame" x="128" y="136" width="256" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Search school"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -245,10 +252,18 @@ DQ
                                             <color key="fillColor" red="0.19997885823249817" green="0.20001345872879028" blue="0.19997128844261169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </box>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DXS-KS-dR5" userLabel="Username Text Field" customClass="CUTextField" customModule="Macister" customModuleProvider="target">
-                                            <rect key="frame" x="128" y="204" width="256" height="48"/>
+                                            <rect key="frame" x="128" y="192" width="256" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Username"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6db-Ui-3iM" userLabel="Password Text Field" customClass="CUTextField" customModule="Macister" customModuleProvider="target">
+                                            <rect key="frame" x="128" y="128" width="256" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Password"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="secure" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTh-Wc-nQG">
@@ -278,14 +293,6 @@ DQ
                                                 <action selector="Buttonaction:" target="mgu-oi-REs" id="qos-0f-Wxy"/>
                                             </connections>
                                         </button>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6db-Ui-3iM" userLabel="Password Text Field" customClass="CUTextField" customModule="Macister" customModuleProvider="target">
-                                            <rect key="frame" x="128" y="148" width="256" height="48"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Password"/>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="secure" value="YES"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </customView>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
