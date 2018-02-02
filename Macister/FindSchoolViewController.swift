@@ -10,33 +10,27 @@ import Cocoa
 
 class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
 
-    @IBOutlet weak var FindSchool: NSComboBox!
+    @IBOutlet weak var findSchool: CUComboBox!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        FindSchool.delegate = self
-    }
-    
-    override func controlTextDidChange(_ obj: Notification) {
-        School.findSchools(filter: FindSchool.stringValue) { (schools) in
-            self.FindSchool.removeAllItems()
-            schools.forEach({ (school) in
-                self.FindSchool.addItem(withObjectValue: school.name)
-            })
+        findSchool.controlTextDidChange = {(obj) in
+            School.findSchools(filter: self.findSchool.input.stringValue) { (schools) in
+                self.findSchool.removeAll()
+                self.findSchool.addItems(item: schools)
+            }
         }
     }
     
     @IBOutlet weak var error: NSTextField!
     
     @IBAction func `continue`(_ sender: Any) {
-        let assigned = FindSchool.indexOfSelectedItem
+        let assigned = findSchool.selectedItem
         if assigned == -1 {
             error.stringValue = "Selecteer een school."
         } else {
             AppDelegate.changeView(controller: LoginViewController.freshController())
-            School.findSchools(filter: FindSchool.stringValue, completionHandler: { (schools) in
-                Magister.magister = Magister(school: schools.first!)
-            })
+            Magister.magister = Magister(school: findSchool.items[assigned] as! School)
         }
     }
 }

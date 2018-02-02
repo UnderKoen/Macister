@@ -35,4 +35,10 @@ class School: NSObject {
             } catch {}
         }
     }
+    
+    override var description: String {
+        get {
+            return name
+        }
+    }
 }

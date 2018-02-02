@@ -146,6 +146,13 @@
                                             </view>
                                             <color key="fillColor" red="0.19997885823249817" green="0.20001345872879028" blue="0.19997128844261169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </box>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kw-wp-qUO" userLabel="Username Text Field" customClass="CUComboBox" customModule="Macister" customModuleProvider="target">
+                                            <rect key="frame" x="128" y="192" width="256" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Search school"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </customView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K93-1Y-2Zs">
                                             <rect key="frame" x="-2" y="64" width="516" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -169,31 +176,6 @@ DQ
                                                 <action selector="continue:" target="6Qw-NS-pYn" id="9Df-9Q-Ha8"/>
                                             </connections>
                                         </button>
-                                        <comboBox identifier="FindSchool" focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4UD-K5-25W">
-                                            <rect key="frame" x="130" y="178" width="256" height="23"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" alignment="center" placeholderString="Een deel van de naam / url van school" drawsBackground="YES" usesSingleLineMode="YES" buttonBordered="NO" completes="NO" numberOfVisibleItems="5" id="Ijn-kD-Qbj">
-                                                <font key="font" metaFont="systemMedium" size="13"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                            </comboBoxCell>
-                                        </comboBox>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOL-YT-i6R">
-                                            <rect key="frame" x="199" y="207" width="114" height="19"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="School zoeken" drawsBackground="YES" id="JGJ-v3-469">
-                                                <font key="font" metaFont="system" size="16"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kw-wp-qUO" userLabel="Username Text Field" customClass="CUTextField" customModule="Macister" customModuleProvider="target">
-                                            <rect key="frame" x="128" y="136" width="256" height="48"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Search school"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </customView>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -201,8 +183,8 @@ DQ
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="FindSchool" destination="4UD-K5-25W" id="0EI-EC-aUP"/>
                         <outlet property="error" destination="K93-1Y-2Zs" id="4OK-TC-QwB"/>
+                        <outlet property="findSchool" destination="6kw-wp-qUO" id="QfX-XU-eUY"/>
                     </connections>
                 </viewController>
                 <customObject id="Zi3-0S-Kad" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

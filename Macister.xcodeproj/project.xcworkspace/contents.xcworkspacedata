@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../../../../DroidSans-Bold.ttf">
-   </FileRef>
-   <FileRef
-      location = "group:../../../../../DroidSans.ttf">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

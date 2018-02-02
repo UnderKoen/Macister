@@ -57,7 +57,7 @@ class CUTextField: NSView, NSTextFieldDelegate {
         }
     }
     
-    @IBInspectable var inputColor:NSColor = NSColor.init(red: 0, green: 0, blue: 0, alpha: 1) {
+    @IBInspectable var inputColor:NSColor = NSColor.black {
         didSet {
             input.textColor = inputColor
         }
@@ -134,6 +134,11 @@ class CUTextField: NSView, NSTextFieldDelegate {
         }
     }
     
+    var controlTextDidChange:(_ obj: Notification) -> () = {(obj) in}
+    override func controlTextDidChange(_ obj: Notification) {
+        controlTextDidChange(obj)
+    }
+    
     func animate(duration: CGFloat, oldPos:NSRect, newPos:NSRect, oldFont:NSFont, newFont:NSFont, oldColor:NSColor, newColor:NSColor) {
         var i:CGFloat = 0.0
         let iTime:CGFloat = duration
@@ -162,7 +167,9 @@ class CUTextField: NSView, NSTextFieldDelegate {
         let bundle = Bundle(for: type(of: self))
         var topLevelObjects: NSArray?
         if bundle.loadNibNamed(NSNib.Name(String(describing: type(of: self))), owner: self, topLevelObjects: &topLevelObjects) {
-            return topLevelObjects!.first(where: { $0 is NSView }) as? NSView
+            return topLevelObjects!.first(where: { (view) in
+                return view is NSView && (view as? NSView)?.identifier?._rawValue ?? "" == "view"
+            }) as? NSView
         }
         return nil
     }
@@ -175,6 +182,10 @@ protocol ClickField {
 class TextFieldClick: NSTextField, ClickField {
     var onClick: () -> () = {() in }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -186,6 +197,10 @@ class TextFieldClick: NSTextField, ClickField {
 
 class SecureTextFieldClick: NSSecureTextField, ClickField {
     var onClick: () -> () = {() in }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

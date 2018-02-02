@@ -25,6 +25,8 @@
 		5D505275202107B800DE3F8F /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5D505274202107B700DE3F8F /* Fonts */; };
 		5D546096200DE8D4002C0D74 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D546095200DE8D4002C0D74 /* TodayViewController.swift */; };
 		5D5460A9200DE9FD002C0D74 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */; };
+		5D68E5F820232C0B0065F4C4 /* CUComboBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */; };
+		5D68E60820232DDA0065F4C4 /* CUComboBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D68E60720232DDA0065F4C4 /* CUComboBox.swift */; };
 		5D6F520620161535004C63BA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6F520520161535004C63BA /* Lesson.swift */; };
 		5D7E3C3E201F86BC00CB8721 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E3C3D201F86BC00CB8721 /* StatusType.swift */; };
 		5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
@@ -225,6 +227,8 @@
 		5D505274202107B700DE3F8F /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		5D546095200DE8D4002C0D74 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CUComboBox.xib; sourceTree = "<group>"; };
+		5D68E60720232DDA0065F4C4 /* CUComboBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUComboBox.swift; sourceTree = "<group>"; };
 		5D6F520520161535004C63BA /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		5D7E3C3D201F86BC00CB8721 /* StatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
 		5D8CB19D200D17C70073613D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -384,6 +388,8 @@
 				5DA53B8F20100266001DD8F2 /* LessonElement.swift */,
 				5D9281A92021C86E00FA3902 /* CUTextField.xib */,
 				5D9281B92021D68D00FA3902 /* CUTextField.swift */,
+				5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */,
+				5D68E60720232DDA0065F4C4 /* CUComboBox.swift */,
 			);
 			path = "Custom Objects";
 			sourceTree = "<group>";
@@ -713,6 +719,7 @@
 				5DA27DCB2009274100909C42 /* Macister.storyboard in Resources */,
 				5DA53B8E20100223001DD8F2 /* LessonElement.xib in Resources */,
 				5D505275202107B800DE3F8F /* Fonts in Resources */,
+				5D68E5F820232C0B0065F4C4 /* CUComboBox.xib in Resources */,
 				5D9281AA2021C86E00FA3902 /* CUTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -762,6 +769,7 @@
 				5D546096200DE8D4002C0D74 /* TodayViewController.swift in Sources */,
 				C6393FF7200FA6F900DD9F78 /* Grades.swift in Sources */,
 				5D016666200FB55000C0E1D9 /* StudyUrl.swift in Sources */,
+				5D68E60820232DDA0065F4C4 /* CUComboBox.swift in Sources */,
 				5DFAED5A200A4298000BC7CF /* School.swift in Sources */,
 				5D041B09200E5EDD00FFBF6A /* DateUtil.swift in Sources */,
 				5DAEC627201F293200AB7B13 /* LessonHandler.swift in Sources */,
