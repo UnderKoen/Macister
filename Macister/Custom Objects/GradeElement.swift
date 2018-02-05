@@ -62,6 +62,17 @@ class GradeElement: NSView {
         }
     }
     
+    var onHover:Bool = false
+    override func mouseEntered(with event: NSEvent) {
+        onHover = true
+        self.layer?.backgroundColor = NSColor(red: 254/255, green: 245/255, blue: 202/255, alpha: 1).cgColor
+    }
+    
+    override func mouseExited(with event: NSEvent) {
+        onHover = false
+        self.layer?.backgroundColor = nil
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -88,6 +99,8 @@ class GradeElement: NSView {
                 break
             }
         }
+        self.wantsLayer = true
+        self.addTrackingArea(NSTrackingArea(rect: self.bounds, options: [.mouseEnteredAndExited, .activeAlways], owner: self, userInfo: nil))
     }
     
     func loadViewFromNib() -> NSView? {
