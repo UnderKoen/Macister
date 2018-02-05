@@ -29,4 +29,8 @@ class PersonUrl: NSObject {
     func getLessonsUrl() -> String {
         return getPersonUrl() + "afspraken/"
     }
+    
+    func getLastGradesUrl() -> String {
+        return getPersonUrl() + "cijfers/laatste/"
+    }
 }

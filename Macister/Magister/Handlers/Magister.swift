@@ -21,6 +21,7 @@ class Magister: NSObject {
     private var studies:Studies?
     private var grades:Grades?
     private var lessonHandler:LessonHandler?
+    private var gradeHandler:GradeHandler?
     
     init(school: School) {
         self.school = school
@@ -54,6 +55,10 @@ class Magister: NSObject {
     
     func getLessonHandler () -> LessonHandler? {
         return lessonHandler
+    }
+    
+    func getGradeHandler () -> GradeHandler? {
+        return gradeHandler
     }
     
     func logout() {
@@ -110,6 +115,7 @@ class Magister: NSObject {
                 }
             }
             self.lessonHandler = LessonHandler.init(magister: self)
+            self.gradeHandler = GradeHandler.init(magister: self)
             HttpUtil.httpGet(url: self.mainUrl.personUrl!.getStudiesUrl()) { (response) in
                 do {
                     let json = try JSON(data: response.data!)

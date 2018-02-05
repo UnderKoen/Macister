@@ -15,14 +15,14 @@ class GradeColomn: NSObject {
     var kolomNummer:String?
     var kolomVolgNummer:String?
     var kolomKop:String?
-    var kolomOmschrijving:Any?
+    var kolomOmschrijving:String?
     var kolomSoort:RowType?
     var isHerkansingKolom:Bool?
     var isDocentKolom:Bool?
     var heeftOnderliggendeKolommen:Bool?
     var isPTAKolom:Bool?
     
-    init(id:Int?, kolomNaam:String?, kolomNummer:String?, kolomVolgNummer:String?, kolomKop:String?, kolomOmschrijving:Any?, kolomSoort:RowType?, isHerkansingKolom:Bool?, isDocentKolom:Bool?, heeftOnderliggendeKolommen:Bool?, isPTAKolom:Bool?) {
+    init(id:Int?, kolomNaam:String?, kolomNummer:String?, kolomVolgNummer:String?, kolomKop:String?, kolomOmschrijving:String?, kolomSoort:RowType?, isHerkansingKolom:Bool?, isDocentKolom:Bool?, heeftOnderliggendeKolommen:Bool?, isPTAKolom:Bool?) {
         self.id = id
         self.kolomNaam = kolomNaam
         self.kolomNummer = kolomNummer
@@ -37,7 +37,7 @@ class GradeColomn: NSObject {
     }
     
     convenience init(json:JSON?) {
-        self.init(id: json?["Id"].int, kolomNaam: json?["KolomNaam"].string, kolomNummer: json?["KolomNummer"].string, kolomVolgNummer: json?["KolomVolgNummer"].string, kolomKop: json?["KolomKop"].string, kolomOmschrijving: json?["KolomOmschrijving"].object, kolomSoort: RowType(rawValue: (json?["KolomSoort"].int) ?? 0), isHerkansingKolom: json?["IsHerkansingKolom"].bool, isDocentKolom: json?["IsDocentKolom"].bool, heeftOnderliggendeKolommen: json?["HeeftOnderliggendeKolommen"].bool, isPTAKolom: json?["IsPTAKolom"].bool)
+        self.init(id: json?["Id"].int, kolomNaam: json?["KolomNaam"].string, kolomNummer: json?["KolomNummer"].string, kolomVolgNummer: json?["KolomVolgNummer"].string, kolomKop: json?["KolomKop"].string ?? json?["KolomKopnaam"].string, kolomOmschrijving: json?["KolomOmschrijving"].string, kolomSoort: RowType(rawValue: json?["KolomSoort"].int ?? json?["KolomSoortKolom"].int ?? 0), isHerkansingKolom: json?["IsHerkansingKolom"].bool, isDocentKolom: json?["IsDocentKolom"].bool, heeftOnderliggendeKolommen: json?["HeeftOnderliggendeKolommen"].bool, isPTAKolom: json?["IsPTAKolom"].bool)
     }
 }
 

@@ -11,6 +11,7 @@ import Cocoa
 class TodayViewController: MainViewController {
 
     @IBOutlet weak var calanderItems: NSScrollView!
+    @IBOutlet weak var gradeItems: NSScrollView!
     @IBOutlet weak var dayLabel: NSTextField!
     @IBOutlet weak var monthLabel: NSTextField!
     
@@ -21,6 +22,7 @@ class TodayViewController: MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateCalander()
+        updateGrades()
     }
     
     @IBAction func nextDay(_ sender: Any) {
@@ -53,7 +55,27 @@ class TodayViewController: MainViewController {
         monthLabel.stringValue = DateUtil.getDateFormatTodayMonth().string(from: calanderDate)
     }
     
-    
+    func updateGrades() {
+        Magister.magister?.getGradeHandler()?.getLastGrades(completionHandler: { (grades) in
+            if (grades != nil) {
+                self.gradeItems.documentView!.subviews.removeAll()
+                var y:Int = Int(self.gradeItems.frame.height)
+                if y-(grades!.grades!.count*self.lessonHeight) < 0 {
+                    self.gradeItems.documentView!.setFrameSize(NSSize(width: self.gradeItems.contentSize.width, height: CGFloat(grades!.grades!.count*48)))
+                    y = grades!.grades!.count*self.lessonHeight
+                }
+                grades!.grades!.forEach({ (grade) in
+                    y = y-self.lessonHeight
+                    let el = GradeElement(frame: CGRect(x: 0, y: y, width: 252, height: self.lessonHeight))
+                    el.gradeObj = grade
+                    self.gradeItems.documentView!.addSubview(el)
+                })
+                self.gradeItems.documentView!.scroll(NSPoint.init(x: 0, y: grades!.grades!.count*self.lessonHeight))
+            } else {
+                
+            }
+        })
+    }
 }
 
 extension TodayViewController {

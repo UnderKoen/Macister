@@ -146,6 +146,39 @@
                                             </view>
                                             <color key="fillColor" red="0.19997885823249817" green="0.20001345872879028" blue="0.19997128844261169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </box>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8OL-SQ-PLK" userLabel="Borders">
+                                            <rect key="frame" x="0.0" y="0.0" width="512" height="320"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="T7p-Ua-40d" userLabel="Border_Left">
+                                                    <rect key="frame" x="0.0" y="0.0" width="4" height="320"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <view key="contentView" ambiguous="YES" id="jVo-Ju-q44">
+                                                        <rect key="frame" x="0.0" y="0.0" width="4" height="320"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </box>
+                                                <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Cbr-6t-uOW" userLabel="Border_Right">
+                                                    <rect key="frame" x="508" y="0.0" width="4" height="320"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <view key="contentView" ambiguous="YES" id="9ag-Nt-hlC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="4" height="320"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </box>
+                                                <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-bz-s0L" userLabel="Border_Bottom">
+                                                    <rect key="frame" x="0.0" y="0.0" width="512" height="4"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <view key="contentView" ambiguous="YES" id="D4m-Xf-qOm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="512" height="4"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </box>
+                                            </subviews>
+                                        </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kw-wp-qUO" userLabel="Username Text Field" customClass="CUComboBox" customModule="Macister" customModuleProvider="target">
                                             <rect key="frame" x="128" y="192" width="256" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -189,7 +222,7 @@ DQ
                 </viewController>
                 <customObject id="Zi3-0S-Kad" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="223"/>
+            <point key="canvasLocation" x="75" y="223"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="cm5-FS-Rvo">
@@ -233,6 +266,39 @@ DQ
                                             </view>
                                             <color key="fillColor" red="0.19997885823249817" green="0.20001345872879028" blue="0.19997128844261169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </box>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RhU-OE-5Yp" userLabel="Borders">
+                                            <rect key="frame" x="0.0" y="0.0" width="512" height="320"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <subviews>
+                                                <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="ljt-Yj-3Ur" userLabel="Border_Left">
+                                                    <rect key="frame" x="0.0" y="0.0" width="4" height="320"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <view key="contentView" ambiguous="YES" id="ZeL-w0-FD5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="4" height="320"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </box>
+                                                <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="r3d-U3-Jql" userLabel="Border_Right">
+                                                    <rect key="frame" x="508" y="0.0" width="4" height="320"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <view key="contentView" ambiguous="YES" id="8pf-BO-fbD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="4" height="320"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </box>
+                                                <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="af2-x4-vCw" userLabel="Border_Bottom">
+                                                    <rect key="frame" x="0.0" y="0.0" width="512" height="4"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <view key="contentView" ambiguous="YES" id="cVi-WB-VPU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="512" height="4"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </view>
+                                                    <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </box>
+                                            </subviews>
+                                        </customView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DXS-KS-dR5" userLabel="Username Text Field" customClass="CUTextField" customModule="Macister" customModuleProvider="target">
                                             <rect key="frame" x="128" y="192" width="256" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -290,7 +356,7 @@ DQ
                 </viewController>
                 <customObject id="Jp6-iq-usF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="669" y="223"/>
+            <point key="canvasLocation" x="75" y="607"/>
         </scene>
         <!--Today View Controller-->
         <scene sceneID="gOw-sN-6JM">
@@ -455,6 +521,50 @@ DQ
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                             <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Emg-ZM-seu">
+                                                                <rect key="frame" x="-100" y="-100" width="16" height="566"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                        </scrollView>
+                                                    </subviews>
+                                                </customView>
+                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4QR-nz-0pK" userLabel="Grades">
+                                                    <rect key="frame" x="512" y="4" width="252" height="612"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <subviews>
+                                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bnb-Hc-YXh" userLabel="Top">
+                                                            <rect key="frame" x="0.0" y="564" width="252" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                            <subviews>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKK-IK-9GW">
+                                                                    <rect key="frame" x="54" y="8" width="144" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Cijfers" id="X7e-H4-CSS">
+                                                                        <font key="font" metaFont="systemMedium" size="24"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="deviceWhite"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                            </subviews>
+                                                        </customView>
+                                                        <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6N4-9H-asw" userLabel="GradeItems">
+                                                            <rect key="frame" x="0.0" y="0.0" width="252" height="564"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                            <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="h7Z-w4-PYh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="252" height="564"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gf-TE-MmT">
+                                                                        <rect key="frame" x="0.0" y="-298798" width="252" height="564"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                                            </clipView>
+                                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="iAe-M0-Dw5">
+                                                                <rect key="frame" x="-100" y="-100" width="252" height="16"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="vnj-xD-xNQ">
                                                                 <rect key="frame" x="-100" y="-100" width="16" height="566"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
@@ -675,6 +785,7 @@ DQ
                         <outlet property="calanderItems" destination="Id6-Yu-WAD" id="Knj-6c-VKa"/>
                         <outlet property="cijfers" destination="UZz-eL-Chj" id="1IB-yL-JMU"/>
                         <outlet property="dayLabel" destination="U8u-ka-aYj" id="UEi-k9-jsb"/>
+                        <outlet property="gradeItems" destination="6N4-9H-asw" id="Wgz-lT-2kx"/>
                         <outlet property="monthLabel" destination="1Xk-Ul-AOt" id="pI0-VF-VvP"/>
                         <outlet property="profileImage" destination="06F-MQ-nyM" id="Tlx-zW-AAG"/>
                         <outlet property="userName" destination="cCS-w6-EtR" id="2Id-8h-aGm"/>
@@ -683,7 +794,7 @@ DQ
                 </viewController>
                 <customObject id="urM-qP-Qdq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="415"/>
+            <point key="canvasLocation" x="759" y="415"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="UJI-1y-Ytf">
@@ -897,35 +1008,6 @@ DQ
                                             </view>
                                             <color key="fillColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                         </box>
-                                        <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="13" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Zup-6N-3K6">
-                                            <rect key="frame" x="381" y="470" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView" ambiguous="YES" id="teG-IH-slL">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0c1-7T-u14">
-                                                        <rect key="frame" x="-34" y="15" width="196" height="17"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Nederlands" id="0sE-3l-dvG">
-                                                            <font key="font" metaFont="system"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ctx-Kf-TYa">
-                                                        <rect key="frame" x="6" y="26" width="116" height="81"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="9,2" id="EPP-aE-xmD">
-                                                            <font key="font" metaFont="systemMedium" size="55"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                </subviews>
-                                            </view>
-                                            <color key="fillColor" red="0.015003772322759193" green="0.61544898696423156" blue="0.76892406088082899" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </box>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -943,7 +1025,7 @@ DQ
                 </viewController>
                 <customObject id="eXK-E8-1Bi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2193" y="415"/>
+            <point key="canvasLocation" x="1588" y="415"/>
         </scene>
     </scenes>
     <resources>

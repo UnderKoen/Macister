@@ -28,12 +28,15 @@
 		5D68E5F820232C0B0065F4C4 /* CUComboBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */; };
 		5D68E60820232DDA0065F4C4 /* CUComboBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D68E60720232DDA0065F4C4 /* CUComboBox.swift */; };
 		5D6F520620161535004C63BA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6F520520161535004C63BA /* Lesson.swift */; };
+		5D7908ED202840240006C7AC /* GradeElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D7908EC202840240006C7AC /* GradeElement.xib */; };
+		5D7908FD202840330006C7AC /* GradeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7908FC202840330006C7AC /* GradeElement.swift */; };
 		5D7E3C3E201F86BC00CB8721 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E3C3D201F86BC00CB8721 /* StatusType.swift */; };
 		5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
 		5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5D8CB19E200D17C70073613D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CB19D200D17C70073613D /* Person.swift */; };
 		5D9281AA2021C86E00FA3902 /* CUTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9281A92021C86E00FA3902 /* CUTextField.xib */; };
 		5D9281BA2021D68D00FA3902 /* CUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9281B92021D68D00FA3902 /* CUTextField.swift */; };
+		5D9AD88D2028958B0020E15A /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9AD88C2028958B0020E15A /* JsonUtil.swift */; };
 		5DA11AB1200D55D6001785F2 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA11AB0200D55D6001785F2 /* FileUtil.swift */; };
 		5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA27DC32009274100909C42 /* AppDelegate.swift */; };
 		5DA27DC82009274100909C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DA27DC72009274100909C42 /* Assets.xcassets */; };
@@ -51,6 +54,7 @@
 		5DE430672020C9420071C7A6 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DE430722020C9490071C7A6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5DE430732020C9490071C7A6 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5DE97BBF20286BA700A57475 /* GradeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE97BBE20286BA700A57475 /* GradeHandler.swift */; };
 		5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF54A42200BC89900278DAB /* EventMonitor.swift */; };
 		5DF746F72019EDCF007E6650 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF746F62019EDCF007E6650 /* Subject.swift */; };
 		5DF747092019EDF2007E6650 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF747082019EDF2007E6650 /* Teacher.swift */; };
@@ -230,10 +234,13 @@
 		5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CUComboBox.xib; sourceTree = "<group>"; };
 		5D68E60720232DDA0065F4C4 /* CUComboBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUComboBox.swift; sourceTree = "<group>"; };
 		5D6F520520161535004C63BA /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		5D7908EC202840240006C7AC /* GradeElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeElement.xib; sourceTree = "<group>"; };
+		5D7908FC202840330006C7AC /* GradeElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeElement.swift; sourceTree = "<group>"; };
 		5D7E3C3D201F86BC00CB8721 /* StatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
 		5D8CB19D200D17C70073613D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5D9281A92021C86E00FA3902 /* CUTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CUTextField.xib; sourceTree = "<group>"; };
 		5D9281B92021D68D00FA3902 /* CUTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUTextField.swift; sourceTree = "<group>"; };
+		5D9AD88C2028958B0020E15A /* JsonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
 		5DA11AB0200D55D6001785F2 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
 		5DA27DC02009274100909C42 /* Macister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA27DC32009274100909C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +261,7 @@
 		5DAEC61F201F152C00AB7B13 /* GradeColomn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeColomn.swift; sourceTree = "<group>"; };
 		5DAEC621201F16DE00AB7B13 /* RowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowType.swift; sourceTree = "<group>"; };
 		5DAEC626201F293200AB7B13 /* LessonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonHandler.swift; sourceTree = "<group>"; };
+		5DE97BBE20286BA700A57475 /* GradeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeHandler.swift; sourceTree = "<group>"; };
 		5DF54A42200BC89900278DAB /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		5DF746F62019EDCF007E6650 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		5DF747082019EDF2007E6650 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
@@ -386,6 +394,8 @@
 			children = (
 				5DA53B8D20100223001DD8F2 /* LessonElement.xib */,
 				5DA53B8F20100266001DD8F2 /* LessonElement.swift */,
+				5D7908EC202840240006C7AC /* GradeElement.xib */,
+				5D7908FC202840330006C7AC /* GradeElement.swift */,
 				5D9281A92021C86E00FA3902 /* CUTextField.xib */,
 				5D9281B92021D68D00FA3902 /* CUTextField.swift */,
 				5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */,
@@ -400,6 +410,7 @@
 				5DAB9012200CB62E00705B36 /* HttpUtil.swift */,
 				5DA11AB0200D55D6001785F2 /* FileUtil.swift */,
 				5D041B08200E5EDD00FFBF6A /* DateUtil.swift */,
+				5D9AD88C2028958B0020E15A /* JsonUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -421,6 +432,7 @@
 				5DFAED59200A4298000BC7CF /* School.swift */,
 				5DFAED5D200A48B0000BC7CF /* Magister.swift */,
 				5DAEC626201F293200AB7B13 /* LessonHandler.swift */,
+				5DE97BBE20286BA700A57475 /* GradeHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -720,6 +732,7 @@
 				5DA53B8E20100223001DD8F2 /* LessonElement.xib in Resources */,
 				5D505275202107B800DE3F8F /* Fonts in Resources */,
 				5D68E5F820232C0B0065F4C4 /* CUComboBox.xib in Resources */,
+				5D7908ED202840240006C7AC /* GradeElement.xib in Resources */,
 				5D9281AA2021C86E00FA3902 /* CUTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,8 +760,10 @@
 			files = (
 				5D016652200FA4FE00C0E1D9 /* MainUrl.swift in Sources */,
 				5DF747102019EEAC007E6650 /* LessonType.swift in Sources */,
+				5D7908FD202840330006C7AC /* GradeElement.swift in Sources */,
 				5DF7470B2019EE2B007E6650 /* ClassRoom.swift in Sources */,
 				5D7E3C3E201F86BC00CB8721 /* StatusType.swift in Sources */,
+				5D9AD88D2028958B0020E15A /* JsonUtil.swift in Sources */,
 				5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */,
 				5D8CB19E200D17C70073613D /* Person.swift in Sources */,
 				5DF746F72019EDCF007E6650 /* Subject.swift in Sources */,
@@ -759,6 +774,7 @@
 				5DAB9013200CB62E00705B36 /* HttpUtil.swift in Sources */,
 				5DAEC60E201F123100AB7B13 /* GradePeriod.swift in Sources */,
 				5D041B07200E549D00FFBF6A /* Studies.swift in Sources */,
+				5DE97BBF20286BA700A57475 /* GradeHandler.swift in Sources */,
 				5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */,
 				5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */,
 				5DAEC620201F152C00AB7B13 /* GradeColomn.swift in Sources */,

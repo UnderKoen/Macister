@@ -10,8 +10,6 @@ import Cocoa
 import SwiftyJSON
 
 class Grades: NSObject {
-    var done:Bool = false
-    
     var grades:[Grade]?
     
     init(grades:[Grade]?) {
@@ -19,14 +17,13 @@ class Grades: NSObject {
     }
     
     convenience init (json: JSON?) {
-        let items = json!["Items"].array
+        let items = json!["items"].array ?? json!["Items"].array
         var grades:[Grade] = []
         items?.forEach({ (json) in
             let grade = Grade(json: json)
             grades.append(grade)
         })
         self.init(grades: grades)
-        self.done = true
     }
 }
 
