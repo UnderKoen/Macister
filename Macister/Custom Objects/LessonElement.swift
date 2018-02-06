@@ -13,6 +13,7 @@ import Cocoa
 class LessonElement: NSView {
     @IBOutlet weak var view: NSView!
     
+    var activeLN = false
     @IBInspectable var lessonNumber:Int = 0 {
         didSet {
             view.subviews.forEach { (view) in
@@ -23,6 +24,9 @@ class LessonElement: NSView {
                         lessonNumber.frame = NSRect.init(x: lessonNumber.frame.minX, y: lessonNumber.frame.minY - 2, width: lessonNumber.frame.width, height: lessonNumber.frame.height) 
                     }
                     lessonNumber.stringValue = "\(self.lessonNumber)"
+                    view.isHidden = false
+                    activeLN = true
+                    lessonInfo = String(lessonInfo)
                 }
             }
         }
@@ -44,13 +48,18 @@ class LessonElement: NSView {
             view.subviews.forEach { (view) in
                 if (view.identifier?.rawValue == "LessonInfo") {
                     let lessonNumber = view as! NSTextField
+                    if (activeLN) {
+                        lessonNumber.frame = NSRect(x: 28, y: lessonNumber.frame.minY, width: 186, height: lessonNumber.frame.height)
+                    } else {
+                        lessonNumber.frame = NSRect(x: 6, y: lessonNumber.frame.minY, width: 208, height: lessonNumber.frame.height)
+                    }
                     lessonNumber.stringValue = lessonInfo
                 }
             }
         }
     }
     
-    var infoType:InfoType = InfoType.NONE {
+    var infoType:InfoType = .NONE {
         didSet {
             view.subviews.forEach { (view) in
                 if (view.identifier?.rawValue == "InfoType") {
@@ -85,6 +94,29 @@ class LessonElement: NSView {
         }
     }
     
+    var alertType:Alert = .NONE {
+        didSet {
+            view.subviews.forEach { (view) in
+                if (view.identifier?.rawValue == "statusColor" || view.identifier?.rawValue == "LessonNumber") {
+                    let box = view as! NSBox
+                    var color:NSColor? = nil
+                    switch self.alertType {
+                    case .NONE:
+                        break
+                    case .BLUE:
+                        color = NSColor(red: 0, green: 147/255, blue: 226/255, alpha: 1)
+                    case .RED:
+                        color = NSColor(red: 202/255, green: 91/255, blue: 91/255, alpha: 1)
+                    }
+                    if color != nil {
+                        box.fillColor = color!
+                        self.layer?.backgroundColor = color!.withAlphaComponent(0.15).cgColor
+                    }
+                }
+            }
+        }
+    }
+    
     var lesson:Lesson? {
         didSet {
             if ((lesson!.lesuurVan) != nil) {
@@ -97,7 +129,7 @@ class LessonElement: NSView {
             }
             if ((lesson!.omschrijving) != nil) {
                 var string = ""
-                if (lesson?.lokatie != nil) {
+                if (lesson?.lokatie != nil && lesson?.lokatie != "") {
                     string = " (\(lesson!.lokatie!))"
                 }
                 lessonInfo = lesson!.omschrijving! + string
@@ -105,18 +137,31 @@ class LessonElement: NSView {
             if (lesson!.infoType != nil) {
                 self.infoType = lesson!.infoType!
             }
+            if (lesson!.lessonType != nil || lesson!.status != nil) {
+                if lesson!.status == StatusType.CANCELEDAUTOMATICALLY || lesson!.status == StatusType.CANCELEDBYHAND {
+                    alertType = .RED
+                } else if lesson!.lessonType == LessonType.GENERAL || lesson!.lessonType == LessonType.PERSONAL {
+                    alertType = .BLUE
+                }
+            }
         }
     }
     
     var onHover:Bool = false
+    var oldColor:CGColor?
     override func mouseEntered(with event: NSEvent) {
         onHover = true
-        self.layer?.backgroundColor = NSColor(red: 254/255, green: 245/255, blue: 202/255, alpha: 1).cgColor
+        oldColor = self.layer?.backgroundColor
+        if (oldColor == nil) {
+            self.layer?.backgroundColor = NSColor(red: 254/255, green: 245/255, blue: 202/255, alpha: 1).cgColor
+        } else {
+            self.layer?.backgroundColor = NSColor.init(cgColor: oldColor!)?.withAlphaComponent(0.3).cgColor
+        }
     }
     
     override func mouseExited(with event: NSEvent) {
         onHover = false
-        self.layer?.backgroundColor = nil
+        self.layer?.backgroundColor = oldColor
     }
     
     override init(frame: CGRect) {
@@ -145,4 +190,10 @@ class LessonElement: NSView {
         }
         return nil
     }
+}
+
+enum Alert {
+    case NONE
+    case BLUE
+    case RED
 }

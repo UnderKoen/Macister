@@ -42,6 +42,8 @@ class TodayViewController: MainViewController {
             if y-(lessons.count*self.lessonHeight) < 0 {
                 self.calanderItems.documentView!.setFrameSize(NSSize(width: self.calanderItems.contentSize.width, height: CGFloat(lessons.count*48)))
                 y = lessons.count*self.lessonHeight
+            } else {
+                self.calanderItems.documentView!.setFrameSize(NSSize(width: self.calanderItems.contentSize.width, height: CGFloat(y)))
             }
             lessons.forEach({ (lesson) in
                 y = y-self.lessonHeight
@@ -63,6 +65,8 @@ class TodayViewController: MainViewController {
                 if y-(grades!.grades!.count*self.lessonHeight) < 0 {
                     self.gradeItems.documentView!.setFrameSize(NSSize(width: self.gradeItems.contentSize.width, height: CGFloat(grades!.grades!.count*48)))
                     y = grades!.grades!.count*self.lessonHeight
+                } else {
+                    self.calanderItems.documentView!.setFrameSize(NSSize(width: self.calanderItems.contentSize.width, height: CGFloat(y)))
                 }
                 grades!.grades!.forEach({ (grade) in
                     y = y-self.lessonHeight

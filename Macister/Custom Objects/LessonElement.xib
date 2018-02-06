@@ -24,7 +24,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <box identifier="LessonNumber" fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="NXh-kH-a66" userLabel="Lesson">
+                <box identifier="LessonNumber" hidden="YES" fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="NXh-kH-a66" userLabel="Lesson">
                     <rect key="frame" x="8" y="8" width="16" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <view key="contentView" ambiguous="YES" id="jdi-Je-y5j">
@@ -45,7 +45,7 @@
                     <color key="fillColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                 </box>
                 <textField identifier="LessonInfo" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CH8-hr-a5O" userLabel="Info">
-                    <rect key="frame" x="26" y="8" width="188" height="16"/>
+                    <rect key="frame" x="6" y="8" width="208" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="-" id="Uy1-dP-Sqw">
                         <font key="font" metaFont="smallSystem"/>
@@ -81,6 +81,14 @@
                         </subviews>
                     </view>
                     <color key="fillColor" red="0.0" green="0.58823529409999997" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </box>
+                <box identifier="statusColor" fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="CAv-tb-TJq">
+                    <rect key="frame" x="0.0" y="0.0" width="4" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" ambiguous="YES" id="jnP-ZI-V6K">
+                        <rect key="frame" x="0.0" y="0.0" width="4" height="48"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
                 </box>
             </subviews>
             <point key="canvasLocation" x="143" y="168"/>
