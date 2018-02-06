@@ -34,6 +34,9 @@ class LessonHandler: NSObject {
                     lessons.append(Lesson.init(json: jsonF))
                 })
             } catch {}
+            lessons.sort(by: { (lesson1, lesson2) -> Bool in
+                return lesson1.startDate!.timeIntervalSince(lesson2.startDate!) < 0
+            })
             completionHandler(lessons)
         }
     }
