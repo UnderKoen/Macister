@@ -83,7 +83,7 @@ class CUComboBox: CUTextField {
     override func controlTextDidChange(_ obj: Notification) {
         super.controlTextDidChange(obj)
         selectedItem = -1
-        if (items.count > 0) {
+        if (items.count > 0 && !popoverActive) || (items.count == 0 && popoverActive) {
             onclick("")
         }
     }
@@ -122,6 +122,9 @@ class CUComboBox: CUTextField {
             i += 1
         }
         popoverView.documentView!.scroll(NSPoint(x: 0, y: amount*heightForItem))
+        if (items.count > 0 && !popoverActive) || (items.count == 0 && popoverActive) {
+            onclick("")
+        }
     }
     
     var popoverActive:Bool = false
