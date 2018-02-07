@@ -35,6 +35,11 @@ class TodayViewController: MainViewController {
         updateCalander()
     }
     
+    override func update() {
+        updateCalander()
+        updateGrades()
+    }
+    
     func updateCalander() {
         Magister.magister?.getLessonHandler()?.getLessonsForDay(day: calanderDate, completionHandler: { (lessons) in
             self.calanderItems.documentView!.subviews.removeAll()

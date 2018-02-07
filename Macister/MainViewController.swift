@@ -18,7 +18,6 @@ class MainViewController: NSViewController {
     @IBOutlet weak var userName: NSTextField!
     @IBOutlet weak var profileImage: NSImageView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         userName.stringValue = Magister.magister!.getPerson()!.getName()
@@ -47,4 +46,6 @@ class MainViewController: NSViewController {
             }
         }
     }
+    
+    func update() {}
 }

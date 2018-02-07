@@ -58,6 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let pw = AppDelegate.popover.contentViewController!.view.window
         pw?.parent?.removeChildWindow(pw!)
         eventMonitor?.start()
+        (AppDelegate.popover.contentViewController! as? MainViewController)?.update()
     }
     
     func closePopover(sender: Any?) {
