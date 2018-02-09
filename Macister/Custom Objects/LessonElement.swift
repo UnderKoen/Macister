@@ -138,7 +138,7 @@ class LessonElement: NSView {
                 self.infoType = lesson!.infoType!
             }
             if (lesson!.lessonType != nil || lesson!.status != nil) {
-                if lesson!.status == StatusType.CANCELEDAUTOMATICALLY || lesson!.status == StatusType.CANCELEDBYHAND {
+                if lesson!.status == LessonStatusType.CANCELEDAUTOMATICALLY || lesson!.status == LessonStatusType.CANCELEDBYHAND {
                     alertType = .RED
                 } else if lesson!.lessonType == LessonType.GENERAL || lesson!.lessonType == LessonType.PERSONAL {
                     alertType = .BLUE

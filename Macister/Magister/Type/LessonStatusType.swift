@@ -8,7 +8,7 @@
 
 import Cocoa
 
-enum StatusType: Int {
+enum LessonStatusType: Int {
     case NONE = 0
     case PLANNEDAUTOMATICALLY = 1
     case PLANNEDBYHAND = 2

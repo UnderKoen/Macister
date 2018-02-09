@@ -23,6 +23,11 @@
 		5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213920095243006BE4DA /* FindSchoolViewController.swift */; };
 		5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213B20095256006BE4DA /* LoginViewController.swift */; };
 		5D505275202107B800DE3F8F /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5D505274202107B700DE3F8F /* Fonts */; };
+		5D50DA78202B2653005A8765 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50DA77202B2653005A8765 /* Message.swift */; };
+		5D50DA7A202B3BE0005A8765 /* MessageStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50DA79202B3BE0005A8765 /* MessageStatusType.swift */; };
+		5D50DA7C202B402C005A8765 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50DA7B202B402C005A8765 /* MessageType.swift */; };
+		5D50DA7E202B40D2005A8765 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50DA7D202B40D2005A8765 /* Contact.swift */; };
+		5D50DA80202B4168005A8765 /* ContactType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50DA7F202B4168005A8765 /* ContactType.swift */; };
 		5D546096200DE8D4002C0D74 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D546095200DE8D4002C0D74 /* TodayViewController.swift */; };
 		5D5460A9200DE9FD002C0D74 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */; };
 		5D68E5F820232C0B0065F4C4 /* CUComboBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */; };
@@ -30,7 +35,7 @@
 		5D6F520620161535004C63BA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6F520520161535004C63BA /* Lesson.swift */; };
 		5D7908ED202840240006C7AC /* GradeElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D7908EC202840240006C7AC /* GradeElement.xib */; };
 		5D7908FD202840330006C7AC /* GradeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7908FC202840330006C7AC /* GradeElement.swift */; };
-		5D7E3C3E201F86BC00CB8721 /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E3C3D201F86BC00CB8721 /* StatusType.swift */; };
+		5D7E3C3E201F86BC00CB8721 /* LessonStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E3C3D201F86BC00CB8721 /* LessonStatusType.swift */; };
 		5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
 		5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5D8CB19E200D17C70073613D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CB19D200D17C70073613D /* Person.swift */; };
@@ -229,6 +234,11 @@
 		5D26213920095243006BE4DA /* FindSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSchoolViewController.swift; sourceTree = "<group>"; };
 		5D26213B20095256006BE4DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5D505274202107B700DE3F8F /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		5D50DA77202B2653005A8765 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		5D50DA79202B3BE0005A8765 /* MessageStatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStatusType.swift; sourceTree = "<group>"; };
+		5D50DA7B202B402C005A8765 /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
+		5D50DA7D202B40D2005A8765 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		5D50DA7F202B4168005A8765 /* ContactType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactType.swift; sourceTree = "<group>"; };
 		5D546095200DE8D4002C0D74 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CUComboBox.xib; sourceTree = "<group>"; };
@@ -236,7 +246,7 @@
 		5D6F520520161535004C63BA /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		5D7908EC202840240006C7AC /* GradeElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeElement.xib; sourceTree = "<group>"; };
 		5D7908FC202840330006C7AC /* GradeElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeElement.swift; sourceTree = "<group>"; };
-		5D7E3C3D201F86BC00CB8721 /* StatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
+		5D7E3C3D201F86BC00CB8721 /* LessonStatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonStatusType.swift; sourceTree = "<group>"; };
 		5D8CB19D200D17C70073613D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5D9281A92021C86E00FA3902 /* CUTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CUTextField.xib; sourceTree = "<group>"; };
 		5D9281B92021D68D00FA3902 /* CUTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUTextField.swift; sourceTree = "<group>"; };
@@ -324,6 +334,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D50DA66202B25AF005A8765 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				5D50DA77202B2653005A8765 /* Message.swift */,
+				5D50DA7D202B40D2005A8765 /* Contact.swift */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 		5DA27DB72009274100909C42 = {
@@ -437,6 +456,15 @@
 			path = Handlers;
 			sourceTree = "<group>";
 		};
+		5DC7074A202D946D005B777D /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				5D6F520520161535004C63BA /* Lesson.swift */,
+				5DF7470A2019EE2B007E6650 /* ClassRoom.swift */,
+			);
+			path = Lesson;
+			sourceTree = "<group>";
+		};
 		5DF7470C2019EE4D007E6650 /* Type */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,7 +472,10 @@
 				5DF747122019F2EE007E6650 /* DisplayType.swift */,
 				5DF747142019F34B007E6650 /* InfoType.swift */,
 				5DAEC621201F16DE00AB7B13 /* RowType.swift */,
-				5D7E3C3D201F86BC00CB8721 /* StatusType.swift */,
+				5D7E3C3D201F86BC00CB8721 /* LessonStatusType.swift */,
+				5D50DA79202B3BE0005A8765 /* MessageStatusType.swift */,
+				5D50DA7B202B402C005A8765 /* MessageType.swift */,
+				5D50DA7F202B4168005A8765 /* ContactType.swift */,
 			);
 			path = Type;
 			sourceTree = "<group>";
@@ -470,16 +501,16 @@
 				325104154C343031730B3840 /* Url */,
 				5DF7470C2019EE4D007E6650 /* Type */,
 				5DAEC623201F18B200AB7B13 /* Grade */,
+				5D50DA66202B25AF005A8765 /* Message */,
+				5DC7074A202D946D005B777D /* Lesson */,
 				5D8CB19D200D17C70073613D /* Person.swift */,
 				5D118544200E08F4003EE455 /* Study.swift */,
 				5D041AF2200E2CF800FFBF6A /* StudyInfo.swift */,
 				5D041B04200E2D0E00FFBF6A /* Group.swift */,
 				5D041B06200E549D00FFBF6A /* Studies.swift */,
 				325103B1BD4D0B957E5FBDBE /* Account.swift */,
-				5D6F520520161535004C63BA /* Lesson.swift */,
 				5DF746F62019EDCF007E6650 /* Subject.swift */,
 				5DF747082019EDF2007E6650 /* Teacher.swift */,
-				5DF7470A2019EE2B007E6650 /* ClassRoom.swift */,
 			);
 			path = Magister;
 			sourceTree = "<group>";
@@ -762,7 +793,7 @@
 				5DF747102019EEAC007E6650 /* LessonType.swift in Sources */,
 				5D7908FD202840330006C7AC /* GradeElement.swift in Sources */,
 				5DF7470B2019EE2B007E6650 /* ClassRoom.swift in Sources */,
-				5D7E3C3E201F86BC00CB8721 /* StatusType.swift in Sources */,
+				5D7E3C3E201F86BC00CB8721 /* LessonStatusType.swift in Sources */,
 				5D9AD88D2028958B0020E15A /* JsonUtil.swift in Sources */,
 				5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */,
 				5D8CB19E200D17C70073613D /* Person.swift in Sources */,
@@ -770,10 +801,12 @@
 				5D041B05200E2D0E00FFBF6A /* Group.swift in Sources */,
 				5D118545200E08F4003EE455 /* Study.swift in Sources */,
 				5DF747092019EDF2007E6650 /* Teacher.swift in Sources */,
+				5D50DA78202B2653005A8765 /* Message.swift in Sources */,
 				5DA11AB1200D55D6001785F2 /* FileUtil.swift in Sources */,
 				5DAB9013200CB62E00705B36 /* HttpUtil.swift in Sources */,
 				5DAEC60E201F123100AB7B13 /* GradePeriod.swift in Sources */,
 				5D041B07200E549D00FFBF6A /* Studies.swift in Sources */,
+				5D50DA7C202B402C005A8765 /* MessageType.swift in Sources */,
 				5DE97BBF20286BA700A57475 /* GradeHandler.swift in Sources */,
 				5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */,
 				5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */,
@@ -786,11 +819,14 @@
 				C6393FF7200FA6F900DD9F78 /* Grades.swift in Sources */,
 				5D016666200FB55000C0E1D9 /* StudyUrl.swift in Sources */,
 				5D68E60820232DDA0065F4C4 /* CUComboBox.swift in Sources */,
+				5D50DA7A202B3BE0005A8765 /* MessageStatusType.swift in Sources */,
 				5DFAED5A200A4298000BC7CF /* School.swift in Sources */,
 				5D041B09200E5EDD00FFBF6A /* DateUtil.swift in Sources */,
 				5DAEC627201F293200AB7B13 /* LessonHandler.swift in Sources */,
 				5DA53B9020100266001DD8F2 /* LessonElement.swift in Sources */,
 				5DF747152019F34B007E6650 /* InfoType.swift in Sources */,
+				5D50DA80202B4168005A8765 /* ContactType.swift in Sources */,
+				5D50DA7E202B40D2005A8765 /* Contact.swift in Sources */,
 				5D6F520620161535004C63BA /* Lesson.swift in Sources */,
 				5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */,
 				5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */,
