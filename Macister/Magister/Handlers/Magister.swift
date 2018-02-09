@@ -61,14 +61,20 @@ class Magister: NSObject {
         return gradeHandler
     }
     
-    func logout() {
+    func logout(forCookie:Bool = false) {
         HttpUtil.httpDelete(url: mainUrl.schoolUrl!.getCurrentSessionUrl())
+        if (!forCookie) {
+            let query = [
+                kSecClass as String: kSecClassGenericPassword,
+                kSecAttrAccount as String: "nl.underkoen.Macister"] as [String : Any]
+            SecItemDelete(query as CFDictionary)
+        }
     }
     
     private var accountId:Int?
     
     func login(username: String, password: String, onError: @escaping (_ error: String) -> Void, onSucces: @escaping () -> Void) {
-        logout()
+        logout(forCookie: true)
         DispatchQueue.global().async {
             while(HttpUtil.cookies == "") {
                 usleep(useconds_t.init(1000000 * 0.1))

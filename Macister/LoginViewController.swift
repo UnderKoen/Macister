@@ -14,48 +14,45 @@ class LoginViewController: NSViewController {
     @IBOutlet weak var usernameTextField: CUTextField!
     @IBOutlet weak var passwordTextField: CUTextField!
     @IBOutlet weak var error: NSTextField!
-    @IBOutlet weak var progressBar: NSProgressIndicator!
+    @IBOutlet weak var loading: NSProgressIndicator!
+    @IBOutlet weak var remember: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        progressBar.minValue = 0
-        progressBar.maxValue = Magister.maxWait
     }
     
     private var timesWrong:[String:Int] = [:]
-    private var busy:Bool = false
+    private var busy:Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                if (self.busy) {
+                    self.loading.isHidden = false
+                    self.loading.startAnimation(self)
+                } else {
+                    self.loading.isHidden = true
+                    self.loading.stopAnimation(self)
+                }
+            }
+        }
+    }
     @IBAction func Buttonaction(_ sender: Any) {
         if (!busy) {
             self.busy = true
             if self.isBlocked(user: self.usernameTextField.input.stringValue) {
-                self.error.stringValue = "Het account is 10 minuten geblokkeerd wegens overschrijding van het maximale aantal foutieve inlogpogingen."
+                self.error.stringValue = "Het account is 10 minuten geblokkeerd."
                 busy = false
             } else if (usernameTextField.input.stringValue == "") || (passwordTextField.input.stringValue == "") {
                 error.stringValue = "Niet alles is ingevuld"
                 busy = false
             } else {
                 self.error.stringValue = ""
-                self.progressBar.isHidden = false
-                self.progressBar.startAnimation(self)
-                DispatchQueue.global().async {
-                    while self.busy {
-                        usleep(useconds_t.init(1000000 * 0.1))
-                        DispatchQueue.main.async {
-                            self.progressBar.increment(by: 0.1)
-                        }
-                    }
-                    DispatchQueue.main.async {
-                        self.progressBar.isHidden = true
-                        self.progressBar.stopAnimation(self)
-                    }
-                }
                 Magister.magister?.login(username: usernameTextField.input.stringValue, password: passwordTextField.input.stringValue, onError: { (error) in
                     DispatchQueue.main.async {
                         if (error.contains("Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord.")) {
                             self.error.stringValue = "Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord."
                             self.timesWrong[self.usernameTextField.input.stringValue] = (self.timesWrong[self.usernameTextField.input.stringValue] ?? 0) + 1
                             if (self.timesWrong[self.usernameTextField.input.stringValue] ?? 0) == 5 {
-                                self.error.stringValue = "Het account is 10 minuten geblokkeerd wegens overschrijding van het maximale aantal foutieve inlogpogingen."
+                                self.error.stringValue = "Het account is 10 minuten geblokkeerd."
                                 self.setBlock(user: self.usernameTextField.input.stringValue, timeInMinutes: 10)
                                 self.timesWrong[self.usernameTextField.input.stringValue] = 0
                             }
@@ -67,6 +64,25 @@ class LoginViewController: NSViewController {
                 }, onSucces: {
                     AppDelegate.changeView(controller: TodayViewController.freshController())
                     self.busy = false
+                    DispatchQueue.main.async {
+                        if (self.remember.state == .on) {
+                            var schoolJson = JSON(parseJSON: "{}")
+                            schoolJson["name"] = JSON(rawValue: Magister.magister!.getSchool().name)!
+                            schoolJson["id"] = JSON(rawValue: Magister.magister!.getSchool().id)!
+                            schoolJson["url"] = JSON(rawValue: Magister.magister!.getSchool().url)!
+                            var json = JSON(parseJSON: "{}")
+                            json["school"] = schoolJson
+                            json["user"] = JSON(rawValue: self.usernameTextField.input.stringValue)!
+                            json["pass"] = JSON(rawValue: self.passwordTextField.input.stringValue)!
+                            let query = [
+                                kSecClass as String: kSecClassGenericPassword as String,
+                                kSecAttrAccount as String: "nl.underkoen.Macister",
+                                kSecValueData as String: json.rawString()!
+                            ]
+                            SecItemDelete(query as CFDictionary)
+                            SecItemAdd(query as CFDictionary, nil)
+                        }
+                    }
                 })
             }
         }

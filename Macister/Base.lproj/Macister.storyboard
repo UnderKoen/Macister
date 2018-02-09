@@ -187,7 +187,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K93-1Y-2Zs">
-                                            <rect key="frame" x="-2" y="64" width="516" height="36"/>
+                                            <rect key="frame" x="-2" y="13" width="516" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" alignment="center" id="tlz-49-tVW">
                                                 <font key="font" metaFont="systemBlack" size="12"/>
@@ -315,7 +315,7 @@ DQ
                                             </userDefinedRuntimeAttributes>
                                         </customView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTh-Wc-nQG">
-                                            <rect key="frame" x="-2" y="64" width="516" height="36"/>
+                                            <rect key="frame" x="-2" y="13" width="516" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" alignment="center" id="xjb-yg-YAg">
                                                 <font key="font" metaFont="system"/>
@@ -323,10 +323,6 @@ DQ
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <progressIndicator hidden="YES" wantsLayer="YES" fixedFrame="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="uyR-Ei-mRY">
-                                            <rect key="frame" x="128" y="63" width="256" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        </progressIndicator>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nvp-zU-n7c">
                                             <rect key="frame" x="122" y="32" width="268" height="32"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -341,6 +337,18 @@ DQ
                                                 <action selector="Buttonaction:" target="mgu-oi-REs" id="qos-0f-Wxy"/>
                                             </connections>
                                         </button>
+                                        <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="gmd-Mc-fHI">
+                                            <rect key="frame" x="392" y="42" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3XG-Zr-nPP">
+                                            <rect key="frame" x="126" y="66" width="260" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="Remember me" bezelStyle="regularSquare" imagePosition="left" inset="2" id="M5B-OD-pTt">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -349,8 +357,9 @@ DQ
                     </customView>
                     <connections>
                         <outlet property="error" destination="UTh-Wc-nQG" id="jnc-0t-Cbm"/>
+                        <outlet property="loading" destination="gmd-Mc-fHI" id="0OB-HC-wdw"/>
                         <outlet property="passwordTextField" destination="6db-Ui-3iM" id="hXn-3q-dei"/>
-                        <outlet property="progressBar" destination="uyR-Ei-mRY" id="jlq-t8-BTE"/>
+                        <outlet property="remember" destination="3XG-Zr-nPP" id="qJM-Kr-DR7"/>
                         <outlet property="usernameTextField" destination="DXS-KS-dR5" id="lXa-Lz-YrZ"/>
                     </connections>
                 </viewController>

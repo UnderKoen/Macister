@@ -459,6 +459,7 @@
 		5DC7074A202D946D005B777D /* Lesson */ = {
 			isa = PBXGroup;
 			children = (
+				5DF747082019EDF2007E6650 /* Teacher.swift */,
 				5D6F520520161535004C63BA /* Lesson.swift */,
 				5DF7470A2019EE2B007E6650 /* ClassRoom.swift */,
 			);
@@ -506,11 +507,10 @@
 				5D8CB19D200D17C70073613D /* Person.swift */,
 				5D118544200E08F4003EE455 /* Study.swift */,
 				5D041AF2200E2CF800FFBF6A /* StudyInfo.swift */,
-				5D041B04200E2D0E00FFBF6A /* Group.swift */,
 				5D041B06200E549D00FFBF6A /* Studies.swift */,
+				5D041B04200E2D0E00FFBF6A /* Group.swift */,
 				325103B1BD4D0B957E5FBDBE /* Account.swift */,
 				5DF746F62019EDCF007E6650 /* Subject.swift */,
-				5DF747082019EDF2007E6650 /* Teacher.swift */,
 			);
 			path = Magister;
 			sourceTree = "<group>";
@@ -602,8 +602,11 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
-							com.apple.Keychain = {
+							com.apple.ApplicationGroups.Mac = {
 								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
 							};
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -1008,13 +1011,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_ENTITLEMENTS = Macister/Macister.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KN7JU6NLR4;
 				INFOPLIST_FILE = Macister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1025,13 +1031,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_ENTITLEMENTS = Macister/Macister.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KN7JU6NLR4;
 				INFOPLIST_FILE = Macister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
