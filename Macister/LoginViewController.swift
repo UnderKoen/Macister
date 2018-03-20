@@ -66,21 +66,17 @@ class LoginViewController: NSViewController {
                     self.busy = false
                     DispatchQueue.main.async {
                         if (self.remember.state == .on) {
-                            var schoolJson = JSON(parseJSON: "{}")
-                            schoolJson["name"] = JSON(rawValue: Magister.magister!.getSchool().name)!
-                            schoolJson["id"] = JSON(rawValue: Magister.magister!.getSchool().id)!
-                            schoolJson["url"] = JSON(rawValue: Magister.magister!.getSchool().url)!
-                            var json = JSON(parseJSON: "{}")
-                            json["school"] = schoolJson
-                            json["user"] = JSON(rawValue: self.usernameTextField.input.stringValue)!
-                            json["pass"] = JSON(rawValue: self.passwordTextField.input.stringValue)!
-                            let query = [
-                                kSecClass as String: kSecClassGenericPassword as String,
-                                kSecAttrAccount as String: "nl.underkoen.Macister",
-                                kSecValueData as String: json.rawString()!
-                            ]
-                            SecItemDelete(query as CFDictionary)
-                            SecItemAdd(query as CFDictionary, nil)
+                            do {
+                                var schoolJson = JSON(parseJSON: "{}")
+                                schoolJson["name"] = JSON(rawValue: Magister.magister!.getSchool().name)!
+                                schoolJson["id"] = JSON(rawValue: Magister.magister!.getSchool().id)!
+                                schoolJson["url"] = JSON(rawValue: Magister.magister!.getSchool().url)!
+                                var json = JSON(parseJSON: "{}")
+                                json["school"] = schoolJson
+                                json["user"] = JSON(rawValue: self.usernameTextField.input.stringValue)!
+                                try json["pass"] = JSON(rawValue: EncryptionUtil.encryptMessage(message: self.passwordTextField.input.stringValue, encryptionKey: schoolJson["id"].stringValue))!
+                                try AssetHandler.createAsset(name: ".secrets.json").setData(data: json.rawData());
+                            } catch {}
                         }
                     }
                 })

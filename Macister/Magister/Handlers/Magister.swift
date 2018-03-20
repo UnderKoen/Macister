@@ -64,10 +64,7 @@ class Magister: NSObject {
     func logout(forCookie:Bool = false) {
         HttpUtil.httpDelete(url: mainUrl.schoolUrl!.getCurrentSessionUrl())
         if (!forCookie) {
-            let query = [
-                kSecClass as String: kSecClassGenericPassword,
-                kSecAttrAccount as String: "nl.underkoen.Macister"] as [String : Any]
-            SecItemDelete(query as CFDictionary)
+            AssetHandler.getAsset(name: ".secrets.json").remove();
         }
     }
     

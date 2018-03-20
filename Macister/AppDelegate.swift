@@ -26,29 +26,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
         AppDelegate.popover.animates = false
-        let query = [
-            kSecClass as String       : kSecClassGenericPassword,
-            kSecAttrAccount as String : "nl.underkoen.Macister",
-            kSecReturnData as String  : kCFBooleanTrue,
-            kSecMatchLimit as String  : kSecMatchLimitOne] as [String : Any]
-        var dataTypeRef: AnyObject?
-        let status: OSStatus = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
-        if status == noErr {
-            do {
-                let json = try JSON(data: dataTypeRef as! Data)
+        let secret = AssetHandler.getAsset(name: ".secrets.json")
+        do {
+            if secret.exists() {
+                let data = secret.getData();
+                let json = try JSON(data: data!)
                 let schoolJson = json["school"]
                 let school = School(url: schoolJson["url"].string!, name: schoolJson["name"].string!, id: schoolJson["id"].string!)
                 Magister.magister = Magister(school: school)
-                Magister.magister!.login(username: json["user"].string!, password: json["pass"].string!, onError: { (str) in
+                
+                let pass = try EncryptionUtil.decryptMessage(encryptedMessage: json["pass"].string!, encryptionKey: schoolJson["id"].string!);
+                Magister.magister!.login(username: json["user"].string!, password: pass, onError: { (str) in
                     Magister.magister = nil
                     AppDelegate.changeView(controller: FindSchoolViewController.freshController())
                 }, onSucces: {
                     AppDelegate.changeView(controller: TodayViewController.freshController())
                 })
-            } catch {
-               AppDelegate.changeView(controller: FindSchoolViewController.freshController())
+            } else {
+                AppDelegate.changeView(controller: FindSchoolViewController.freshController())
             }
-        } else {
+        } catch {
             AppDelegate.changeView(controller: FindSchoolViewController.freshController())
         }
     }
