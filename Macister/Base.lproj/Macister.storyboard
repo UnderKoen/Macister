@@ -430,7 +430,7 @@ DQ
                                                                 <rect key="frame" x="0.0" y="0.0" width="2" height="568"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             </view>
-                                                            <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.25064212328767121" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </box>
                                                         <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="SVf-Qe-ZDY" userLabel="Border_Middle_Right">
                                                             <rect key="frame" x="510" y="0.0" width="2" height="568"/>
@@ -439,7 +439,7 @@ DQ
                                                                 <rect key="frame" x="0.0" y="0.0" width="2" height="568"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             </view>
-                                                            <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.25064212330000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </box>
                                                         <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="LrX-GY-4IQ" userLabel="Border_Right">
                                                             <rect key="frame" x="764" y="0.0" width="4" height="704"/>
@@ -530,6 +530,90 @@ DQ
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                             <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Emg-ZM-seu">
+                                                                <rect key="frame" x="-100" y="-100" width="16" height="566"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                        </scrollView>
+                                                    </subviews>
+                                                </customView>
+                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKn-ws-fq2" userLabel="Mail">
+                                                    <rect key="frame" x="258" y="4" width="252" height="612"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <subviews>
+                                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jgr-JM-A1C" userLabel="Top">
+                                                            <rect key="frame" x="0.0" y="564" width="252" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                            <subviews>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aO3-u8-pBP">
+                                                                    <rect key="frame" x="54" y="8" width="144" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Berichten" id="BwN-A2-cZB">
+                                                                        <font key="font" metaFont="systemMedium" size="24"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="deviceWhite"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                            </subviews>
+                                                        </customView>
+                                                        <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO3-Lc-5Ww" userLabel="MailItems">
+                                                            <rect key="frame" x="0.0" y="0.0" width="252" height="564"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                            <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="QBk-Ih-hAh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="252" height="564"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJC-XL-jpM">
+                                                                        <rect key="frame" x="0.0" y="-298798" width="252" height="564"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <subviews>
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVW-f7-cdb" customClass="MailElement" customModule="Macister" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="372" width="252" height="48"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="from" value="Daan Docters van Leeuwen"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="subject" value="Dick pics"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="20-03 16:25"/>
+                                                                                    <userDefinedRuntimeAttribute type="image" keyPath="info" value="ic_attachment"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </customView>
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p87-r2-fO5" customClass="MailElement" customModule="Macister" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="420" width="252" height="48"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="from" value="Ander persoon"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="subject" value="dingen"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="21-03 10:12"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </customView>
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDB-AF-qcy" customClass="MailElement" customModule="Macister" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="516" width="252" height="48"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="from" value="Jezelf"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="subject" value="blablablablablablablablablablablablablablablablablablablabla"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="21-03 15:24"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </customView>
+                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUY-p1-1yQ" customClass="MailElement" customModule="Macister" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="468" width="252" height="48"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="from" value="Een ander persoon met een enorme naam"/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="subject" value="Ik wil graag jan genoemd worden en verder ehm."/>
+                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="21-03 10:38"/>
+                                                                                    <userDefinedRuntimeAttribute type="image" keyPath="info" value="ic_attach_file"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </customView>
+                                                                        </subviews>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                                            </clipView>
+                                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="tKm-RB-tHK">
+                                                                <rect key="frame" x="-100" y="-100" width="252" height="16"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="1E9-it-NjN">
                                                                 <rect key="frame" x="-100" y="-100" width="16" height="566"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
@@ -1043,6 +1127,8 @@ DQ
         <image name="Tab" width="192" height="32"/>
         <image name="ic_arrow_back_white" width="24" height="24"/>
         <image name="ic_arrow_forward_white" width="24" height="24"/>
+        <image name="ic_attach_file" width="24" height="24"/>
+        <image name="ic_attachment" width="24" height="24"/>
         <image name="ic_date_range_white" width="24" height="24"/>
         <image name="ic_email_white" width="24" height="24"/>
         <image name="ic_exit_to_app_white" width="24" height="24"/>

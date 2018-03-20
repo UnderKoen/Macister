@@ -23,6 +23,8 @@
 		5D041B07200E549D00FFBF6A /* Studies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D041B06200E549D00FFBF6A /* Studies.swift */; };
 		5D041B09200E5EDD00FFBF6A /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D041B08200E5EDD00FFBF6A /* DateUtil.swift */; };
 		5D118545200E08F4003EE455 /* Study.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D118544200E08F4003EE455 /* Study.swift */; };
+		5D14C90A20614B61003E14D0 /* MailElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D14C90920614B61003E14D0 /* MailElement.xib */; };
+		5D14C91E20614F8E003E14D0 /* MailElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14C91D20614F8E003E14D0 /* MailElement.swift */; };
 		5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213920095243006BE4DA /* FindSchoolViewController.swift */; };
 		5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213B20095256006BE4DA /* LoginViewController.swift */; };
 		5D505275202107B800DE3F8F /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5D505274202107B700DE3F8F /* Fonts */; };
@@ -281,6 +283,8 @@
 		5D041B06200E549D00FFBF6A /* Studies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Studies.swift; sourceTree = "<group>"; };
 		5D041B08200E5EDD00FFBF6A /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		5D118544200E08F4003EE455 /* Study.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study.swift; sourceTree = "<group>"; };
+		5D14C90920614B61003E14D0 /* MailElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailElement.xib; sourceTree = "<group>"; };
+		5D14C91D20614F8E003E14D0 /* MailElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailElement.swift; sourceTree = "<group>"; };
 		5D26213920095243006BE4DA /* FindSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSchoolViewController.swift; sourceTree = "<group>"; };
 		5D26213B20095256006BE4DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5D505274202107B700DE3F8F /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
@@ -482,6 +486,8 @@
 				5DA53B8F20100266001DD8F2 /* LessonElement.swift */,
 				5D7908EC202840240006C7AC /* GradeElement.xib */,
 				5D7908FC202840330006C7AC /* GradeElement.swift */,
+				5D14C90920614B61003E14D0 /* MailElement.xib */,
+				5D14C91D20614F8E003E14D0 /* MailElement.swift */,
 				5D9281A92021C86E00FA3902 /* CUTextField.xib */,
 				5D9281B92021D68D00FA3902 /* CUTextField.swift */,
 				5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */,
@@ -883,6 +889,7 @@
 				5DA53B8E20100223001DD8F2 /* LessonElement.xib in Resources */,
 				5D505275202107B800DE3F8F /* Fonts in Resources */,
 				5D68E5F820232C0B0065F4C4 /* CUComboBox.xib in Resources */,
+				5D14C90A20614B61003E14D0 /* MailElement.xib in Resources */,
 				5D7908ED202840240006C7AC /* GradeElement.xib in Resources */,
 				5D9281AA2021C86E00FA3902 /* CUTextField.xib in Resources */,
 			);
@@ -929,6 +936,7 @@
 				5D50DA7C202B402C005A8765 /* MessageType.swift in Sources */,
 				5DE97BBF20286BA700A57475 /* GradeHandler.swift in Sources */,
 				5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */,
+				5D14C91E20614F8E003E14D0 /* MailElement.swift in Sources */,
 				5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */,
 				5DAEC620201F152C00AB7B13 /* GradeColomn.swift in Sources */,
 				5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */,
