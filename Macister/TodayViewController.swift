@@ -11,6 +11,7 @@ import Cocoa
 class TodayViewController: MainViewController {
 
     @IBOutlet weak var calanderItems: NSScrollView!
+    @IBOutlet weak var mailItems: NSScrollView!
     @IBOutlet weak var gradeItems: NSScrollView!
     @IBOutlet weak var dayLabel: NSTextField!
     @IBOutlet weak var monthLabel: NSTextField!
@@ -21,8 +22,7 @@ class TodayViewController: MainViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateCalander()
-        updateGrades()
+        update()
     }
     
     @IBAction func nextDay(_ sender: Any) {
@@ -37,6 +37,7 @@ class TodayViewController: MainViewController {
     
     override func update() {
         updateCalander()
+        updateMail()
         updateGrades()
     }
     
@@ -60,6 +61,26 @@ class TodayViewController: MainViewController {
         })
         dayLabel.stringValue = DateUtil.getDateFormatTodayDay().string(from: calanderDate)
         monthLabel.stringValue = DateUtil.getDateFormatTodayMonth().string(from: calanderDate)
+    }
+    
+    func updateMail() {
+        Magister.magister?.getMailHandler()?.getMail(mapId: 1, top: nil, skip: nil, completionHandler: { (mail) in
+            self.mailItems.documentView!.subviews.removeAll()
+            var y:Int = Int(self.mailItems.frame.height)
+            if y-(mail.count*self.lessonHeight) < 0 {
+                self.mailItems.documentView!.setFrameSize(NSSize(width: self.mailItems.contentSize.width, height: CGFloat(mail.count*48)))
+                y = mail.count*self.lessonHeight
+            } else {
+                self.mailItems.documentView!.setFrameSize(NSSize(width: self.mailItems.contentSize.width, height: CGFloat(y)))
+            }
+            mail.forEach({ (message) in
+                y = y-self.lessonHeight
+                let el = MailElement(frame: CGRect(x: 0, y: y, width: 252, height: self.lessonHeight))
+                el.message = message
+                self.mailItems.documentView!.addSubview(el)
+            })
+            self.mailItems.documentView!.scroll(NSPoint.init(x: 0, y: mail.count*self.lessonHeight))
+        })
     }
     
     func updateGrades() {

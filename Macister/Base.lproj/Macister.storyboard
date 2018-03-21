@@ -430,7 +430,7 @@ DQ
                                                                 <rect key="frame" x="0.0" y="0.0" width="2" height="568"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             </view>
-                                                            <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </box>
                                                         <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="SVf-Qe-ZDY" userLabel="Border_Middle_Right">
                                                             <rect key="frame" x="510" y="0.0" width="2" height="568"/>
@@ -439,7 +439,7 @@ DQ
                                                                 <rect key="frame" x="0.0" y="0.0" width="2" height="568"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             </view>
-                                                            <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </box>
                                                         <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="LrX-GY-4IQ" userLabel="Border_Right">
                                                             <rect key="frame" x="764" y="0.0" width="4" height="704"/>
@@ -565,46 +565,6 @@ DQ
                                                                     <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJC-XL-jpM">
                                                                         <rect key="frame" x="0.0" y="-298798" width="252" height="564"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                        <subviews>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVW-f7-cdb" customClass="MailElement" customModule="Macister" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="372" width="252" height="48"/>
-                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="from" value="Daan Docters van Leeuwen"/>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="subject" value="Dick pics"/>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="20-03 16:25"/>
-                                                                                    <userDefinedRuntimeAttribute type="image" keyPath="info" value="ic_attachment"/>
-                                                                                </userDefinedRuntimeAttributes>
-                                                                            </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p87-r2-fO5" customClass="MailElement" customModule="Macister" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="420" width="252" height="48"/>
-                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="from" value="Ander persoon"/>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="subject" value="dingen"/>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="21-03 10:12"/>
-                                                                                </userDefinedRuntimeAttributes>
-                                                                            </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDB-AF-qcy" customClass="MailElement" customModule="Macister" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="516" width="252" height="48"/>
-                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="from" value="Jezelf"/>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="subject" value="blablablablablablablablablablablablablablablablablablablabla"/>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="21-03 15:24"/>
-                                                                                </userDefinedRuntimeAttributes>
-                                                                            </customView>
-                                                                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUY-p1-1yQ" customClass="MailElement" customModule="Macister" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="468" width="252" height="48"/>
-                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="from" value="Een ander persoon met een enorme naam"/>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="subject" value="Ik wil graag jan genoemd worden en verder ehm."/>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="time" value="21-03 10:38"/>
-                                                                                    <userDefinedRuntimeAttribute type="image" keyPath="info" value="ic_attach_file"/>
-                                                                                </userDefinedRuntimeAttributes>
-                                                                            </customView>
-                                                                        </subviews>
                                                                     </view>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
@@ -879,6 +839,7 @@ DQ
                         <outlet property="cijfers" destination="UZz-eL-Chj" id="1IB-yL-JMU"/>
                         <outlet property="dayLabel" destination="U8u-ka-aYj" id="UEi-k9-jsb"/>
                         <outlet property="gradeItems" destination="6N4-9H-asw" id="Wgz-lT-2kx"/>
+                        <outlet property="mailItems" destination="PO3-Lc-5Ww" id="XoE-Sv-Rt9"/>
                         <outlet property="monthLabel" destination="1Xk-Ul-AOt" id="pI0-VF-VvP"/>
                         <outlet property="profileImage" destination="06F-MQ-nyM" id="Tlx-zW-AAG"/>
                         <outlet property="userName" destination="cCS-w6-EtR" id="2Id-8h-aGm"/>
@@ -1127,8 +1088,6 @@ DQ
         <image name="Tab" width="192" height="32"/>
         <image name="ic_arrow_back_white" width="24" height="24"/>
         <image name="ic_arrow_forward_white" width="24" height="24"/>
-        <image name="ic_attach_file" width="24" height="24"/>
-        <image name="ic_attachment" width="24" height="24"/>
         <image name="ic_date_range_white" width="24" height="24"/>
         <image name="ic_email_white" width="24" height="24"/>
         <image name="ic_exit_to_app_white" width="24" height="24"/>

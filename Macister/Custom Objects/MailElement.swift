@@ -17,20 +17,21 @@ class MailElement: NSView {
     var subjectEl:NSTextField!
     var timeEl:NSTextField!
     var infoEl:NSImageView!
+    var statusEl:NSBox!
     
-    @IBInspectable var from:String = "" {
+    @IBInspectable var from:String! {
         didSet {
             fromEl.stringValue = from
         }
     }
     
-    @IBInspectable var subject:String = "" {
+    @IBInspectable var subject:String! {
         didSet {
             subjectEl.stringValue = subject
         }
     }
     
-    @IBInspectable var time:String = "" {
+    @IBInspectable var time:String! {
         didSet {
             timeEl.stringValue = time
         }
@@ -44,15 +45,46 @@ class MailElement: NSView {
         }
     }
     
+    var message:Message? {
+        didSet {
+            if message?.afzender?.naam != nil {
+                from = message!.afzender!.naam!
+            }
+            if message?.onderwerp != nil {
+                subject = message!.onderwerp!
+            }
+            if message?.verstuurdOpDate != nil {
+                time = DateUtil.getDateFormatMail().string(from: message!.verstuurdOpDate!)
+            }
+            if message?.heeftBijlagen != nil {
+                if message!.heeftBijlagen! {
+                    info = #imageLiteral(resourceName: "ic_attach_file")
+                }
+            }
+            if message?.isGelezen != nil {
+                if !message!.isGelezen! {
+                    statusEl.fillColor = NSColor(red: 0/255, green: 147/255, blue: 226/255, alpha: 1)
+                    self.layer?.backgroundColor = statusEl.fillColor.withAlphaComponent(0.15).cgColor
+                }
+            }
+        }
+    }
+    
     var onHover:Bool = false
+    var oldColor:CGColor?
     override func mouseEntered(with event: NSEvent) {
         onHover = true
-        self.layer?.backgroundColor = NSColor(red: 254/255, green: 245/255, blue: 202/255, alpha: 1).cgColor
+        oldColor = self.layer?.backgroundColor
+        if (oldColor == nil) {
+            self.layer?.backgroundColor = NSColor(red: 254/255, green: 245/255, blue: 202/255, alpha: 1).cgColor
+        } else {
+            self.layer?.backgroundColor = NSColor.init(cgColor: oldColor!)?.withAlphaComponent(0.3).cgColor
+        }
     }
     
     override func mouseExited(with event: NSEvent) {
         onHover = false
-        self.layer?.backgroundColor = nil
+        self.layer?.backgroundColor = oldColor
     }
     
     override init(frame: CGRect) {
@@ -79,6 +111,8 @@ class MailElement: NSView {
                 timeEl = el as! NSTextField
             case "info":
                 infoEl = el as! NSImageView
+            case "statusColor":
+                statusEl = el as! NSBox
             default:
                 break
             }

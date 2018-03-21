@@ -30,6 +30,10 @@ class PersonUrl: NSObject {
         return getPersonUrl() + "afspraken/"
     }
     
+    func getMailUrl() -> String {
+        return getPersonUrl() + "berichten/"
+    }
+    
     func getLastGradesUrl() -> String {
         return getPersonUrl() + "cijfers/laatste/"
     }

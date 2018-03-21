@@ -27,6 +27,7 @@
 		5D14C91E20614F8E003E14D0 /* MailElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14C91D20614F8E003E14D0 /* MailElement.swift */; };
 		5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213920095243006BE4DA /* FindSchoolViewController.swift */; };
 		5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213B20095256006BE4DA /* LoginViewController.swift */; };
+		5D3F833920623C820018DE32 /* MailHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F833820623C820018DE32 /* MailHandler.swift */; };
 		5D505275202107B800DE3F8F /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5D505274202107B700DE3F8F /* Fonts */; };
 		5D50DA78202B2653005A8765 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50DA77202B2653005A8765 /* Message.swift */; };
 		5D50DA7A202B3BE0005A8765 /* MessageStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50DA79202B3BE0005A8765 /* MessageStatusType.swift */; };
@@ -287,6 +288,7 @@
 		5D14C91D20614F8E003E14D0 /* MailElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailElement.swift; sourceTree = "<group>"; };
 		5D26213920095243006BE4DA /* FindSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSchoolViewController.swift; sourceTree = "<group>"; };
 		5D26213B20095256006BE4DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5D3F833820623C820018DE32 /* MailHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHandler.swift; sourceTree = "<group>"; };
 		5D505274202107B700DE3F8F /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		5D50DA77202B2653005A8765 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		5D50DA79202B3BE0005A8765 /* MessageStatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStatusType.swift; sourceTree = "<group>"; };
@@ -527,6 +529,7 @@
 				5DFAED5D200A48B0000BC7CF /* Magister.swift */,
 				5DAEC626201F293200AB7B13 /* LessonHandler.swift */,
 				5DE97BBE20286BA700A57475 /* GradeHandler.swift */,
+				5D3F833820623C820018DE32 /* MailHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -933,6 +936,7 @@
 				5DAB9013200CB62E00705B36 /* HttpUtil.swift in Sources */,
 				5DAEC60E201F123100AB7B13 /* GradePeriod.swift in Sources */,
 				5D041B07200E549D00FFBF6A /* Studies.swift in Sources */,
+				5D3F833920623C820018DE32 /* MailHandler.swift in Sources */,
 				5D50DA7C202B402C005A8765 /* MessageType.swift in Sources */,
 				5DE97BBF20286BA700A57475 /* GradeHandler.swift in Sources */,
 				5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */,

@@ -57,6 +57,6 @@ class Message: NSObject {
         json?["Ontvangers"].array?.forEach({(jsonC) in
             ontvangers.append(Contact(json: jsonC))
         })
-        self.init(id: json?["Id"].int, mapId: json?["MapId"].int, mapTitel: json?["MapTitel"].string, onderwerp: json?["Onderwerp"].string, afzender: Contact(json: json?["Afzender"]), ingekortBericht: json?["IngekortBericht"].object, ontvangers: ontvangers, verstuurdOp: json?["VerstuurdOp"].string, begin: json?["Begin"].string, einde: json?["Eind"].string, isGelezen: json?["IsGelezen"].bool, status: MessageStatusType(rawValue: json?["Status"].int ?? 0), heeftPrioriteit: json?["HeeftPrioriteit"].bool, heeftBijlagen: json?["HeeftBijlagen"].bool, soort: MessageType(rawValue: json?["Soort"].int ?? 0), toonOpVandaagscherm: json?["ToonOpVandaagscherm"].bool)
+        self.init(id: json?["Id"].int, mapId: json?["MapId"].int, mapTitel: json?["MapTitel"].string, onderwerp: json?["Onderwerp"].string, afzender: Contact(json: json?["Afzender"]), ingekortBericht: json?["IngekortBericht"].object, ontvangers: ontvangers, verstuurdOp: json?["VerstuurdOp"].string, begin: json?["Begin"].string, einde: json?["Einde"].string, isGelezen: json?["IsGelezen"].bool, status: MessageStatusType(rawValue: json?["Status"].int ?? 0), heeftPrioriteit: json?["HeeftPrioriteit"].bool, heeftBijlagen: json?["HeeftBijlagen"].bool, soort: MessageType(rawValue: json?["Soort"].int ?? 0), toonOpVandaagscherm: json?["ToonOpVandaagscherm"].bool)
     }
 }
