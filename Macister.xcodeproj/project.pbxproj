@@ -39,6 +39,8 @@
 		5D68E5F820232C0B0065F4C4 /* CUComboBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */; };
 		5D68E60820232DDA0065F4C4 /* CUComboBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D68E60720232DDA0065F4C4 /* CUComboBox.swift */; };
 		5D6F520620161535004C63BA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6F520520161535004C63BA /* Lesson.swift */; };
+		5D74D5DB2069448C00E90A59 /* HotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D74D5D62069447600E90A59 /* HotKey.framework */; };
+		5D74D5DC2069448C00E90A59 /* HotKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D74D5D62069447600E90A59 /* HotKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D7908ED202840240006C7AC /* GradeElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D7908EC202840240006C7AC /* GradeElement.xib */; };
 		5D7908FD202840330006C7AC /* GradeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7908FC202840330006C7AC /* GradeElement.swift */; };
 		5D7E3C3E201F86BC00CB8721 /* LessonStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E3C3D201F86BC00CB8721 /* LessonStatusType.swift */; };
@@ -124,6 +126,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = FBCF48D31B43286D00DCFB19;
 			remoteInfo = "RNCryptor-OSX";
+		};
+		5D74D5D52069447600E90A59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21887E361F2209DE00A05579;
+			remoteInfo = HotKey;
+		};
+		5D74D5D72069447600E90A59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21887E3F1F2209DE00A05579;
+			remoteInfo = HotKeyTests;
+		};
+		5D74D5D92069447600E90A59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21887E661F22154600A05579;
+			remoteInfo = Example;
+		};
+		5D74D5DD2069448C00E90A59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 21887E351F2209DE00A05579;
+			remoteInfo = HotKey;
 		};
 		5DA27DD32009274100909C42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -260,6 +290,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5D74D5DC2069448C00E90A59 /* HotKey.framework in Embed Frameworks */,
 				5DE430732020C9490071C7A6 /* SwiftyJSON.framework in Embed Frameworks */,
 				5D00A4E020613EBD00B77B0A /* RNCryptor.framework in Embed Frameworks */,
 				5DE430672020C9420071C7A6 /* Alamofire.framework in Embed Frameworks */,
@@ -301,6 +332,7 @@
 		5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CUComboBox.xib; sourceTree = "<group>"; };
 		5D68E60720232DDA0065F4C4 /* CUComboBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUComboBox.swift; sourceTree = "<group>"; };
 		5D6F520520161535004C63BA /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HotKey.xcodeproj; path = "Libs/HotKey-0.1.0/HotKey.xcodeproj"; sourceTree = "<group>"; };
 		5D7908EC202840240006C7AC /* GradeElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeElement.xib; sourceTree = "<group>"; };
 		5D7908FC202840330006C7AC /* GradeElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeElement.swift; sourceTree = "<group>"; };
 		5D7E3C3D201F86BC00CB8721 /* LessonStatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonStatusType.swift; sourceTree = "<group>"; };
@@ -352,6 +384,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D74D5DB2069448C00E90A59 /* HotKey.framework in Frameworks */,
 				5DE430722020C9490071C7A6 /* SwiftyJSON.framework in Frameworks */,
 				5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */,
 				5D00A4DF20613EBD00B77B0A /* RNCryptor.framework in Frameworks */,
@@ -418,6 +451,16 @@
 			path = Message;
 			sourceTree = "<group>";
 		};
+		5D74D5D02069447500E90A59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D74D5D62069447600E90A59 /* HotKey.framework */,
+				5D74D5D82069447600E90A59 /* HotKeyTests.xctest */,
+				5D74D5DA2069447600E90A59 /* Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5DA27DB72009274100909C42 = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +468,7 @@
 				5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */,
 				5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */,
 				5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */,
+				5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */,
 				5DA27DC22009274100909C42 /* Macister */,
 				5DA27DD52009274100909C42 /* MacisterTests */,
 				5DA27DE02009274100909C42 /* MacisterUITests */,
@@ -636,6 +680,7 @@
 				5DE430692020C9420071C7A6 /* PBXTargetDependency */,
 				5DE430752020C9490071C7A6 /* PBXTargetDependency */,
 				5D00A4E220613EBD00B77B0A /* PBXTargetDependency */,
+				5D74D5DE2069448C00E90A59 /* PBXTargetDependency */,
 			);
 			name = Macister;
 			productName = Macister;
@@ -732,6 +777,10 @@
 					ProjectRef = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
 				},
 				{
+					ProductGroup = 5D74D5D02069447500E90A59 /* Products */;
+					ProjectRef = 5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */;
+				},
+				{
 					ProductGroup = 5D00A4CC20613DD100B77B0A /* Products */;
 					ProjectRef = 5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */;
 				},
@@ -783,6 +832,27 @@
 			fileType = wrapper.cfbundle;
 			path = RNCryptorPerfTests.xctest;
 			remoteRef = 5D00A4DB20613DD200B77B0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D74D5D62069447600E90A59 /* HotKey.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HotKey.framework;
+			remoteRef = 5D74D5D52069447600E90A59 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D74D5D82069447600E90A59 /* HotKeyTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HotKeyTests.xctest;
+			remoteRef = 5D74D5D72069447600E90A59 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D74D5DA2069447600E90A59 /* Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Example.app;
+			remoteRef = 5D74D5D92069447600E90A59 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5DFAED47200A2FD6000BC7CF /* SwiftyJSON.framework */ = {
@@ -1003,6 +1073,11 @@
 			isa = PBXTargetDependency;
 			name = "RNCryptor-OSX";
 			targetProxy = 5D00A4E120613EBD00B77B0A /* PBXContainerItemProxy */;
+		};
+		5D74D5DE2069448C00E90A59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HotKey;
+			targetProxy = 5D74D5DD2069448C00E90A59 /* PBXContainerItemProxy */;
 		};
 		5DA27DD42009274100909C42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -8,13 +8,15 @@
 
 import Cocoa
 import SwiftyJSON
+import HotKey
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     static let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
     static let popover = NSPopover()
     var eventMonitor: EventMonitor?
-
+    let hotKey = HotKey(key: .grave, modifiers: [.command])
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let button = AppDelegate.statusItem.button {
             button.image = NSImage(named:NSImage.Name("MagisterIcon"))
@@ -81,6 +83,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         pw?.parent?.removeChildWindow(pw!)
         eventMonitor?.start()
         (AppDelegate.popover.contentViewController! as? MainViewController)?.update()
+        
+        if hotKey.keyDownHandler == nil {
+            hotKey.keyDownHandler = {
+                self.togglePopover(self)
+            }
+        }
     }
     
     func closePopover(sender: Any?) {
