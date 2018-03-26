@@ -75,6 +75,7 @@
 		5DF747102019EEAC007E6650 /* LessonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF7470F2019EEAC007E6650 /* LessonType.swift */; };
 		5DF747132019F2EE007E6650 /* DisplayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF747122019F2EE007E6650 /* DisplayType.swift */; };
 		5DF747152019F34B007E6650 /* InfoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF747142019F34B007E6650 /* InfoType.swift */; };
+		5DF8601B2068DB6400969596 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF8601A2068DB6400969596 /* ColorPalette.swift */; };
 		5DFAED5A200A4298000BC7CF /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED59200A4298000BC7CF /* School.swift */; };
 		5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5B200A4792000BC7CF /* MainViewController.swift */; };
 		5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5D200A48B0000BC7CF /* Magister.swift */; };
@@ -337,6 +338,7 @@
 		5DF7470F2019EEAC007E6650 /* LessonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonType.swift; sourceTree = "<group>"; };
 		5DF747122019F2EE007E6650 /* DisplayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayType.swift; sourceTree = "<group>"; };
 		5DF747142019F34B007E6650 /* InfoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoType.swift; sourceTree = "<group>"; };
+		5DF8601A2068DB6400969596 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = Libs/SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		5DFAED59200A4298000BC7CF /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		5DFAED5B200A4792000BC7CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -507,6 +509,7 @@
 				5D9AD88C2028958B0020E15A /* JsonUtil.swift */,
 				5DEE3BE620613368007E40E4 /* AssetHandler.swift */,
 				5D00A4BB20613D6400B77B0A /* EncryptionUtil.swift */,
+				5DF8601A2068DB6400969596 /* ColorPalette.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -929,6 +932,7 @@
 				5D8CB19E200D17C70073613D /* Person.swift in Sources */,
 				5DF746F72019EDCF007E6650 /* Subject.swift in Sources */,
 				5D041B05200E2D0E00FFBF6A /* Group.swift in Sources */,
+				5DF8601B2068DB6400969596 /* ColorPalette.swift in Sources */,
 				5D118545200E08F4003EE455 /* Study.swift in Sources */,
 				5DF747092019EDF2007E6650 /* Teacher.swift in Sources */,
 				5D50DA78202B2653005A8765 /* Message.swift in Sources */,

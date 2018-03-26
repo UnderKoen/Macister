@@ -112,7 +112,7 @@ class Magister: NSObject {
         HttpUtil.httpGet(url: mainUrl.schoolUrl!.getAccountUrl(accountId: accountId!)) { (response) in
             do {
                 let json = try JSON(data: response.data!)
-                self.account = Account.init(json: json)
+                self.account = Account(json: json)
             } catch {}
         }
         DispatchQueue.global().async {
@@ -128,7 +128,7 @@ class Magister: NSObject {
             HttpUtil.httpGet(url: self.mainUrl.personUrl!.getStudiesUrl()) { (response) in
                 do {
                     let json = try JSON(data: response.data!)
-                    self.studies = Studies.init(json: json)
+                    self.studies = Studies(json: json)
                 } catch {}
             }
         }

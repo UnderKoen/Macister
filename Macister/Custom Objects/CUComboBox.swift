@@ -98,7 +98,7 @@ class CUComboBox: CUTextField {
             popoverView.frame = NSRect(x: frame.minX, y: frame.minY-CGFloat(maxItems*heightForItem), width: bounds.width, height: CGFloat(maxItems*heightForItem))
         }
         popoverView.documentView!.setFrameSize(NSSize(width: Int(bounds.width), height: amount*heightForItem))
-        popoverView.backgroundColor = NSColor.white
+        popoverView.backgroundColor = ColorPalette.white
         var height:CGFloat = CGFloat((amount-1)*heightForItem)
         var i = 0
         items.forEach { (obj) in
@@ -107,11 +107,11 @@ class CUComboBox: CUTextField {
             text.stringValue = obj.description
             text.isBordered = false
             text.font = NSFont.init(name: text.font!.fontName, size: CGFloat(heightForItem/2+4))
-            text.textColor = NSColor.black
+            text.textColor = ColorPalette.black
             popoverView.documentView!.addSubview(text)
             height -= CGFloat(heightForItem)
             let id = i
-            text.backgroundColor = NSColor.white
+            text.backgroundColor = ColorPalette.white
             text.onClick = {() in
                 self.selectedItem = id
                 self.popoverView.isHidden = true

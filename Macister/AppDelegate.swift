@@ -105,7 +105,7 @@ class PopoverContentView:NSView {
 
 class PopoverBackgroundView:NSView {
     override func draw(_ dirtyRect: NSRect) {
-        NSColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1).set()
+        ColorPalette.magisterBlack.set()
         __NSRectFill(self.bounds)
     }
 }

@@ -18,7 +18,7 @@ class StudyUrl: NSObject {
     }
     
     func getStudyUrl() -> String  {
-        return self.personUrl.getStudiesUrl() + "\(study.id!)"
+        return self.personUrl.getStudiesUrl() + "\(study.id!)/"
     }
     
     func getRecentGrateUrl() -> String  {

@@ -26,4 +26,15 @@ class GradeHandler: NSObject {
             completionHandler(nil)
         }
     }
+    
+    func getAverageGrades(completionHandler: @escaping (Grades?) -> () = { _ in }) {
+        HttpUtil.httpGet(url: magister.getMainUrl().currentStudyUrl!.getGratesUrl(), parameters: ["actievePerioden":"false","alleenBerekendeKolommen":"true","alleenPTAKolommen":"false"]) { (response) in
+            do {
+                let json = try JSON(data: response.data!)
+                completionHandler(Grades(json: json))
+                return
+            } catch {}
+            completionHandler(nil)
+        }
+    }
 }

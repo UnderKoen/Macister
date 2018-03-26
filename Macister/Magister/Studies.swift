@@ -18,6 +18,8 @@ class Studies: NSObject {
     init(studies:[Study]?, currentStudy:Study?) {
         self.studies = studies
         self.currentStudy = currentStudy
+        super.init()
+        Magister.magister!.getMainUrl().setStudies(studies: self)
     }
     
     convenience init (json: JSON?) {

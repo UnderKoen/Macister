@@ -104,9 +104,9 @@ class LessonElement: NSView {
                     case .NONE:
                         break
                     case .BLUE:
-                        color = NSColor(red: 0, green: 147/255, blue: 226/255, alpha: 1)
+                        color = ColorPalette.magisterBlue
                     case .RED:
-                        color = NSColor(red: 202/255, green: 91/255, blue: 91/255, alpha: 1)
+                        color = ColorPalette.magisterRed
                     }
                     if color != nil {
                         box.fillColor = color!
@@ -153,7 +153,7 @@ class LessonElement: NSView {
         onHover = true
         oldColor = self.layer?.backgroundColor
         if (oldColor == nil) {
-            self.layer?.backgroundColor = NSColor(red: 254/255, green: 245/255, blue: 202/255, alpha: 1).cgColor
+            self.layer?.backgroundColor = ColorPalette.magisterYellow.cgColor
         } else {
             self.layer?.backgroundColor = NSColor.init(cgColor: oldColor!)?.withAlphaComponent(0.3).cgColor
         }

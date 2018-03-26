@@ -37,7 +37,9 @@ class Grade: NSObject {
         self.isVoldoende = isVoldoende
         self.ingevoerdDoor = ingevoerdDoor
         self.datumIngevoerd = datumIngevoerd
-        self.datumIngevoerdDate = DateUtil.getDateFromMagisterString(date: datumIngevoerd!)
+        if datumIngevoerd != nil {
+            self.datumIngevoerdDate = DateUtil.getDateFromMagisterString(date: datumIngevoerd!)
+        }
         self.cijferPeriode = cijferPeriode
         self.vak = vak
         self.inhalen = inhalen

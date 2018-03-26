@@ -33,15 +33,9 @@ class DateUtil: NSObject {
         return dateFormatter
     }
     
-    static func getDateFormatTodayDay() -> DateFormatter {
+    static func getDateFormatToday() -> DateFormatter {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE d"
-        return dateFormatter
-    }
-    
-    static func getDateFormatTodayMonth() -> DateFormatter {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM yyyy"
+        dateFormatter.dateFormat = "EEEE d MMMM yyyy"
         return dateFormatter
     }
     
