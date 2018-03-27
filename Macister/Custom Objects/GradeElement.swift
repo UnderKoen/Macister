@@ -47,6 +47,9 @@ class GradeElement: NSView {
     
     var gradeObj:Grade? {
         didSet {
+            if gradeObj == nil {
+                return
+            }
             if gradeObj!.cijferStr != nil {
                 grade = gradeObj!.cijferStr!
             }

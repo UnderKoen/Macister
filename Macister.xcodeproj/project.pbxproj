@@ -495,9 +495,9 @@
 				5DA27DCD2009274100909C42 /* Macister.entitlements */,
 				5DA27DC92009274100909C42 /* Macister.storyboard */,
 				5DA53B8C201001FD001DD8F2 /* Custom Objects */,
-				5DEE3BF62061347C007E40E4 /* Entities */,
 				5DAB9001200CB60A00705B36 /* Utils */,
-				5DFAED56200A420C000BC7CF /* Magister */,
+				5DEE3BF62061347C007E40E4 /* Entities */,
+				5DAEC625201F282500AB7B13 /* Handlers */,
 				5DA27DC32009274100909C42 /* AppDelegate.swift */,
 				5DF54A42200BC89900278DAB /* EventMonitor.swift */,
 				5D26213920095243006BE4DA /* FindSchoolViewController.swift */,
@@ -594,6 +594,7 @@
 		5DEE3BF62061347C007E40E4 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				5DFAED56200A420C000BC7CF /* Magister */,
 				5DEE3BF720613491007E40E4 /* Asset.swift */,
 			);
 			path = Entities;
@@ -631,7 +632,6 @@
 		5DFAED56200A420C000BC7CF /* Magister */ = {
 			isa = PBXGroup;
 			children = (
-				5DAEC625201F282500AB7B13 /* Handlers */,
 				325104154C343031730B3840 /* Url */,
 				5DF7470C2019EE4D007E6650 /* Type */,
 				5DAEC623201F18B200AB7B13 /* Grade */,

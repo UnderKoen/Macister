@@ -59,6 +59,8 @@ class LoginViewController: NSViewController {
                         } else {
                             self.error.stringValue = error
                         }
+                        let school = Magister.magister?.getSchool()
+                        Magister.magister = Magister(school: school!)
                     }
                     self.busy = false
                 }, onSucces: {

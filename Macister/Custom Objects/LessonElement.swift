@@ -119,6 +119,9 @@ class LessonElement: NSView {
     
     var lesson:Lesson? {
         didSet {
+            if lesson == nil {
+                return
+            }
             if ((lesson!.lesuurVan) != nil) {
                 lessonNumber = lesson!.lesuurVan!
             }

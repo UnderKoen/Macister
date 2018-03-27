@@ -47,6 +47,9 @@ class MailElement: NSView {
     
     var message:Message? {
         didSet {
+            if message == nil {
+                return
+            }
             if message?.afzender?.naam != nil {
                 from = message!.afzender!.naam!
             }

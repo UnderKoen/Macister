@@ -86,6 +86,7 @@ class TodayViewController: MainViewController {
         update()
     }
     
+    //Need to update visual when current day changed TODO
     override func update() {
         updateCalander()
         updateMail()
@@ -155,7 +156,10 @@ class TodayViewController: MainViewController {
     
     func updateCalander() {
         Magister.magister?.getLessonHandler()?.getLessonsForDay(day: calanderDate, completionHandler: { (lessons) in
-            self.calanderItems.documentView!.subviews.removeAll()
+            self.calanderItems.documentView!.subviews.forEach({(view) in
+                (view as? LessonElement)?.lesson = nil
+                view.removeFromSuperview()
+            })
             var y:Int = Int(self.calanderItems.frame.height)
             if y-(lessons.count*self.lessonHeight) < 0 {
                 self.calanderItems.documentView!.setFrameSize(NSSize(width: self.calanderItems.contentSize.width, height: CGFloat(lessons.count*48)))
@@ -214,7 +218,10 @@ class TodayViewController: MainViewController {
     
     func updateMail() {
         Magister.magister?.getMailHandler()?.getMail(mapId: mapId, top: nil, skip: nil, completionHandler: { (mail) in
-            self.mailItems.documentView!.subviews.removeAll()
+            self.mailItems.documentView!.subviews.forEach({(view) in
+                (view as? MailElement)?.message = nil
+                view.removeFromSuperview()
+            })
             var y:Int = Int(self.mailItems.frame.height)
             if y-(mail.count*self.lessonHeight) < 0 {
                 self.mailItems.documentView!.setFrameSize(NSSize(width: self.mailItems.contentSize.width, height: CGFloat(mail.count*48)))
@@ -260,7 +267,10 @@ class TodayViewController: MainViewController {
     func updateGrades() {
         let completionHandler:(Grades?) -> () = { (grades) in
             if (grades != nil) {
-                self.gradeItems.documentView!.subviews.removeAll()
+                self.gradeItems.documentView!.subviews.forEach({(view) in
+                    (view as? GradeElement)?.gradeObj = nil
+                    view.removeFromSuperview()
+                })
                 var y:Int = Int(self.gradeItems.frame.height)
                 if y-(grades!.grades!.count*self.lessonHeight) < 0 {
                     self.gradeItems.documentView!.setFrameSize(NSSize(width: self.gradeItems.contentSize.width, height: CGFloat(grades!.grades!.count*48)))
