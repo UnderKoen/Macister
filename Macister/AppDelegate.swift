@@ -8,48 +8,51 @@
 
 import Cocoa
 import SwiftyJSON
+import HotKey
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     static let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
     static let popover = NSPopover()
     var eventMonitor: EventMonitor?
-
+    let hotKey = HotKey(key: .grave, modifiers: [.command])
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        if let button = AppDelegate.statusItem.button {
-            button.image = NSImage(named:NSImage.Name("MagisterIcon"))
-            button.action = #selector(togglePopover(_:))
+        //Tries to login with saved info.
+        let secret = AssetHandler.getAsset(name: ".secrets.json")
+        var willTry = false
+        do {
+            if secret.exists() {
+                willTry = true
+                let data = secret.getData();
+                let json = try JSON(data: data!)
+                let schoolJson = json["school"]
+                let school = School(url: schoolJson["url"].string!, name: schoolJson["name"].string!, id: schoolJson["id"].string!)
+                Magister.magister = Magister(school: school)
+                let pass = try EncryptionUtil.decryptMessage(encryptedMessage: json["pass"].string!, encryptionKey: schoolJson["id"].string!);
+                Magister.magister!.login(username: json["user"].string!, password: pass, onError: { (str) in
+                    Magister.magister = nil
+                }, onSucces: {
+                    AppDelegate.changeView(controller: TodayViewController.freshController())
+                })
+            }
+        } catch {willTry = false}
+        if !willTry {
+            AppDelegate.changeView(controller: FindSchoolViewController.freshController())
         }
+        
+        //Setup Popover
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
             if AppDelegate.popover.isShown {
                 self?.closePopover(sender: event)
             }
         }
         AppDelegate.popover.animates = false
-        let query = [
-            kSecClass as String       : kSecClassGenericPassword,
-            kSecAttrAccount as String : "nl.underkoen.Macister",
-            kSecReturnData as String  : kCFBooleanTrue,
-            kSecMatchLimit as String  : kSecMatchLimitOne] as [String : Any]
-        var dataTypeRef: AnyObject?
-        let status: OSStatus = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
-        if status == noErr {
-            do {
-                let json = try JSON(data: dataTypeRef as! Data)
-                let schoolJson = json["school"]
-                let school = School(url: schoolJson["url"].string!, name: schoolJson["name"].string!, id: schoolJson["id"].string!)
-                Magister.magister = Magister(school: school)
-                Magister.magister!.login(username: json["user"].string!, password: json["pass"].string!, onError: { (str) in
-                    Magister.magister = nil
-                    AppDelegate.changeView(controller: FindSchoolViewController.freshController())
-                }, onSucces: {
-                    AppDelegate.changeView(controller: TodayViewController.freshController())
-                })
-            } catch {
-               AppDelegate.changeView(controller: FindSchoolViewController.freshController())
-            }
-        } else {
-            AppDelegate.changeView(controller: FindSchoolViewController.freshController())
+        AppDelegate.popover.appearance = NSAppearance(named: .aqua)
+        
+        if let button = AppDelegate.statusItem.button {
+            button.image = NSImage(named:NSImage.Name("MagisterIcon"))
+            button.action = #selector(togglePopover(_:))
         }
     }
 
@@ -59,16 +62,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     static func changeView(controller:  NSViewController) {
         DispatchQueue.main.async {
-            let newSize = NSSize.init(width: controller.view.frame.size.width, height: controller.view.frame.size.height)
+            let newSize = NSSize(width: controller.view.frame.size.width, height: controller.view.frame.size.height)
             popover.contentSize = newSize
             popover.contentViewController = controller
-            let pw = controller.view.window
-            pw?.parent?.removeChildWindow(pw!)
         }
     }
 
     @objc func togglePopover(_ sender: Any?) {
-        if  AppDelegate.popover.isShown {
+        //Checks if the contentViewController is set, beacuse logging in takes sometime so i may not been set.
+        if AppDelegate.popover.contentViewController == nil { return }
+        if AppDelegate.popover.isShown {
             closePopover(sender: sender)
         } else {
             showPopover(sender: sender)
@@ -79,11 +82,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = AppDelegate.statusItem.button {
             AppDelegate.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
         }
-        AppDelegate.popover.appearance = NSAppearance.init(named: .aqua)
         let pw = AppDelegate.popover.contentViewController!.view.window
         pw?.parent?.removeChildWindow(pw!)
         eventMonitor?.start()
         (AppDelegate.popover.contentViewController! as? MainViewController)?.update()
+        if hotKey.keyDownHandler == nil {
+            hotKey.keyDownHandler = {
+                self.togglePopover(self)
+            }
+        }
     }
     
     func closePopover(sender: Any?) {
@@ -108,7 +115,7 @@ class PopoverContentView:NSView {
 
 class PopoverBackgroundView:NSView {
     override func draw(_ dirtyRect: NSRect) {
-        NSColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1).set()
+        ColorPalette.magisterBlack.set()
         __NSRectFill(self.bounds)
     }
 }

@@ -40,13 +40,16 @@ class GradeElement: NSView {
     @IBInspectable var isFail:Bool = false {
         didSet {
             if (isFail) {
-                gradeEl.fillColor = NSColor(red: 202/255, green: 91/255, blue: 91/255, alpha: 1)
+                gradeEl.fillColor = ColorPalette.magisterRed
             }
         }
     }
     
     var gradeObj:Grade? {
         didSet {
+            if gradeObj == nil {
+                return
+            }
             if gradeObj!.cijferStr != nil {
                 grade = gradeObj!.cijferStr!
             }
@@ -65,7 +68,7 @@ class GradeElement: NSView {
     var onHover:Bool = false
     override func mouseEntered(with event: NSEvent) {
         onHover = true
-        self.layer?.backgroundColor = NSColor(red: 254/255, green: 245/255, blue: 202/255, alpha: 1).cgColor
+        self.layer?.backgroundColor = ColorPalette.magisterYellow.cgColor
     }
     
     override func mouseExited(with event: NSEvent) {

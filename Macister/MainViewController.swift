@@ -14,6 +14,8 @@ class MainViewController: NSViewController {
     @IBOutlet weak var cijfers: NSView!
     @IBOutlet weak var agenda: NSView!
     @IBOutlet weak var vandaag: NSView!
+    //Currently hardcoded TODO
+    static var current:Active = .vandaag
     
     @IBOutlet weak var userName: NSTextField!
     @IBOutlet weak var profileImage: NSImageView!
@@ -38,14 +40,28 @@ class MainViewController: NSViewController {
         if let tab = sender as? NSClickGestureRecognizer {
             let view = tab.view
             if view == berichten {
+                if MainViewController.current != .berichten {
+                }
             } else if view == cijfers {
+                if MainViewController.current != .cijfers {
+                }
             } else if view == agenda {
-                AppDelegate.changeView(controller: CalendarViewController.freshController())
+                if MainViewController.current != .agenda {
+                    AppDelegate.changeView(controller: CalendarViewController.freshController())
+                    MainViewController.current = .agenda
+                }
             } else if view == vandaag {
-                AppDelegate.changeView(controller: TodayViewController.freshController())
+                if MainViewController.current != .vandaag {
+                    AppDelegate.changeView(controller: TodayViewController.freshController())
+                    MainViewController.current = .vandaag
+                }
             }
         }
     }
     
     func update() {}
+}
+
+enum Active {
+    case berichten, cijfers, agenda, vandaag
 }

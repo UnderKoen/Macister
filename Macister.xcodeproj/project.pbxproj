@@ -13,6 +13,9 @@
 		32510A01928C9210EDCFA599 /* AccountUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251087250EDA4D6C703A278 /* AccountUrl.swift */; };
 		32510C10B8247A10427147B0 /* StudentUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325107C6ABAB648C9B2A98E7 /* StudentUrl.swift */; };
 		32510D4EDC1DDDB9EF7E56D0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325103B1BD4D0B957E5FBDBE /* Account.swift */; };
+		5D00A4BC20613D6400B77B0A /* EncryptionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D00A4BB20613D6400B77B0A /* EncryptionUtil.swift */; };
+		5D00A4DF20613EBD00B77B0A /* RNCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D00A4D820613DD200B77B0A /* RNCryptor.framework */; };
+		5D00A4E020613EBD00B77B0A /* RNCryptor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D00A4D820613DD200B77B0A /* RNCryptor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D016652200FA4FE00C0E1D9 /* MainUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D016651200FA4FE00C0E1D9 /* MainUrl.swift */; };
 		5D016666200FB55000C0E1D9 /* StudyUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D016665200FB55000C0E1D9 /* StudyUrl.swift */; };
 		5D041AF3200E2CF800FFBF6A /* StudyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D041AF2200E2CF800FFBF6A /* StudyInfo.swift */; };
@@ -20,8 +23,11 @@
 		5D041B07200E549D00FFBF6A /* Studies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D041B06200E549D00FFBF6A /* Studies.swift */; };
 		5D041B09200E5EDD00FFBF6A /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D041B08200E5EDD00FFBF6A /* DateUtil.swift */; };
 		5D118545200E08F4003EE455 /* Study.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D118544200E08F4003EE455 /* Study.swift */; };
+		5D14C90A20614B61003E14D0 /* MailElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D14C90920614B61003E14D0 /* MailElement.xib */; };
+		5D14C91E20614F8E003E14D0 /* MailElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14C91D20614F8E003E14D0 /* MailElement.swift */; };
 		5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213920095243006BE4DA /* FindSchoolViewController.swift */; };
 		5D26213C20095256006BE4DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D26213B20095256006BE4DA /* LoginViewController.swift */; };
+		5D3F833920623C820018DE32 /* MailHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3F833820623C820018DE32 /* MailHandler.swift */; };
 		5D505275202107B800DE3F8F /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5D505274202107B700DE3F8F /* Fonts */; };
 		5D50DA78202B2653005A8765 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50DA77202B2653005A8765 /* Message.swift */; };
 		5D50DA7A202B3BE0005A8765 /* MessageStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50DA79202B3BE0005A8765 /* MessageStatusType.swift */; };
@@ -33,6 +39,8 @@
 		5D68E5F820232C0B0065F4C4 /* CUComboBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */; };
 		5D68E60820232DDA0065F4C4 /* CUComboBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D68E60720232DDA0065F4C4 /* CUComboBox.swift */; };
 		5D6F520620161535004C63BA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6F520520161535004C63BA /* Lesson.swift */; };
+		5D74D5DB2069448C00E90A59 /* HotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D74D5D62069447600E90A59 /* HotKey.framework */; };
+		5D74D5DC2069448C00E90A59 /* HotKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D74D5D62069447600E90A59 /* HotKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D7908ED202840240006C7AC /* GradeElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D7908EC202840240006C7AC /* GradeElement.xib */; };
 		5D7908FD202840330006C7AC /* GradeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7908FC202840330006C7AC /* GradeElement.swift */; };
 		5D7E3C3E201F86BC00CB8721 /* LessonStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E3C3D201F86BC00CB8721 /* LessonStatusType.swift */; };
@@ -60,6 +68,8 @@
 		5DE430722020C9490071C7A6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5DE430732020C9490071C7A6 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DE97BBF20286BA700A57475 /* GradeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE97BBE20286BA700A57475 /* GradeHandler.swift */; };
+		5DEE3BE720613368007E40E4 /* AssetHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE3BE620613368007E40E4 /* AssetHandler.swift */; };
+		5DEE3BF820613491007E40E4 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE3BF720613491007E40E4 /* Asset.swift */; };
 		5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF54A42200BC89900278DAB /* EventMonitor.swift */; };
 		5DF746F72019EDCF007E6650 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF746F62019EDCF007E6650 /* Subject.swift */; };
 		5DF747092019EDF2007E6650 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF747082019EDF2007E6650 /* Teacher.swift */; };
@@ -67,6 +77,7 @@
 		5DF747102019EEAC007E6650 /* LessonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF7470F2019EEAC007E6650 /* LessonType.swift */; };
 		5DF747132019F2EE007E6650 /* DisplayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF747122019F2EE007E6650 /* DisplayType.swift */; };
 		5DF747152019F34B007E6650 /* InfoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF747142019F34B007E6650 /* InfoType.swift */; };
+		5DF8601B2068DB6400969596 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF8601A2068DB6400969596 /* ColorPalette.swift */; };
 		5DFAED5A200A4298000BC7CF /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED59200A4298000BC7CF /* School.swift */; };
 		5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5B200A4792000BC7CF /* MainViewController.swift */; };
 		5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5D200A48B0000BC7CF /* Magister.swift */; };
@@ -74,6 +85,76 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5D00A4D320613DD200B77B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB627FCE1B2B7A1700C3A579;
+			remoteInfo = RNCryptor;
+		};
+		5D00A4D520613DD200B77B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB627FD81B2B7A1800C3A579;
+			remoteInfo = RNCryptorTests;
+		};
+		5D00A4D720613DD200B77B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FBCF48D41B43286D00DCFB19;
+			remoteInfo = "RNCryptor-OSX";
+		};
+		5D00A4D920613DD200B77B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FBCF48DD1B43286D00DCFB19;
+			remoteInfo = "RNCryptor-OSXTests";
+		};
+		5D00A4DB20613DD200B77B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB7F2FBF1D17438400A6283E;
+			remoteInfo = RNCryptorPerfTests;
+		};
+		5D00A4E120613EBD00B77B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FBCF48D31B43286D00DCFB19;
+			remoteInfo = "RNCryptor-OSX";
+		};
+		5D74D5D52069447600E90A59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21887E361F2209DE00A05579;
+			remoteInfo = HotKey;
+		};
+		5D74D5D72069447600E90A59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21887E3F1F2209DE00A05579;
+			remoteInfo = HotKeyTests;
+		};
+		5D74D5D92069447600E90A59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21887E661F22154600A05579;
+			remoteInfo = Example;
+		};
+		5D74D5DD2069448C00E90A59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 21887E351F2209DE00A05579;
+			remoteInfo = HotKey;
+		};
 		5DA27DD32009274100909C42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5DA27DB82009274100909C42 /* Project object */;
@@ -209,7 +290,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				5D74D5DC2069448C00E90A59 /* HotKey.framework in Embed Frameworks */,
 				5DE430732020C9490071C7A6 /* SwiftyJSON.framework in Embed Frameworks */,
+				5D00A4E020613EBD00B77B0A /* RNCryptor.framework in Embed Frameworks */,
 				5DE430672020C9420071C7A6 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -224,6 +307,8 @@
 		3251083F745E625D541E9F52 /* SchoolUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolUrl.swift; sourceTree = "<group>"; };
 		3251087250EDA4D6C703A278 /* AccountUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountUrl.swift; sourceTree = "<group>"; };
 		32510F33F605D20AFFE2846F /* PersonUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonUrl.swift; sourceTree = "<group>"; };
+		5D00A4BB20613D6400B77B0A /* EncryptionUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionUtil.swift; sourceTree = "<group>"; };
+		5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCryptor.xcodeproj; path = Libs/RNCryptor/RNCryptor.xcodeproj; sourceTree = "<group>"; };
 		5D016651200FA4FE00C0E1D9 /* MainUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUrl.swift; sourceTree = "<group>"; };
 		5D016665200FB55000C0E1D9 /* StudyUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyUrl.swift; sourceTree = "<group>"; };
 		5D041AF2200E2CF800FFBF6A /* StudyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyInfo.swift; sourceTree = "<group>"; };
@@ -231,8 +316,11 @@
 		5D041B06200E549D00FFBF6A /* Studies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Studies.swift; sourceTree = "<group>"; };
 		5D041B08200E5EDD00FFBF6A /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		5D118544200E08F4003EE455 /* Study.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study.swift; sourceTree = "<group>"; };
+		5D14C90920614B61003E14D0 /* MailElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailElement.xib; sourceTree = "<group>"; };
+		5D14C91D20614F8E003E14D0 /* MailElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailElement.swift; sourceTree = "<group>"; };
 		5D26213920095243006BE4DA /* FindSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSchoolViewController.swift; sourceTree = "<group>"; };
 		5D26213B20095256006BE4DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5D3F833820623C820018DE32 /* MailHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHandler.swift; sourceTree = "<group>"; };
 		5D505274202107B700DE3F8F /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		5D50DA77202B2653005A8765 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		5D50DA79202B3BE0005A8765 /* MessageStatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStatusType.swift; sourceTree = "<group>"; };
@@ -244,6 +332,7 @@
 		5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CUComboBox.xib; sourceTree = "<group>"; };
 		5D68E60720232DDA0065F4C4 /* CUComboBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUComboBox.swift; sourceTree = "<group>"; };
 		5D6F520520161535004C63BA /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HotKey.xcodeproj; path = "Libs/HotKey-0.1.0/HotKey.xcodeproj"; sourceTree = "<group>"; };
 		5D7908EC202840240006C7AC /* GradeElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeElement.xib; sourceTree = "<group>"; };
 		5D7908FC202840330006C7AC /* GradeElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeElement.swift; sourceTree = "<group>"; };
 		5D7E3C3D201F86BC00CB8721 /* LessonStatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonStatusType.swift; sourceTree = "<group>"; };
@@ -272,6 +361,8 @@
 		5DAEC621201F16DE00AB7B13 /* RowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowType.swift; sourceTree = "<group>"; };
 		5DAEC626201F293200AB7B13 /* LessonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonHandler.swift; sourceTree = "<group>"; };
 		5DE97BBE20286BA700A57475 /* GradeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeHandler.swift; sourceTree = "<group>"; };
+		5DEE3BE620613368007E40E4 /* AssetHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetHandler.swift; sourceTree = "<group>"; };
+		5DEE3BF720613491007E40E4 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		5DF54A42200BC89900278DAB /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		5DF746F62019EDCF007E6650 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		5DF747082019EDF2007E6650 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
@@ -279,6 +370,7 @@
 		5DF7470F2019EEAC007E6650 /* LessonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonType.swift; sourceTree = "<group>"; };
 		5DF747122019F2EE007E6650 /* DisplayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayType.swift; sourceTree = "<group>"; };
 		5DF747142019F34B007E6650 /* InfoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoType.swift; sourceTree = "<group>"; };
+		5DF8601A2068DB6400969596 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = Libs/SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		5DFAED59200A4298000BC7CF /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		5DFAED5B200A4792000BC7CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -292,8 +384,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D74D5DB2069448C00E90A59 /* HotKey.framework in Frameworks */,
 				5DE430722020C9490071C7A6 /* SwiftyJSON.framework in Frameworks */,
 				5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */,
+				5D00A4DF20613EBD00B77B0A /* RNCryptor.framework in Frameworks */,
 				5DE430662020C9420071C7A6 /* Alamofire.framework in Frameworks */,
 				5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */,
 			);
@@ -329,6 +423,18 @@
 			path = Url;
 			sourceTree = "<group>";
 		};
+		5D00A4CC20613DD100B77B0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D00A4D420613DD200B77B0A /* RNCryptor.framework */,
+				5D00A4D620613DD200B77B0A /* RNCryptorTests.xctest */,
+				5D00A4D820613DD200B77B0A /* RNCryptor.framework */,
+				5D00A4DA20613DD200B77B0A /* RNCryptor-OSXTests.xctest */,
+				5D00A4DC20613DD200B77B0A /* RNCryptorPerfTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5D2621FA2009678B006BE4DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,12 +451,24 @@
 			path = Message;
 			sourceTree = "<group>";
 		};
+		5D74D5D02069447500E90A59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D74D5D62069447600E90A59 /* HotKey.framework */,
+				5D74D5D82069447600E90A59 /* HotKeyTests.xctest */,
+				5D74D5DA2069447600E90A59 /* Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5DA27DB72009274100909C42 = {
 			isa = PBXGroup;
 			children = (
 				5D505274202107B700DE3F8F /* Fonts */,
 				5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */,
 				5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */,
+				5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */,
+				5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */,
 				5DA27DC22009274100909C42 /* Macister */,
 				5DA27DD52009274100909C42 /* MacisterTests */,
 				5DA27DE02009274100909C42 /* MacisterUITests */,
@@ -372,18 +490,19 @@
 		5DA27DC22009274100909C42 /* Macister */ = {
 			isa = PBXGroup;
 			children = (
-				5DA53B8C201001FD001DD8F2 /* Custom Objects */,
-				5DAB9001200CB60A00705B36 /* Utils */,
-				5DFAED56200A420C000BC7CF /* Magister */,
-				5DA27DC32009274100909C42 /* AppDelegate.swift */,
 				5DA27DC72009274100909C42 /* Assets.xcassets */,
-				5DA27DC92009274100909C42 /* Macister.storyboard */,
 				5DA27DCC2009274100909C42 /* Info.plist */,
 				5DA27DCD2009274100909C42 /* Macister.entitlements */,
+				5DA27DC92009274100909C42 /* Macister.storyboard */,
+				5DA53B8C201001FD001DD8F2 /* Custom Objects */,
+				5DAB9001200CB60A00705B36 /* Utils */,
+				5DEE3BF62061347C007E40E4 /* Entities */,
+				5DAEC625201F282500AB7B13 /* Handlers */,
+				5DA27DC32009274100909C42 /* AppDelegate.swift */,
+				5DF54A42200BC89900278DAB /* EventMonitor.swift */,
 				5D26213920095243006BE4DA /* FindSchoolViewController.swift */,
 				5D26213B20095256006BE4DA /* LoginViewController.swift */,
 				5DFAED5B200A4792000BC7CF /* MainViewController.swift */,
-				5DF54A42200BC89900278DAB /* EventMonitor.swift */,
 				5D546095200DE8D4002C0D74 /* TodayViewController.swift */,
 				5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */,
 			);
@@ -415,6 +534,8 @@
 				5DA53B8F20100266001DD8F2 /* LessonElement.swift */,
 				5D7908EC202840240006C7AC /* GradeElement.xib */,
 				5D7908FC202840330006C7AC /* GradeElement.swift */,
+				5D14C90920614B61003E14D0 /* MailElement.xib */,
+				5D14C91D20614F8E003E14D0 /* MailElement.swift */,
 				5D9281A92021C86E00FA3902 /* CUTextField.xib */,
 				5D9281B92021D68D00FA3902 /* CUTextField.swift */,
 				5D68E5F720232C0B0065F4C4 /* CUComboBox.xib */,
@@ -430,6 +551,9 @@
 				5DA11AB0200D55D6001785F2 /* FileUtil.swift */,
 				5D041B08200E5EDD00FFBF6A /* DateUtil.swift */,
 				5D9AD88C2028958B0020E15A /* JsonUtil.swift */,
+				5DEE3BE620613368007E40E4 /* AssetHandler.swift */,
+				5D00A4BB20613D6400B77B0A /* EncryptionUtil.swift */,
+				5DF8601A2068DB6400969596 /* ColorPalette.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -452,6 +576,7 @@
 				5DFAED5D200A48B0000BC7CF /* Magister.swift */,
 				5DAEC626201F293200AB7B13 /* LessonHandler.swift */,
 				5DE97BBE20286BA700A57475 /* GradeHandler.swift */,
+				5D3F833820623C820018DE32 /* MailHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -464,6 +589,15 @@
 				5DF7470A2019EE2B007E6650 /* ClassRoom.swift */,
 			);
 			path = Lesson;
+			sourceTree = "<group>";
+		};
+		5DEE3BF62061347C007E40E4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5DFAED56200A420C000BC7CF /* Magister */,
+				5DEE3BF720613491007E40E4 /* Asset.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		5DF7470C2019EE4D007E6650 /* Type */ = {
@@ -498,7 +632,6 @@
 		5DFAED56200A420C000BC7CF /* Magister */ = {
 			isa = PBXGroup;
 			children = (
-				5DAEC625201F282500AB7B13 /* Handlers */,
 				325104154C343031730B3840 /* Url */,
 				5DF7470C2019EE4D007E6650 /* Type */,
 				5DAEC623201F18B200AB7B13 /* Grade */,
@@ -546,6 +679,8 @@
 			dependencies = (
 				5DE430692020C9420071C7A6 /* PBXTargetDependency */,
 				5DE430752020C9490071C7A6 /* PBXTargetDependency */,
+				5D00A4E220613EBD00B77B0A /* PBXTargetDependency */,
+				5D74D5DE2069448C00E90A59 /* PBXTargetDependency */,
 			);
 			name = Macister;
 			productName = Macister;
@@ -606,7 +741,7 @@
 								enabled = 0;
 							};
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -642,6 +777,14 @@
 					ProjectRef = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
 				},
 				{
+					ProductGroup = 5D74D5D02069447500E90A59 /* Products */;
+					ProjectRef = 5D74D5CF2069447500E90A59 /* HotKey.xcodeproj */;
+				},
+				{
+					ProductGroup = 5D00A4CC20613DD100B77B0A /* Products */;
+					ProjectRef = 5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */;
+				},
+				{
 					ProductGroup = 5DFAED3C200A2FD6000BC7CF /* Products */;
 					ProjectRef = 5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */;
 				},
@@ -656,6 +799,62 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		5D00A4D420613DD200B77B0A /* RNCryptor.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RNCryptor.framework;
+			remoteRef = 5D00A4D320613DD200B77B0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D00A4D620613DD200B77B0A /* RNCryptorTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RNCryptorTests.xctest;
+			remoteRef = 5D00A4D520613DD200B77B0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D00A4D820613DD200B77B0A /* RNCryptor.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RNCryptor.framework;
+			remoteRef = 5D00A4D720613DD200B77B0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D00A4DA20613DD200B77B0A /* RNCryptor-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "RNCryptor-OSXTests.xctest";
+			remoteRef = 5D00A4D920613DD200B77B0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D00A4DC20613DD200B77B0A /* RNCryptorPerfTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RNCryptorPerfTests.xctest;
+			remoteRef = 5D00A4DB20613DD200B77B0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D74D5D62069447600E90A59 /* HotKey.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HotKey.framework;
+			remoteRef = 5D74D5D52069447600E90A59 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D74D5D82069447600E90A59 /* HotKeyTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HotKeyTests.xctest;
+			remoteRef = 5D74D5D72069447600E90A59 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5D74D5DA2069447600E90A59 /* Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Example.app;
+			remoteRef = 5D74D5D92069447600E90A59 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		5DFAED47200A2FD6000BC7CF /* SwiftyJSON.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -766,6 +965,7 @@
 				5DA53B8E20100223001DD8F2 /* LessonElement.xib in Resources */,
 				5D505275202107B800DE3F8F /* Fonts in Resources */,
 				5D68E5F820232C0B0065F4C4 /* CUComboBox.xib in Resources */,
+				5D14C90A20614B61003E14D0 /* MailElement.xib in Resources */,
 				5D7908ED202840240006C7AC /* GradeElement.xib in Resources */,
 				5D9281AA2021C86E00FA3902 /* CUTextField.xib in Resources */,
 			);
@@ -802,6 +1002,7 @@
 				5D8CB19E200D17C70073613D /* Person.swift in Sources */,
 				5DF746F72019EDCF007E6650 /* Subject.swift in Sources */,
 				5D041B05200E2D0E00FFBF6A /* Group.swift in Sources */,
+				5DF8601B2068DB6400969596 /* ColorPalette.swift in Sources */,
 				5D118545200E08F4003EE455 /* Study.swift in Sources */,
 				5DF747092019EDF2007E6650 /* Teacher.swift in Sources */,
 				5D50DA78202B2653005A8765 /* Message.swift in Sources */,
@@ -809,9 +1010,11 @@
 				5DAB9013200CB62E00705B36 /* HttpUtil.swift in Sources */,
 				5DAEC60E201F123100AB7B13 /* GradePeriod.swift in Sources */,
 				5D041B07200E549D00FFBF6A /* Studies.swift in Sources */,
+				5D3F833920623C820018DE32 /* MailHandler.swift in Sources */,
 				5D50DA7C202B402C005A8765 /* MessageType.swift in Sources */,
 				5DE97BBF20286BA700A57475 /* GradeHandler.swift in Sources */,
 				5D26213A20095243006BE4DA /* FindSchoolViewController.swift in Sources */,
+				5D14C91E20614F8E003E14D0 /* MailElement.swift in Sources */,
 				5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */,
 				5DAEC620201F152C00AB7B13 /* GradeColomn.swift in Sources */,
 				5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */,
@@ -829,13 +1032,16 @@
 				5DA53B9020100266001DD8F2 /* LessonElement.swift in Sources */,
 				5DF747152019F34B007E6650 /* InfoType.swift in Sources */,
 				5D50DA80202B4168005A8765 /* ContactType.swift in Sources */,
+				5DEE3BE720613368007E40E4 /* AssetHandler.swift in Sources */,
 				5D50DA7E202B40D2005A8765 /* Contact.swift in Sources */,
 				5D6F520620161535004C63BA /* Lesson.swift in Sources */,
 				5DA27DC42009274100909C42 /* AppDelegate.swift in Sources */,
 				5DF54A43200BC89900278DAB /* EventMonitor.swift in Sources */,
 				325100FB473A1DEA4561BBF9 /* SchoolUrl.swift in Sources */,
 				3251078DA73A7CF619E01E78 /* PersonUrl.swift in Sources */,
+				5D00A4BC20613D6400B77B0A /* EncryptionUtil.swift in Sources */,
 				32510C10B8247A10427147B0 /* StudentUrl.swift in Sources */,
+				5DEE3BF820613491007E40E4 /* Asset.swift in Sources */,
 				32510A01928C9210EDCFA599 /* AccountUrl.swift in Sources */,
 				5DF747132019F2EE007E6650 /* DisplayType.swift in Sources */,
 				5D9281BA2021D68D00FA3902 /* CUTextField.swift in Sources */,
@@ -863,6 +1069,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5D00A4E220613EBD00B77B0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RNCryptor-OSX";
+			targetProxy = 5D00A4E120613EBD00B77B0A /* PBXContainerItemProxy */;
+		};
+		5D74D5DE2069448C00E90A59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HotKey;
+			targetProxy = 5D74D5DD2069448C00E90A59 /* PBXContainerItemProxy */;
+		};
 		5DA27DD42009274100909C42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5DA27DBF2009274100909C42 /* Macister */;
@@ -1011,11 +1227,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
-				CODE_SIGN_ENTITLEMENTS = Macister/Macister.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KN7JU6NLR4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Macister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;
@@ -1031,11 +1246,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
-				CODE_SIGN_ENTITLEMENTS = Macister/Macister.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = KN7JU6NLR4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Macister/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;

@@ -67,7 +67,7 @@
             </subviews>
             <point key="canvasLocation" x="-3" y="174"/>
         </customView>
-        <scrollView identifier="popover" hidden="YES" wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="05E-1O-kah">
+        <scrollView identifier="popover" hidden="YES" wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="05E-1O-kah">
             <rect key="frame" x="0.0" y="0.0" width="256" height="16"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <clipView key="contentView" id="qKI-uu-z9J">
@@ -80,12 +80,12 @@
                     </view>
                 </subviews>
             </clipView>
-            <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="ybl-Vw-hmg">
-                <rect key="frame" x="0.0" y="0.0" width="256" height="16"/>
+            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ybl-Vw-hmg">
+                <rect key="frame" x="-100" y="-100" width="256" height="16"/>
                 <autoresizingMask key="autoresizingMask"/>
             </scroller>
-            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="fbH-yB-ywv">
-                <rect key="frame" x="240" y="0.0" width="16" height="16"/>
+            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="fbH-yB-ywv">
+                <rect key="frame" x="-100" y="-100" width="16" height="16"/>
                 <autoresizingMask key="autoresizingMask"/>
             </scroller>
             <point key="canvasLocation" x="-6" y="253"/>

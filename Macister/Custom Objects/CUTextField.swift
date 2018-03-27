@@ -41,7 +41,7 @@ class CUTextField: NSView, NSTextFieldDelegate {
         }
     }
     
-    @IBInspectable var activeColor:NSColor = NSColor.init(red: 0, green: 147/255, blue: 226/255, alpha: 1) {
+    @IBInspectable var activeColor:NSColor = ColorPalette.magisterBlue {
         didSet {
             if (active) {
                 label.textColor = activeColor
@@ -49,7 +49,7 @@ class CUTextField: NSView, NSTextFieldDelegate {
         }
     }
     
-    @IBInspectable var notActiveColor:NSColor = NSColor.init(red: 178/255, green: 178/255, blue: 178/255, alpha: 1) {
+    @IBInspectable var notActiveColor:NSColor = ColorPalette.notActiveLabel {
         didSet {
             if (!active) {
                 label.textColor = notActiveColor
@@ -57,7 +57,7 @@ class CUTextField: NSView, NSTextFieldDelegate {
         }
     }
     
-    @IBInspectable var inputColor:NSColor = NSColor.black {
+    @IBInspectable var inputColor:NSColor = ColorPalette.black {
         didSet {
             input.textColor = inputColor
         }
