@@ -29,7 +29,7 @@ class DateUtil: NSObject {
     
     static func getDateFormatMail() -> DateFormatter {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM'-'dd HH:mm"
+        dateFormatter.dateFormat = "dd'-'MM HH:mm"
         return dateFormatter
     }
     
