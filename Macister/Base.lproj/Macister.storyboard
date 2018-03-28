@@ -1355,24 +1355,6 @@ DQ
                                                             </view>
                                                             <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </box>
-                                                        <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="qdd-sL-eYK" userLabel="Border_Middle_Left">
-                                                            <rect key="frame" x="256" y="0.0" width="2" height="584"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <view key="contentView" ambiguous="YES" id="JGj-R1-bPR">
-                                                                <rect key="frame" x="0.0" y="0.0" width="2" height="584"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            </view>
-                                                            <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </box>
-                                                        <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="ovc-93-5ah" userLabel="Border_Middle_Right">
-                                                            <rect key="frame" x="510" y="0.0" width="2" height="584"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <view key="contentView" ambiguous="YES" id="BAc-Sq-xuM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="2" height="584"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            </view>
-                                                            <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </box>
                                                         <box fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="BFQ-vz-J4q" userLabel="Border_Right">
                                                             <rect key="frame" x="764" y="0.0" width="4" height="704"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1391,6 +1373,16 @@ DQ
                                                             </view>
                                                             <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </box>
+                                                    </subviews>
+                                                </customView>
+                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cLd-mh-ZBt" userLabel="Calender">
+                                                    <rect key="frame" x="4" y="4" width="760" height="582"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <subviews>
+                                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZgP-xK-665" userLabel="Top">
+                                                            <rect key="frame" x="0.0" y="532" width="760" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        </customView>
                                                     </subviews>
                                                 </customView>
                                             </subviews>
