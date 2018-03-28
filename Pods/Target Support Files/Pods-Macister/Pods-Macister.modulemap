@@ -1,0 +1,6 @@
+framework module Pods_Macister {
+  umbrella header "Pods-Macister-umbrella.h"
+
+  export *
+  module * { export * }
+}

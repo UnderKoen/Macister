@@ -13,6 +13,8 @@
 		32510A01928C9210EDCFA599 /* AccountUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251087250EDA4D6C703A278 /* AccountUrl.swift */; };
 		32510C10B8247A10427147B0 /* StudentUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325107C6ABAB648C9B2A98E7 /* StudentUrl.swift */; };
 		32510D4EDC1DDDB9EF7E56D0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325103B1BD4D0B957E5FBDBE /* Account.swift */; };
+		36B22AB7DA75CCC9781F175E /* Pods_MacisterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7098998F077E734930FBA298 /* Pods_MacisterUITests.framework */; };
+		5311AB97BF7CBF8C6454983C /* Pods_MacisterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44016A47B8672BD98F2E7E7F /* Pods_MacisterTests.framework */; };
 		5D00A4BC20613D6400B77B0A /* EncryptionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D00A4BB20613D6400B77B0A /* EncryptionUtil.swift */; };
 		5D00A4DF20613EBD00B77B0A /* RNCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D00A4D820613DD200B77B0A /* RNCryptor.framework */; };
 		5D00A4E020613EBD00B77B0A /* RNCryptor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D00A4D820613DD200B77B0A /* RNCryptor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -61,8 +63,6 @@
 		5DAEC620201F152C00AB7B13 /* GradeColomn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEC61F201F152C00AB7B13 /* GradeColomn.swift */; };
 		5DAEC622201F16DE00AB7B13 /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEC621201F16DE00AB7B13 /* RowType.swift */; };
 		5DAEC627201F293200AB7B13 /* LessonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAEC626201F293200AB7B13 /* LessonHandler.swift */; };
-		5DB133D1206C1F3F00E85244 /* HotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB133CC206C1F2900E85244 /* HotKey.framework */; };
-		5DB133D2206C1F3F00E85244 /* HotKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB133CC206C1F2900E85244 /* HotKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DE430662020C9420071C7A6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
 		5DE430672020C9420071C7A6 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DE430722020C9490071C7A6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
@@ -82,6 +82,7 @@
 		5DFAED5C200A4792000BC7CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5B200A4792000BC7CF /* MainViewController.swift */; };
 		5DFAED5E200A48B0000BC7CF /* Magister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFAED5D200A48B0000BC7CF /* Magister.swift */; };
 		C6393FF7200FA6F900DD9F78 /* Grades.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6393FF6200FA6F900DD9F78 /* Grades.swift */; };
+		D75FE3EC4BD101D98505DAFE /* Pods_Macister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56373B9BA930B63B4083C435 /* Pods_Macister.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,34 +141,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5DA27DBF2009274100909C42;
 			remoteInfo = Macister;
-		};
-		5DB133CB206C1F2900E85244 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DB133C5206C1F2900E85244 /* HotKey.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 21887E361F2209DE00A05579;
-			remoteInfo = HotKey;
-		};
-		5DB133CD206C1F2900E85244 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DB133C5206C1F2900E85244 /* HotKey.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 21887E3F1F2209DE00A05579;
-			remoteInfo = HotKeyTests;
-		};
-		5DB133CF206C1F2900E85244 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DB133C5206C1F2900E85244 /* HotKey.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 21887E661F22154600A05579;
-			remoteInfo = Example;
-		};
-		5DB133D3206C1F3F00E85244 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DB133C5206C1F2900E85244 /* HotKey.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 21887E351F2209DE00A05579;
-			remoteInfo = HotKey;
 		};
 		5DE430682020C9420071C7A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -290,7 +263,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5DB133D2206C1F3F00E85244 /* HotKey.framework in Embed Frameworks */,
 				5DE430732020C9490071C7A6 /* SwiftyJSON.framework in Embed Frameworks */,
 				5D00A4E020613EBD00B77B0A /* RNCryptor.framework in Embed Frameworks */,
 				5DE430672020C9420071C7A6 /* Alamofire.framework in Embed Frameworks */,
@@ -301,12 +273,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		027CEA4F1439986E3CC0456D /* Pods-Macister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Macister/Pods-Macister.debug.xcconfig"; sourceTree = "<group>"; };
+		20E3BD8DE363A27ECB6CB147 /* Pods-MacisterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacisterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacisterUITests/Pods-MacisterUITests.release.xcconfig"; sourceTree = "<group>"; };
 		325103B1BD4D0B957E5FBDBE /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		32510517A416ACC98321249B /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		325107C6ABAB648C9B2A98E7 /* StudentUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentUrl.swift; sourceTree = "<group>"; };
 		3251083F745E625D541E9F52 /* SchoolUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolUrl.swift; sourceTree = "<group>"; };
 		3251087250EDA4D6C703A278 /* AccountUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountUrl.swift; sourceTree = "<group>"; };
 		32510F33F605D20AFFE2846F /* PersonUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonUrl.swift; sourceTree = "<group>"; };
+		44016A47B8672BD98F2E7E7F /* Pods_MacisterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacisterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4727CF994239D130D61FE6B1 /* Pods-MacisterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacisterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacisterUITests/Pods-MacisterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B29F6E39A5870711B89807A /* Pods-Macister.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macister.release.xcconfig"; path = "Pods/Target Support Files/Pods-Macister/Pods-Macister.release.xcconfig"; sourceTree = "<group>"; };
+		56373B9BA930B63B4083C435 /* Pods_Macister.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Macister.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D00A4BB20613D6400B77B0A /* EncryptionUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionUtil.swift; sourceTree = "<group>"; };
 		5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCryptor.xcodeproj; path = Libs/RNCryptor/RNCryptor.xcodeproj; sourceTree = "<group>"; };
 		5D016651200FA4FE00C0E1D9 /* MainUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUrl.swift; sourceTree = "<group>"; };
@@ -359,7 +337,6 @@
 		5DAEC61F201F152C00AB7B13 /* GradeColomn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeColomn.swift; sourceTree = "<group>"; };
 		5DAEC621201F16DE00AB7B13 /* RowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowType.swift; sourceTree = "<group>"; };
 		5DAEC626201F293200AB7B13 /* LessonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonHandler.swift; sourceTree = "<group>"; };
-		5DB133C5206C1F2900E85244 /* HotKey.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HotKey.xcodeproj; path = Libs/HotKey/HotKey.xcodeproj; sourceTree = "<group>"; };
 		5DE97BBE20286BA700A57475 /* GradeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeHandler.swift; sourceTree = "<group>"; };
 		5DEE3BE620613368007E40E4 /* AssetHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetHandler.swift; sourceTree = "<group>"; };
 		5DEE3BF720613491007E40E4 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
@@ -376,7 +353,10 @@
 		5DFAED5B200A4792000BC7CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5DFAED5D200A48B0000BC7CF /* Magister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magister.swift; sourceTree = "<group>"; };
 		5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Libs/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		7098998F077E734930FBA298 /* Pods_MacisterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacisterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E2D762F2C910B952CFE1531 /* Pods-MacisterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacisterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacisterTests/Pods-MacisterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C6393FF6200FA6F900DD9F78 /* Grades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grades.swift; sourceTree = "<group>"; };
+		D7364287E47732FFC3BC987C /* Pods-MacisterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacisterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacisterTests/Pods-MacisterTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,12 +364,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DB133D1206C1F3F00E85244 /* HotKey.framework in Frameworks */,
 				5DE430722020C9490071C7A6 /* SwiftyJSON.framework in Frameworks */,
 				5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */,
 				5D00A4DF20613EBD00B77B0A /* RNCryptor.framework in Frameworks */,
 				5DE430662020C9420071C7A6 /* Alamofire.framework in Frameworks */,
 				5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */,
+				D75FE3EC4BD101D98505DAFE /* Pods_Macister.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +377,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5311AB97BF7CBF8C6454983C /* Pods_MacisterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,12 +385,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B22AB7DA75CCC9781F175E /* Pods_MacisterUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A00CA07ED0B7906E46804CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				027CEA4F1439986E3CC0456D /* Pods-Macister.debug.xcconfig */,
+				4B29F6E39A5870711B89807A /* Pods-Macister.release.xcconfig */,
+				7E2D762F2C910B952CFE1531 /* Pods-MacisterTests.debug.xcconfig */,
+				D7364287E47732FFC3BC987C /* Pods-MacisterTests.release.xcconfig */,
+				4727CF994239D130D61FE6B1 /* Pods-MacisterUITests.debug.xcconfig */,
+				20E3BD8DE363A27ECB6CB147 /* Pods-MacisterUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		325104154C343031730B3840 /* Url */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +433,9 @@
 		5D2621FA2009678B006BE4DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56373B9BA930B63B4083C435 /* Pods_Macister.framework */,
+				44016A47B8672BD98F2E7E7F /* Pods_MacisterTests.framework */,
+				7098998F077E734930FBA298 /* Pods_MacisterUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -458,12 +456,12 @@
 				5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */,
 				5DFAED3B200A2FD6000BC7CF /* SwiftyJSON.xcodeproj */,
 				5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */,
-				5DB133C5206C1F2900E85244 /* HotKey.xcodeproj */,
 				5DA27DC22009274100909C42 /* Macister */,
 				5DA27DD52009274100909C42 /* MacisterTests */,
 				5DA27DE02009274100909C42 /* MacisterUITests */,
 				5DA27DC12009274100909C42 /* Products */,
 				5D2621FA2009678B006BE4DA /* Frameworks */,
+				2A00CA07ED0B7906E46804CF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -571,16 +569,6 @@
 			path = Handlers;
 			sourceTree = "<group>";
 		};
-		5DB133C6206C1F2900E85244 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5DB133CC206C1F2900E85244 /* HotKey.framework */,
-				5DB133CE206C1F2900E85244 /* HotKeyTests.xctest */,
-				5DB133D0206C1F2900E85244 /* Example.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5DC7074A202D946D005B777D /* Lesson */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,10 +657,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DA27DE62009274100909C42 /* Build configuration list for PBXNativeTarget "Macister" */;
 			buildPhases = (
+				F5DE53C58CBC68F7410B9EAC /* [CP] Check Pods Manifest.lock */,
 				5DA27DBC2009274100909C42 /* Sources */,
 				5DA27DBD2009274100909C42 /* Frameworks */,
 				5DA27DBE2009274100909C42 /* Resources */,
 				5D2621E72009664C006BE4DA /* Embed Frameworks */,
+				525112016198840BF3D9DF90 /* [CP] Embed Pods Frameworks */,
+				D1EDBD9E9BC92D6864123EA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -680,7 +671,6 @@
 				5DE430692020C9420071C7A6 /* PBXTargetDependency */,
 				5DE430752020C9490071C7A6 /* PBXTargetDependency */,
 				5D00A4E220613EBD00B77B0A /* PBXTargetDependency */,
-				5DB133D4206C1F3F00E85244 /* PBXTargetDependency */,
 			);
 			name = Macister;
 			productName = Macister;
@@ -691,9 +681,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DA27DE92009274100909C42 /* Build configuration list for PBXNativeTarget "MacisterTests" */;
 			buildPhases = (
+				C680FDE82EFCECCD10561D94 /* [CP] Check Pods Manifest.lock */,
 				5DA27DCE2009274100909C42 /* Sources */,
 				5DA27DCF2009274100909C42 /* Frameworks */,
 				5DA27DD02009274100909C42 /* Resources */,
+				3E350C5497C8575DFE669D80 /* [CP] Embed Pods Frameworks */,
+				1CBD88C0E765FE770452C5A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -709,9 +702,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DA27DEC2009274100909C42 /* Build configuration list for PBXNativeTarget "MacisterUITests" */;
 			buildPhases = (
+				033AA6D220DE377C8D5E7718 /* [CP] Check Pods Manifest.lock */,
 				5DA27DD92009274100909C42 /* Sources */,
 				5DA27DDA2009274100909C42 /* Frameworks */,
 				5DA27DDB2009274100909C42 /* Resources */,
+				A992DA2FE4A4E3DD6329165A /* [CP] Embed Pods Frameworks */,
+				44A37CC188F5798BDAFA3E03 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -777,10 +773,6 @@
 					ProjectRef = 5DFAED78200A5C83000BC7CF /* Alamofire.xcodeproj */;
 				},
 				{
-					ProductGroup = 5DB133C6206C1F2900E85244 /* Products */;
-					ProjectRef = 5DB133C5206C1F2900E85244 /* HotKey.xcodeproj */;
-				},
-				{
 					ProductGroup = 5D00A4CC20613DD100B77B0A /* Products */;
 					ProjectRef = 5D00A4CB20613DD100B77B0A /* RNCryptor.xcodeproj */;
 				},
@@ -832,27 +824,6 @@
 			fileType = wrapper.cfbundle;
 			path = RNCryptorPerfTests.xctest;
 			remoteRef = 5D00A4DB20613DD200B77B0A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5DB133CC206C1F2900E85244 /* HotKey.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = HotKey.framework;
-			remoteRef = 5DB133CB206C1F2900E85244 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5DB133CE206C1F2900E85244 /* HotKeyTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = HotKeyTests.xctest;
-			remoteRef = 5DB133CD206C1F2900E85244 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5DB133D0206C1F2900E85244 /* Example.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Example.app;
-			remoteRef = 5DB133CF206C1F2900E85244 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5DFAED47200A2FD6000BC7CF /* SwiftyJSON.framework */ = {
@@ -987,6 +958,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		033AA6D220DE377C8D5E7718 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MacisterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CBD88C0E765FE770452C5A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacisterTests/Pods-MacisterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E350C5497C8575DFE669D80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacisterTests/Pods-MacisterTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44A37CC188F5798BDAFA3E03 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacisterUITests/Pods-MacisterUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		525112016198840BF3D9DF90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Macister/Pods-Macister-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HotKey/HotKey.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HotKey.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Macister/Pods-Macister-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A992DA2FE4A4E3DD6329165A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacisterUITests/Pods-MacisterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C680FDE82EFCECCD10561D94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MacisterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1EDBD9E9BC92D6864123EA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Macister/Pods-Macister-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5DE53C58CBC68F7410B9EAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Macister-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5DA27DBC2009274100909C42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1083,11 +1204,6 @@
 			isa = PBXTargetDependency;
 			target = 5DA27DBF2009274100909C42 /* Macister */;
 			targetProxy = 5DA27DDE2009274100909C42 /* PBXContainerItemProxy */;
-		};
-		5DB133D4206C1F3F00E85244 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HotKey;
-			targetProxy = 5DB133D3206C1F3F00E85244 /* PBXContainerItemProxy */;
 		};
 		5DE430692020C9420071C7A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1223,6 +1339,7 @@
 		};
 		5DA27DE72009274100909C42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 027CEA4F1439986E3CC0456D /* Pods-Macister.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1242,6 +1359,7 @@
 		};
 		5DA27DE82009274100909C42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B29F6E39A5870711B89807A /* Pods-Macister.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1261,6 +1379,7 @@
 		};
 		5DA27DEA2009274100909C42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E2D762F2C910B952CFE1531 /* Pods-MacisterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1277,6 +1396,7 @@
 		};
 		5DA27DEB2009274100909C42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7364287E47732FFC3BC987C /* Pods-MacisterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1293,6 +1413,7 @@
 		};
 		5DA27DED2009274100909C42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4727CF994239D130D61FE6B1 /* Pods-MacisterUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1308,6 +1429,7 @@
 		};
 		5DA27DEE2009274100909C42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20E3BD8DE363A27ECB6CB147 /* Pods-MacisterUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
