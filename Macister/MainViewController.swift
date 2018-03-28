@@ -14,20 +14,25 @@ class MainViewController: NSViewController {
     @IBOutlet weak var cijfers: NSView!
     @IBOutlet weak var agenda: NSView!
     @IBOutlet weak var vandaag: NSView!
-    //Currently hardcoded TODO
     static var current:Active = .vandaag
+    static var vandaagView:TodayViewController = TodayViewController.freshController()
+    static var agendaView:CalendarViewController = CalendarViewController.freshController()
     
     @IBOutlet weak var userName: NSTextField!
     @IBOutlet weak var profileImage: NSImageView!
     
+    var loaded = false;
     override func viewDidLoad() {
         super.viewDidLoad()
-        userName.stringValue = Magister.magister!.getPerson()!.getName()
-        profileImage.image = Magister.magister!.getPerson()!.profielFoto!
-        profileImage.wantsLayer = true
-        profileImage.image?.size=profileImage.frame.size
-        profileImage.layer?.cornerRadius = profileImage.frame.size.width/2
-        profileImage.layer?.masksToBounds = true
+        if !loaded {
+            userName.stringValue = Magister.magister!.getPerson()!.getName()
+            profileImage.image = Magister.magister!.getPerson()!.profielFoto!
+            profileImage.wantsLayer = true
+            profileImage.image?.size=profileImage.frame.size
+            profileImage.layer?.cornerRadius = profileImage.frame.size.width/2
+            profileImage.layer?.masksToBounds = true
+            loaded = true
+        }
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -47,12 +52,12 @@ class MainViewController: NSViewController {
                 }
             } else if view == agenda {
                 if MainViewController.current != .agenda {
-                    AppDelegate.changeView(controller: CalendarViewController.freshController())
+                    AppDelegate.changeView(controller: MainViewController.agendaView)
                     MainViewController.current = .agenda
                 }
             } else if view == vandaag {
                 if MainViewController.current != .vandaag {
-                    AppDelegate.changeView(controller: TodayViewController.freshController())
+                    AppDelegate.changeView(controller: MainViewController.vandaagView)
                     MainViewController.current = .vandaag
                 }
             }
