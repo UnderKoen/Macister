@@ -31,7 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 Magister.magister!.login(username: json["user"].string!, password: pass, onError: { (str) in
                     Magister.magister = nil
                 }, onSucces: {
-                    AppDelegate.changeView(controller: MainViewController.vandaagView)
+                    AppDelegate.changeView(controller: SpecialViewController.freshController())
                 })
             }
         } catch {}
@@ -112,6 +112,6 @@ class PopoverContentView:NSView {
 class PopoverBackgroundView:NSView {
     override func draw(_ dirtyRect: NSRect) {
         ColorPalette.magisterBlack.set()
-        //__NSRectFill(self.bounds)
+        __NSRectFill(self.bounds)
     }
 }

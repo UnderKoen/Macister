@@ -68,5 +68,5 @@ class MainViewController: NSViewController {
 }
 
 enum Active {
-    case berichten, cijfers, agenda, vandaag
+    case berichten, cijfers, agenda, vandaag, other
 }
