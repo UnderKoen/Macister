@@ -33,6 +33,12 @@ class DateUtil: NSObject {
         return dateFormatter
     }
     
+    static func getFullDateFormatMail() -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, 4 MMMM yyyy - HH:mm"
+        return dateFormatter
+    }
+    
     static func getDateFormatToday() -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE d MMMM yyyy"

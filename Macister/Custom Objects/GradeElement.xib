@@ -19,7 +19,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="-" id="xGH-WY-R4I">
                         <font key="font" metaFont="systemBold" size="12"/>
-                        <color key="textColor" white="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
@@ -28,7 +28,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="-" id="yIw-7T-UfU">
                         <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" white="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>

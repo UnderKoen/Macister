@@ -18,6 +18,8 @@ class MainViewController: NSViewController {
     static var vandaagView:TodayViewController = TodayViewController.freshController()
     static var agendaView:CalendarViewController = CalendarViewController.freshController()
     
+    static var mailView:MailViewController = MailViewController.freshController()
+    
     @IBOutlet weak var userName: NSTextField!
     @IBOutlet weak var profileImage: NSImageView!
     
@@ -46,6 +48,8 @@ class MainViewController: NSViewController {
             let view = tab.view
             if view == berichten {
                 if MainViewController.current != .berichten {
+                    AppDelegate.changeView(controller: MainViewController.mailView)
+                    MainViewController.current = .berichten
                 }
             } else if view == cijfers {
                 if MainViewController.current != .cijfers {
@@ -62,6 +66,34 @@ class MainViewController: NSViewController {
                 }
             }
         }
+    }
+    
+    static func switchToView(_ view: Active) {
+        switch view {
+        case .berichten:
+            if MainViewController.current != .berichten {
+                AppDelegate.changeView(controller: MainViewController.mailView)
+            }
+            break
+        case .cijfers:
+            if MainViewController.current != .cijfers {
+                return
+            }
+            break
+        case .agenda:
+            if MainViewController.current != .agenda {
+                AppDelegate.changeView(controller: MainViewController.agendaView)
+            }
+            break
+        case .vandaag:
+            if MainViewController.current != .vandaag {
+                AppDelegate.changeView(controller: MainViewController.vandaagView)
+            }
+            break
+        case .other:
+            return
+        }
+        MainViewController.current = view
     }
     
     func update() {}

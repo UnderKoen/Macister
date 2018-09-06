@@ -44,7 +44,7 @@
 		5D7908ED202840240006C7AC /* GradeElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D7908EC202840240006C7AC /* GradeElement.xib */; };
 		5D7908FD202840330006C7AC /* GradeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7908FC202840330006C7AC /* GradeElement.swift */; };
 		5D7E3C3E201F86BC00CB8721 /* LessonStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E3C3D201F86BC00CB8721 /* LessonStatusType.swift */; };
-		5D858DEB20AEE67E0003F799 /* SpecialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D858DEA20AEE67E0003F799 /* SpecialViewController.swift */; };
+		5D858DEB20AEE67E0003F799 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D858DEA20AEE67E0003F799 /* MailViewController.swift */; };
 		5D8CB19B200CF7FC0073613D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED88200A5C84000BC7CF /* Alamofire.framework */; };
 		5D8CB19C200CF8020073613D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFAED4B200A2FD6000BC7CF /* SwiftyJSON.framework */; };
 		5D8CB19E200D17C70073613D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CB19D200D17C70073613D /* Person.swift */; };
@@ -314,7 +314,7 @@
 		5D7908EC202840240006C7AC /* GradeElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeElement.xib; sourceTree = "<group>"; };
 		5D7908FC202840330006C7AC /* GradeElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeElement.swift; sourceTree = "<group>"; };
 		5D7E3C3D201F86BC00CB8721 /* LessonStatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonStatusType.swift; sourceTree = "<group>"; };
-		5D858DEA20AEE67E0003F799 /* SpecialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewController.swift; sourceTree = "<group>"; };
+		5D858DEA20AEE67E0003F799 /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		5D8CB19D200D17C70073613D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5D9281A92021C86E00FA3902 /* CUTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CUTextField.xib; sourceTree = "<group>"; };
 		5D9281B92021D68D00FA3902 /* CUTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUTextField.swift; sourceTree = "<group>"; };
@@ -495,7 +495,7 @@
 				5DFAED5B200A4792000BC7CF /* MainViewController.swift */,
 				5D546095200DE8D4002C0D74 /* TodayViewController.swift */,
 				5D5460A7200DE9FD002C0D74 /* CalendarViewController.swift */,
-				5D858DEA20AEE67E0003F799 /* SpecialViewController.swift */,
+				5D858DEA20AEE67E0003F799 /* MailViewController.swift */,
 			);
 			path = Macister;
 			sourceTree = "<group>";
@@ -1146,7 +1146,7 @@
 				5DAEC622201F16DE00AB7B13 /* RowType.swift in Sources */,
 				5D041AF3200E2CF800FFBF6A /* StudyInfo.swift in Sources */,
 				5D546096200DE8D4002C0D74 /* TodayViewController.swift in Sources */,
-				5D858DEB20AEE67E0003F799 /* SpecialViewController.swift in Sources */,
+				5D858DEB20AEE67E0003F799 /* MailViewController.swift in Sources */,
 				C6393FF7200FA6F900DD9F78 /* Grades.swift in Sources */,
 				5D016666200FB55000C0E1D9 /* StudyUrl.swift in Sources */,
 				5D68E60820232DDA0065F4C4 /* CUComboBox.swift in Sources */,

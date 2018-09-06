@@ -13,6 +13,8 @@ import Cocoa
 class MailElement: NSView {
     @IBOutlet weak var view: NSView!
     
+    var backgroundEl:NSBox!
+    var curveEl:NSBox!
     var fromEl:NSTextField!
     var subjectEl:NSTextField!
     var timeEl:NSTextField!
@@ -37,11 +39,68 @@ class MailElement: NSView {
         }
     }
     
-    @IBInspectable var info:NSImage! {
+    @IBInspectable var bijlage:Bool = false {
         didSet {
-            infoEl.isHidden = false;
-            infoEl.image = info
-            subjectEl.frame = NSRect(x: subjectEl.frame.minX, y: subjectEl.frame.minY, width: 212, height: subjectEl.frame.height)
+            if (bijlage) {
+                infoEl.isHidden = false;
+                if (selected) {
+                    infoEl.image = #imageLiteral(resourceName: "ic_attach_file_white")
+                } else {
+                    infoEl.image = #imageLiteral(resourceName: "ic_attach_file")
+                }
+                subjectEl.frame = NSRect(x: subjectEl.frame.minX, y: subjectEl.frame.minY, width: 212, height: subjectEl.frame.height)
+            }
+        }
+    }
+    
+    @IBInspectable var selected:Bool = false {
+        didSet {
+            if (selected) {
+                self.fromEl.textColor = ColorPalette.whiteTextColor;
+                self.subjectEl.textColor = ColorPalette.whiteTextColor;
+                self.timeEl.textColor = ColorPalette.whiteTextColor;
+                if (oldColor == nil) {
+                    oldColor = backgroundEl.fillColor;
+                }
+                backgroundEl.fillColor = ColorPalette.magisterBlue
+                curveEl.fillColor = ColorPalette.magisterBlue
+                curveEl.cornerRadius = 4
+                self.frame = NSRect(x: self.frame.minX, y: self.frame.minY, width: 258, height: self.frame.height)
+                self.bounds = NSRect(x: self.bounds.minX, y: self.bounds.minY, width: 258, height: self.bounds.height)
+                self.view.frame = bounds
+                self.view.bounds = bounds
+                if (bijlage) {
+                    infoEl.image = #imageLiteral(resourceName: "ic_attach_file_white")
+                }
+            } else {
+                self.fromEl.textColor = ColorPalette.textColor;
+                self.subjectEl.textColor = ColorPalette.textColor;
+                self.timeEl.textColor = ColorPalette.textColor;
+                if (oldColor != nil) {
+                    backgroundEl.fillColor = oldColor;
+                }
+                curveEl.fillColor = ColorPalette.none
+                curveEl.cornerRadius = 0
+                self.frame = NSRect(x: self.frame.minX, y: self.frame.minY, width: 252, height: self.frame.height)
+                self.bounds = NSRect(x: self.bounds.minX, y: self.bounds.minY, width: 252, height: self.bounds.height)
+                self.view.frame = bounds
+                self.view.bounds = bounds
+                if (bijlage) {
+                    infoEl.image = #imageLiteral(resourceName: "ic_attach_file")
+                }
+            }
+        }
+    }
+    
+    @IBInspectable var gelezen:Bool = true {
+        didSet {
+            if (gelezen) {
+                statusEl.fillColor = ColorPalette.none;
+                backgroundEl.fillColor = ColorPalette.none;
+            } else {
+                statusEl.fillColor = ColorPalette.magisterBlue
+                backgroundEl.fillColor = statusEl.fillColor.withAlphaComponent(0.15)
+            }
         }
     }
     
@@ -50,8 +109,15 @@ class MailElement: NSView {
             if message == nil {
                 return
             }
-            if message?.afzender?.naam != nil {
-                from = message!.afzender!.naam!
+            if message?.mapId == 2 {
+                if message?.ontvangersStr != nil {
+                    from = message!.ontvangersStr!
+                }
+            } else {
+                if message?.afzender?.naam != nil {
+                    from = message!.afzender!.naam!
+                }
+                
             }
             if message?.onderwerp != nil {
                 subject = message!.onderwerp!
@@ -59,35 +125,41 @@ class MailElement: NSView {
             if message?.verstuurdOpDate != nil {
                 time = DateUtil.getDateFormatMail().string(from: message!.verstuurdOpDate!)
             }
-            if message?.heeftBijlagen != nil {
-                if message!.heeftBijlagen! {
-                    info = #imageLiteral(resourceName: "ic_attach_file")
-                }
+            if message?.heeftBijlagen != nil && message!.heeftBijlagen ?? false {
+                bijlage = message!.heeftBijlagen!
             }
-            if message?.isGelezen != nil {
-                if !message!.isGelezen! {
-                    statusEl.fillColor = NSColor(red: 0/255, green: 147/255, blue: 226/255, alpha: 1)
-                    self.layer?.backgroundColor = statusEl.fillColor.withAlphaComponent(0.15).cgColor
-                }
+            if message?.isGelezen != nil && !(message!.isGelezen ?? true) {
+                gelezen = message!.isGelezen!
             }
         }
     }
     
     var onHover:Bool = false
-    var oldColor:CGColor?
+    var oldColor:NSColor!
     override func mouseEntered(with event: NSEvent) {
         onHover = true
-        oldColor = self.layer?.backgroundColor
-        if (oldColor == nil) {
-            self.layer?.backgroundColor = NSColor(red: 254/255, green: 245/255, blue: 202/255, alpha: 1).cgColor
+        if (selected) {
+            return
+        }
+        oldColor = backgroundEl.fillColor
+        if (oldColor.alphaComponent == 0) {
+            backgroundEl.fillColor = ColorPalette.magisterYellow
         } else {
-            self.layer?.backgroundColor = NSColor.init(cgColor: oldColor!)?.withAlphaComponent(0.3).cgColor
+            backgroundEl.fillColor = oldColor.withAlphaComponent(oldColor.alphaComponent + 0.15)
         }
     }
     
     override func mouseExited(with event: NSEvent) {
         onHover = false
-        self.layer?.backgroundColor = oldColor
+        if (selected) {
+            return
+        }
+        backgroundEl.fillColor = oldColor
+    }
+    
+    var onClick:((MailElement) -> ())?
+    override func mouseUp(with event: NSEvent) {
+        onClick?(self)
     }
     
     override init(frame: CGRect) {
@@ -116,6 +188,10 @@ class MailElement: NSView {
                 infoEl = el as! NSImageView
             case "statusColor":
                 statusEl = el as! NSBox
+            case "background":
+                backgroundEl = el as! NSBox
+            case "curve":
+                curveEl = el as! NSBox
             default:
                 break
             }

@@ -31,7 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 Magister.magister!.login(username: json["user"].string!, password: pass, onError: { (str) in
                     Magister.magister = nil
                 }, onSucces: {
-                    AppDelegate.changeView(controller: SpecialViewController.freshController())
+                    AppDelegate.changeView(controller: MainViewController.vandaagView)
                 })
             }
         } catch {}
@@ -61,6 +61,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let newSize = NSSize(width: controller.view.frame.size.width, height: controller.view.frame.size.height)
             popover.contentSize = newSize
             popover.contentViewController = controller
+            if let mainController = controller as? MainViewController {
+                mainController.update()
+            }
         }
     }
 
