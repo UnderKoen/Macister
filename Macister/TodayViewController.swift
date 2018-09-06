@@ -9,7 +9,6 @@
 import Cocoa
 
 class TodayViewController: MainViewController {
-
     @IBOutlet weak var calanderItems: NSScrollView!
     @IBOutlet weak var mailItems: NSScrollView!
     @IBOutlet weak var gradeItems: NSScrollView!
@@ -26,7 +25,6 @@ class TodayViewController: MainViewController {
         super.viewDidLoad()
         setupWeek(calanderDate)
         updateCalanderVisual(true)
-        update()
     }
     
     @IBAction func nextDay(_ sender: Any) {
@@ -178,13 +176,23 @@ class TodayViewController: MainViewController {
         self.dateLabel.stringValue = DateUtil.getDateFormatToday().string(from: calanderDate)
     }
     
-    var mapId = 1
-    @IBAction func switchMapId(_ sender: Any) {
-        mailTop.subviews.forEach {(view) in
-            if !view.subviews[0].isHidden {
-                switchButton(view.subviews[1] as! NSButton)
+    var mapId = 1 {
+        didSet {
+            if (oldValue == self.mapId) {
+                return
+            }
+            
+            if let button = mailTop.subviews[oldValue - 1].subviews[1] as? NSButton {
+                switchButton(button)
+            }
+            
+            if let button = mailTop.subviews[mapId - 1].subviews[1] as? NSButton {
+                switchButton(button)
             }
         }
+    }
+    
+    @IBAction func switchMapId(_ sender: Any) {
         if let button = sender as? NSButton {
             switch(button.identifier?.rawValue) {
             case "In"?:
@@ -202,9 +210,8 @@ class TodayViewController: MainViewController {
             default:
                 return
             }
-            switchButton(button)
+            self.updateMail()
         }
-        updateMail()
     }
     
     func switchButton(_ button:NSButton) {
@@ -233,20 +240,34 @@ class TodayViewController: MainViewController {
                 y = y-self.lessonHeight
                 let el = MailElement(frame: CGRect(x: 0, y: y, width: 252, height: self.lessonHeight))
                 el.message = message
+                el.onClick = { (element) in
+                    MainViewController.mailView.selected = element.message?.id
+                    MainViewController.mailView.updateId = self.mapId
+                    MainViewController.switchToView(.berichten)
+                }
                 self.mailItems.documentView!.addSubview(el)
             })
             self.mailItems.documentView!.scroll(NSPoint.init(x: 0, y: mail.count*self.lessonHeight))
         })
     }
     
-    var average = false
-    
-    @IBAction func switchGrades(_ sender: Any) {
-        gradesTop.subviews.forEach {(view) in
-            if !view.subviews[0].isHidden {
-                switchButton(view.subviews[1] as! NSButton)
+    var average = false {
+        didSet {
+            if (oldValue == self.average) {
+                return
+            }
+            
+            if let button = gradesTop.subviews[oldValue ? 1 : 0].subviews[1] as? NSButton {
+                switchButton(button)
+            }
+            
+            if let button = gradesTop.subviews[average ? 1 : 0].subviews[1] as? NSButton {
+                switchButton(button)
             }
         }
+    }
+    
+    @IBAction func switchGrades(_ sender: Any) {
         if let button = sender as? NSButton {
             switch(button.identifier?.rawValue) {
             case "New"?:
@@ -258,9 +279,8 @@ class TodayViewController: MainViewController {
             default:
                 return
             }
-            switchButton(button)
+            self.updateGrades()
         }
-        updateGrades()
     }
     
     

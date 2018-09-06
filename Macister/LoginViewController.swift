@@ -64,7 +64,7 @@ class LoginViewController: NSViewController {
                     }
                     self.busy = false
                 }, onSucces: {
-                    AppDelegate.changeView(controller: TodayViewController.freshController())
+                    AppDelegate.changeView(controller: MainViewController.vandaagView)
                     self.busy = false
                     DispatchQueue.main.async {
                         if (self.remember.state == .on) {

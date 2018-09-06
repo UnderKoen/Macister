@@ -20,10 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         //Tries to login with saved info.
         let secret = AssetHandler.getAsset(name: ".secrets.json")
-        var willTry = false
         do {
             if secret.exists() {
-                willTry = true
                 let data = secret.getData();
                 let json = try JSON(data: data!)
                 let schoolJson = json["school"]
@@ -33,13 +31,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 Magister.magister!.login(username: json["user"].string!, password: pass, onError: { (str) in
                     Magister.magister = nil
                 }, onSucces: {
-                    AppDelegate.changeView(controller: TodayViewController.freshController())
+                    AppDelegate.changeView(controller: MainViewController.vandaagView)
                 })
             }
-        } catch {willTry = false}
-        if !willTry {
-            AppDelegate.changeView(controller: FindSchoolViewController.freshController())
-        }
+        } catch {}
+        AppDelegate.changeView(controller: FindSchoolViewController.freshController())
         
         //Setup Popover
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
@@ -65,6 +61,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let newSize = NSSize(width: controller.view.frame.size.width, height: controller.view.frame.size.height)
             popover.contentSize = newSize
             popover.contentViewController = controller
+            if let mainController = controller as? MainViewController {
+                mainController.update()
+            }
         }
     }
 
