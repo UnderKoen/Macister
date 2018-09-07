@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30A5605AB4924D9CF3350DFD /* Pods_Macister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 685286F9833517EF4360CC5A /* Pods_Macister.framework */; };
+		3251001ED3EB34DABCC48581 /* Macister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3251076762A3B4577B72925E /* Macister.storyboard */; };
+		3251004AFC2CB05ECF11FCC8 /* ClassRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251050CE919008B4B3B8B82 /* ClassRoom.swift */; };
+		325100808FB3CE2646A71848 /* SwitchButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32510DCFEB901A8A0049A4C9 /* SwitchButton.xib */; };
+		325100985B18B7AC4611D094 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325106FC117AD60C25A8B91E /* CalendarViewController.swift */; };
+		325100E9B1D214413F9222C8 /* FindSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325102F8ED5D22285ADE0323 /* FindSchoolViewController.swift */; };
+		325101CFCC12FCB52F1BA6F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510E1505787F5A6078FBF5 /* LoginViewController.swift */; };
+		325101D32D497F023106BE18 /* AccountUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510B39F6A15EA0417B3DE5 /* AccountUrl.swift */; };
+		3251023099F0DD6D20CC224F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325102582C3CA9CF761368CD /* Message.swift */; };
+		32510237CD2CEE65FB5292B6 /* Study.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325102B3BD3FD855DBF1D216 /* Study.swift */; };
+		325102636480FF21F9B84C18 /* Grades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510759811A34F19A3DE8E4 /* Grades.swift */; };
+		3251027A1641AFA1B5DB1B32 /* GradeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325100D18CB1BF51DDACA1B3 /* GradeElement.swift */; };
+		3251027A7AD913B3C2827169 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510EBD01FEF6B1452BB22F /* Account.swift */; };
+		3251028075B7C7475651AA7A /* GradeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510A76061FC38F3E6A381D /* GradeHandler.swift */; };
+		325102A6A518947B37B73E33 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251075DCEF60ED23A72236C /* Group.swift */; };
+		325102D68E3DA605A602C8B4 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510D2EA8F211B7C37D8AF8 /* MailViewController.swift */; };
+		325102DA7713B0AA6940D095 /* CUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510339EF38637B9B2B94B9 /* CUTextField.swift */; };
+		3251030768C43F4A2700D9ED /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325107666BE5E91C03738B16 /* Teacher.swift */; };
+		3251031FD697259680CBF1D0 /* MailElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510792907B236DE6B0881C /* MailElement.swift */; };
+		3251033827081998CF039912 /* CUComboBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510592538140A79D5E741A /* CUComboBox.swift */; };
+		325103384C6DBB5F2D52FEAF /* LessonStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251002BE3BAE2451085E323 /* LessonStatusType.swift */; };
+		3251036F3140BEA463273C6C /* MainUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325101FDECA579A2E4064F7C /* MainUrl.swift */; };
+		3251038C5A0E390CF182A129 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325100E93D6E38326180D3AE /* Subject.swift */; };
+		3251050F4861F72DB76E7DA1 /* StudyUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325108664C4BE524CCCA09A1 /* StudyUrl.swift */; };
+		3251051AE801BB5DAD8AA035 /* InfoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325106AEAD369AA4F4B8AC4A /* InfoType.swift */; };
+		325105330E948EEB1582C946 /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510ACCD8C40308128B0879 /* HttpUtil.swift */; };
+		32510564502E6BB0B7AC6324 /* AssetHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251019FAC0BC0D0B71F88E6 /* AssetHandler.swift */; };
+		325105E842BE31A62AE61A08 /* LessonElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510E21FB93B6DB86FC232A /* LessonElement.swift */; };
+		32510634F07026F993FCCC12 /* CUTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32510C4A3F79CBA6BDEBA97C /* CUTextField.xib */; };
+		325106AE87965351385499B4 /* Studies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510ED37C6E1B83361A9441 /* Studies.swift */; };
+		32510702DAD0BC22D67456E3 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510726F030A2BCC6C78F5B /* DateUtil.swift */; };
+		325108870A73BC9D611DE930 /* GradePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325108FB98283B42CE7ADAAA /* GradePeriod.swift */; };
+		325108ED127E0F5F52B94F5B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325100E7894002ABFF295F66 /* Person.swift */; };
+		325109020F60A515AA9F4703 /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325103ABDAA39CC466B737CB /* RowType.swift */; };
+		32510915BF7B8B2A1FDB2DA0 /* PersonUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325100D6CCF40B7EAD4361C7 /* PersonUrl.swift */; };
+		3251096B555700378AD2C040 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510D890584138917E7618E /* AppDelegate.swift */; };
+		3251098383A3CCE1ECECBBEB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325102D072C20195FA951BF3 /* Contact.swift */; };
+		3251099400C98386E9D95462 /* GradeColomn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325102B91F32B8A4B2305DB1 /* GradeColomn.swift */; };
+		32510A066BF495F0EED65A16 /* Magister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510E1FAF073F712F4F4EE0 /* Magister.swift */; };
+		32510A094A7BF0FD087FDB6F /* LessonElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325101A6DF58E3DB1EBC3709 /* LessonElement.xib */; };
+		32510A1EF1944E59535516FD /* StudyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510EC78B482CA89D5B3C19 /* StudyInfo.swift */; };
+		32510A41CCC3F749E57A8501 /* MailHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251076B4F248EE2C8207484 /* MailHandler.swift */; };
+		32510A50ED410E3A580965B0 /* LessonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510CB3E25FF9523D622FB3 /* LessonType.swift */; };
+		32510A8EE02ED12104B2A036 /* DisplayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510C16066AAB6CD844FF99 /* DisplayType.swift */; };
+		32510A989B7CB293C3098EF9 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325100469F2C76E400A726E6 /* FileUtil.swift */; };
+		32510B31AB2C845DC842587E /* LessonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325107A34DEA72C196A27000 /* LessonHandler.swift */; };
+		32510B92CF4E66365852C558 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510232FDA656CE6A0EA485 /* TodayViewController.swift */; };
+		32510BDD8843495D0053065D /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325104AFA5D4FEB75775CF1B /* EventMonitor.swift */; };
+		32510BFF3542E50C7DBBEA84 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325103E8330FE0C87E3931A7 /* Grade.swift */; };
+		32510C724873F4DF06A81441 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251004053F7D62ADD5C1B39 /* MessageType.swift */; };
+		32510C82EC41A492414068A1 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325107A43C22F5C23D4C4C38 /* Asset.swift */; };
+		32510C95A225615B5D41CD72 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510B2FC3E54B81648A367B /* SwitchButton.swift */; };
+		32510C963EF1ACB310610E92 /* ContactType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510535D338A2CE080ED032 /* ContactType.swift */; };
+		32510CC77F843398DDA56E01 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510A9810F63E1FD18F2F7E /* ColorPalette.swift */; };
+		32510D029336AE8ADC0F75B4 /* StudentUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325107441DF7BDAD3E48419C /* StudentUrl.swift */; };
+		32510D67023EE55D7240E12F /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325108CDFE0DEAFBBA00257D /* School.swift */; };
+		32510D9C7C78E3DEBB96B953 /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251060CDC6633DABB22A574 /* JsonUtil.swift */; };
+		32510DB4330F5374AA644EBE /* EncryptionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510B0FCDFB3342DCF0E8C7 /* EncryptionUtil.swift */; };
+		32510EB3A1266ACEE96CC298 /* CUComboBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32510CED7B7F8B372AEAA07B /* CUComboBox.xib */; };
+		32510EEF728BB59B0E606FA7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251093EC1621983E76FB85B /* Lesson.swift */; };
+		32510F433EBB01EFD21B348D /* MessageStatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251030F9CFDE66ACA3C1B7B /* MessageStatusType.swift */; };
+		32510F8F1806C2EF4DFDEC2E /* GradeElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325108434EFFBE5FC9BF641D /* GradeElement.xib */; };
+		32510F9E07C6380BE820BE67 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510AF293CEE6FADCDCF7DC /* MainViewController.swift */; };
+		32510FC2138F5F382E42E638 /* MailElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3251006910B2DD88DEA86170 /* MailElement.xib */; };
+		32510FC9B8D7AD674E3B6168 /* SchoolUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510277935B4207BCAFB7F5 /* SchoolUrl.swift */; };
+		5D5BE6852142AC2900E4FAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5BE6842142AC2900E4FAB2 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		100F13302A2C6ACFD6D97758 /* Pods-Macister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Macister/Pods-Macister.debug.xcconfig"; sourceTree = "<group>"; };
+		3251002BE3BAE2451085E323 /* LessonStatusType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonStatusType.swift; sourceTree = "<group>"; };
+		3251004053F7D62ADD5C1B39 /* MessageType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
+		325100469F2C76E400A726E6 /* FileUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
+		3251006910B2DD88DEA86170 /* MailElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailElement.xib; sourceTree = "<group>"; };
+		325100D18CB1BF51DDACA1B3 /* GradeElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeElement.swift; sourceTree = "<group>"; };
+		325100D6CCF40B7EAD4361C7 /* PersonUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonUrl.swift; sourceTree = "<group>"; };
+		325100E7894002ABFF295F66 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		325100E93D6E38326180D3AE /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		3251019FAC0BC0D0B71F88E6 /* AssetHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetHandler.swift; sourceTree = "<group>"; };
+		325101A6DF58E3DB1EBC3709 /* LessonElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonElement.xib; sourceTree = "<group>"; };
+		325101FDECA579A2E4064F7C /* MainUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainUrl.swift; sourceTree = "<group>"; };
+		32510232FDA656CE6A0EA485 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		32510240C9D129D5F796BC85 /* Macister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macister.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		325102582C3CA9CF761368CD /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		32510277935B4207BCAFB7F5 /* SchoolUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolUrl.swift; sourceTree = "<group>"; };
+		325102B3BD3FD855DBF1D216 /* Study.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Study.swift; sourceTree = "<group>"; };
+		325102B91F32B8A4B2305DB1 /* GradeColomn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeColomn.swift; sourceTree = "<group>"; };
+		325102D072C20195FA951BF3 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		325102F8ED5D22285ADE0323 /* FindSchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindSchoolViewController.swift; sourceTree = "<group>"; };
+		3251030F9CFDE66ACA3C1B7B /* MessageStatusType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageStatusType.swift; sourceTree = "<group>"; };
+		32510339EF38637B9B2B94B9 /* CUTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUTextField.swift; sourceTree = "<group>"; };
+		325103ABDAA39CC466B737CB /* RowType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowType.swift; sourceTree = "<group>"; };
+		325103CCC7582F3EA1836441 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Macister.storyboard; sourceTree = "<group>"; };
+		325103E8330FE0C87E3931A7 /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
+		3251041B7F7D1AF4094FF1EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		325104AFA5D4FEB75775CF1B /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		3251050CE919008B4B3B8B82 /* ClassRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassRoom.swift; sourceTree = "<group>"; };
+		32510535D338A2CE080ED032 /* ContactType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactType.swift; sourceTree = "<group>"; };
+		32510583A719F1A90AD00997 /* Macister.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Macister.entitlements; sourceTree = "<group>"; };
+		32510592538140A79D5E741A /* CUComboBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUComboBox.swift; sourceTree = "<group>"; };
+		3251060CDC6633DABB22A574 /* JsonUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
+		325106AEAD369AA4F4B8AC4A /* InfoType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoType.swift; sourceTree = "<group>"; };
+		325106FC117AD60C25A8B91E /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		32510726F030A2BCC6C78F5B /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		325107441DF7BDAD3E48419C /* StudentUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentUrl.swift; sourceTree = "<group>"; };
+		32510759811A34F19A3DE8E4 /* Grades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grades.swift; sourceTree = "<group>"; };
+		3251075DCEF60ED23A72236C /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		325107666BE5E91C03738B16 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		3251076B4F248EE2C8207484 /* MailHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailHandler.swift; sourceTree = "<group>"; };
+		32510792907B236DE6B0881C /* MailElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailElement.swift; sourceTree = "<group>"; };
+		325107A34DEA72C196A27000 /* LessonHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonHandler.swift; sourceTree = "<group>"; };
+		325107A43C22F5C23D4C4C38 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		325108434EFFBE5FC9BF641D /* GradeElement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeElement.xib; sourceTree = "<group>"; };
+		325108664C4BE524CCCA09A1 /* StudyUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyUrl.swift; sourceTree = "<group>"; };
+		325108CDFE0DEAFBBA00257D /* School.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		325108FB98283B42CE7ADAAA /* GradePeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradePeriod.swift; sourceTree = "<group>"; };
+		3251093EC1621983E76FB85B /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		32510A76061FC38F3E6A381D /* GradeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeHandler.swift; sourceTree = "<group>"; };
+		32510A9810F63E1FD18F2F7E /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		32510ACCD8C40308128B0879 /* HttpUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
+		32510AF293CEE6FADCDCF7DC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		32510B0FCDFB3342DCF0E8C7 /* EncryptionUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionUtil.swift; sourceTree = "<group>"; };
+		32510B2FC3E54B81648A367B /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
+		32510B39F6A15EA0417B3DE5 /* AccountUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountUrl.swift; sourceTree = "<group>"; };
+		32510C16066AAB6CD844FF99 /* DisplayType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayType.swift; sourceTree = "<group>"; };
+		32510C4A3F79CBA6BDEBA97C /* CUTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CUTextField.xib; sourceTree = "<group>"; };
+		32510CB3E25FF9523D622FB3 /* LessonType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonType.swift; sourceTree = "<group>"; };
+		32510CED7B7F8B372AEAA07B /* CUComboBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CUComboBox.xib; sourceTree = "<group>"; };
+		32510D2EA8F211B7C37D8AF8 /* MailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
+		32510D890584138917E7618E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		32510DCFEB901A8A0049A4C9 /* SwitchButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchButton.xib; sourceTree = "<group>"; };
+		32510E1505787F5A6078FBF5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		32510E1FAF073F712F4F4EE0 /* Magister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Magister.swift; sourceTree = "<group>"; };
+		32510E21FB93B6DB86FC232A /* LessonElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonElement.swift; sourceTree = "<group>"; };
+		32510EBD01FEF6B1452BB22F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		32510EC78B482CA89D5B3C19 /* StudyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyInfo.swift; sourceTree = "<group>"; };
+		32510ED37C6E1B83361A9441 /* Studies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Studies.swift; sourceTree = "<group>"; };
+		5D5BE6842142AC2900E4FAB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		685286F9833517EF4360CC5A /* Pods_Macister.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Macister.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77976C0E830DF278A50E749F /* Pods-Macister.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macister.release.xcconfig"; path = "Pods/Target Support Files/Pods-Macister/Pods-Macister.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32510E63B22522DFAE307886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A5605AB4924D9CF3350DFD /* Pods_Macister.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3251005901F048EBAFDA77EF /* Url */ = {
+			isa = PBXGroup;
+			children = (
+				325101FDECA579A2E4064F7C /* MainUrl.swift */,
+				325108664C4BE524CCCA09A1 /* StudyUrl.swift */,
+				325100D6CCF40B7EAD4361C7 /* PersonUrl.swift */,
+				32510277935B4207BCAFB7F5 /* SchoolUrl.swift */,
+				32510B39F6A15EA0417B3DE5 /* AccountUrl.swift */,
+				325107441DF7BDAD3E48419C /* StudentUrl.swift */,
+			);
+			path = Url;
+			sourceTree = "<group>";
+		};
+		325101F6812300B1A37A42E7 /* Grade */ = {
+			isa = PBXGroup;
+			children = (
+				325103E8330FE0C87E3931A7 /* Grade.swift */,
+				32510759811A34F19A3DE8E4 /* Grades.swift */,
+				325102B91F32B8A4B2305DB1 /* GradeColomn.swift */,
+				325108FB98283B42CE7ADAAA /* GradePeriod.swift */,
+			);
+			path = Grade;
+			sourceTree = "<group>";
+		};
+		32510244D2533BB6143CF3CC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				32510726F030A2BCC6C78F5B /* DateUtil.swift */,
+				325100469F2C76E400A726E6 /* FileUtil.swift */,
+				32510ACCD8C40308128B0879 /* HttpUtil.swift */,
+				3251060CDC6633DABB22A574 /* JsonUtil.swift */,
+				3251019FAC0BC0D0B71F88E6 /* AssetHandler.swift */,
+				32510A9810F63E1FD18F2F7E /* ColorPalette.swift */,
+				32510B0FCDFB3342DCF0E8C7 /* EncryptionUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		325103A6E3F47B870DC3B006 /* Magister */ = {
+			isa = PBXGroup;
+			children = (
+				3251005901F048EBAFDA77EF /* Url */,
+				32510F2EEA2F09F16BFF81DA /* Type */,
+				325101F6812300B1A37A42E7 /* Grade */,
+				3251062FB11553A6A8FF0018 /* Lesson */,
+				32510CA77CA23F8F93B53AD8 /* Message */,
+				3251075DCEF60ED23A72236C /* Group.swift */,
+				325102B3BD3FD855DBF1D216 /* Study.swift */,
+				325100E7894002ABFF295F66 /* Person.swift */,
+				32510EBD01FEF6B1452BB22F /* Account.swift */,
+				32510ED37C6E1B83361A9441 /* Studies.swift */,
+				325100E93D6E38326180D3AE /* Subject.swift */,
+				32510EC78B482CA89D5B3C19 /* StudyInfo.swift */,
+			);
+			path = Magister;
+			sourceTree = "<group>";
+		};
+		3251062FB11553A6A8FF0018 /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				3251093EC1621983E76FB85B /* Lesson.swift */,
+				325107666BE5E91C03738B16 /* Teacher.swift */,
+				3251050CE919008B4B3B8B82 /* ClassRoom.swift */,
+			);
+			path = Lesson;
+			sourceTree = "<group>";
+		};
+		325106CE9CD8474EF8A0E1CF /* Macister */ = {
+			isa = PBXGroup;
+			children = (
+				3251041B7F7D1AF4094FF1EF /* Info.plist */,
+				32510583A719F1A90AD00997 /* Macister.entitlements */,
+				32510D2EA8F211B7C37D8AF8 /* MailViewController.swift */,
+				32510232FDA656CE6A0EA485 /* TodayViewController.swift */,
+				32510AF293CEE6FADCDCF7DC /* MainViewController.swift */,
+				32510244D2533BB6143CF3CC /* Utils */,
+				32510E1505787F5A6078FBF5 /* LoginViewController.swift */,
+				32510C6A2BE8E694A73F5637 /* Handlers */,
+				325104AFA5D4FEB75775CF1B /* EventMonitor.swift */,
+				32510AAC8270C889F7B74328 /* Custom Objects */,
+				325106FC117AD60C25A8B91E /* CalendarViewController.swift */,
+				325102F8ED5D22285ADE0323 /* FindSchoolViewController.swift */,
+				32510EBAF70391C7880692CF /* Entities */,
+				32510D890584138917E7618E /* AppDelegate.swift */,
+				3251076762A3B4577B72925E /* Macister.storyboard */,
+				5D5BE6842142AC2900E4FAB2 /* Assets.xcassets */,
+			);
+			path = Macister;
+			sourceTree = "<group>";
+		};
+		325107DEAD70972C7F98960F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32510240C9D129D5F796BC85 /* Macister.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32510AAC8270C889F7B74328 /* Custom Objects */ = {
+			isa = PBXGroup;
+			children = (
+				32510CED7B7F8B372AEAA07B /* CUComboBox.xib */,
+				32510C4A3F79CBA6BDEBA97C /* CUTextField.xib */,
+				3251006910B2DD88DEA86170 /* MailElement.xib */,
+				32510592538140A79D5E741A /* CUComboBox.swift */,
+				325108434EFFBE5FC9BF641D /* GradeElement.xib */,
+				32510DCFEB901A8A0049A4C9 /* SwitchButton.xib */,
+				32510339EF38637B9B2B94B9 /* CUTextField.swift */,
+				325101A6DF58E3DB1EBC3709 /* LessonElement.xib */,
+				32510792907B236DE6B0881C /* MailElement.swift */,
+				325100D18CB1BF51DDACA1B3 /* GradeElement.swift */,
+				32510B2FC3E54B81648A367B /* SwitchButton.swift */,
+				32510E21FB93B6DB86FC232A /* LessonElement.swift */,
+			);
+			path = "Custom Objects";
+			sourceTree = "<group>";
+		};
+		32510C51C4BAF7D5FDE9585F = {
+			isa = PBXGroup;
+			children = (
+				325107DEAD70972C7F98960F /* Products */,
+				325106CE9CD8474EF8A0E1CF /* Macister */,
+				9B1B5D717A6925A5A02DF53C /* Pods */,
+				56D5A13C5692C9C1B0E255FB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		32510C6A2BE8E694A73F5637 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				325108CDFE0DEAFBBA00257D /* School.swift */,
+				32510E1FAF073F712F4F4EE0 /* Magister.swift */,
+				3251076B4F248EE2C8207484 /* MailHandler.swift */,
+				32510A76061FC38F3E6A381D /* GradeHandler.swift */,
+				325107A34DEA72C196A27000 /* LessonHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		32510CA77CA23F8F93B53AD8 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				325102D072C20195FA951BF3 /* Contact.swift */,
+				325102582C3CA9CF761368CD /* Message.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		32510EBAF70391C7880692CF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				325103A6E3F47B870DC3B006 /* Magister */,
+				325107A43C22F5C23D4C4C38 /* Asset.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		32510F2EEA2F09F16BFF81DA /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				325103ABDAA39CC466B737CB /* RowType.swift */,
+				325106AEAD369AA4F4B8AC4A /* InfoType.swift */,
+				32510CB3E25FF9523D622FB3 /* LessonType.swift */,
+				32510535D338A2CE080ED032 /* ContactType.swift */,
+				32510C16066AAB6CD844FF99 /* DisplayType.swift */,
+				3251004053F7D62ADD5C1B39 /* MessageType.swift */,
+				3251002BE3BAE2451085E323 /* LessonStatusType.swift */,
+				3251030F9CFDE66ACA3C1B7B /* MessageStatusType.swift */,
+			);
+			path = Type;
+			sourceTree = "<group>";
+		};
+		56D5A13C5692C9C1B0E255FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				685286F9833517EF4360CC5A /* Pods_Macister.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B1B5D717A6925A5A02DF53C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				100F13302A2C6ACFD6D97758 /* Pods-Macister.debug.xcconfig */,
+				77976C0E830DF278A50E749F /* Pods-Macister.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3251025E4A327C64A0C8229D /* Macister */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32510F21FCD7BA8DB72F08B5 /* Build configuration list for PBXNativeTarget "Macister" */;
+			buildPhases = (
+				3392254A25C11BDD84FABC3A /* [CP] Check Pods Manifest.lock */,
+				32510ADFE63BDDA0524B70A1 /* Sources */,
+				32510E63B22522DFAE307886 /* Frameworks */,
+				32510B1075A9513BFD595571 /* Resources */,
+				6D37AC7C6E68A5BD7EBCB8A8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Macister;
+			productName = Macister;
+			productReference = 32510240C9D129D5F796BC85 /* Macister.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3251076E7DB281FD953AD738 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Under_Koen;
+				TargetAttributes = {
+					3251025E4A327C64A0C8229D = {
+						DevelopmentTeam = KN7JU6NLR4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 32510F43BFF44E570CB25725 /* Build configuration list for PBXProject "Macister" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 32510C51C4BAF7D5FDE9585F;
+			productRefGroup = 325107DEAD70972C7F98960F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3251025E4A327C64A0C8229D /* Macister */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32510B1075A9513BFD595571 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32510EB3A1266ACEE96CC298 /* CUComboBox.xib in Resources */,
+				32510634F07026F993FCCC12 /* CUTextField.xib in Resources */,
+				32510FC2138F5F382E42E638 /* MailElement.xib in Resources */,
+				32510F8F1806C2EF4DFDEC2E /* GradeElement.xib in Resources */,
+				325100808FB3CE2646A71848 /* SwitchButton.xib in Resources */,
+				32510A094A7BF0FD087FDB6F /* LessonElement.xib in Resources */,
+				5D5BE6852142AC2900E4FAB2 /* Assets.xcassets in Resources */,
+				3251001ED3EB34DABCC48581 /* Macister.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3392254A25C11BDD84FABC3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Macister-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D37AC7C6E68A5BD7EBCB8A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Macister/Pods-Macister-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HotKey/HotKey.framework",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HotKey.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Macister/Pods-Macister-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32510ADFE63BDDA0524B70A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325102D68E3DA605A602C8B4 /* MailViewController.swift in Sources */,
+				32510B92CF4E66365852C558 /* TodayViewController.swift in Sources */,
+				32510F9E07C6380BE820BE67 /* MainViewController.swift in Sources */,
+				32510702DAD0BC22D67456E3 /* DateUtil.swift in Sources */,
+				32510A989B7CB293C3098EF9 /* FileUtil.swift in Sources */,
+				325105330E948EEB1582C946 /* HttpUtil.swift in Sources */,
+				32510D9C7C78E3DEBB96B953 /* JsonUtil.swift in Sources */,
+				32510564502E6BB0B7AC6324 /* AssetHandler.swift in Sources */,
+				32510CC77F843398DDA56E01 /* ColorPalette.swift in Sources */,
+				32510DB4330F5374AA644EBE /* EncryptionUtil.swift in Sources */,
+				325101CFCC12FCB52F1BA6F5 /* LoginViewController.swift in Sources */,
+				32510D67023EE55D7240E12F /* School.swift in Sources */,
+				32510A066BF495F0EED65A16 /* Magister.swift in Sources */,
+				32510A41CCC3F749E57A8501 /* MailHandler.swift in Sources */,
+				3251028075B7C7475651AA7A /* GradeHandler.swift in Sources */,
+				32510B31AB2C845DC842587E /* LessonHandler.swift in Sources */,
+				32510BDD8843495D0053065D /* EventMonitor.swift in Sources */,
+				3251033827081998CF039912 /* CUComboBox.swift in Sources */,
+				325102DA7713B0AA6940D095 /* CUTextField.swift in Sources */,
+				3251031FD697259680CBF1D0 /* MailElement.swift in Sources */,
+				3251027A1641AFA1B5DB1B32 /* GradeElement.swift in Sources */,
+				32510C95A225615B5D41CD72 /* SwitchButton.swift in Sources */,
+				325105E842BE31A62AE61A08 /* LessonElement.swift in Sources */,
+				325100985B18B7AC4611D094 /* CalendarViewController.swift in Sources */,
+				325100E9B1D214413F9222C8 /* FindSchoolViewController.swift in Sources */,
+				3251036F3140BEA463273C6C /* MainUrl.swift in Sources */,
+				3251050F4861F72DB76E7DA1 /* StudyUrl.swift in Sources */,
+				32510915BF7B8B2A1FDB2DA0 /* PersonUrl.swift in Sources */,
+				32510FC9B8D7AD674E3B6168 /* SchoolUrl.swift in Sources */,
+				325101D32D497F023106BE18 /* AccountUrl.swift in Sources */,
+				32510D029336AE8ADC0F75B4 /* StudentUrl.swift in Sources */,
+				325109020F60A515AA9F4703 /* RowType.swift in Sources */,
+				3251051AE801BB5DAD8AA035 /* InfoType.swift in Sources */,
+				32510A50ED410E3A580965B0 /* LessonType.swift in Sources */,
+				32510C963EF1ACB310610E92 /* ContactType.swift in Sources */,
+				32510A8EE02ED12104B2A036 /* DisplayType.swift in Sources */,
+				32510C724873F4DF06A81441 /* MessageType.swift in Sources */,
+				325103384C6DBB5F2D52FEAF /* LessonStatusType.swift in Sources */,
+				32510F433EBB01EFD21B348D /* MessageStatusType.swift in Sources */,
+				32510BFF3542E50C7DBBEA84 /* Grade.swift in Sources */,
+				325102636480FF21F9B84C18 /* Grades.swift in Sources */,
+				3251099400C98386E9D95462 /* GradeColomn.swift in Sources */,
+				325108870A73BC9D611DE930 /* GradePeriod.swift in Sources */,
+				32510EEF728BB59B0E606FA7 /* Lesson.swift in Sources */,
+				3251030768C43F4A2700D9ED /* Teacher.swift in Sources */,
+				3251004AFC2CB05ECF11FCC8 /* ClassRoom.swift in Sources */,
+				3251098383A3CCE1ECECBBEB /* Contact.swift in Sources */,
+				3251023099F0DD6D20CC224F /* Message.swift in Sources */,
+				325102A6A518947B37B73E33 /* Group.swift in Sources */,
+				32510237CD2CEE65FB5292B6 /* Study.swift in Sources */,
+				325108ED127E0F5F52B94F5B /* Person.swift in Sources */,
+				3251027A7AD913B3C2827169 /* Account.swift in Sources */,
+				325106AE87965351385499B4 /* Studies.swift in Sources */,
+				3251038C5A0E390CF182A129 /* Subject.swift in Sources */,
+				32510A1EF1944E59535516FD /* StudyInfo.swift in Sources */,
+				32510C82EC41A492414068A1 /* Asset.swift in Sources */,
+				3251096B555700378AD2C040 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3251076762A3B4577B72925E /* Macister.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325103CCC7582F3EA1836441 /* Base */,
+			);
+			name = Macister.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3251024614E316DBA29E8DE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77976C0E830DF278A50E749F /* Pods-Macister.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KN7JU6NLR4;
+				INFOPLIST_FILE = Macister/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		32510271EBB4E27807B69A2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		325103C58842D635CD4EA313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		325106A10C2A5219444D4176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100F13302A2C6ACFD6D97758 /* Pods-Macister.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KN7JU6NLR4;
+				INFOPLIST_FILE = Macister/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.underkoen.Macister;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32510F21FCD7BA8DB72F08B5 /* Build configuration list for PBXNativeTarget "Macister" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325106A10C2A5219444D4176 /* Debug */,
+				3251024614E316DBA29E8DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32510F43BFF44E570CB25725 /* Build configuration list for PBXProject "Macister" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				325103C58842D635CD4EA313 /* Debug */,
+				32510271EBB4E27807B69A2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3251076E7DB281FD953AD738 /* Project object */;
+}

@@ -1,0 +1,29 @@
+.DS_Store
+.idea/
+pods/
+
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+xcuserdata
+xcuserdata/
+
+*.xcscmblueprint
+*.xccheckout
+
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+DerivedData
+*.hmap
+*.ipa

@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.7.0)
+  - HotKey (0.1.0)
+  - RNCryptor (5.0.2)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire (= 4.7.0)
+  - HotKey (= 0.1.0)
+  - RNCryptor (= 5.0.2)
+  - SwiftyJSON (= 4.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - HotKey
+    - RNCryptor
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  HotKey: aa2b99ed0a4d7026e1bc15b6ae206a70e9a1851f
+  RNCryptor: 59b9f92e9fa8a1af74c32dc6b1af5e30ff5e1b64
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: 8c9b0124988d74a1bc0d4a1a45b74f6f3833fc24
+
+COCOAPODS: 1.5.3
