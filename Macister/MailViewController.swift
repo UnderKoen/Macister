@@ -18,51 +18,29 @@ class MailViewController: MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if (updateId != nil) {
-            mapId = updateId!
+            switchMapId(mailItemsTop.subviews[updateId! - 1])
         }
     }
 
     var updateId: Int? {
         didSet {
             if (updateId != nil && loaded) {
-                mapId = updateId!
-            }
-        }
-    }
-    var mapId = 1 {
-        didSet {
-            if (oldValue == self.mapId) {
-                return
-            }
-            if let button = mailItemsTop?.subviews[oldValue - 1].subviews[1] as? NSButton {
-                switchButton(button)
-            }
-
-            if let button = mailItemsTop?.subviews[mapId - 1].subviews[1] as? NSButton {
-                switchButton(button)
+                switchMapId(mailItemsTop.subviews[updateId! - 1])
             }
         }
     }
 
+    @IBOutlet weak var currentMap: SwitchButton!
+
+    var mapId = 1
+    
     @IBAction func switchMapId(_ sender: Any) {
-        if let button = sender as? NSButton {
-            switch (button.identifier?.rawValue) {
-            case "Mail_In"?:
-                mapId = 1
-                break
-            case "Mail_Out"?:
-                mapId = 2
-                break
-            case "Mail_Trash"?:
-                mapId = 3
-                break
-            case "Mail_Notifications"?:
-                mapId = 4
-                break
-            default:
-                return
-            }
-            self.update()
+        if let button = sender as? SwitchButton {
+            mapId = button.value
+            currentMap.active = false
+            currentMap = button
+            currentMap.active = true
+            self.updateMail()
         }
     }
 
@@ -92,33 +70,21 @@ class MailViewController: MainViewController {
     }
 
     @IBOutlet weak var info: NSView!
-    @IBOutlet weak var infoButton: NSButton!
+    @IBOutlet weak var infoButton: SwitchButton!
 
     var infoState: Bool = false {
         didSet {
             if (oldValue == infoState) {
                 return
             }
-            switchButton(infoButton)
+            infoButton.active = infoState
             info.isHidden = !infoState
             onderwerp.isHidden = infoState
         }
     }
 
     @IBAction func switchInfo(_ sender: Any) {
-        if sender is NSButton {
-            infoState = !infoState
-        }
-    }
-
-
-    func switchButton(_ button: NSButton) {
-        let old = button.image
-        let new = button.alternateImage
-        button.image = new
-        button.alternateImage = old
-        let box = button.superview?.subviews[0]
-        box?.isHidden = !box!.isHidden
+        infoState = !infoState
     }
 
     @IBOutlet weak var onderwerp: NSTextField!
@@ -185,7 +151,7 @@ class MailViewController: MainViewController {
 
             self.text.attributedStringValue = html.html2AttributedString!
 
-            var h: CGFloat = self.text.attributedStringValue.size().height
+            var h = self.text.attributedStringValue.getHeight(self.text.frame.width)
             if (h < 500) {
                 h = 500
             }
@@ -213,7 +179,11 @@ class MailViewController: MainViewController {
     }
 
     func updateSelected(element: MailElement) {
-        if (element.message == nil || oldMessage == element) {
+        if (element.message == nil) {
+            return
+        }
+        if (oldMessage == element) {
+            unselect()
             return
         }
         if (oldMessage != nil) {
@@ -287,5 +257,13 @@ extension String {
     }
     var html2String: String {
         return html2AttributedString?.string ?? ""
+    }
+}
+
+extension NSAttributedString {
+    func getHeight(_ width: CGFloat) -> CGFloat {
+        let size = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let rect = self.boundingRect(with: size, options: [.usesLineFragmentOrigin, .usesFontLeading])
+        return rect.height
     }
 }

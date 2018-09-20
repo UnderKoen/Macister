@@ -84,11 +84,11 @@ class TodayViewController: MainViewController {
         update()
     }
 
-    //Need to update visual when current day changed TODO
     override func update() {
         updateCalander()
         updateMail()
         updateGrades()
+        updateCalanderVisual(true)
     }
 
     let calendar = Calendar(identifier: .iso8601);
@@ -99,6 +99,7 @@ class TodayViewController: MainViewController {
         var date = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: day))!
         date = date.addingTimeInterval(TimeInterval(TimeZone.current.secondsFromGMT(for: date)))
         week = [Date]()
+
         week.append(date)
         week.append(date.addingTimeInterval(86400))
         week.append(date.addingTimeInterval(86400 * 2))
@@ -169,6 +170,13 @@ class TodayViewController: MainViewController {
                 y = y - self.lessonHeight
                 let el = LessonElement(frame: CGRect(x: 0, y: y, width: 252, height: self.lessonHeight))
                 el.lesson = lesson
+                el.onClick = { (element) in
+                    MainViewController.agendaView.setupWeek(self.calanderDate)
+                    MainViewController.agendaView.calanderDate = self.calanderDate
+                    MainViewController.agendaView.selected = element.lesson?.id
+                    MainViewController.switchToView(.agenda)
+                }
+                
                 self.calanderItems.documentView!.addSubview(el)
             })
             self.calanderItems.documentView!.scroll(NSPoint.init(x: 0, y: lessons.count * self.lessonHeight))
@@ -176,51 +184,18 @@ class TodayViewController: MainViewController {
         self.dateLabel.stringValue = DateUtil.getDateFormatToday().string(from: calanderDate)
     }
 
-    var mapId = 1 {
-        didSet {
-            if (oldValue == self.mapId) {
-                return
-            }
+    @IBOutlet weak var currentMap: SwitchButton!
 
-            if let button = mailTop.subviews[oldValue - 1].subviews[1] as? NSButton {
-                switchButton(button)
-            }
-
-            if let button = mailTop.subviews[mapId - 1].subviews[1] as? NSButton {
-                switchButton(button)
-            }
-        }
-    }
+    var mapId = 1
 
     @IBAction func switchMapId(_ sender: Any) {
-        if let button = sender as? NSButton {
-            switch (button.identifier?.rawValue) {
-            case "In"?:
-                mapId = 1
-                break
-            case "Out"?:
-                mapId = 2
-                break
-            case "Trash"?:
-                mapId = 3
-                break
-            case "Notifications"?:
-                mapId = 4
-                break
-            default:
-                return
-            }
+        if let button = sender as? SwitchButton {
+            mapId = button.value
+            currentMap.active = false
+            currentMap = button
+            currentMap.active = true
             self.updateMail()
         }
-    }
-
-    func switchButton(_ button: NSButton) {
-        let old = button.image
-        let new = button.alternateImage
-        button.image = new
-        button.alternateImage = old
-        let box = button.superview?.subviews[0]
-        box?.isHidden = !box!.isHidden
     }
 
     func updateMail() {
@@ -251,38 +226,19 @@ class TodayViewController: MainViewController {
         })
     }
 
-    var average = false {
-        didSet {
-            if (oldValue == self.average) {
-                return
-            }
+    @IBOutlet weak var currentGrade: SwitchButton!
 
-            if let button = gradesTop.subviews[oldValue ? 1 : 0].subviews[1] as? NSButton {
-                switchButton(button)
-            }
-
-            if let button = gradesTop.subviews[average ? 1 : 0].subviews[1] as? NSButton {
-                switchButton(button)
-            }
-        }
-    }
+    var average = false
 
     @IBAction func switchGrades(_ sender: Any) {
-        if let button = sender as? NSButton {
-            switch (button.identifier?.rawValue) {
-            case "New"?:
-                average = false
-                break
-            case "Average"?:
-                average = true
-                break
-            default:
-                return
-            }
+        if let button = sender as? SwitchButton {
+            average = button.value == 2
+            currentGrade.active = false
+            currentGrade = button
+            currentGrade.active = true
             self.updateGrades()
         }
     }
-
 
     func updateGrades() {
         let completionHandler: (Grades?) -> () = { (grades) in

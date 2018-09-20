@@ -45,4 +45,14 @@ class LessonHandler: NSObject {
         }
     }
 
+    func getLesson(lesson: Lesson, completionHandler: @escaping (Lesson) -> () = { _ in
+    }) {
+        HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getSingleLessonUrl(lesson.id!))!) { (response) in
+            do {
+                let json = try JSON(data: response.data!)
+                completionHandler(Lesson(json: json))
+            } catch {
+            }
+        }
+    }
 }

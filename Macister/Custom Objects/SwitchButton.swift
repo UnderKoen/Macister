@@ -15,6 +15,8 @@ class SwitchButton: NSControl {
     @IBOutlet weak var box: NSBox!
     @IBOutlet weak var button: NSButton!
 
+    @IBInspectable var value: Int = 0
+    
     @IBInspectable var active: Bool = false {
         didSet {
             if (oldValue == active) {
@@ -42,7 +44,6 @@ class SwitchButton: NSControl {
     }
 
     @IBAction func onPress(_ sender: Any) {
-        active = !active
         sendAction(action, to: target)
     }
 

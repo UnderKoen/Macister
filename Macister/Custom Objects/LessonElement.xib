@@ -8,15 +8,47 @@
         <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="LessonElement" customModule="Macister" customModuleProvider="target"/>
+        <customObject id="-2" userLabel="File's Owner" customClass="LessonElement" customModule="Macister" customModuleProvider="target">
+            <connections>
+                <outlet property="alertBox" destination="CAv-tb-TJq" id="ipn-k6-JKl"/>
+                <outlet property="background" destination="kEq-8H-WmJ" id="x7C-sT-8Hb"/>
+                <outlet property="border" destination="0B1-ZU-a0l" id="2F8-wK-4Sw"/>
+                <outlet property="curve" destination="kGC-0e-8SY" id="sqg-qO-Sau"/>
+                <outlet property="info" destination="CH8-hr-a5O" id="yD6-fD-xud"/>
+                <outlet property="infoTypeE" destination="caI-fc-lnh" id="UMB-et-UK7"/>
+                <outlet property="infoTypeF" destination="D0D-Df-8NY" id="jVq-uh-3Hv"/>
+                <outlet property="lessonE" destination="NXh-kH-a66" id="IIX-xJ-GI9"/>
+                <outlet property="lessonF" destination="ZZl-PV-Z9q" id="Q6h-6w-ZJN"/>
+                <outlet property="time" destination="fRK-jE-j1f" id="oiV-Wg-RPe"/>
+                <outlet property="topView" destination="7dC-bg-D4X" id="Sic-ns-2XQ"/>
+            </connections>
+        </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="7dC-bg-D4X" userLabel="LessonElement">
             <rect key="frame" x="0.0" y="0.0" width="252" height="48"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <box identifier="curve" fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="kGC-0e-8SY" userLabel="Curve">
+                    <rect key="frame" x="210" y="0.0" width="48" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" ambiguous="YES" id="1Az-Kl-We7">
+                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box identifier="background" fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="kEq-8H-WmJ" userLabel="Background">
+                    <rect key="frame" x="0.0" y="0.0" width="252" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" ambiguous="YES" id="TAD-Zf-LZK">
+                        <rect key="frame" x="0.0" y="0.0" width="252" height="48"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
                 <textField identifier="LessonTime" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRK-jE-j1f" userLabel="Time">
-                    <rect key="frame" x="6" y="24" width="208" height="16"/>
+                    <rect key="frame" x="6" y="24" width="240" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="-" id="8a9-yu-tie">
                         <font key="font" metaFont="systemBold" size="12"/>
@@ -42,10 +74,11 @@
                             </textField>
                         </subviews>
                     </view>
-                    <color key="fillColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="borderColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </box>
                 <textField identifier="LessonInfo" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CH8-hr-a5O" userLabel="Info">
-                    <rect key="frame" x="6" y="8" width="208" height="16"/>
+                    <rect key="frame" x="6" y="8" width="240" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="-" id="Uy1-dP-Sqw">
                         <font key="font" metaFont="smallSystem"/>
@@ -80,6 +113,7 @@
                             </textField>
                         </subviews>
                     </view>
+                    <color key="borderColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="fillColor" red="0.0" green="0.58823529409999997" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </box>
                 <box identifier="statusColor" fixedFrame="YES" boxType="custom" borderType="none" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="CAv-tb-TJq">

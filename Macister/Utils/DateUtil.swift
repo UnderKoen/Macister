@@ -15,6 +15,12 @@ class DateUtil: NSObject {
         return dateFormatter
     }
 
+    static func getDateFormatFullLesson() -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, d MMM yyyy HH:mm"
+        return dateFormatter
+    }
+    
     static func getDateFormatLesson() -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
@@ -35,7 +41,7 @@ class DateUtil: NSObject {
 
     static func getFullDateFormatMail() -> DateFormatter {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE, 4 MMMM yyyy - HH:mm"
+        dateFormatter.dateFormat = "EEEE, d MMM yyyy HH:mm"
         return dateFormatter
     }
 
@@ -53,5 +59,15 @@ class DateUtil: NSObject {
     static func getLessonTime(lesson: Lesson) -> String {
         let format = getDateFormatLesson()
         return format.string(from: lesson.startDate!) + " - " + format.string(from: lesson.eindeDate!)
+    }
+
+    static func getFullLessonTime(lesson: Lesson) -> String {
+        let fFormat = getDateFormatFullLesson()
+        let format = getDateFormatLesson()
+        if (lesson.duurtHeleDag ?? false) {
+            return fFormat.string(from: lesson.startDate!) + " - 24:00"
+        } else {
+            return fFormat.string(from: lesson.startDate!) + " - " + format.string(from: lesson.eindeDate!)
+        }
     }
 }
