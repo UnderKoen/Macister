@@ -964,7 +964,7 @@ DQ
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="proportionallyDown" image="MagisterLogo" id="Gc9-sH-UqG"/>
                                                     </imageView>
                                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjL-rR-7Ij" userLabel="User Info">
-                                                        <rect key="frame" x="353" y="0.0" width="320" height="48"/>
+                                                        <rect key="frame" x="352" y="0.0" width="320" height="48"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <subviews>
                                                             <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06F-MQ-nyM">
@@ -1784,7 +1784,7 @@ DQ
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="proportionallyDown" image="MagisterLogo" id="kHc-Ix-kug"/>
                                                     </imageView>
                                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vbz-2U-V97" userLabel="User Info">
-                                                        <rect key="frame" x="353" y="0.0" width="320" height="48"/>
+                                                        <rect key="frame" x="352" y="0.0" width="320" height="48"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <subviews>
                                                             <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJl-DR-d5i">
@@ -2352,7 +2352,7 @@ DQ
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="proportionallyDown" image="MagisterLogo" id="wXw-LH-0iY"/>
                                                     </imageView>
                                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZH-HZ-vSc" userLabel="User Info">
-                                                        <rect key="frame" x="353" y="0.0" width="320" height="48"/>
+                                                        <rect key="frame" x="352" y="0.0" width="320" height="48"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <subviews>
                                                             <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TgW-7A-0jL">
