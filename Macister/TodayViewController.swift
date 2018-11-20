@@ -86,6 +86,7 @@ class TodayViewController: MainViewController {
 
     override func update() {
         updateCalander()
+        updateNotifactions()
         updateMail()
         updateGrades()
         updateCalanderVisual(true)
@@ -198,6 +199,17 @@ class TodayViewController: MainViewController {
         }
     }
 
+    func updateNotifactions() {
+        mailTop.subviews.forEach { (view) in
+            if let button = view as? SwitchButton {
+                let notId = button.value
+                Magister.magister?.getMailHandler()?.getUnread(mapId: notId, completionHandler: { (amount) in
+                    button.notifactions = amount
+                })
+            }
+        }
+    }
+    
     func updateMail() {
         Magister.magister?.getMailHandler()?.getMail(mapId: mapId, top: nil, skip: nil, completionHandler: { (mail) in
             self.mailItems.documentView!.subviews.forEach({ (view) in
@@ -252,7 +264,7 @@ class TodayViewController: MainViewController {
                     self.gradeItems.documentView!.setFrameSize(NSSize(width: self.gradeItems.contentSize.width, height: CGFloat(grades!.grades!.count * 48)))
                     y = grades!.grades!.count * self.lessonHeight
                 } else {
-                    self.calanderItems.documentView!.setFrameSize(NSSize(width: self.calanderItems.contentSize.width, height: CGFloat(y)))
+                    self.gradeItems.documentView!.setFrameSize(NSSize(width: self.gradeItems.contentSize.width, height: CGFloat(y)))
                 }
                 grades!.grades!.forEach({ (grade) in
                     y = y - self.lessonHeight

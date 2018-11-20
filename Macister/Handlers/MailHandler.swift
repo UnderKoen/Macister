@@ -80,4 +80,21 @@ class MailHandler: NSObject {
             }
         }
     }
+
+    func getUnread(mapId: Int, completionHandler: @escaping (Int) -> () = { _ in
+    }) {
+        HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getMailUrl())!, parameters: ["count": "true", "gelezen": "false", "mapId": "\(mapId)"]) { (response) in
+            do {
+                let json = try JSON(data: response.data!)
+                completionHandler(json["TotalCount"].int ?? 0)
+            } catch {
+            }
+        }
+    }
+
+    func downloadBijlage(bijlage: Bijlage, progressHandler: @escaping (Progress) -> () = { _ in
+    }) {
+        let download = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
+        HttpUtil.httpGetFile(url: (magister.getMainUrl().personUrl?.getBijlagenUrl(bijlage.id ?? 0))!, fileName: bijlage.naam ?? "", location: download, override: false, progressHandler: progressHandler)
+    }
 }

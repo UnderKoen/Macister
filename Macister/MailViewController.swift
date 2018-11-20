@@ -12,7 +12,9 @@ class MailViewController: MainViewController {
     @IBOutlet weak var mailItems: NSScrollView!
     @IBOutlet weak var mailItemsTop: NSView!
     @IBOutlet weak var mail: NSScrollView!
-
+    @IBOutlet weak var attachments: NSView!
+    @IBOutlet weak var attachmentsList: NSScrollView!
+    
     @IBInspectable var lessonHeight: Int = 48
 
     override func viewDidLoad() {
@@ -44,6 +46,60 @@ class MailViewController: MainViewController {
         }
     }
 
+    var height = 532
+
+    func updateBijlagen(_ message: Message?) {
+        if (message?.heeftBijlagen ?? false) {
+            attachments.isHidden = false
+            height = 484
+        } else {
+            attachments.isHidden = true
+            height = 532
+        }
+
+        self.attachmentsList.documentView?.subviews.forEach({ (view) in
+            (view as? Attachment)?.bijlage = nil
+            view.removeFromSuperview()
+        })
+
+        let bijlages = message?.bijlages
+        if (message?.heeftBijlagen ?? false) {
+            var i = 0
+            bijlages?.forEach({ (bijlage) in
+                var width = Int(Attachment.getWidth(font: NSFont.systemFont(ofSize: 10, weight: .medium), file: bijlage.naam ?? ""))
+                if (width > 256) {
+                    width = 256
+                }
+                let att = Attachment(frame: CGRect(x: i, y: 0, width: width, height: 48))
+                att.bijlage = bijlage
+                att.onClick = { (att) in
+                    if (att.bijlage != nil) {
+                        Magister.magister?.getMailHandler()?.downloadBijlage(bijlage: att.bijlage!, progressHandler: { (progress) in
+                            att.progress = progress.fractionCompleted
+                        })
+                    }
+                }
+
+                attachmentsList.documentView?.addSubview(att)
+                i += width
+            })
+            attachmentsList.documentView?.setFrameSize(NSSize(width: CGFloat(i + 8), height: attachmentsList.contentSize.height))
+        }
+
+        mail.setFrameSize(NSSize(width: self.mail.contentSize.width, height: CGFloat(height)))
+    }
+
+    func updateNotifactions() {
+        mailItemsTop.subviews.forEach { (view) in
+            if let button = view as? SwitchButton {
+                let notId = button.value
+                Magister.magister?.getMailHandler()?.getUnread(mapId: notId, completionHandler: { (amount) in
+                    button.notifactions = amount
+                })
+            }
+        }
+    }
+
     @IBAction func delete(_ sender: Any) {
         if (selectedMessage == nil) {
             return
@@ -67,6 +123,7 @@ class MailViewController: MainViewController {
 
     override func update() {
         updateMail()
+        updateNotifactions()
     }
 
     @IBOutlet weak var info: NSView!
@@ -144,6 +201,8 @@ class MailViewController: MainViewController {
             return
         }
         Magister.magister?.getMailHandler()?.getSingleMail(message: selectedMessage!, completionHandler: { (mail) in
+            self.updateBijlagen(mail)
+            
             var html: String = (mail.inhoud ?? "")
             html = html.replacingOccurrences(of: "<p", with: "<div")
             html = html.replacingOccurrences(of: "p>", with: "div>")
@@ -152,14 +211,17 @@ class MailViewController: MainViewController {
             self.text.attributedStringValue = html.html2AttributedString!
 
             var h = self.text.attributedStringValue.getHeight(self.text.frame.width)
-            if (h < 500) {
-                h = 500
+            if (h < CGFloat(self.height - 32)) {
+                h = CGFloat(self.height - 32)
             }
+
             self.mail.documentView!.setFrameSize(NSSize(width: self.mail.contentSize.width, height: h + 32))
             self.text.frame = NSRect(x: 16, y: 16, width: self.text.frame.width, height: h)
             self.mail.documentView!.scroll(NSPoint(x: 0, y: h + 32))
             if !mail.isGelezen! {
-                Magister.magister?.getMailHandler()?.markRead(message: mail, read: true)
+                Magister.magister?.getMailHandler()?.markRead(message: mail, read: true, completionHandler: { (ignored) in
+                    self.updateNotifactions()
+                })
             }
         })
     }
@@ -190,6 +252,7 @@ class MailViewController: MainViewController {
             oldMessage?.selected = false
             oldMessage?.gelezen = true
         }
+
         oldMessage = element
         element.selected = true
         selectedMessage = element.message!

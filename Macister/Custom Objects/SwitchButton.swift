@@ -12,6 +12,8 @@ import Cocoa
 class SwitchButton: NSControl {
     @IBOutlet var topView: NSView!
 
+    @IBOutlet weak var not_box: NSBox!
+    @IBOutlet weak var not_text: NSTextField!
     @IBOutlet weak var box: NSBox!
     @IBOutlet weak var button: NSButton!
 
@@ -39,6 +41,21 @@ class SwitchButton: NSControl {
         didSet {
             if (!active) {
                 button.image = inactiveImage
+            }
+        }
+    }
+
+    @IBInspectable var notifactions: Int = 0 {
+        didSet {
+            if notifactions != 0 {
+                not_box.isHidden = false;
+                if (notifactions > 9) {
+                    not_text.stringValue = "9+"
+                } else {
+                    not_text.stringValue = "\(notifactions)"
+                }
+            } else {
+                not_box.isHidden = true;
             }
         }
     }

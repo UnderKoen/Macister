@@ -36,6 +36,7 @@
 		32510634F07026F993FCCC12 /* CUTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32510C4A3F79CBA6BDEBA97C /* CUTextField.xib */; };
 		325106AE87965351385499B4 /* Studies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510ED37C6E1B83361A9441 /* Studies.swift */; };
 		32510702DAD0BC22D67456E3 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510726F030A2BCC6C78F5B /* DateUtil.swift */; };
+		32510719586F727FBE457B69 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510A58E4B2D0CDDF8A702D /* Future.swift */; };
 		325108870A73BC9D611DE930 /* GradePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325108FB98283B42CE7ADAAA /* GradePeriod.swift */; };
 		325108ED127E0F5F52B94F5B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325100E7894002ABFF295F66 /* Person.swift */; };
 		325109020F60A515AA9F4703 /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325103ABDAA39CC466B737CB /* RowType.swift */; };
@@ -73,7 +74,10 @@
 		5D5BE6852142AC2900E4FAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5BE6842142AC2900E4FAB2 /* Assets.xcassets */; };
 		5D627A12214FCF7A004ABE1D /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5D627A11214FCF7A004ABE1D /* Fonts */; };
 		5D627A16214FFA43004ABE1D /* LessonElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D627A15214FFA43004ABE1D /* LessonElement.swift */; };
-		90B286E669186F936EC189C2 /* Pods_Macister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25E3CCD267D787E8A08F63F /* Pods_Macister.framework */; };
+		5D780ED3219EAF8D0060E440 /* Bijlage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D780ED2219EAF8D0060E440 /* Bijlage.swift */; };
+		5DC04209219969A500796787 /* Attachment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC04208219969A500796787 /* Attachment.xib */; };
+		5DC0420B21996CF100796787 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC0420A21996CF100796787 /* Attachment.swift */; };
+		FE4BCC9BE2D95340A0A52B8C /* Pods_Macister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C38A209ECE5541CFC00FEF /* Pods_Macister.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +128,7 @@
 		325108CDFE0DEAFBBA00257D /* School.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		325108FB98283B42CE7ADAAA /* GradePeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradePeriod.swift; sourceTree = "<group>"; };
 		3251093EC1621983E76FB85B /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		32510A58E4B2D0CDDF8A702D /* Future.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
 		32510A76061FC38F3E6A381D /* GradeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeHandler.swift; sourceTree = "<group>"; };
 		32510A9810F63E1FD18F2F7E /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		32510ACCD8C40308128B0879 /* HttpUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
@@ -146,9 +151,12 @@
 		5D5BE6842142AC2900E4FAB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D627A11214FCF7A004ABE1D /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		5D627A15214FFA43004ABE1D /* LessonElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonElement.swift; sourceTree = "<group>"; };
-		C920512D82355C8356E86E20 /* Pods-Macister.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macister.release.xcconfig"; path = "Pods/Target Support Files/Pods-Macister/Pods-Macister.release.xcconfig"; sourceTree = "<group>"; };
-		E92339FF2FB2BFD50D495DED /* Pods-Macister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Macister/Pods-Macister.debug.xcconfig"; sourceTree = "<group>"; };
-		F25E3CCD267D787E8A08F63F /* Pods_Macister.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Macister.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D780ED2219EAF8D0060E440 /* Bijlage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bijlage.swift; sourceTree = "<group>"; };
+		5DC04208219969A500796787 /* Attachment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Attachment.xib; sourceTree = "<group>"; };
+		5DC0420A21996CF100796787 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		C6DF9679179E4C73750605C7 /* Pods-Macister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Macister/Pods-Macister.debug.xcconfig"; sourceTree = "<group>"; };
+		D2D666CCF65A994161779CB1 /* Pods-Macister.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macister.release.xcconfig"; path = "Pods/Target Support Files/Pods-Macister/Pods-Macister.release.xcconfig"; sourceTree = "<group>"; };
+		F6C38A209ECE5541CFC00FEF /* Pods_Macister.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Macister.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90B286E669186F936EC189C2 /* Pods_Macister.framework in Frameworks */,
+				FE4BCC9BE2D95340A0A52B8C /* Pods_Macister.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +205,7 @@
 				3251019FAC0BC0D0B71F88E6 /* AssetHandler.swift */,
 				32510A9810F63E1FD18F2F7E /* ColorPalette.swift */,
 				32510B0FCDFB3342DCF0E8C7 /* EncryptionUtil.swift */,
+				32510A58E4B2D0CDDF8A702D /* Future.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -275,6 +284,8 @@
 				3251006910B2DD88DEA86170 /* MailElement.xib */,
 				32510B2FC3E54B81648A367B /* SwitchButton.swift */,
 				32510DCFEB901A8A0049A4C9 /* SwitchButton.xib */,
+				5DC0420A21996CF100796787 /* Attachment.swift */,
+				5DC04208219969A500796787 /* Attachment.xib */,
 			);
 			path = "Custom Objects";
 			sourceTree = "<group>";
@@ -283,11 +294,11 @@
 			isa = PBXGroup;
 			children = (
 				5D627A11214FCF7A004ABE1D /* Fonts */,
-				DD0C9AA00FBB2E2D54019850 /* Frameworks */,
 				325106CE9CD8474EF8A0E1CF /* Macister */,
 				3251076762A3B4577B72925E /* Macister.storyboard */,
-				EB54A89964A0365104C6C6E4 /* Pods */,
 				325107DEAD70972C7F98960F /* Products */,
+				8716D2BD17A33BFB11D1851D /* Pods */,
+				3E59F474EB47B31D79D2C0ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -308,6 +319,7 @@
 			children = (
 				325102D072C20195FA951BF3 /* Contact.swift */,
 				325102582C3CA9CF761368CD /* Message.swift */,
+				5D780ED2219EAF8D0060E440 /* Bijlage.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -336,19 +348,19 @@
 			path = Type;
 			sourceTree = "<group>";
 		};
-		DD0C9AA00FBB2E2D54019850 /* Frameworks */ = {
+		3E59F474EB47B31D79D2C0ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F25E3CCD267D787E8A08F63F /* Pods_Macister.framework */,
+				F6C38A209ECE5541CFC00FEF /* Pods_Macister.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EB54A89964A0365104C6C6E4 /* Pods */ = {
+		8716D2BD17A33BFB11D1851D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E92339FF2FB2BFD50D495DED /* Pods-Macister.debug.xcconfig */,
-				C920512D82355C8356E86E20 /* Pods-Macister.release.xcconfig */,
+				C6DF9679179E4C73750605C7 /* Pods-Macister.debug.xcconfig */,
+				D2D666CCF65A994161779CB1 /* Pods-Macister.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -360,12 +372,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32510F21FCD7BA8DB72F08B5 /* Build configuration list for PBXNativeTarget "Macister" */;
 			buildPhases = (
-				146E51093E189374FF5E09D7 /* [CP] Check Pods Manifest.lock */,
+				1F848E26473E016D316F7C1F /* [CP] Check Pods Manifest.lock */,
 				32510ADFE63BDDA0524B70A1 /* Sources */,
 				32510E63B22522DFAE307886 /* Frameworks */,
 				32510B1075A9513BFD595571 /* Resources */,
-				941EA1F09198A00D5F5D9A2F /* [CP] Embed Pods Frameworks */,
-				95E7ADB26662D761C97C1185 /* [CP] Copy Pods Resources */,
+				A5D0335328697FCA9CF2190E /* [CP] Embed Pods Frameworks */,
+				1C4C100111CCB053D66A2124 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -420,6 +432,7 @@
 				325100808FB3CE2646A71848 /* SwitchButton.xib in Resources */,
 				32510A094A7BF0FD087FDB6F /* LessonElement.xib in Resources */,
 				5D5BE6852142AC2900E4FAB2 /* Assets.xcassets in Resources */,
+				5DC04209219969A500796787 /* Attachment.xib in Resources */,
 				3251001ED3EB34DABCC48581 /* Macister.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +440,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		146E51093E189374FF5E09D7 /* [CP] Check Pods Manifest.lock */ = {
+		1C4C100111CCB053D66A2124 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Macister/Pods-Macister-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F848E26473E016D316F7C1F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -445,7 +473,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		941EA1F09198A00D5F5D9A2F /* [CP] Embed Pods Frameworks */ = {
+		A5D0335328697FCA9CF2190E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -469,21 +497,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Macister/Pods-Macister-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95E7ADB26662D761C97C1185 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Macister/Pods-Macister-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -495,6 +508,7 @@
 				32510B92CF4E66365852C558 /* TodayViewController.swift in Sources */,
 				32510F9E07C6380BE820BE67 /* MainViewController.swift in Sources */,
 				32510702DAD0BC22D67456E3 /* DateUtil.swift in Sources */,
+				5D780ED3219EAF8D0060E440 /* Bijlage.swift in Sources */,
 				32510A989B7CB293C3098EF9 /* FileUtil.swift in Sources */,
 				325105330E948EEB1582C946 /* HttpUtil.swift in Sources */,
 				32510D9C7C78E3DEBB96B953 /* JsonUtil.swift in Sources */,
@@ -547,7 +561,9 @@
 				3251038C5A0E390CF182A129 /* Subject.swift in Sources */,
 				32510A1EF1944E59535516FD /* StudyInfo.swift in Sources */,
 				32510C82EC41A492414068A1 /* Asset.swift in Sources */,
+				5DC0420B21996CF100796787 /* Attachment.swift in Sources */,
 				3251096B555700378AD2C040 /* AppDelegate.swift in Sources */,
+				32510719586F727FBE457B69 /* Future.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +583,7 @@
 /* Begin XCBuildConfiguration section */
 		3251024614E316DBA29E8DE7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C920512D82355C8356E86E20 /* Pods-Macister.release.xcconfig */;
+			baseConfigurationReference = D2D666CCF65A994161779CB1 /* Pods-Macister.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
@@ -691,7 +707,7 @@
 		};
 		325106A10C2A5219444D4176 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E92339FF2FB2BFD50D495DED /* Pods-Macister.debug.xcconfig */;
+			baseConfigurationReference = C6DF9679179E4C73750605C7 /* Pods-Macister.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";

@@ -46,15 +46,30 @@ class HttpUtil: NSObject {
         }
     }
 
-    static func httpGetFile(url: String, fileName: String, parameters: Parameters = [:], completionHandler: @escaping (DownloadResponse<Data>) -> () = { _ in
+    static func httpGetFile(url: String, fileName: String, location: URL = FileUtil.getApplicationFolder(), override: Bool = true, parameters: Parameters = [:], completionHandler: @escaping (DownloadResponse<Data>) -> () = { _ in
+    }, progressHandler: @escaping (Progress) -> () = { _ in
     }) {
         let destination: DownloadRequest.DownloadFileDestination = { _, _ in
-            let documentsURL = FileUtil.getApplicationFolder()
-            let fileURL = documentsURL.appendingPathComponent(fileName)
+            let documentsURL = location
+            var fileURL = documentsURL.appendingPathComponent(fileName)
+
+            if (!override) {
+                var t = fileName.split(separator: ".")
+                let fileAft = t.removeLast()
+                let filePre = t.joined(separator: ".")
+
+                var i = 1
+                while FileManager.default.fileExists(atPath: fileURL.path) {
+                    fileURL = documentsURL.appendingPathComponent("\(filePre) (\(i)).\(fileAft)")
+                    i += 1
+                }
+            }
             return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
         }
         Alamofire.download(url, method: .get, parameters: parameters, headers: ["Cookie": cookies, "X-API-Client-ID": X_API_Client_ID], to: destination).responseData { (response) in
             completionHandler(response)
+        }.downloadProgress { (progress) in
+            progressHandler(progress)
         }
     }
 

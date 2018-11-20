@@ -70,11 +70,11 @@ class Person: NSObject {
 
     convenience init(json: JSON?) {
         self.init(id: json?["Id"].int, roepNaam: json?["Roepnaam"].string, tussenvoegsel: json?["Tussenvoegsel"].string, achternaam: json?["Achternaam"].string, officieleVoornamen: json?["OfficieleVoornamen"].string, voorletters: json?["Voorletters"].string, officieleTussenvoegsels: json?["OfficieleTussenvoegsels"].string, officieleAchternaam: json?["OfficieleAchternaam"].string, geboortedatum: json?["Geboortedatum"].string, geboorteAchternaam: json?["GeboorteAchternaam"].string, geboortenaamTussenvoegsel: json?["GeboortenaamTussenvoegsel"].string, gebruikGeboortenaam: json?["GebruikGeboortenaam"].bool, profielFoto: nil)
-        HttpUtil.httpGetFile(url: Magister.magister!.getMainUrl().personUrl!.getPhotoUrl(), fileName: "pf.png") { (response) in
+        HttpUtil.httpGetFile(url: Magister.magister!.getMainUrl().personUrl!.getPhotoUrl(), fileName: "pf.png", completionHandler: { (response) in
             if let data = response.result.value {
                 self.profielFoto = NSImage(data: data)
                 self.done = true
             }
-        }
+        })
     }
 }

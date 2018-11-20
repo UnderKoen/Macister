@@ -11,6 +11,8 @@
             <connections>
                 <outlet property="box" destination="xJJ-yn-now" id="Y1e-bg-tLb"/>
                 <outlet property="button" destination="gJV-cR-gWp" id="a4g-pE-PhG"/>
+                <outlet property="not_box" destination="vuj-lP-qB5" id="6OQ-Pd-sJi"/>
+                <outlet property="not_text" destination="dFf-7X-wig" id="B9b-68-uLj"/>
                 <outlet property="topView" destination="U6O-Oo-qbN" id="pjz-Nj-skG"/>
             </connections>
         </customObject>
@@ -40,6 +42,27 @@
                         <action selector="onPress:" target="-2" id="Sws-JZ-v85"/>
                     </connections>
                 </button>
+                <box hidden="YES" fixedFrame="YES" boxType="custom" borderType="line" cornerRadius="7" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="vuj-lP-qB5">
+                    <rect key="frame" x="27" y="27" width="17" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" ambiguous="YES" id="WB1-ef-pDG">
+                        <rect key="frame" x="1" y="1" width="15" height="15"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFf-7X-wig" userLabel="Notifcation">
+                                <rect key="frame" x="-2" y="-4" width="21" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="3ZQ-Ye-0LX">
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.098376498287671185" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" red="1" green="0.0" blue="0.0" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                </box>
             </subviews>
         </customView>
     </objects>

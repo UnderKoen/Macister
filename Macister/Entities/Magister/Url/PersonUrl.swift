@@ -42,6 +42,10 @@ class PersonUrl: NSObject {
         return getMailUrl() + "\(mailId)/"
     }
 
+    func getBijlagenUrl(_ bijlagenId: Int) -> String {
+        return getMailUrl() + "bijlagen/\(bijlagenId)"
+    }
+
     func getLastGradesUrl() -> String {
         return getPersonUrl() + "cijfers/laatste/"
     }

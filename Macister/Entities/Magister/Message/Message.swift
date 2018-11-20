@@ -19,6 +19,7 @@ class Message: NSObject {
     var onderwerp: String?
     var afzender: Contact?
     var ingekortBericht: Any?
+    var bijlages: [Bijlage]?
     var ontvangers: [Contact]?
     var ontvangersStr: String?
     var verstuurdOp: String?
@@ -34,7 +35,7 @@ class Message: NSObject {
     var soort: MessageType?
     var toonOpVandaagscherm: Bool?
 
-    init(json: JSON!, id: Int?, content: String?, mapId: Int?, mapTitel: String?, onderwerp: String?, afzender: Contact?, ingekortBericht: Any?, ontvangers: [Contact]?, verstuurdOp: String?, begin: String?, einde: String?, isGelezen: Bool?, status: MessageStatusType?, heeftPrioriteit: Bool?, heeftBijlagen: Bool?, soort: MessageType?, toonOpVandaagscherm: Bool?) {
+    init(json: JSON!, id: Int?, content: String?, mapId: Int?, mapTitel: String?, onderwerp: String?, afzender: Contact?, ingekortBericht: Any?, bijlages: [Bijlage]?, ontvangers: [Contact]?, verstuurdOp: String?, begin: String?, einde: String?, isGelezen: Bool?, status: MessageStatusType?, heeftPrioriteit: Bool?, heeftBijlagen: Bool?, soort: MessageType?, toonOpVandaagscherm: Bool?) {
         self.json = json
         self.id = id
         self.inhoud = content
@@ -43,6 +44,7 @@ class Message: NSObject {
         self.onderwerp = onderwerp
         self.afzender = afzender
         self.ingekortBericht = ingekortBericht
+        self.bijlages = bijlages
         self.ontvangers = ontvangers
         self.verstuurdOp = verstuurdOp
         if (verstuurdOp != nil) {
@@ -82,6 +84,12 @@ class Message: NSObject {
         (json?["Ontvangers"] ?? json?["KopieOntvangers"])?.array?.forEach({ (jsonC) in
             ontvangers.append(Contact(json: jsonC))
         })
-        self.init(json: json, id: json?["Id"].int, content: json?["Inhoud"].string, mapId: json?["MapId"].int, mapTitel: json?["MapTitel"].string, onderwerp: json?["Onderwerp"].string, afzender: Contact(json: json?["Afzender"]), ingekortBericht: json?["IngekortBericht"].object, ontvangers: ontvangers, verstuurdOp: json?["VerstuurdOp"].string, begin: json?["Begin"].string, einde: json?["Einde"].string, isGelezen: json?["IsGelezen"].bool, status: MessageStatusType(rawValue: json?["Status"].int ?? 0), heeftPrioriteit: json?["HeeftPrioriteit"].bool, heeftBijlagen: json?["HeeftBijlagen"].bool, soort: MessageType(rawValue: json?["Soort"].int ?? 0), toonOpVandaagscherm: json?["ToonOpVandaagscherm"].bool)
+
+        var bijlages = [Bijlage]()
+        (json?["Bijlagen"])?.array?.forEach({ (jsonC) in
+            bijlages.append(Bijlage(json: jsonC))
+        })
+
+        self.init(json: json, id: json?["Id"].int, content: json?["Inhoud"].string, mapId: json?["MapId"].int, mapTitel: json?["MapTitel"].string, onderwerp: json?["Onderwerp"].string, afzender: Contact(json: json?["Afzender"]), ingekortBericht: json?["IngekortBericht"].object, bijlages: bijlages, ontvangers: ontvangers, verstuurdOp: json?["VerstuurdOp"].string, begin: json?["Begin"].string, einde: json?["Einde"].string, isGelezen: json?["IsGelezen"].bool, status: MessageStatusType(rawValue: json?["Status"].int ?? 0), heeftPrioriteit: json?["HeeftPrioriteit"].bool, heeftBijlagen: json?["HeeftBijlagen"].bool, soort: MessageType(rawValue: json?["Soort"].int ?? 0), toonOpVandaagscherm: json?["ToonOpVandaagscherm"].bool)
     }
 }
