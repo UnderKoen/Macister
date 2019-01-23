@@ -16,85 +16,89 @@ class MailHandler: NSObject {
         self.magister = magister
     }
 
-    func getMail(mapId: Int, top: Int?, skip: Int?, completionHandler: @escaping ([Message]) -> () = { _ in
-    }) {
-        HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getMailUrl())!, parameters: ["mapId": mapId, "top": top ?? "", "skip": skip ?? ""]) { (response) in
-            var mail: [Message] = [Message].init()
-            do {
-                let json = try JSON(data: response.data!)
-                json["Items"].array?.forEach({ (jsonF) in
-                    mail.append(Message.init(json: jsonF))
-                })
-            } catch {
-            }
-            mail.sort(by: { (mail1, mail2) -> Bool in
-                return mail2.verstuurdOpDate!.timeIntervalSince(mail1.verstuurdOpDate!) < 0
-            })
-            completionHandler(mail)
-        }
+    func getMail(mapId: Int, top: Int?, skip: Int?) -> Future<[Message]> {
+        return HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getMailUrl())!, parameters: ["mapId": mapId, "top": top ?? "", "skip": skip ?? ""])
+                .map { response throws in
+                    return try JSON(data: response.data!)
+                }
+                .map { json in
+                    var mail: [Message] = [Message]()
+
+                    json["Items"].array?.forEach({ (jsonF) in
+                        mail.append(Message(json: jsonF))
+                    })
+
+                    mail.sort(by: { (mail1, mail2) -> Bool in
+                        return mail2.verstuurdOpDate!.timeIntervalSince(mail1.verstuurdOpDate!) < 0
+                    })
+                    return mail
+                }
     }
 
-    func getSingleMail(message: Message, completionHandler: @escaping (Message) -> () = { _ in
-    }) {
-        HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getSingleMailUrl(message.id!))!, parameters: ["berichtSoort": message.soort!.rawValue]) { (response) in
-            do {
-                let json = try JSON(data: response.data!)
-                let mail: Message = Message.init(json: json)
-                completionHandler(mail)
-            } catch {
-            }
-        }
+    func getSingleMail(message: Message) -> Future<Message> {
+        return HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getSingleMailUrl(message.id!))!, parameters: ["berichtSoort": message.soort!.rawValue])
+                .map { response throws in
+                    return try JSON(data: response.data!)
+                }
+                .map { json in
+                    return Message(json: json)
+                }
     }
 
-    func moveMail(message: Message, toMapId: Int, completionHandler: @escaping (Message) -> () = { _ in
-    }) {
+    func moveMail(message: Message, toMapId: Int) -> Future<Message> {
         var para = message.json.dictionaryObject!
         para["MapId"] = toMapId
-        HttpUtil.httpPut(url: (magister.getMainUrl().personUrl?.getSingleMailUrl(message.id!))!, parameters: para) { (response) in
-            do {
-                let json = try JSON(data: response.data!)
-                let mail: Message = Message.init(json: json)
-                completionHandler(mail)
-            } catch {
-            }
-        }
+        return HttpUtil.httpPut(url: (magister.getMainUrl().personUrl?.getSingleMailUrl(message.id!))!, parameters: para)
+                .map { response throws in
+                    return try JSON(data: response.data!)
+                }
+                .map { json in
+                    return Message(json: json)
+                }
     }
 
-    func deleteMail(message: Message, completionHandler: @escaping () -> () = {
-    }) {
-        HttpUtil.httpDelete(url: (magister.getMainUrl().personUrl?.getSingleMailUrl(message.id!))!) { (_) in
-            completionHandler()
-        }
+    func deleteMail(message: Message) -> Future<NSNull> {
+        return HttpUtil.httpDelete(url: (magister.getMainUrl().personUrl?.getSingleMailUrl(message.id!))!)
+            .done()
     }
 
-    func markRead(message: Message, read: Bool, completionHandler: @escaping (Message) -> () = { _ in
-    }) {
+    func markRead(message: Message, read: Bool) -> Future<Message> {
         var para = message.json.dictionaryObject!
         para["IsGelezen"] = read
-        HttpUtil.httpPut(url: (magister.getMainUrl().personUrl?.getSingleMailUrl(message.id!))!, parameters: para) { (response) in
-            do {
-                let json = try JSON(data: response.data!)
-                let mail: Message = Message.init(json: json)
-                completionHandler(mail)
-            } catch {
-            }
-        }
+        return HttpUtil.httpPut(url: (magister.getMainUrl().personUrl?.getSingleMailUrl(message.id!))!, parameters: para)
+                .map { response throws in
+                    return try JSON(data: response.data!)
+                }
+                .map { json in
+                    return Message(json: json)
+                }
     }
 
-    func getUnread(mapId: Int, completionHandler: @escaping (Int) -> () = { _ in
-    }) {
-        HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getMailUrl())!, parameters: ["count": "true", "gelezen": "false", "mapId": "\(mapId)"]) { (response) in
-            do {
-                let json = try JSON(data: response.data!)
-                completionHandler(json["TotalCount"].int ?? 0)
-            } catch {
-            }
-        }
+    func getUnread(mapId: Int) -> Future<Int> {
+        return HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getMailUrl())!, parameters: ["count": "true", "gelezen": "false", "mapId": "\(mapId)"])
+                .map { response throws in
+                    return try JSON(data: response.data!)
+                }
+                .map { json in
+                    return json["TotalCount"].int!
+                }
     }
+
+    static let download = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
 
     func downloadBijlage(bijlage: Bijlage, progressHandler: @escaping (Progress) -> () = { _ in
-    }) {
-        let download = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
-        HttpUtil.httpGetFile(url: (magister.getMainUrl().personUrl?.getBijlagenUrl(bijlage.id ?? 0))!, fileName: bijlage.naam ?? "", location: download, override: false, progressHandler: progressHandler)
+    }) -> Future<NSNull> {
+        return HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getMailBijlagenUrl(bijlage.id ?? 0))!, parameters: ["redirect_type":"body"])
+            .map { response throws in
+                return try JSON(data: response.data!)
+            }
+            .map { json in
+                return json["location"].stringValue
+            }
+            .flatMap { url in
+                return HttpUtil.httpGetFile(url: url, fileName: bijlage.naam ?? "", location: MailHandler.download, override: false, progressHandler: progressHandler)
+            }
+            .done()
     }
+
 }

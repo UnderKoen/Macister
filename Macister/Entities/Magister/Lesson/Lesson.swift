@@ -33,9 +33,9 @@ class Lesson: NSObject {
     var groepen: Any?
     var opdrachtId: Int?
     var heeftBijlagen: Bool?
-    var bijlagen: Any?
+    var bijlagen: [Bijlage]?
 
-    init(id: Int?, start: String?, einde: String?, lesuurVan: Int?, lesuurTotMet: Int?, duurtHeleDag: Bool?, omschrijving: String?, lokatie: String?, status: LessonStatusType?, lessonType: LessonType?, weergaveType: DisplayType?, inhoud: String?, infoType: InfoType?, aantekening: Any?, afgerond: Bool?, vakken: [Subject]?, docenten: [Teacher]?, lokalen: [ClassRoom]?, groepen: Any?, opdrachtId: Int?, heeftBijlagen: Bool?, bijlagen: Any?) {
+    init(id: Int?, start: String?, einde: String?, lesuurVan: Int?, lesuurTotMet: Int?, duurtHeleDag: Bool?, omschrijving: String?, lokatie: String?, status: LessonStatusType?, lessonType: LessonType?, weergaveType: DisplayType?, inhoud: String?, infoType: InfoType?, aantekening: Any?, afgerond: Bool?, vakken: [Subject]?, docenten: [Teacher]?, lokalen: [ClassRoom]?, groepen: Any?, opdrachtId: Int?, heeftBijlagen: Bool?, bijlagen: [Bijlage]?) {
         self.id = id
         self.start = start
         self.startDate = DateUtil.getDateFromMagisterString(date: start!)
@@ -75,7 +75,11 @@ class Lesson: NSObject {
         json?["Lokalen"].array?.forEach({ (jsonF) in
             classRooms.append(ClassRoom.init(json: jsonF))
         })
-        self.init(id: json?["Id"].int, start: json?["Start"].string, einde: json?["Einde"].string, lesuurVan: json?["LesuurVan"].int, lesuurTotMet: json?["LesuurTotMet"].int, duurtHeleDag: json?["DuurtHeleDag"].bool, omschrijving: json?["Omschrijving"].string, lokatie: json?["Lokatie"].string, status: LessonStatusType(rawValue: json?["Status"].int ?? 0), lessonType: LessonType(rawValue: (json?["Type"].int) ?? 0), weergaveType: DisplayType(rawValue: (json?["WeergaveType"].int) ?? 0), inhoud: json?["Inhoud"].string, infoType: InfoType(rawValue: (json?["InfoType"].int) ?? 0), aantekening: json?["Aantekening"].object, afgerond: json?["Afgerond"].bool, vakken: subjects, docenten: teachers, lokalen: classRooms, groepen: json?["Groepen"].object, opdrachtId: json?["OpdrachtId"].int, heeftBijlagen: json?["HeeftBijlagen"].bool, bijlagen: json?["Bijlagen"].object)
+        var bijlages = [Bijlage]()
+        (json?["Bijlagen"])?.array?.forEach({ (jsonC) in
+            bijlages.append(Bijlage(json: jsonC))
+        })
+        self.init(id: json?["Id"].int, start: json?["Start"].string, einde: json?["Einde"].string, lesuurVan: json?["LesuurVan"].int, lesuurTotMet: json?["LesuurTotMet"].int, duurtHeleDag: json?["DuurtHeleDag"].bool, omschrijving: json?["Omschrijving"].string, lokatie: json?["Lokatie"].string, status: LessonStatusType(rawValue: json?["Status"].int ?? 0), lessonType: LessonType(rawValue: (json?["Type"].int) ?? 0), weergaveType: DisplayType(rawValue: (json?["WeergaveType"].int) ?? 0), inhoud: json?["Inhoud"].string, infoType: InfoType(rawValue: (json?["InfoType"].int) ?? 0), aantekening: json?["Aantekening"].object, afgerond: json?["Afgerond"].bool, vakken: subjects, docenten: teachers, lokalen: classRooms, groepen: json?["Groepen"].object, opdrachtId: json?["OpdrachtId"].int, heeftBijlagen: json?["HeeftBijlagen"].bool, bijlagen: bijlages)
     }
 }
 

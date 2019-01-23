@@ -15,10 +15,10 @@ class FindSchoolViewController: NSViewController, NSComboBoxDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         findSchool.controlTextDidChange = { (obj) in
-            School.findSchools(filter: self.findSchool.input.stringValue) { (schools) in
+            School.findSchools(filter: self.findSchool.input.stringValue).subscribe(onNext: { schools in
                 self.findSchool.removeAll()
                 self.findSchool.addItems(item: schools)
-            }
+            })
         }
     }
 

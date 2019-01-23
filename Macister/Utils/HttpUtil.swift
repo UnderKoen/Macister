@@ -10,74 +10,104 @@ import Cocoa
 import Alamofire
 
 class HttpUtil: NSObject {
-    static var cookies: String = ""
     static let X_API_Client_ID: String = "12D8"
+    public static var auth: String = ""
+    static var start = false
+    
+    static func getParameter(parameter: String, url: String) -> String {
+        let pattern = "\(parameter)=(.+?)(?=$|&)"
+        let regex = try! NSRegularExpression(pattern: pattern)
+        let result = regex.firstMatch(in: url, range: NSRange(location: url.startIndex.encodedOffset, length: url.endIndex.encodedOffset))
+        return regex.replacementString(for: result!, in: url, offset: 0, template: "$1")
+    }
+    
+    private static func startF() {
+        if start {
+            return
+        }
+        start = true
+        let delegate = Alamofire.SessionManager.default.delegate
+        delegate.taskWillPerformHTTPRedirection = { (_, _, _, _) -> URLRequest? in
+            return nil
+        }
+    }
 
-    static func httpDelete(url: String, completionHandler: @escaping (DataResponse<Any>) -> () = { _ in
-    }) {
+    static func httpDelete(url: String) -> Future<DataResponse<Any>> {
+        startF()
         URLCache.shared.removeAllCachedResponses()
-        Alamofire.SessionManager.default.request(url, method: .delete, encoding: JSONEncoding.default, headers: ["X-API-Client-ID": X_API_Client_ID]).responseJSON { (response) in
-            storeCookies(response: response)
-            completionHandler(response)
-        }
-    }
-
-    static func httpPost(url: String, parameters: Parameters = [:], completionHandler: @escaping (DataResponse<Any>) -> () = { _ in
-    }) {
-        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: ["Cookie": cookies, "X-API-Client-ID": X_API_Client_ID]).responseJSON { (response) in
-            storeCookies(response: response)
-            completionHandler(response)
-        }
-    }
-
-    static func httpPut(url: String, parameters: Parameters = [:], completionHandler: @escaping (DataResponse<Any>) -> () = { _ in
-    }) {
-        Alamofire.request(url, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: ["Cookie": cookies, "X-API-Client-ID": X_API_Client_ID]).responseJSON { (response) in
-            storeCookies(response: response)
-            completionHandler(response)
-        }
-    }
-
-    static func httpGet(url: String, parameters: Parameters = [:], completionHandler: @escaping (DataResponse<Any>) -> () = { _ in
-    }) {
-        Alamofire.SessionManager.default.requestWithoutCache(url, method: .get, parameters: parameters, headers: ["Cookie": cookies, "X-API-Client-ID": X_API_Client_ID]).responseJSON { (response) in
-            storeCookies(response: response)
-            completionHandler(response)
-        }
-    }
-
-    static func httpGetFile(url: String, fileName: String, location: URL = FileUtil.getApplicationFolder(), override: Bool = true, parameters: Parameters = [:], completionHandler: @escaping (DownloadResponse<Data>) -> () = { _ in
-    }, progressHandler: @escaping (Progress) -> () = { _ in
-    }) {
-        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
-            let documentsURL = location
-            var fileURL = documentsURL.appendingPathComponent(fileName)
-
-            if (!override) {
-                var t = fileName.split(separator: ".")
-                let fileAft = t.removeLast()
-                let filePre = t.joined(separator: ".")
-
-                var i = 1
-                while FileManager.default.fileExists(atPath: fileURL.path) {
-                    fileURL = documentsURL.appendingPathComponent("\(filePre) (\(i)).\(fileAft)")
-                    i += 1
-                }
+        return Future { completion in
+            Alamofire.SessionManager.default.request(url, method: .delete, encoding: JSONEncoding.default, headers: ["X-API-Client-ID": X_API_Client_ID, "Authorization":"Bearer \(auth)"]).responseJSON { (response) in
+                completion(Result.success(response))
             }
-            return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
-        }
-        Alamofire.download(url, method: .get, parameters: parameters, headers: ["Cookie": cookies, "X-API-Client-ID": X_API_Client_ID], to: destination).responseData { (response) in
-            completionHandler(response)
-        }.downloadProgress { (progress) in
-            progressHandler(progress)
         }
     }
 
-    static func storeCookies(response: DataResponse<Any>) {
-        let cookies_new = response.response?.allHeaderFields["Set-Cookie"] as? String ?? ""
-        if cookies_new != "" {
-            cookies = cookies_new
+    static func httpPost(url: String, parameters: Parameters = [:], headers: HTTPHeaders = [:]) -> Future<DataResponse<Any>> {
+        startF()
+        var head = headers
+        head["Cookie"] = getCookies()
+        head["X-API-Client-ID"] = X_API_Client_ID
+        head["Authorization"] = "Bearer \(auth)"
+        return Future { completion in
+            Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: head).responseJSON { (response) in
+                completion(Result.success(response))
+            }
         }
+    }
+
+    static func httpPut(url: String, parameters: Parameters = [:]) -> Future<DataResponse<Any>> {
+        startF()
+        return Future { completion in
+            Alamofire.request(url, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: ["Cookie": getCookies(), "X-API-Client-ID": X_API_Client_ID, "Authorization":"Bearer \(auth)"]).responseJSON { (response) in
+                completion(Result.success(response))
+            }
+        }
+    }
+    
+    static func httpGet(url: String, parameters: Parameters = [:]) -> Future<DataResponse<Any>> {
+        startF()
+        return Future { completion in
+            Alamofire.SessionManager.default.requestWithoutCache(url, method: .get, parameters: parameters, headers: ["Cookie": getCookies(), "X-API-Client-ID": X_API_Client_ID, "Authorization":"Bearer \(auth)"]).responseJSON { (response) in
+                completion(Result.success(response))
+            }
+        }
+    }
+
+    static func httpGetFile(url: String, fileName: String, location: URL = FileUtil.getApplicationFolder(), override: Bool = true, parameters: Parameters = [:], progressHandler: @escaping (Progress) -> () = { _ in
+    }) -> Future<DownloadResponse<Data>> {
+        startF()
+        return Future { completion in
+            let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+                let documentsURL = location
+                var fileURL = documentsURL.appendingPathComponent(fileName)
+
+                if (!override) {
+                    var t = fileName.split(separator: ".")
+                    let fileAft = t.removeLast()
+                    let filePre = t.joined(separator: ".")
+
+                    var i = 1
+                    while FileManager.default.fileExists(atPath: fileURL.path) {
+                        fileURL = documentsURL.appendingPathComponent("\(filePre) (\(i)).\(fileAft)")
+                        i += 1
+                    }
+                }
+                return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+            }
+
+            Alamofire.download(url, method: .get, parameters: parameters, headers: ["Cookie": getCookies(), "X-API-Client-ID": X_API_Client_ID, "Authorization":"Bearer \(auth)"], to: destination).responseData { (response) in
+                completion(Result.success(response))
+            }.downloadProgress { (progress) in
+                progressHandler(progress)
+            }
+        }
+    }
+
+    static func getCookies() -> String {
+        let storage = Alamofire.SessionManager.default.session.configuration.httpCookieStorage!
+        return storage.cookies!.map { cookie in
+            return "\(cookie.name)=\(cookie.value); "
+            }.joined()
     }
 }
 

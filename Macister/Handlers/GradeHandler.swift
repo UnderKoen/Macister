@@ -16,29 +16,23 @@ class GradeHandler: NSObject {
         self.magister = magister
     }
 
-    func getLastGrades(completionHandler: @escaping (Grades?) -> () = { _ in
-    }) {
-        HttpUtil.httpGet(url: magister.getMainUrl().personUrl!.getLastGradesUrl()) { (response) in
-            do {
-                let json = try JSON(data: response.data!)
-                completionHandler(Grades(json: json))
-                return
-            } catch {
-            }
-            completionHandler(nil)
-        }
+    func getLastGrades() -> Future<Grades> {
+        return HttpUtil.httpGet(url: magister.getMainUrl().personUrl!.getLastGradesUrl())
+                .map { response throws in
+                    return try JSON(data: response.data!)
+                }
+                .map { json in
+                    return Grades(json: json)
+                }
     }
 
-    func getAverageGrades(completionHandler: @escaping (Grades?) -> () = { _ in
-    }) {
-        HttpUtil.httpGet(url: magister.getMainUrl().currentStudyUrl!.getGratesUrl(), parameters: ["actievePerioden": "false", "alleenBerekendeKolommen": "true", "alleenPTAKolommen": "false"]) { (response) in
-            do {
-                let json = try JSON(data: response.data!)
-                completionHandler(Grades(json: json))
-                return
-            } catch {
-            }
-            completionHandler(nil)
-        }
+    func getAverageGrades() -> Future<Grades> {
+        return HttpUtil.httpGet(url: magister.getMainUrl().currentStudyUrl!.getGratesUrl(), parameters: ["actievePerioden": "false", "alleenBerekendeKolommen": "true", "alleenPTAKolommen": "false"])
+                .map { response throws in
+                    return try JSON(data: response.data!)
+                }
+                .map { json in
+                    return Grades(json: json)
+                }
     }
 }

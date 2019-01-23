@@ -66,86 +66,214 @@ class Magister: NSObject {
         return gradeHandler
     }
 
-    func logout(forCookie: Bool = false) {
-        HttpUtil.httpDelete(url: mainUrl.schoolUrl!.getCurrentSessionUrl())
-        if (!forCookie) {
-            AssetHandler.getAsset(name: ".secrets.json").remove();
-        }
+    func logout() -> Future<NSNull> {
+        loggedIn = false
+        AssetHandler.getAsset(name: ".secrets.json").remove();
+        return HttpUtil.httpDelete(url: mainUrl.schoolUrl!.getCurrentSessionUrl())
+            .peek { _ in
+                self.reset()
+            }
+            .done()
+    }
+    
+    func reset() {
+        HttpUtil.auth = ""
+        Alamofire.SessionManager.default.session.configuration.httpCookieStorage!.removeCookies(since: Date.distantPast)
     }
 
     private var accountId: Int?
+    private var loggedIn = false
 
-    func login(username: String, password: String, onError: @escaping (_ error: String) -> Void, onSucces: @escaping () -> Void) {
-        logout(forCookie: true)
-        DispatchQueue.global().async {
-            while (HttpUtil.cookies == "") {
-                usleep(useconds_t.init(1000000 * 0.1))
+    private var sessionId: String!
+    private var returnUrl: String!
+    private var xsrfToken: String!
+    private var authCode: String!
+    
+    func login(username: String, password: String) -> Future<NSNull> {
+        loggedIn = true
+        return HttpUtil.httpGet(url: "https://accounts.magister.net/connect/authorize", parameters: ["client_id":mainUrl.schoolUrl!.getClientId(), "redirect_uri":mainUrl.schoolUrl!.getRedirectUri(), "response_type":"id_token token", "scope":"openid profile magister.ecs.legacy magister.mdv.broker.read magister.dnn.roles.read", "nonce":"\(arc4random())"])
+            .check{ response in
+                return response.error?.localizedDescription
             }
-            HttpUtil.httpPost(url: self.mainUrl.schoolUrl!.getSessionUrl(), parameters: ["Gebruikersnaam": username, "Wachtwoord": password, "IngelogdBlijven": true], completionHandler: { (response) in
-                do {
-                    let json = try JSON(data: response.data!)
-                    let msg = json["message"]
-                    if msg == JSON.null {
-                        self.accountId = Int((json["links"]["account"]["href"].string?.replacingOccurrences(of: "/api/accounts/", with: ""))!)
-                        self.init_magister(onSucces, onError)
-                    } else {
-                        onError(msg.string!)
-                    }
-                    return
-                } catch {
+            .map { response in
+                return response.response!.allHeaderFields["Location"]! as! String
+            }
+            .flatMap { url in
+                return HttpUtil.httpGet(url: url)
+            }
+            .check{ response in
+                return response.error?.localizedDescription
+            }
+            .map { response in
+                return response.response!.allHeaderFields["Location"]! as! String
+            }
+            .peek { url in
+                self.sessionId = HttpUtil.getParameter(parameter: "sessionId", url: url)
+                self.returnUrl = HttpUtil.getParameter(parameter: "returnUrl", url: url).removingPercentEncoding!
+                for cookie in HTTPCookieStorage.shared.cookies! {
+                    if cookie.name == "XSRF-TOKEN" { self.xsrfToken = cookie.value }
                 }
-                onError("Iets ging mis probeer opnieuw")
-            })
-        }
+            }
+            .flatMap { url in
+                return HttpUtil.httpGet(url: url)
+            }
+            .check{ response in
+                return response.error?.localizedDescription
+            }
+            .flatMap { _ in
+                return HttpUtil.httpGet(url: "https://macister.nl/authcode.php")
+            }
+            .check{ response in
+                return response.error?.localizedDescription
+            }
+            .map { response throws in
+                return try JSON(data: response.data!)
+            }
+            .peek { json in
+                self.authCode = json["authCode"].stringValue
+            }
+            .flatMap { _ in
+                return HttpUtil.httpPost(url: "https://accounts.magister.net/challenge/current", parameters: ["sessionId":self.sessionId, "returnUrl":self.returnUrl, "authCode":self.authCode], headers: ["X-XSRF-TOKEN":self.xsrfToken])
+            }
+            .check{ response in
+                return response.error?.localizedDescription
+            }
+            .map { response throws in
+                return try JSON(data: response.data!)
+            }
+            .check { json in
+                let error = json["error"]
+                if error != JSON.null { return error.stringValue }
+                return nil
+            }
+            .flatMap { _ in
+                return HttpUtil.httpPost(url: "https://accounts.magister.net/challenge/username", parameters: ["sessionId":self.sessionId, "returnUrl":self.returnUrl, "authCode":self.authCode,"username":username], headers: ["X-XSRF-TOKEN":self.xsrfToken])
+            }
+            .check{ response in
+                return response.error?.localizedDescription
+            }
+            .map { response throws in
+                return try JSON(data: response.data!)
+            }
+            .check { json in
+                let error = json["error"]
+                if error != JSON.null { return error.stringValue }
+                return nil
+            }
+            .flatMap { _ in
+                return HttpUtil.httpPost(url: "https://accounts.magister.net/challenge/password", parameters: ["sessionId":self.sessionId, "returnUrl":self.returnUrl, "authCode":self.authCode,"password":password], headers: ["X-XSRF-TOKEN":self.xsrfToken])
+            }
+            .check{ response in
+                return response.error?.localizedDescription
+            }
+            .map { response throws in
+                return try JSON(data: response.data!)
+            }
+            .check { json in
+                let error = json["error"]
+                if error != JSON.null { return error.stringValue }
+                return nil
+            }
+            .flatMap { _ in
+                return HttpUtil.httpGet(url: "https://accounts.magister.net" + self.returnUrl)
+            }
+            .check{ response in
+                return response.error?.localizedDescription
+            }
+            .map { response in
+                return HttpUtil.getParameter(parameter: "access_token", url: response.response!.allHeaderFields["Location"]! as! String)
+            }
+            .peek { token in
+                HttpUtil.auth = token
+            }
+            .flatMap { _ in
+                return HttpUtil.httpPost(url: "https://macister.nl/activated.php", parameters: ["school":self.school.id,"user":username])
+            }
+            .check{ response in
+                return response.error?.localizedDescription
+            }
+            .map { response throws in
+                return try JSON(data: response.data!)
+            }
+            .check { json in
+                let activated = json["activated"].bool
+                if (activated == nil) {
+                    return json["error"].stringValue
+                } else if !activated! {
+                    return json["message"].stringValue
+                }
+                return nil
+            }
+            .flatMap { _ in
+                return HttpUtil.httpGet(url: self.mainUrl.schoolUrl!.getCurrentSessionUrl())
+            }
+            .check{ response in
+                return response.error?.localizedDescription
+            }
+            .map { response throws in
+                return try JSON(data: response.data!)
+            }
+            .flatMap { json -> Future<NSNull> in
+                let msg = json["message"]
+                if msg == JSON.null {
+                    self.accountId = Int((json["links"]["account"]["href"].string?.replacingOccurrences(of: "/api/accounts/", with: ""))!)
+                    return self.initMagister()
+                } else {
+                    return Future(result: .failure(msg.string!))
+                }
+            }
+            .check{ response in
+                return response.error?.localizedDescription
+            }
+            .peek { _ in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 60){//2700) {
+                    if (self.loggedIn) {
+                        self.logout().flatMap{_ in
+                            return self.login(username: username, password: password)
+                        }.execute()
+                    }
+                }
+            }
+            .onFailure{ error in
+                print(error)
+                self.reset()
+            }
+            .done()
     }
 
-    var waiting = 0.0
-
-    private func init_magister(_ whenDone: @escaping () -> Void, _ onError: @escaping (_ error: String) -> Void) {
-        waiting = 0.0
-        HttpUtil.httpGet(url: mainUrl.schoolUrl!.getUserUrl()) { (response) in
-            do {
-                let json = try JSON(data: response.data!)
-                let person = json["Persoon"]
-                self.person = Person(json: person)
-            } catch {
-            }
-        }
-        HttpUtil.httpGet(url: mainUrl.schoolUrl!.getAccountUrl(accountId: accountId!)) { (response) in
-            do {
-                let json = try JSON(data: response.data!)
-                self.account = Account(json: json)
-            } catch {
-            }
-        }
-        DispatchQueue.global().async {
-            while !((self.person?.done ?? false)) {
-                usleep(useconds_t.init(1000000 * 0.1))
-                if self.waiting > Magister.maxWait {
-                    return
+    private func initMagister() -> Future<NSNull> {
+        return HttpUtil.httpGet(url: mainUrl.schoolUrl!.getUserUrl())
+                .map { response throws in
+                    return try JSON(data: response.data!)
                 }
-            }
-            self.lessonHandler = LessonHandler.init(magister: self)
-            self.mailHandler = MailHandler.init(magister: self)
-            self.gradeHandler = GradeHandler.init(magister: self)
-            HttpUtil.httpGet(url: self.mainUrl.personUrl!.getStudiesUrl()) { (response) in
-                do {
-                    let json = try JSON(data: response.data!)
+                .peek { json in
+                    self.person = Person(json: json["Persoon"])
+                }
+                .flatMap({ _ in
+                    return self.person!.loadImage()
+                })
+                .flatMap { _ in
+                    return HttpUtil.httpGet(url: self.mainUrl.schoolUrl!.getAccountUrl(accountId: self.accountId!))
+                }
+                .map { response throws in
+                    return try JSON(data: response.data!)
+                }
+                .peek { json in
+                    self.account = Account(json: json)
+                }
+                .flatMap { _ in
+                    return HttpUtil.httpGet(url: self.mainUrl.personUrl!.getStudiesUrl())
+                }
+                .map { response throws in
+                    return try JSON(data: response.data!)
+                }
+                .peek { json in
                     self.studies = Studies(json: json)
-                } catch {
+                    
+                    self.lessonHandler = LessonHandler(magister: self)
+                    self.mailHandler = MailHandler(magister: self)
+                    self.gradeHandler = GradeHandler(magister: self)
                 }
-            }
-        }
-        DispatchQueue.global().async {
-            while !((self.person?.done ?? false) && (self.studies?.done ?? false) && (self.account?.done ?? false)) {
-                usleep(useconds_t.init(1000000 * 0.1))
-                self.waiting = self.waiting + 0.1
-                if self.waiting > Magister.maxWait {
-                    onError("Het inloggen duurde te lang.")
-                    return
-                }
-            }
-            whenDone()
-        }
+                .done()
     }
 }

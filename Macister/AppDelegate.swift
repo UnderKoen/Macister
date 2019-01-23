@@ -28,10 +28,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 let school = School(url: schoolJson["url"].string!, name: schoolJson["name"].string!, id: schoolJson["id"].string!)
                 Magister.magister = Magister(school: school)
                 let pass = try EncryptionUtil.decryptMessage(encryptedMessage: json["pass"].string!, encryptionKey: schoolJson["id"].string!);
-                Magister.magister!.login(username: json["user"].string!, password: pass, onError: { (str) in
-                    Magister.magister = nil
-                }, onSucces: {
+                Magister.magister!.login(username: json["user"].string!, password: pass).subscribe(onNext: { _ in
                     AppDelegate.changeView(controller: MainViewController.vandaagView)
+                }, onError: { r in
+                    Magister.magister = nil
                 })
             }
         } catch {

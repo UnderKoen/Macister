@@ -13,7 +13,9 @@ class CalendarViewController: MainViewController {
     @IBOutlet weak var calenderTop: NSView!
     @IBOutlet weak var dateLabel: NSTextField!
     @IBOutlet weak var homework: NSScrollView!
-
+    @IBOutlet weak var attachments: NSView!
+    @IBOutlet weak var attachmentsList: NSScrollView!
+    
     @IBInspectable var lessonHeight: Int = 48
 
     var calanderDate: Date = Date()
@@ -24,6 +26,54 @@ class CalendarViewController: MainViewController {
             setupWeek(calanderDate)
         }
         updateCalanderVisual(true)
+    }
+    
+    var height = 532
+    
+    func updateBijlagen(_ lesson: Lesson?) {
+        if (lesson?.heeftBijlagen ?? false) {
+            attachments.isHidden = false
+            height = 484
+        } else {
+            attachments.isHidden = true
+            height = 532
+        }
+        
+        self.attachmentsList.documentView?.subviews.forEach({ (view) in
+            (view as? Attachment)?.bijlage = nil
+            view.removeFromSuperview()
+        })
+        
+        if !(lesson?.heeftBijlagen ?? false) {
+            return
+        }
+        
+        let bijlages = lesson?.bijlagen
+        if (lesson?.heeftBijlagen ?? false) {
+            var i = 0
+            bijlages?.forEach({ (bijlage) in
+                var width = Int(Attachment.getWidth(font: NSFont.systemFont(ofSize: 10, weight: .medium), file: bijlage.naam ?? ""))
+                if (width > 256) {
+                    width = 256
+                }
+                let att = Attachment(frame: CGRect(x: i, y: 0, width: width, height: 48))
+                att.bijlage = bijlage
+                att.onClick = { (att) in
+                    if (att.bijlage != nil) {
+                        Magister.magister?.getLessonHandler()?.downloadBijlage(bijlage: att.bijlage!, progressHandler: { (progress) in
+                            att.progress = progress.fractionCompleted
+                        })
+                        .execute()
+                    }
+                }
+                
+                attachmentsList.documentView?.addSubview(att)
+                i += width
+            })
+            attachmentsList.documentView?.setFrameSize(NSSize(width: CGFloat(i + 8), height: attachmentsList.contentSize.height))
+        }
+        
+        homework.setFrameSize(NSSize(width: self.homework.contentSize.width, height: CGFloat(height)))
     }
 
     @IBAction func nextDay(_ sender: Any) {
@@ -187,7 +237,9 @@ class CalendarViewController: MainViewController {
         if (selectedLesson == nil) {
             return
         }
-        Magister.magister?.getLessonHandler()?.getLesson(lesson: selectedLesson!, completionHandler: { (lesson) in
+        Magister.magister?.getLessonHandler()?.getLesson(lesson: selectedLesson!).subscribe(onNext: { lesson in
+            self.updateBijlagen(lesson)
+            
             var html: String = (lesson.inhoud ?? "")
             html = html.replacingOccurrences(of: "<p", with: "<div")
             html = html.replacingOccurrences(of: "p>", with: "div>")
@@ -196,8 +248,8 @@ class CalendarViewController: MainViewController {
             self.text.attributedStringValue = html.html2AttributedString!
 
             var h = self.text.attributedStringValue.getHeight(self.text.frame.width)
-            if (h < 500) {
-                h = 500
+            if (h < CGFloat(self.height - 32)) {
+                h = CGFloat(self.height - 32)
             }
 
             self.homework.documentView!.setFrameSize(NSSize(width: self.homework.contentSize.width, height: h + 32))
@@ -300,7 +352,7 @@ class CalendarViewController: MainViewController {
     }
 
     func updateCalander() {
-        Magister.magister?.getLessonHandler()?.getLessonsForDay(day: calanderDate, completionHandler: { (lessons) in
+        Magister.magister?.getLessonHandler()?.getLessonsForDay(day: calanderDate).subscribe(onNext: { lessons in
             self.calanderItems.documentView!.subviews.forEach({ (view) in
                 (view as? LessonElement)?.lesson = nil
                 view.removeFromSuperview()

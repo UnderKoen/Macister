@@ -10,7 +10,7 @@ import Foundation
 
 public enum Result<T> {
     case success(T)
-    case failure(Error)
+    case failure(String)
 }
 
 public struct Future<T> {
@@ -28,7 +28,7 @@ public struct Future<T> {
         self.init(result: .success(value))
     }
 
-    public init(error: Error) {
+    public init(error: String) {
         self.init(result: .failure(error))
     }
 
@@ -43,7 +43,7 @@ public struct Future<T> {
     }
 
     public func subscribe(onNext: @escaping (T) -> Void = { _ in
-    }, onError: @escaping (Error) -> Void = { _ in
+    }, onError: @escaping (String) -> Void = { _ in
     }) {
         self.then { result in
             switch result {
@@ -52,6 +52,10 @@ public struct Future<T> {
             }
         }
     }
+    
+    public func execute() {
+        self.subscribe()
+    }
 }
 
 extension Future {
@@ -59,21 +63,63 @@ extension Future {
         return Future<U>(operation: { completion in
             self.then { result in
                 switch result {
-
                 case .success(let resultValue):
                     do {
                         let transformedValue = try f(resultValue)
                         completion(Result.success(transformedValue))
                     } catch let error {
-                        completion(Result.failure(error))
+                        completion(Result.failure(error.localizedDescription))
                     }
-
 
                 case .failure(let errorBox):
                     completion(Result.failure(errorBox))
-
                 }
             }
+        })
+    }
+    
+    public func check(_ f: @escaping (T) throws -> String?) -> Future<T> {
+        return Future<T>(operation: { completion in
+            self.then { result in
+                switch result {
+                case .success(let resultValue):
+                    do {
+                        let transformedValue = try f(resultValue)
+                        if (transformedValue == nil || transformedValue!.isEmpty) {
+                            completion(result)
+                        } else {
+                            completion(Result.failure(transformedValue!))
+                        }
+                    } catch let error {
+                        completion(Result.failure(error.localizedDescription))
+                    }
+                    
+                case .failure(let errorBox):
+                    completion(Result.failure(errorBox))
+                }
+            }
+        })
+    }
+    
+    public func onFailure(_ f: @escaping (String) -> Void) -> Future<T> {
+        return Future<T>(operation: { completion in
+            self.then { result in
+                switch result {
+                case .success(let _):
+                    completion(result)
+                    
+                case .failure(let errorBox):
+                    f(errorBox)
+                    completion(Result.failure(errorBox))
+                }
+            }
+        })
+    }
+
+    public func peek(_ f: @escaping (T) throws -> Void) -> Future<T> {
+        return self.map({ obj throws in
+            try f(obj)
+            return obj
         })
     }
 
@@ -85,6 +131,12 @@ extension Future {
                 case .failure(let error): completion(Result.failure(error))
                 }
             }
+        })
+    }
+    
+    public func done() -> Future<NSNull> {
+        return self.map({ _ in
+            return NSNull()
         })
     }
 }

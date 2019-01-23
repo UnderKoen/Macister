@@ -24,21 +24,32 @@ class LoginViewController: NSViewController {
     private var timesWrong: [String: Int] = [:]
     private var busy: Bool = false {
         didSet {
-            DispatchQueue.main.async {
-                if (self.busy) {
-                    self.loading.isHidden = false
-                    self.loading.startAnimation(self)
-                } else {
-                    self.loading.isHidden = true
-                    self.loading.stopAnimation(self)
-                }
+            if (self.busy) {
+                self.loading.isHidden = false
+                self.loading.startAnimation(self)
+                self.time += 1
+                let t = self.time
+                DispatchQueue.global().asyncAfter(deadline: .now() + 5, execute: {
+                    if self.busy && self.time == t {
+                        DispatchQueue.main.async {
+                            self.busy = false
+                            self.error.stringValue = "Het laden van de gegevens duurde telang."
+                        }
+                    }
+                })
+            } else {
+                self.loading.isHidden = true
+                self.loading.stopAnimation(self)
             }
         }
     }
+    
+    private var time = 0
 
     @IBAction func Buttonaction(_ sender: Any) {
         if (!busy) {
             self.busy = true
+            let t = time
             if self.isBlocked(user: self.usernameTextField.input.stringValue) {
                 self.error.stringValue = "Het account is 10 minuten geblokkeerd."
                 busy = false
@@ -47,42 +58,41 @@ class LoginViewController: NSViewController {
                 busy = false
             } else {
                 self.error.stringValue = ""
-                Magister.magister?.login(username: usernameTextField.input.stringValue, password: passwordTextField.input.stringValue, onError: { (error) in
-                    DispatchQueue.main.async {
-                        if (error.contains("Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord.")) {
-                            self.error.stringValue = "Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord."
-                            self.timesWrong[self.usernameTextField.input.stringValue] = (self.timesWrong[self.usernameTextField.input.stringValue] ?? 0) + 1
-                            if (self.timesWrong[self.usernameTextField.input.stringValue] ?? 0) == 5 {
-                                self.error.stringValue = "Het account is 10 minuten geblokkeerd."
-                                self.setBlock(user: self.usernameTextField.input.stringValue, timeInMinutes: 10)
-                                self.timesWrong[self.usernameTextField.input.stringValue] = 0
-                            }
-                        } else {
-                            self.error.stringValue = error
-                        }
-                        let school = Magister.magister?.getSchool()
-                        Magister.magister = Magister(school: school!)
+                Magister.magister?.login(username: usernameTextField.input.stringValue, password: passwordTextField.input.stringValue).subscribe(onNext: { _ in
+                    if !self.busy || self.time != t {
+                        return
                     }
-                    self.busy = false
-                }, onSucces: {
                     AppDelegate.changeView(controller: MainViewController.vandaagView)
                     self.busy = false
-                    DispatchQueue.main.async {
-                        if (self.remember.state == .on) {
-                            do {
-                                var schoolJson = JSON(parseJSON: "{}")
-                                schoolJson["name"] = JSON(rawValue: Magister.magister!.getSchool().name)!
-                                schoolJson["id"] = JSON(rawValue: Magister.magister!.getSchool().id)!
-                                schoolJson["url"] = JSON(rawValue: Magister.magister!.getSchool().url)!
-                                var json = JSON(parseJSON: "{}")
-                                json["school"] = schoolJson
-                                json["user"] = JSON(rawValue: self.usernameTextField.input.stringValue)!
-                                try json["pass"] = JSON(rawValue: EncryptionUtil.encryptMessage(message: self.passwordTextField.input.stringValue, encryptionKey: schoolJson["id"].stringValue))!
-                                try AssetHandler.createAsset(name: ".secrets.json").setData(data: json.rawData());
-                            } catch {
-                            }
+                    if (self.remember.state == .on) {
+                        do {
+                            var schoolJson = JSON(parseJSON: "{}")
+                            schoolJson["name"] = JSON(rawValue: Magister.magister!.getSchool().name)!
+                            schoolJson["id"] = JSON(rawValue: Magister.magister!.getSchool().id)!
+                            schoolJson["url"] = JSON(rawValue: Magister.magister!.getSchool().url)!
+                            var json = JSON(parseJSON: "{}")
+                            json["school"] = schoolJson
+                            json["user"] = JSON(rawValue: self.usernameTextField.input.stringValue)!
+                            try json["pass"] = JSON(rawValue: EncryptionUtil.encryptMessage(message: self.passwordTextField.input.stringValue, encryptionKey: schoolJson["id"].stringValue))!
+                            try AssetHandler.createAsset(name: ".secrets.json").setData(data: json.rawData());
+                        } catch {
                         }
                     }
+                }, onError: { error in
+                    if (error.contains("Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord.")) {
+                        self.error.stringValue = "Ongeldig account of verkeerde combinatie van gebruikersnaam en wachtwoord."
+                        self.timesWrong[self.usernameTextField.input.stringValue] = (self.timesWrong[self.usernameTextField.input.stringValue] ?? 0) + 1
+                        if (self.timesWrong[self.usernameTextField.input.stringValue] ?? 0) == 5 {
+                            self.error.stringValue = "Het account is 10 minuten geblokkeerd."
+                            self.setBlock(user: self.usernameTextField.input.stringValue, timeInMinutes: 10)
+                            self.timesWrong[self.usernameTextField.input.stringValue] = 0
+                        }
+                    } else {
+                        self.error.stringValue = error
+                    }
+                    let school = Magister.magister?.getSchool()
+                    Magister.magister = Magister(school: school!)
+                    self.busy = false
                 })
             }
         }

@@ -7,8 +7,6 @@ import Cocoa
 import SwiftyJSON
 
 class Account: NSObject {
-    var done: Bool = false
-
     var id: Int?
     var naam: String?
     var emailadres: String?
@@ -27,7 +25,6 @@ class Account: NSObject {
         self.isEmailadresGeverifieerd = isEmailadresGeverifieerd
         self.moetEmailadresVerifieren = moetEmailadresVerifieren
         self.uuId = uuId
-        self.done = true
     }
 
     convenience init(json: JSON?) {

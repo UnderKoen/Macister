@@ -17,8 +17,8 @@ class MainViewController: NSViewController {
     static var current: Active = .vandaag
     static var vandaagView: TodayViewController = TodayViewController.freshController()
     static var agendaView: CalendarViewController = CalendarViewController.freshController()
-
     static var mailView: MailViewController = MailViewController.freshController()
+    static var cijferView: CijferViewController = CijferViewController.freshController()
 
     @IBOutlet weak var userName: NSTextField!
     @IBOutlet weak var profileImage: NSImageView!
@@ -39,7 +39,7 @@ class MainViewController: NSViewController {
     }
 
     @IBAction func logout(_ sender: Any) {
-        Magister.magister!.logout()
+        Magister.magister?.logout().execute()
         AppDelegate.changeView(controller: FindSchoolViewController.freshController())
         Magister.magister = nil
     }
@@ -54,6 +54,8 @@ class MainViewController: NSViewController {
                 }
             } else if view == cijfers {
                 if MainViewController.current != .cijfers {
+                    AppDelegate.changeView(controller: MainViewController.cijferView)
+                    MainViewController.current = .cijfers
                 }
             } else if view == agenda {
                 if MainViewController.current != .agenda {
@@ -78,7 +80,7 @@ class MainViewController: NSViewController {
             break
         case .cijfers:
             if MainViewController.current != .cijfers {
-                return
+                AppDelegate.changeView(controller: MainViewController.cijferView)
             }
             break
         case .agenda:

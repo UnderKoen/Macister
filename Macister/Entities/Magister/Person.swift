@@ -10,8 +10,6 @@ import Cocoa
 import SwiftyJSON
 
 class Person: NSObject {
-    var done: Bool = false
-
     var id: Int?
     var roepNaam: String?
     var tussenvoegsel: String?
@@ -70,11 +68,13 @@ class Person: NSObject {
 
     convenience init(json: JSON?) {
         self.init(id: json?["Id"].int, roepNaam: json?["Roepnaam"].string, tussenvoegsel: json?["Tussenvoegsel"].string, achternaam: json?["Achternaam"].string, officieleVoornamen: json?["OfficieleVoornamen"].string, voorletters: json?["Voorletters"].string, officieleTussenvoegsels: json?["OfficieleTussenvoegsels"].string, officieleAchternaam: json?["OfficieleAchternaam"].string, geboortedatum: json?["Geboortedatum"].string, geboorteAchternaam: json?["GeboorteAchternaam"].string, geboortenaamTussenvoegsel: json?["GeboortenaamTussenvoegsel"].string, gebruikGeboortenaam: json?["GebruikGeboortenaam"].bool, profielFoto: nil)
-        HttpUtil.httpGetFile(url: Magister.magister!.getMainUrl().personUrl!.getPhotoUrl(), fileName: "pf.png", completionHandler: { (response) in
-            if let data = response.result.value {
-                self.profielFoto = NSImage(data: data)
-                self.done = true
-            }
-        })
+    }
+    
+    public func loadImage() -> Future<NSNull> {
+        return HttpUtil.httpGetFile(url: Magister.magister!.getMainUrl().personUrl!.getPhotoUrl(), fileName: "pf.png")
+                .peek({ response in
+                    self.profielFoto = NSImage(data: response.result.value!)
+                })
+                .done()
     }
 }

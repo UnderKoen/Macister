@@ -16,43 +16,54 @@ class LessonHandler: NSObject {
         self.magister = magister
     }
 
-    func getLessonsToday(completionHandler: @escaping ([Lesson]) -> () = { _ in
-    }) {
-        getLessonsForDay(day: Date(), completionHandler: completionHandler)
+    func getLessonsToday() -> Future<[Lesson]> {
+        return getLessonsForDay(day: Date())
     }
 
-    func getLessonsForDay(day: Date, completionHandler: @escaping ([Lesson]) -> () = { _ in
-    }) {
-        getLessons(from: day, until: day, completionHandler: completionHandler)
+    func getLessonsForDay(day: Date) -> Future<[Lesson]> {
+        return getLessons(from: day, until: day)
     }
 
-    func getLessons(from: Date, until: Date, completionHandler: @escaping ([Lesson]) -> () = { _ in
-    }) {
+    func getLessons(from: Date, until: Date) -> Future<[Lesson]> {
         let format = DateUtil.getDateFormatLessons()
-        HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getLessonsUrl())!, parameters: ["van": format.string(from: from), "tot": format.string(from: until), "status": 0]) { (response) in
-            var lessons: [Lesson] = [Lesson].init()
-            do {
-                let json = try JSON(data: response.data!)
-                json["Items"].array?.forEach({ (jsonF) in
-                    lessons.append(Lesson.init(json: jsonF))
+        return HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getLessonsUrl())!, parameters: ["van": format.string(from: from), "tot": format.string(from: until), "status": 0])
+                .map { response throws in
+                    return try JSON(data: response.data!)
+                }
+                .map({ json in
+                    var lessons: [Lesson] = [Lesson]()
+                    json["Items"].array?.forEach({ (jsonF) in
+                        lessons.append(Lesson.init(json: jsonF))
+                    })
+                    lessons.sort(by: { (lesson1, lesson2) -> Bool in
+                        return lesson1.startDate!.timeIntervalSince(lesson2.startDate!) < 0
+                    })
+                    return lessons
                 })
-            } catch {
-            }
-            lessons.sort(by: { (lesson1, lesson2) -> Bool in
-                return lesson1.startDate!.timeIntervalSince(lesson2.startDate!) < 0
-            })
-            completionHandler(lessons)
-        }
     }
 
-    func getLesson(lesson: Lesson, completionHandler: @escaping (Lesson) -> () = { _ in
-    }) {
-        HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getSingleLessonUrl(lesson.id!))!) { (response) in
-            do {
-                let json = try JSON(data: response.data!)
-                completionHandler(Lesson(json: json))
-            } catch {
+    func getLesson(lesson: Lesson) -> Future<Lesson> {
+        return HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getSingleLessonUrl(lesson.id!))!)
+                .map { response throws in
+                    return try JSON(data: response.data!)
+                }
+                .map { json in
+                    return Lesson(json: json)
+                }
+    }
+    
+    func downloadBijlage(bijlage: Bijlage, progressHandler: @escaping (Progress) -> () = { _ in
+        }) -> Future<NSNull> {
+        return HttpUtil.httpGet(url: (magister.getMainUrl().personUrl?.getLessonBijlagenUrl(bijlage.id ?? 0))!, parameters: ["redirect_type":"body"])
+            .map { response throws in
+                return try JSON(data: response.data!)
             }
-        }
+            .map { json in
+                return json["location"].stringValue
+            }
+            .flatMap { url in
+                return HttpUtil.httpGetFile(url: url, fileName: bijlage.naam ?? "", location: MailHandler.download, override: false, progressHandler: progressHandler)
+            }
+            .done()
     }
 }

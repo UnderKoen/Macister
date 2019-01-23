@@ -77,6 +77,7 @@ class MailViewController: MainViewController {
                         Magister.magister?.getMailHandler()?.downloadBijlage(bijlage: att.bijlage!, progressHandler: { (progress) in
                             att.progress = progress.fractionCompleted
                         })
+                        .execute()
                     }
                 }
 
@@ -93,7 +94,7 @@ class MailViewController: MainViewController {
         mailItemsTop.subviews.forEach { (view) in
             if let button = view as? SwitchButton {
                 let notId = button.value
-                Magister.magister?.getMailHandler()?.getUnread(mapId: notId, completionHandler: { (amount) in
+                Magister.magister?.getMailHandler()?.getUnread(mapId: notId).subscribe(onNext: { amount in
                     button.notifactions = amount
                 })
             }
@@ -105,12 +106,12 @@ class MailViewController: MainViewController {
             return
         }
         if (mapId == 3) {
-            Magister.magister?.getMailHandler()?.deleteMail(message: selectedMessage!, completionHandler: {
+            Magister.magister?.getMailHandler()?.deleteMail(message: selectedMessage!).subscribe(onNext: { _ in
                 self.unselect()
                 self.update()
             })
         } else {
-            Magister.magister?.getMailHandler()?.moveMail(message: selectedMessage!, toMapId: 3, completionHandler: { (mail) in
+            Magister.magister?.getMailHandler()?.moveMail(message: selectedMessage!, toMapId: 3).subscribe(onNext: { _ in
                 self.unselect()
                 self.update()
             })
@@ -200,7 +201,7 @@ class MailViewController: MainViewController {
         if (selectedMessage == nil) {
             return
         }
-        Magister.magister?.getMailHandler()?.getSingleMail(message: selectedMessage!, completionHandler: { (mail) in
+        Magister.magister?.getMailHandler()?.getSingleMail(message: selectedMessage!).subscribe(onNext: { mail in
             self.updateBijlagen(mail)
             
             var html: String = (mail.inhoud ?? "")
@@ -219,7 +220,7 @@ class MailViewController: MainViewController {
             self.text.frame = NSRect(x: 16, y: 16, width: self.text.frame.width, height: h)
             self.mail.documentView!.scroll(NSPoint(x: 0, y: h + 32))
             if !mail.isGelezen! {
-                Magister.magister?.getMailHandler()?.markRead(message: mail, read: true, completionHandler: { (ignored) in
+                Magister.magister?.getMailHandler()?.markRead(message: mail, read: true).subscribe(onNext: { _ in
                     self.updateNotifactions()
                 })
             }
@@ -259,7 +260,7 @@ class MailViewController: MainViewController {
     }
 
     func updateMail() {
-        Magister.magister?.getMailHandler()?.getMail(mapId: mapId, top: nil, skip: nil, completionHandler: { (mail) in
+        Magister.magister?.getMailHandler()?.getMail(mapId: mapId, top: nil, skip: nil).subscribe(onNext: { mail in
             self.mailItems.documentView!.subviews.forEach({ (view) in
                 (view as? MailElement)?.message = nil
                 view.removeFromSuperview()

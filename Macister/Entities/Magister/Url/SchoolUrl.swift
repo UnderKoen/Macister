@@ -19,6 +19,14 @@ class SchoolUrl: NSObject {
         return school.url + "/"
     }
 
+    func getClientId() -> String {
+        return "M6-" + school.url.replacingOccurrences(of: "https://", with: "")
+    }
+    
+    func getRedirectUri() -> String {
+        return getMagisterUrl() + "oidc/redirect_callback.html"
+    }
+    
     func getApiUrl() -> String {
         return getMagisterUrl() + "api/"
     }
@@ -28,11 +36,11 @@ class SchoolUrl: NSObject {
     }
 
     func getSessionUrl() -> String {
-        return getApiUrl() + "sessies/"
+        return getApiUrl() + "sessions/"
     }
 
     func getCurrentSessionUrl() -> String {
-        return getSessionUrl() + "huidige/"
+        return getSessionUrl() + "current/"
     }
 
     func getUserUrl() -> String {

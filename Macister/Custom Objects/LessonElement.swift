@@ -146,7 +146,7 @@ class LessonElement: NSControl {
             alertBox.fillColor = color
             infoTypeE.fillColor = color
             lessonE.fillColor = color
-            layer?.backgroundColor = color.withAlphaComponent(0.15).cgColor
+            background.fillColor = color.withAlphaComponent(0.15)
         }
     }
 

@@ -123,7 +123,7 @@ class TodayViewController: MainViewController {
             let dayOfMonthLabel = view.subviews[2] as! NSTextField
             let box = view.subviews[1] as! NSBox
 
-            let today = Date().timeIntervalSince(date) < 86400 && Date().timeIntervalSince(date) >= 0
+            let today = calendar.isDateInToday(date)
             let current = calanderDate.timeIntervalSince(date) < 86400 && calanderDate.timeIntervalSince(date) >= 0
 
             if firstTime {
@@ -155,7 +155,7 @@ class TodayViewController: MainViewController {
     }
 
     func updateCalander() {
-        Magister.magister?.getLessonHandler()?.getLessonsForDay(day: calanderDate, completionHandler: { (lessons) in
+        Magister.magister?.getLessonHandler()?.getLessonsForDay(day: calanderDate).subscribe(onNext: { lessons in
             self.calanderItems.documentView!.subviews.forEach({ (view) in
                 (view as? LessonElement)?.lesson = nil
                 view.removeFromSuperview()
@@ -203,7 +203,7 @@ class TodayViewController: MainViewController {
         mailTop.subviews.forEach { (view) in
             if let button = view as? SwitchButton {
                 let notId = button.value
-                Magister.magister?.getMailHandler()?.getUnread(mapId: notId, completionHandler: { (amount) in
+                Magister.magister?.getMailHandler()?.getUnread(mapId: notId).subscribe(onNext: { amount in
                     button.notifactions = amount
                 })
             }
@@ -211,7 +211,7 @@ class TodayViewController: MainViewController {
     }
     
     func updateMail() {
-        Magister.magister?.getMailHandler()?.getMail(mapId: mapId, top: nil, skip: nil, completionHandler: { (mail) in
+        Magister.magister?.getMailHandler()?.getMail(mapId: mapId, top: nil, skip: nil).subscribe(onNext: { mail in
             self.mailItems.documentView!.subviews.forEach({ (view) in
                 (view as? MailElement)?.message = nil
                 view.removeFromSuperview()
@@ -253,38 +253,36 @@ class TodayViewController: MainViewController {
     }
 
     func updateGrades() {
-        let completionHandler: (Grades?) -> () = { (grades) in
-            if (grades != nil) {
-                self.gradeItems.documentView!.subviews.forEach({ (view) in
-                    (view as? GradeElement)?.gradeObj = nil
-                    view.removeFromSuperview()
-                })
-                var y: Int = Int(self.gradeItems.frame.height)
-                if y - (grades!.grades!.count * self.lessonHeight) < 0 {
-                    self.gradeItems.documentView!.setFrameSize(NSSize(width: self.gradeItems.contentSize.width, height: CGFloat(grades!.grades!.count * 48)))
-                    y = grades!.grades!.count * self.lessonHeight
-                } else {
-                    self.gradeItems.documentView!.setFrameSize(NSSize(width: self.gradeItems.contentSize.width, height: CGFloat(y)))
-                }
-                grades!.grades!.forEach({ (grade) in
-                    y = y - self.lessonHeight
-                    let el = GradeElement(frame: CGRect(x: 0, y: y, width: 252, height: self.lessonHeight))
-                    el.gradeObj = grade
-                    if self.average {
-                        el.gradeInfoStr = "Gemiddelde"
-                    }
-                    self.gradeItems.documentView!.addSubview(el)
-                })
-                self.gradeItems.documentView!.scroll(NSPoint.init(x: 0, y: grades!.grades!.count * self.lessonHeight))
-            } else {
-
-            }
-        }
+        var f: Future<Grades>?
         if average {
-            Magister.magister?.getGradeHandler()?.getAverageGrades(completionHandler: completionHandler)
+            f = Magister.magister?.getGradeHandler()?.getAverageGrades()
         } else {
-            Magister.magister?.getGradeHandler()?.getLastGrades(completionHandler: completionHandler)
+            f = Magister.magister?.getGradeHandler()?.getLastGrades()
         }
+        
+        f?.subscribe(onNext: { grades in
+            self.gradeItems.documentView!.subviews.forEach({ (view) in
+                (view as? GradeElement)?.gradeObj = nil
+                view.removeFromSuperview()
+            })
+            var y: Int = Int(self.gradeItems.frame.height)
+            if y - (grades.grades!.count * self.lessonHeight) < 0 {
+                self.gradeItems.documentView!.setFrameSize(NSSize(width: self.gradeItems.contentSize.width, height: CGFloat(grades.grades!.count * 48)))
+                y = grades.grades!.count * self.lessonHeight
+            } else {
+                self.gradeItems.documentView!.setFrameSize(NSSize(width: self.gradeItems.contentSize.width, height: CGFloat(y)))
+            }
+            grades.grades!.forEach({ (grade) in
+                y = y - self.lessonHeight
+                let el = GradeElement(frame: CGRect(x: 0, y: y, width: 252, height: self.lessonHeight))
+                el.gradeObj = grade
+                if self.average {
+                    el.gradeInfoStr = "Gemiddelde"
+                }
+                self.gradeItems.documentView!.addSubview(el)
+            })
+            self.gradeItems.documentView!.scroll(NSPoint.init(x: 0, y: grades.grades!.count * self.lessonHeight))
+        })
     }
 }
 

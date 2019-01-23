@@ -10,8 +10,6 @@ import Cocoa
 import SwiftyJSON
 
 class Studies: NSObject {
-    var done: Bool = false
-
     var studies: [Study]?
     var currentStudy: Study?
 
@@ -34,6 +32,5 @@ class Studies: NSObject {
             }
         })
         self.init(studies: studies, currentStudy: currentStudy)
-        self.done = true
     }
 }

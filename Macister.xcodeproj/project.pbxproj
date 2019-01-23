@@ -71,6 +71,7 @@
 		32510F9E07C6380BE820BE67 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510AF293CEE6FADCDCF7DC /* MainViewController.swift */; };
 		32510FC2138F5F382E42E638 /* MailElement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3251006910B2DD88DEA86170 /* MailElement.xib */; };
 		32510FC9B8D7AD674E3B6168 /* SchoolUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32510277935B4207BCAFB7F5 /* SchoolUrl.swift */; };
+		5D0F62D421B14DE7000E6E36 /* CijferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F62D321B14DE7000E6E36 /* CijferViewController.swift */; };
 		5D5BE6852142AC2900E4FAB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5BE6842142AC2900E4FAB2 /* Assets.xcassets */; };
 		5D627A12214FCF7A004ABE1D /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 5D627A11214FCF7A004ABE1D /* Fonts */; };
 		5D627A16214FFA43004ABE1D /* LessonElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D627A15214FFA43004ABE1D /* LessonElement.swift */; };
@@ -148,6 +149,7 @@
 		32510EBD01FEF6B1452BB22F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		32510EC78B482CA89D5B3C19 /* StudyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyInfo.swift; sourceTree = "<group>"; };
 		32510ED37C6E1B83361A9441 /* Studies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Studies.swift; sourceTree = "<group>"; };
+		5D0F62D321B14DE7000E6E36 /* CijferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CijferViewController.swift; sourceTree = "<group>"; };
 		5D5BE6842142AC2900E4FAB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D627A11214FCF7A004ABE1D /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		5D627A15214FFA43004ABE1D /* LessonElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonElement.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				325101F6812300B1A37A42E7 /* Grade */,
 				3251062FB11553A6A8FF0018 /* Lesson */,
 				32510CA77CA23F8F93B53AD8 /* Message */,
+				5D780ED2219EAF8D0060E440 /* Bijlage.swift */,
 				3251075DCEF60ED23A72236C /* Group.swift */,
 				325102B3BD3FD855DBF1D216 /* Study.swift */,
 				325100E7894002ABFF295F66 /* Person.swift */,
@@ -245,13 +248,14 @@
 				32510583A719F1A90AD00997 /* Macister.entitlements */,
 				3251041B7F7D1AF4094FF1EF /* Info.plist */,
 				32510D890584138917E7618E /* AppDelegate.swift */,
-				325106FC117AD60C25A8B91E /* CalendarViewController.swift */,
 				325104AFA5D4FEB75775CF1B /* EventMonitor.swift */,
 				325102F8ED5D22285ADE0323 /* FindSchoolViewController.swift */,
 				32510E1505787F5A6078FBF5 /* LoginViewController.swift */,
-				32510D2EA8F211B7C37D8AF8 /* MailViewController.swift */,
 				32510AF293CEE6FADCDCF7DC /* MainViewController.swift */,
 				32510232FDA656CE6A0EA485 /* TodayViewController.swift */,
+				325106FC117AD60C25A8B91E /* CalendarViewController.swift */,
+				32510D2EA8F211B7C37D8AF8 /* MailViewController.swift */,
+				5D0F62D321B14DE7000E6E36 /* CijferViewController.swift */,
 				5D5BE6842142AC2900E4FAB2 /* Assets.xcassets */,
 				32510AAC8270C889F7B74328 /* Custom Objects */,
 				32510EBAF70391C7880692CF /* Entities */,
@@ -319,7 +323,6 @@
 			children = (
 				325102D072C20195FA951BF3 /* Contact.swift */,
 				325102582C3CA9CF761368CD /* Message.swift */,
-				5D780ED2219EAF8D0060E440 /* Bijlage.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				3251027A7AD913B3C2827169 /* Account.swift in Sources */,
 				325106AE87965351385499B4 /* Studies.swift in Sources */,
 				3251038C5A0E390CF182A129 /* Subject.swift in Sources */,
+				5D0F62D421B14DE7000E6E36 /* CijferViewController.swift in Sources */,
 				32510A1EF1944E59535516FD /* StudyInfo.swift in Sources */,
 				32510C82EC41A492414068A1 /* Asset.swift in Sources */,
 				5DC0420B21996CF100796787 /* Attachment.swift in Sources */,
